@@ -11,5 +11,6 @@ namespace PBL3.DTO
         public int MaCV {  get; set; }
         public string TenCV { get; set; }
 
+        public ICollection<NhanVien> NhanViens { get; set; }
     }
 }

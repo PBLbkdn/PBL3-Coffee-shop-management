@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,5 +16,8 @@ namespace PBL3.DTO
         public string SDT {  get; set; }
         public double Luong {  get; set; }
         public string GioiTinh { get; set; }
+
+        public ChucVu ChucVu { get; set; }
+        public TaiKhoan TaiKhoan { get; set; }
     }
 }

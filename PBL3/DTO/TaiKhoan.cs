@@ -12,5 +12,6 @@ namespace PBL3.DTO
         public string TenDangNhap { get; set; }
         public string MatKhau { get; set; }
 
+        public NhanVien NhanVien { get; set; }
     }
 }
