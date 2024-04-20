@@ -13,6 +13,8 @@ namespace PBL3.DTO
         public string TenNl { get; set; }
         public int SLNhap { get; set; }
         public int SLTonKho { get; set; }
-        public DateTime 
+        public DateTime NgayHetHan { get; set; }
+        public double GiaNhap {  get; set; }
+        public string DonviTinh { get; set; }
     }
 }

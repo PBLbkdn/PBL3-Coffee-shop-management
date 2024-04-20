@@ -11,6 +11,6 @@ namespace PBL3.DTO
         public int MaSP {  get; set; }
         public string TenSP { get; set; }
         public double GiaSP { get; set; }
-
+        
     }
 }

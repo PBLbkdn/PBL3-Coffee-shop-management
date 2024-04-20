@@ -69,7 +69,9 @@
     <Compile Include="DAO\TaiKhoanDAO.cs" />
     <Compile Include="DTO\CaTruc.cs" />
     <Compile Include="DTO\ChucVu.cs" />
+    <Compile Include="DTO\Class1.cs" />
     <Compile Include="DTO\NguyenLieu.cs" />
+    <Compile Include="DTO\NguyenLieu_Soluong.cs" />
     <Compile Include="DTO\NhanVien.cs" />
     <Compile Include="DTO\SanPham.cs" />
     <Compile Include="DTO\TaiKhoan.cs" />
