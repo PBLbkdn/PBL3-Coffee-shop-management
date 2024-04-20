@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\DTO"
+    "\\DTO",
+    "\\GUI",
+    "\\WindowsFormsApp2"
   ],
-  "SelectedNode": "\\DTO\\Form1.Designer.cs",
+  "SelectedNode": "\\DTO\\Form1.cs",
   "PreviewInSolutionExplorer": false
 }
