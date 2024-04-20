@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CD455E93-3E57-42F2-AE51-7CF22AFB6A11}</ProjectGuid>
+    <ProjectGuid>{555DD9FB-80C9-45EE-92A9-72E492507A0D}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>GUI</RootNamespace>
-    <AssemblyName>GUI</AssemblyName>
+    <RootNamespace>PBL3</RootNamespace>
+    <AssemblyName>PBL3</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,17 +46,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Login.cs">
+    <Compile Include="DAO\BanDAO.cs" />
+    <Compile Include="DAO\CaTrucDAO.cs" />
+    <Compile Include="DAO\ChiTietHoaDonDAO.cs" />
+    <Compile Include="DAO\ChiTietSanPhamDAO.cs" />
+    <Compile Include="DAO\ChucVuDAO.cs" />
+    <Compile Include="DAO\DoanhThuDAO.cs" />
+    <Compile Include="DAO\DonHangDAO.cs" />
+    <Compile Include="DAO\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
+    <Compile Include="DAO\Form1.Designer.cs" />
+    <Compile Include="DAO\HoaDonDAO.cs" />
+    <Compile Include="DAO\KhachHangDAO.cs" />
+    <Compile Include="DAO\KhuyenMaiDAO.cs" />
+    <Compile Include="DAO\LoaiKhachHang.cs" />
+    <Compile Include="DAO\NguyenLieuDAO.cs" />
+    <Compile Include="DAO\NhanVienDAO.cs" />
+    <Compile Include="DAO\Program.cs" />
+    <Compile Include="DAO\SanPhamDAO.cs" />
+    <Compile Include="DAO\TaiKhoanDAO.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -78,6 +95,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BUS\" />
+    <Folder Include="DTO\" />
+    <Folder Include="GUI\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
