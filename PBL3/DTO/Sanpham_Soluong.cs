@@ -4,9 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PBL3.BUS
+namespace PBL3.DTO
 {
-    internal class Class1
+    internal class Sanpham_Soluong
     {
+        public int MaSP { get; set; }
+        public int SoluongSP { get; set; }
+
     }
 }

@@ -12,5 +12,6 @@ namespace PBL3.DTO
         public string TenSP { get; set; }
         public double GiaSP { get; set; }
         
+        public List<NguyenLieu_Soluong> nguyenLieu_Soluongs { get; set; }
     }
 }
