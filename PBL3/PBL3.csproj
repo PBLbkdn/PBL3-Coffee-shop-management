@@ -56,29 +56,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
-    <Compile Include="BUS\SanPhamBUS.cs" />
-    <Compile Include="DAO\BanDAO.cs" />
-    <Compile Include="DAO\CaTrucDAO.cs" />
-    <Compile Include="DAO\ChiTietHoaDonDAO.cs" />
-    <Compile Include="DAO\ChiTietSanPhamDAO.cs" />
-    <Compile Include="DAO\ChucVuDAO.cs" />
-    <Compile Include="DAO\DoanhThuDAO.cs" />
-    <Compile Include="DAO\DonHangDAO.cs" />
-    <Compile Include="DAO\HoaDonDAO.cs" />
-    <Compile Include="DAO\KhachHangDAO.cs" />
-    <Compile Include="DAO\KhuyenMaiDAO.cs" />
-    <Compile Include="DAO\LoaiKhachHang.cs" />
-    <Compile Include="DAO\NguyenLieuDAO.cs" />
-    <Compile Include="DAO\NhanVienDAO.cs" />
-    <Compile Include="DAO\SanPhamDAO.cs" />
-    <Compile Include="DAO\TaiKhoanDAO.cs" />
-    <Compile Include="DTO\Ban.cs" />
-=======
     <Compile Include="BUS\Class1.cs" />
     <Compile Include="DAO\CreateDB.cs" />
     <Compile Include="DAO\DALQuanCaPhe.cs" />
->>>>>>> d616ce3b47d6677877e9380d77845868a58e7a59
+    <Compile Include="DTO\Ban.cs" />
     <Compile Include="DTO\CaTruc.cs" />
     <Compile Include="DTO\ChucVu.cs" />
     <Compile Include="DTO\Class1.cs" />
