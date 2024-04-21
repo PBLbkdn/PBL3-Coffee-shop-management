@@ -9,3 +9,8 @@ D:\sem4\pbl3\PBL3\obj\Debug\PBL3.csproj.GenerateResource.cache
 D:\sem4\pbl3\PBL3\obj\Debug\PBL3.csproj.CoreCompileInputs.cache
 D:\sem4\pbl3\PBL3\obj\Debug\PBL3.exe
 D:\sem4\pbl3\PBL3\obj\Debug\PBL3.pdb
+D:\sem4\pbl3\PBL3\bin\Debug\EntityFramework.dll
+D:\sem4\pbl3\PBL3\bin\Debug\EntityFramework.SqlServer.dll
+D:\sem4\pbl3\PBL3\bin\Debug\EntityFramework.xml
+D:\sem4\pbl3\PBL3\bin\Debug\EntityFramework.SqlServer.xml
+D:\sem4\pbl3\PBL3\obj\Debug\PBL3.csproj.CopyComplete

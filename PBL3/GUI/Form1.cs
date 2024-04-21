@@ -4,12 +4,15 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Runtime.Remoting.Contexts;
 
 namespace PBL3.GUI
 {
@@ -22,21 +25,23 @@ namespace PBL3.GUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            List<NhanVien> list = new List<NhanVien>();
-            string s = @"Data Source=DESKTOP-9SBKOG0\NGUYET;Initial Catalog=QuanCaPhe;Integrated Security=True";
-            SqlConnection cnn = new SqlConnection(s);
-            string query = "select * from NhanVien";
-            SqlCommand cmd = new SqlCommand(query, cnn);
-            cnn.Open();
-            SqlDataReader dr = cmd.ExecuteReader();
-            DataTable dataTable = new DataTable();
-            dataTable.Load(dr);
-            dataGridView1.DataSource = dataTable;
+            QuanCaPhe db = new QuanCaPhe();
+
+            //1 list nhân viên thêm vào ca trực
+            List<NhanVien> listNV = db.NhanViens.ToList();
+            //thêm vào ca trực mã 1, ngày 01/01/2021, đã có trong bảng CaTruc
+            CaTruc ct = db.CaTrucs.Where(p => p.MaCT == 1 && p.NgayTruc == new DateTime(2021, 1, 1)).FirstOrDefault();
+            ct.NhanViens = listNV;
+            db.SaveChanges();
+            dataGridView1.DataSource= ct.NhanViens.ToList();
 
 
-            //lấy dữ liệu từ NhanVienDao để hiển thị lên datagridview
+
+
+
+
+
 
         }
     }
 }
-

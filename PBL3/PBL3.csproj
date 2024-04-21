@@ -45,6 +45,8 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -56,24 +58,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Ban.cs">
+      <DependentUpon>QuanCaPhe.tt</DependentUpon>
+    </Compile>
     <Compile Include="BUS\Class1.cs" />
-    <Compile Include="DAO\CreateDB.cs" />
-    <Compile Include="DAO\DALQuanCaPhe.cs" />
-    <Compile Include="DTO\Ban.cs" />
-    <Compile Include="DTO\CaTruc.cs" />
-    <Compile Include="DTO\ChucVu.cs" />
-    <Compile Include="DTO\Class1.cs" />
-    <Compile Include="DTO\DonHang.cs" />
-    <Compile Include="DTO\HoaDon.cs" />
-    <Compile Include="DTO\KhachHang.cs" />
-    <Compile Include="DTO\KhuyenMai.cs" />
-    <Compile Include="DTO\LoaiKhachHang.cs" />
-    <Compile Include="DTO\NguyenLieu.cs" />
-    <Compile Include="DTO\NguyenLieu_Soluong.cs" />
-    <Compile Include="DTO\NhanVien.cs" />
-    <Compile Include="DTO\SanPham.cs" />
-    <Compile Include="DTO\Sanpham_Soluong.cs" />
-    <Compile Include="DTO\TaiKhoan.cs" />
+    <Compile Include="CaTruc.cs">
+      <DependentUpon>QuanCaPhe.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ChiTietHoaDon.cs">
+      <DependentUpon>QuanCaPhe.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ChiTietNguyenLieu.cs">
+      <DependentUpon>QuanCaPhe.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ChiTietSanPham.cs">
+      <DependentUpon>QuanCaPhe.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ChucVu.cs">
+      <DependentUpon>QuanCaPhe.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DoanhThu.cs">
+      <DependentUpon>QuanCaPhe.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DonHang.cs">
+      <DependentUpon>QuanCaPhe.tt</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,8 +101,47 @@
     <Compile Include="GUI\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="HoaDon.cs">
+      <DependentUpon>QuanCaPhe.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KhachHang.cs">
+      <DependentUpon>QuanCaPhe.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KhuyenMai.cs">
+      <DependentUpon>QuanCaPhe.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LoaiKhachHang.cs">
+      <DependentUpon>QuanCaPhe.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NguyenLieu.cs">
+      <DependentUpon>QuanCaPhe.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NhanVien.cs">
+      <DependentUpon>QuanCaPhe.tt</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuanCaPhe.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanCaPhe.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QuanCaPhe.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanCaPhe.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QuanCaPhe.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanCaPhe.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="SanPham.cs">
+      <DependentUpon>QuanCaPhe.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TaiKhoan.cs">
+      <DependentUpon>QuanCaPhe.tt</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="GUI\DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </EmbeddedResource>
@@ -119,11 +167,32 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EntityDeploy Include="QuanCaPhe.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>QuanCaPhe.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="QuanCaPhe.edmx.diagram">
+      <DependentUpon>QuanCaPhe.edmx</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="QuanCaPhe.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QuanCaPhe.edmx</DependentUpon>
+      <LastGenOutput>QuanCaPhe.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="QuanCaPhe.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QuanCaPhe.edmx</DependentUpon>
+      <LastGenOutput>QuanCaPhe.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
