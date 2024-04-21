@@ -1,3 +1,21 @@
+<<<<<<< HEAD
+D:\DEV\HK4\PBL3_Coffee_shop_management\PBL3\obj\Debug\PBL3.csproj.AssemblyReference.cache
+D:\DEV\HK4\PBL3_Coffee_shop_management\PBL3\obj\Debug\PBL3.GUI.DangNhap.resources
+D:\DEV\HK4\PBL3_Coffee_shop_management\PBL3\obj\Debug\PBL3.Properties.Resources.resources
+D:\DEV\HK4\PBL3_Coffee_shop_management\PBL3\obj\Debug\PBL3.csproj.GenerateResource.cache
+D:\DEV\HK4\PBL3_Coffee_shop_management\PBL3\obj\Debug\PBL3.csproj.CoreCompileInputs.cache
+D:\DEV\HK4\PBL3_Coffee_shop_management\PBL3\bin\Debug\PBL3.exe.config
+D:\DEV\HK4\PBL3_Coffee_shop_management\PBL3\bin\Debug\PBL3.exe
+D:\DEV\HK4\PBL3_Coffee_shop_management\PBL3\bin\Debug\PBL3.pdb
+D:\DEV\HK4\PBL3_Coffee_shop_management\PBL3\obj\Debug\PBL3.exe
+D:\DEV\HK4\PBL3_Coffee_shop_management\PBL3\obj\Debug\PBL3.pdb
+D:\DEV\HK4\PBL3_Coffee_shop_management\PBL3\bin\Debug\Guna.UI2.dll
+D:\DEV\HK4\PBL3_Coffee_shop_management\PBL3\obj\Debug\PBL3.csproj.CopyComplete
+D:\DEV\HK4\PBL3_Coffee_shop_management\PBL3\obj\Debug\PBL3.GUI.ManHinhChinh.resources
+D:\DEV\HK4\PBL3_Coffee_shop_management\PBL3\obj\Debug\PBL3.GUI.ThucDon.resources
+D:\DEV\HK4\PBL3_Coffee_shop_management\PBL3\obj\Debug\PBL3.GUI.Khuyến_mãi.resources
+D:\DEV\HK4\PBL3_Coffee_shop_management\PBL3\obj\Debug\PBL3.GUI.CaLamViec.resources
+=======
 D:\sem4\pbl3\PBL3\bin\Debug\PBL3.exe.config
 D:\sem4\pbl3\PBL3\bin\Debug\PBL3.exe
 D:\sem4\pbl3\PBL3\bin\Debug\PBL3.pdb
@@ -14,3 +32,4 @@ D:\sem4\pbl3\PBL3\bin\Debug\EntityFramework.SqlServer.dll
 D:\sem4\pbl3\PBL3\bin\Debug\EntityFramework.xml
 D:\sem4\pbl3\PBL3\bin\Debug\EntityFramework.SqlServer.xml
 D:\sem4\pbl3\PBL3\obj\Debug\PBL3.csproj.CopyComplete
+>>>>>>> a1cbb0d0ec0856c887f2780725bd53cd1b6467f0
