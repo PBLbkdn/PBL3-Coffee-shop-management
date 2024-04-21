@@ -36,28 +36,23 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
-=======
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
->>>>>>> a1cbb0d0ec0856c887f2780725bd53cd1b6467f0
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
-<<<<<<< HEAD
     <Reference Include="System.Design" />
     <Reference Include="System.Management" />
     <Reference Include="System.Web" />
-=======
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
->>>>>>> a1cbb0d0ec0856c887f2780725bd53cd1b6467f0
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -69,32 +64,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <Compile Include="BUS\Class1.cs" />
-    <Compile Include="DAO\BanDAO.cs" />
-    <Compile Include="DAO\CaTrucDAO.cs" />
-    <Compile Include="DAO\ChiTietHoaDonDAO.cs" />
-    <Compile Include="DAO\ChiTietSanPhamDAO.cs" />
-    <Compile Include="DAO\ChucVuDAO.cs" />
-    <Compile Include="DAO\DoanhThuDAO.cs" />
-    <Compile Include="DAO\DonHangDAO.cs" />
-    <Compile Include="DAO\HoaDonDAO.cs" />
-    <Compile Include="DAO\KhachHangDAO.cs" />
-    <Compile Include="DAO\KhuyenMaiDAO.cs" />
-    <Compile Include="DAO\LoaiKhachHang.cs" />
-    <Compile Include="DAO\NguyenLieuDAO.cs" />
-    <Compile Include="DAO\NhanVienDAO.cs" />
-    <Compile Include="DAO\SanPhamDAO.cs" />
-    <Compile Include="DAO\TaiKhoanDAO.cs" />
-    <Compile Include="DTO\CaTruc.cs" />
-    <Compile Include="DTO\ChucVu.cs" />
-    <Compile Include="DTO\Class1.cs" />
-    <Compile Include="DTO\NguyenLieu.cs" />
-    <Compile Include="DTO\NguyenLieu_Soluong.cs" />
-    <Compile Include="DTO\NhanVien.cs" />
-    <Compile Include="DTO\SanPham.cs" />
-    <Compile Include="DTO\TaiKhoan.cs" />
-=======
     <Compile Include="Ban.cs">
       <DependentUpon>QuanCaPhe.tt</DependentUpon>
     </Compile>
@@ -120,7 +90,6 @@
     <Compile Include="DonHang.cs">
       <DependentUpon>QuanCaPhe.tt</DependentUpon>
     </Compile>
->>>>>>> a1cbb0d0ec0856c887f2780725bd53cd1b6467f0
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -213,7 +182,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-<<<<<<< HEAD
     <EmbeddedResource Include="GUI\CaLamViec.resx">
       <DependentUpon>CaLamViec.cs</DependentUpon>
     </EmbeddedResource>
@@ -246,7 +214,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\ThucDon.resx">
       <DependentUpon>ThucDon.cs</DependentUpon>
-=======
+    </EmbeddedResource>
     <Compile Include="QuanCaPhe.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -273,7 +241,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
->>>>>>> a1cbb0d0ec0856c887f2780725bd53cd1b6467f0
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -307,7 +274,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <None Include="Resources\user-fill.png" />
   </ItemGroup>
   <ItemGroup>
@@ -393,7 +359,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ba chấm.png" />
-=======
     <Content Include="QuanCaPhe.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>QuanCaPhe.edmx</DependentUpon>
@@ -407,7 +372,6 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
->>>>>>> a1cbb0d0ec0856c887f2780725bd53cd1b6467f0
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

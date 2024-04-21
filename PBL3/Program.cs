@@ -16,13 +16,9 @@ namespace PBL3
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-<<<<<<< HEAD
             /* Application.Run(new GUI.DangNhap());*/
             /*Application.Run(new GUI.ManHinhChinh());*/
             Application.Run(new GUI.CaLamViec());
-=======
-            Application.Run(new GUI.Form1());
->>>>>>> a1cbb0d0ec0856c887f2780725bd53cd1b6467f0
         }
     }
 }
