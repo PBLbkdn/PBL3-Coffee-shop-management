@@ -15,6 +15,13 @@ namespace PBL3.GUI
         public NhanVienTrongCa()
         {
             InitializeComponent();
+            QuanCaPheEntities quanCaPheEntities = new QuanCaPheEntities();
+            dataGridView1.DataSource= quanCaPheEntities.NhanViens.ToList();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

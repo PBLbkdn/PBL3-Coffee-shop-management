@@ -18,7 +18,8 @@ namespace PBL3
             Application.SetCompatibleTextRenderingDefault(false);
             /* Application.Run(new GUI.DangNhap());*/
             /*Application.Run(new GUI.ManHinhChinh());*/
-            Application.Run(new GUI.CaLamViec());
+            /*Application.Run(new GUI.CaLamViec());*/
+            Application.Run(new GUI.NhanVienTrongCa());
         }
     }
 }

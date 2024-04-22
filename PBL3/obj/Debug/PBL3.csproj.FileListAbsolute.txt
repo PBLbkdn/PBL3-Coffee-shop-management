@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 D:\DEV\HK4\PBL3_Coffee_shop_management\PBL3\obj\Debug\PBL3.csproj.AssemblyReference.cache
 D:\DEV\HK4\PBL3_Coffee_shop_management\PBL3\obj\Debug\PBL3.GUI.DangNhap.resources
 D:\DEV\HK4\PBL3_Coffee_shop_management\PBL3\obj\Debug\PBL3.Properties.Resources.resources
@@ -15,7 +15,7 @@ D:\DEV\HK4\PBL3_Coffee_shop_management\PBL3\obj\Debug\PBL3.GUI.ManHinhChinh.reso
 D:\DEV\HK4\PBL3_Coffee_shop_management\PBL3\obj\Debug\PBL3.GUI.ThucDon.resources
 D:\DEV\HK4\PBL3_Coffee_shop_management\PBL3\obj\Debug\PBL3.GUI.Khuyến_mãi.resources
 D:\DEV\HK4\PBL3_Coffee_shop_management\PBL3\obj\Debug\PBL3.GUI.CaLamViec.resources
-=======
+
 D:\sem4\pbl3\PBL3\bin\Debug\PBL3.exe.config
 D:\sem4\pbl3\PBL3\bin\Debug\PBL3.exe
 D:\sem4\pbl3\PBL3\bin\Debug\PBL3.pdb
@@ -32,4 +32,14 @@ D:\sem4\pbl3\PBL3\bin\Debug\EntityFramework.SqlServer.dll
 D:\sem4\pbl3\PBL3\bin\Debug\EntityFramework.xml
 D:\sem4\pbl3\PBL3\bin\Debug\EntityFramework.SqlServer.xml
 D:\sem4\pbl3\PBL3\obj\Debug\PBL3.csproj.CopyComplete
->>>>>>> a1cbb0d0ec0856c887f2780725bd53cd1b6467f0
+
+D:\DEV\HK4\PBL3_Coffee_shop_management\PBL3\bin\Debug\EntityFramework.dll
+D:\DEV\HK4\PBL3_Coffee_shop_management\PBL3\bin\Debug\EntityFramework.SqlServer.dll
+D:\DEV\HK4\PBL3_Coffee_shop_management\PBL3\bin\Debug\EntityFramework.xml
+D:\DEV\HK4\PBL3_Coffee_shop_management\PBL3\bin\Debug\EntityFramework.SqlServer.xml
+D:\DEV\HK4\PBL3_Coffee_shop_management\PBL3\obj\Debug\PBL3.GUI.NhanVienTrongCa.resources
+D:\DEV\HK4\PBL3_Coffee_shop_management\PBL3\obj\Debug\PBL3.GUI.SuaKhuyenMai.resources
+D:\DEV\HK4\PBL3_Coffee_shop_management\PBL3\obj\Debug\PBL3.GUI.SuaMon.resources
+D:\DEV\HK4\PBL3_Coffee_shop_management\PBL3\obj\Debug\PBL3.GUI.ThemMaKM.resources
+D:\DEV\HK4\PBL3_Coffee_shop_management\PBL3\obj\Debug\PBL3.GUI.ThemMon.resources
+D:\DEV\HK4\PBL3_Coffee_shop_management\PBL3\obj\Debug\PBL3.GUI.ThemNhanVienVaoCa.resources

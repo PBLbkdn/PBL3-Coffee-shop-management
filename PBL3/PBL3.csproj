@@ -96,70 +96,76 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\CaLamViec.cs">
+    <Compile Include="GUI\Admin\CaLamViec.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\CaLamViec.Designer.cs">
+    <Compile Include="GUI\Admin\CaLamViec.Designer.cs">
       <DependentUpon>CaLamViec.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\DangNhap.cs">
+    <Compile Include="GUI\Admin\DangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\DangNhap.Designer.cs">
+    <Compile Include="GUI\Admin\DangNhap.Designer.cs">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\KhuyenMai.cs">
+    <Compile Include="GUI\Admin\KhuyenMai.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\KhuyenMai.Designer.cs">
+    <Compile Include="GUI\Admin\KhuyenMai.Designer.cs">
       <DependentUpon>KhuyenMai.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\ManHinhChinh.cs">
+    <Compile Include="GUI\Admin\ManHinhChinh.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\ManHinhChinh.Designer.cs">
+    <Compile Include="GUI\Admin\ManHinhChinh.Designer.cs">
       <DependentUpon>ManHinhChinh.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\NhanVienTrongCa.cs">
+    <Compile Include="GUI\Admin\NhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\NhanVienTrongCa.Designer.cs">
+    <Compile Include="GUI\Admin\NhanVien.Designer.cs">
+      <DependentUpon>NhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin\NhanVienTrongCa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin\NhanVienTrongCa.Designer.cs">
       <DependentUpon>NhanVienTrongCa.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\SuaKhuyenMai.cs">
+    <Compile Include="GUI\Admin\SuaKhuyenMai.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\SuaKhuyenMai.Designer.cs">
+    <Compile Include="GUI\Admin\SuaKhuyenMai.Designer.cs">
       <DependentUpon>SuaKhuyenMai.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\SuaMon.cs">
+    <Compile Include="GUI\Admin\SuaMon.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\SuaMon.Designer.cs">
+    <Compile Include="GUI\Admin\SuaMon.Designer.cs">
       <DependentUpon>SuaMon.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\ThemMaKM.cs">
+    <Compile Include="GUI\Admin\ThemMaKM.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\ThemMaKM.Designer.cs">
+    <Compile Include="GUI\Admin\ThemMaKM.Designer.cs">
       <DependentUpon>ThemMaKM.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\ThemMon.cs">
+    <Compile Include="GUI\Admin\ThemMon.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\ThemMon.Designer.cs">
+    <Compile Include="GUI\Admin\ThemMon.Designer.cs">
       <DependentUpon>ThemMon.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\ThemNhanVienVaoCa.cs">
+    <Compile Include="GUI\Admin\ThemNhanVienVaoCa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\ThemNhanVienVaoCa.Designer.cs">
+    <Compile Include="GUI\Admin\ThemNhanVienVaoCa.Designer.cs">
       <DependentUpon>ThemNhanVienVaoCa.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\ThucDon.cs">
+    <Compile Include="GUI\Admin\ThucDon.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\ThucDon.Designer.cs">
+    <Compile Include="GUI\Admin\ThucDon.Designer.cs">
       <DependentUpon>ThucDon.cs</DependentUpon>
     </Compile>
     <Compile Include="HoaDon.cs">
@@ -182,37 +188,40 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="GUI\CaLamViec.resx">
+    <EmbeddedResource Include="GUI\Admin\CaLamViec.resx">
       <DependentUpon>CaLamViec.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\DangNhap.resx">
+    <EmbeddedResource Include="GUI\Admin\DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\KhuyenMai.resx">
+    <EmbeddedResource Include="GUI\Admin\KhuyenMai.resx">
       <DependentUpon>KhuyenMai.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\ManHinhChinh.resx">
+    <EmbeddedResource Include="GUI\Admin\ManHinhChinh.resx">
       <DependentUpon>ManHinhChinh.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\NhanVienTrongCa.resx">
+    <EmbeddedResource Include="GUI\Admin\NhanVien.resx">
+      <DependentUpon>NhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Admin\NhanVienTrongCa.resx">
       <DependentUpon>NhanVienTrongCa.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\SuaKhuyenMai.resx">
+    <EmbeddedResource Include="GUI\Admin\SuaKhuyenMai.resx">
       <DependentUpon>SuaKhuyenMai.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\SuaMon.resx">
+    <EmbeddedResource Include="GUI\Admin\SuaMon.resx">
       <DependentUpon>SuaMon.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\ThemMaKM.resx">
+    <EmbeddedResource Include="GUI\Admin\ThemMaKM.resx">
       <DependentUpon>ThemMaKM.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\ThemMon.resx">
+    <EmbeddedResource Include="GUI\Admin\ThemMon.resx">
       <DependentUpon>ThemMon.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\ThemNhanVienVaoCa.resx">
+    <EmbeddedResource Include="GUI\Admin\ThemNhanVienVaoCa.resx">
       <DependentUpon>ThemNhanVienVaoCa.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\ThucDon.resx">
+    <EmbeddedResource Include="GUI\Admin\ThucDon.resx">
       <DependentUpon>ThucDon.cs</DependentUpon>
     </EmbeddedResource>
     <Compile Include="QuanCaPhe.Context.cs">
@@ -236,12 +245,6 @@
     <Compile Include="TaiKhoan.cs">
       <DependentUpon>QuanCaPhe.tt</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="GUI\DangNhap.resx">
-      <DependentUpon>DangNhap.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -358,6 +361,7 @@
     <None Include="Resources\icon hủy.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\icons8-human-30 1.png" />
     <None Include="Resources\ba chấm.png" />
     <Content Include="QuanCaPhe.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

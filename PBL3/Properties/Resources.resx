@@ -151,6 +151,9 @@
   <data name="entypo_magnifying-glass" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\entypo_magnifying-glass.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ba chấm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ba chấm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="bytesize_chevron-top (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bytesize_chevron-top (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -202,7 +205,7 @@
   <data name="icon thực đơn" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon thực đơn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ba chấm" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ba chấm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8-human-30 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-human-30 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
