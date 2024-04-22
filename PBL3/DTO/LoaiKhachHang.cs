@@ -7,33 +7,26 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PBL3
+namespace PBL3.DTO
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class SanPham
+    public partial class LoaiKhachHang
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public SanPham()
+        public LoaiKhachHang()
         {
-            this.ChiTietHoaDons = new HashSet<ChiTietHoaDon>();
-            this.ChiTietSanPhams = new HashSet<ChiTietSanPham>();
-            this.DonHangs = new HashSet<DonHang>();
+            this.KhachHangs = new HashSet<KhachHang>();
+            this.KhuyenMais = new HashSet<KhuyenMai>();
         }
     
-        public int MaSP { get; set; }
-        public string TenSP { get; set; }
-        public Nullable<long> GiaSP { get; set; }
-        public string LoaiSP { get; set; }
-        public string NhomSP { get; set; }
-        public string DonViSP { get; set; }
+        public int MaLKH { get; set; }
+        public string TenLKH { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ChiTietHoaDon> ChiTietHoaDons { get; set; }
+        public virtual ICollection<KhachHang> KhachHangs { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ChiTietSanPham> ChiTietSanPhams { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<DonHang> DonHangs { get; set; }
+        public virtual ICollection<KhuyenMai> KhuyenMais { get; set; }
     }
 }

@@ -1,5 +1,4 @@
-﻿using PBL3.DTO;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,19 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PBL3.BUS;
 
-namespace PBL3.GUI
+namespace PBL3.DTO
 {
-    public partial class NhanVienTrongCa : Form
+    public partial class Form1 : Form
     {
-        public NhanVienTrongCa()
+        public Form1()
         {
             InitializeComponent();
+
         }
 
-        private void pictureBox4_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            dataGridView1.DataSource = Ban_BLL.Instance.GetListBan();
         }
     }
 }

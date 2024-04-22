@@ -7,17 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PBL3
+namespace PBL3.DTO
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class ChiTietNguyenLieu
+    public partial class DoanhThu
     {
-        public int MaNL { get; set; }
-        public System.DateTime NgayNhap { get; set; }
-        public Nullable<int> SLNhap { get; set; }
+        public int MaCT { get; set; }
+        public System.DateTime NgayTruc { get; set; }
+        public Nullable<long> DoanhThuCT { get; set; }
+        public Nullable<long> DoanhThuNT { get; set; }
     
-        public virtual NguyenLieu NguyenLieu { get; set; }
+        public virtual CaTruc CaTruc { get; set; }
     }
 }

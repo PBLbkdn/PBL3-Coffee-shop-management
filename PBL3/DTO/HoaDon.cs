@@ -7,26 +7,27 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PBL3
+namespace PBL3.DTO
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class KhachHang
+    public partial class HoaDon
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public KhachHang()
+        public HoaDon()
         {
-            this.HoaDons = new HashSet<HoaDon>();
+            this.ChiTietHoaDons = new HashSet<ChiTietHoaDon>();
         }
     
-        public int MaKH { get; set; }
-        public string TenKH { get; set; }
-        public string SDT { get; set; }
-        public Nullable<int> MaLKH { get; set; }
+        public int MaHD { get; set; }
+        public Nullable<int> MaDH { get; set; }
+        public Nullable<int> MaKH { get; set; }
+        public Nullable<System.DateTime> ThoiGian { get; set; }
+        public Nullable<long> TongTien { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<HoaDon> HoaDons { get; set; }
-        public virtual LoaiKhachHang LoaiKhachHang { get; set; }
+        public virtual ICollection<ChiTietHoaDon> ChiTietHoaDons { get; set; }
+        public virtual KhachHang KhachHang { get; set; }
     }
 }

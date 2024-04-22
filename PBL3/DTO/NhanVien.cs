@@ -7,24 +7,32 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PBL3
+namespace PBL3.DTO
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class DoanhThu
+    public partial class NhanVien
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public DoanhThu()
+        public NhanVien()
         {
+            this.ChiTietHoaDons = new HashSet<ChiTietHoaDon>();
             this.CaTrucs = new HashSet<CaTruc>();
         }
     
-        public int MaCT { get; set; }
-        public System.DateTime NgayTruc { get; set; }
-        public Nullable<long> DoanhThuCT { get; set; }
-        public Nullable<long> DoanhThuNT { get; set; }
+        public int MaNV { get; set; }
+        public int MaCV { get; set; }
+        public string HoTenNV { get; set; }
+        public Nullable<System.DateTime> NgaySinh { get; set; }
+        public string SDT { get; set; }
+        public Nullable<long> Luong { get; set; }
+        public Nullable<bool> GioiTinh { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ChiTietHoaDon> ChiTietHoaDons { get; set; }
+        public virtual ChucVu ChucVu { get; set; }
+        public virtual TaiKhoan TaiKhoan { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CaTruc> CaTrucs { get; set; }
     }

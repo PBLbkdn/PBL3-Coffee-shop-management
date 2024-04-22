@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b7ac11a694624a19abe7fdd7d90bd2a9" Name="Diagram1">
+        <EntityTypeShape EntityType="QuanCaPheModel.Ban" Width="1.5" PointX="6" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanCaPheModel.CaTruc" Width="1.5" PointX="0.75" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanCaPheModel.ChiTietHoaDon" Width="1.5" PointX="8.25" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanCaPheModel.ChiTietNguyenLieu" Width="1.5" PointX="13" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanCaPheModel.ChiTietSanPham" Width="1.5" PointX="13" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanCaPheModel.ChucVu" Width="1.5" PointX="3.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanCaPheModel.DoanhThu" Width="1.5" PointX="3" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanCaPheModel.DonHang" Width="1.5" PointX="8.25" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanCaPheModel.HoaDon" Width="1.5" PointX="6" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanCaPheModel.KhachHang" Width="1.5" PointX="3.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanCaPheModel.KhuyenMai" Width="1.5" PointX="1.5" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanCaPheModel.LoaiKhachHang" Width="1.5" PointX="1.5" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanCaPheModel.NguyenLieu" Width="1.5" PointX="10.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanCaPheModel.NhanVien" Width="1.5" PointX="6" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanCaPheModel.SanPham" Width="1.5" PointX="6" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanCaPheModel.TaiKhoan" Width="1.5" PointX="8.25" PointY="8.125" IsExpanded="true" />
+        <AssociationConnector Association="QuanCaPheModel.FK_ChiTietHoaDon_Ban" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanCaPheModel.FK_DoanhThu_CaTruc" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanCaPheModel.FK_ChiTietHoaDon_HoaDon" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanCaPheModel.FK_ChiTietHoaDon_NhanVien" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanCaPheModel.FK_ChiTietHoaDon_SanPham" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanCaPheModel.FK_ChiTietNguyenLieu_NguyenLieu" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanCaPheModel.FK_ChiTietSanPham_NguyenLieu" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanCaPheModel.FK_ChiTietSanPham_SanPham" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanCaPheModel.FK_MaChucVu" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanCaPheModel.FK_DonHang_SanPham" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanCaPheModel.FK_HoaDon_KhachHang" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanCaPheModel.FK_KhachHang_LoaiKhachHang" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanCaPheModel.FK_TaiKhoan_NhanVien" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanCaPheModel.ChiTietCaTruc" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanCaPheModel.ChiTietKhuyenMai" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

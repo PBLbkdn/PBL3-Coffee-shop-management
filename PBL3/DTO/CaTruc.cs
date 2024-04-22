@@ -7,20 +7,26 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PBL3
+namespace PBL3.DTO
 {
     using System;
     using System.Collections.Generic;
     
     public partial class CaTruc
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public CaTruc()
+        {
+            this.NhanViens = new HashSet<NhanVien>();
+        }
+    
         public int MaCT { get; set; }
         public System.DateTime NgayTruc { get; set; }
-        public int MaNV { get; set; }
         public Nullable<System.TimeSpan> ThoiGianBD { get; set; }
         public Nullable<System.TimeSpan> ThoiGianKT { get; set; }
     
         public virtual DoanhThu DoanhThu { get; set; }
-        public virtual NhanVien NhanVien { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<NhanVien> NhanViens { get; set; }
     }
 }
