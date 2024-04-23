@@ -276,9 +276,9 @@
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(132)))), ((int)(((byte)(132)))));
+            this.guna2Panel1.Controls.Add(this.panel2);
             this.guna2Panel1.Controls.Add(this.pictureBox4);
             this.guna2Panel1.Controls.Add(this.pictureBox5);
-            this.guna2Panel1.Controls.Add(this.panel2);
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1386, 54);
@@ -309,15 +309,15 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(231)))), ((int)(((byte)(231)))));
             this.panel2.Controls.Add(this.pictureBox6);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(60, 0);
+            this.panel2.Location = new System.Drawing.Point(63, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(180, 54);
-            this.panel2.TabIndex = 0;
+            this.panel2.TabIndex = 3;
             // 
             // pictureBox6
             // 
-            this.pictureBox6.Image = global::PBL3.Properties.Resources.icon_quà;
-            this.pictureBox6.Location = new System.Drawing.Point(15, 13);
+            this.pictureBox6.Image = global::PBL3.Properties.Resources.Vector__3_;
+            this.pictureBox6.Location = new System.Drawing.Point(18, 13);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(27, 29);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -330,11 +330,11 @@
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(231)))), ((int)(((byte)(231)))));
             this.label2.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(49, 15);
+            this.label2.Location = new System.Drawing.Point(52, 15);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(127, 25);
+            this.label2.Size = new System.Drawing.Size(102, 25);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Khuyến mãi";
+            this.label2.Text = "Thống kê";
             // 
             // ThongKeNgay
             // 

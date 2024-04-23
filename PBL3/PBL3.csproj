@@ -382,6 +382,12 @@
     <Compile Include="GUI\Employee\ThongKe_NV.Designer.cs">
       <DependentUpon>ThongKe_NV.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Employee\ThongTinNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Employee\ThongTinNhanVien.Designer.cs">
+      <DependentUpon>ThongTinNhanVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Employee\XemThongTinBan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -468,6 +474,15 @@
     <EmbeddedResource Include="GUI\Employee\Ban.resx">
       <DependentUpon>Ban.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Employee\CapNhatMatKhau.resx">
+      <DependentUpon>CapNhatMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Employee\ChiTietDonHang.resx">
+      <DependentUpon>ChiTietDonHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Employee\ChiTietHoaDon.resx">
+      <DependentUpon>ChiTietHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Employee\ChonBan.resx">
       <DependentUpon>ChonBan.cs</DependentUpon>
     </EmbeddedResource>
@@ -477,11 +492,32 @@
     <EmbeddedResource Include="GUI\Employee\DatMon.resx">
       <DependentUpon>DatMon.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Employee\DonHang.resx">
+      <DependentUpon>DonHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Employee\HoaDon.resx">
+      <DependentUpon>HoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Employee\KhachHang.resx">
+      <DependentUpon>KhachHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Employee\ManHinhChinh_NV.resx">
       <DependentUpon>ManHinhChinh_NV.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Employee\SuaKhachHang.resx">
+      <DependentUpon>SuaKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Employee\ThanhToan.resx">
       <DependentUpon>ThanhToan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Employee\ThemKhachHang.resx">
+      <DependentUpon>ThemKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Employee\ThongKe_NV.resx">
+      <DependentUpon>ThongKe_NV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Employee\ThongTinNhanVien.resx">
+      <DependentUpon>ThongTinNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Employee\XemThongTinBan.resx">
       <DependentUpon>XemThongTinBan.cs</DependentUpon>
@@ -628,6 +664,7 @@
       <DependentUpon>QuanCaPhePBL3.edmx</DependentUpon>
       <LastGenOutput>QuanCaPhePBL3.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\icons8-order-48 1.png" />
     <None Include="Resources\bàn 1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace PBL3.GUI.Employee
 {
-    public partial class HoaDon : Form
+    public partial class ThongTinNhanVien : Form
     {
-        public HoaDon()
+        public ThongTinNhanVien()
         {
             InitializeComponent();
         }
 
-        private void HoaDon_Load(object sender, EventArgs e)
+        private void ThongTinNhanVien_Load(object sender, EventArgs e)
         {
 
         }
