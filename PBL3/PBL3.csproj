@@ -292,11 +292,41 @@
     <Compile Include="GUI\Admin\ThucDon.Designer.cs">
       <DependentUpon>ThucDon.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Employee\Ban.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Employee\Ban.Designer.cs">
+      <DependentUpon>Ban.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Employee\CapNhatMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Employee\CapNhatMatKhau.Designer.cs">
+      <DependentUpon>CapNhatMatKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Employee\ChiTietDonHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Employee\ChiTietDonHang.Designer.cs">
+      <DependentUpon>ChiTietDonHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Employee\ChiTietHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Employee\ChiTietHoaDon.Designer.cs">
+      <DependentUpon>ChiTietHoaDon.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Employee\ChonBan.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\Employee\ChonBan.Designer.cs">
       <DependentUpon>ChonBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Employee\DatBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Employee\DatBan.Designer.cs">
+      <DependentUpon>DatBan.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Employee\DatMon.cs">
       <SubType>Form</SubType>
@@ -304,11 +334,35 @@
     <Compile Include="GUI\Employee\DatMon.Designer.cs">
       <DependentUpon>DatMon.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Employee\DonHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Employee\DonHang.Designer.cs">
+      <DependentUpon>DonHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Employee\HoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Employee\HoaDon.Designer.cs">
+      <DependentUpon>HoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Employee\KhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Employee\KhachHang.Designer.cs">
+      <DependentUpon>KhachHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Employee\ManHinhChinh_NV.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\Employee\ManHinhChinh_NV.Designer.cs">
       <DependentUpon>ManHinhChinh_NV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Employee\SuaKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Employee\SuaKhachHang.Designer.cs">
+      <DependentUpon>SuaKhachHang.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Employee\ThanhToan.cs">
       <SubType>Form</SubType>
@@ -316,23 +370,23 @@
     <Compile Include="GUI\Employee\ThanhToan.Designer.cs">
       <DependentUpon>ThanhToan.cs</DependentUpon>
     </Compile>
-    <Compile Include="HoaDon.cs">
-      <DependentUpon>QuanCaPhe.tt</DependentUpon>
+    <Compile Include="GUI\Employee\ThemKhachHang.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="KhachHang.cs">
-      <DependentUpon>QuanCaPhe.tt</DependentUpon>
+    <Compile Include="GUI\Employee\ThemKhachHang.Designer.cs">
+      <DependentUpon>ThemKhachHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="KhuyenMai.cs">
-      <DependentUpon>QuanCaPhe.tt</DependentUpon>
+    <Compile Include="GUI\Employee\ThongKe_NV.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoaiKhachHang.cs">
-      <DependentUpon>QuanCaPhe.tt</DependentUpon>
+    <Compile Include="GUI\Employee\ThongKe_NV.Designer.cs">
+      <DependentUpon>ThongKe_NV.cs</DependentUpon>
     </Compile>
-    <Compile Include="NguyenLieu.cs">
-      <DependentUpon>QuanCaPhe.tt</DependentUpon>
+    <Compile Include="GUI\Employee\XemThongTinBan.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NhanVien.cs">
-      <DependentUpon>QuanCaPhe.tt</DependentUpon>
+    <Compile Include="GUI\Employee\XemThongTinBan.Designer.cs">
+      <DependentUpon>XemThongTinBan.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -411,29 +465,14 @@
     <EmbeddedResource Include="GUI\Admin\ThucDon.resx">
       <DependentUpon>ThucDon.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="QuanCaPhe.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QuanCaPhe.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="QuanCaPhe.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QuanCaPhe.tt</DependentUpon>
-    </Compile>
-    <Compile Include="QuanCaPhe.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QuanCaPhe.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="SanPham.cs">
-      <DependentUpon>QuanCaPhe.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TaiKhoan.cs">
-      <DependentUpon>QuanCaPhe.tt</DependentUpon>
-    </Compile>
+    <EmbeddedResource Include="GUI\Employee\Ban.resx">
+      <DependentUpon>Ban.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Employee\ChonBan.resx">
       <DependentUpon>ChonBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Employee\DatBan.resx">
+      <DependentUpon>DatBan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Employee\DatMon.resx">
       <DependentUpon>DatMon.cs</DependentUpon>
@@ -443,6 +482,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Employee\ThanhToan.resx">
       <DependentUpon>ThanhToan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Employee\XemThongTinBan.resx">
+      <DependentUpon>XemThongTinBan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -461,7 +503,6 @@
     <None Include="DTO\QuanCaPhePBL3.edmx.diagram">
       <DependentUpon>QuanCaPhePBL3.edmx</DependentUpon>
     </None>
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -587,6 +628,7 @@
       <DependentUpon>QuanCaPhePBL3.edmx</DependentUpon>
       <LastGenOutput>QuanCaPhePBL3.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\bàn 1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

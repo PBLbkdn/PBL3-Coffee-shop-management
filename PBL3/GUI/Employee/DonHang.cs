@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace PBL3.GUI.Employee
 {
-    public partial class Thanh : Form
+    public partial class DonHang : Form
     {
-        public Thanh()
+        public DonHang()
         {
             InitializeComponent();
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

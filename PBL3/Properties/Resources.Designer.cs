@@ -123,6 +123,16 @@ namespace PBL3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bàn_1 {
+            get {
+                object obj = ResourceManager.GetObject("bàn 1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bàn_Tầng_1__004 {
             get {
                 object obj = ResourceManager.GetObject("bàn Tầng 1 -004", resourceCulture);
