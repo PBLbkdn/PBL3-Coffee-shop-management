@@ -13,10 +13,10 @@ namespace PBL3.DTO
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class QuanCaPheEntities : DbContext
+    public partial class QuanCaPhePBL3Entities : DbContext
     {
-        public QuanCaPheEntities()
-            : base("name=QuanCaPheEntities")
+        public QuanCaPhePBL3Entities()
+            : base("name=QuanCaPhePBL3Entities")
         {
         }
     

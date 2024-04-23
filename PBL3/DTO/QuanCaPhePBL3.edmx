@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="QuanCaPheModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="QuanCaPhePBL3Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Ban">
           <Key>
             <PropertyRef Name="MaBan" />
@@ -384,7 +384,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="QuanCaPheModelStoreContainer">
+        <EntityContainer Name="QuanCaPhePBL3ModelStoreContainer">
           <EntitySet Name="Ban" EntityType="Self.Ban" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CaTruc" EntityType="Self.CaTruc" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ChiTietCaTruc" EntityType="Self.ChiTietCaTruc" Schema="dbo" store:Type="Tables" />
@@ -476,7 +476,7 @@
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="QuanCaPheModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="QuanCaPhePBL3Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="Ban">
           <Key>
             <PropertyRef Name="MaBan" />
@@ -826,7 +826,7 @@
           <End Role="KhuyenMai" Type="Self.KhuyenMai" Multiplicity="*" />
           <End Role="LoaiKhachHang" Type="Self.LoaiKhachHang" Multiplicity="*" />
         </Association>
-        <EntityContainer Name="QuanCaPheEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="QuanCaPhePBL3Entities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Bans" EntityType="Self.Ban" />
           <EntitySet Name="CaTrucs" EntityType="Self.CaTruc" />
           <EntitySet Name="ChiTietHoaDons" EntityType="Self.ChiTietHoaDon" />
@@ -909,9 +909,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="QuanCaPheModelStoreContainer" CdmEntityContainer="QuanCaPheEntities">
+        <EntityContainerMapping StorageEntityContainer="QuanCaPhePBL3ModelStoreContainer" CdmEntityContainer="QuanCaPhePBL3Entities">
           <EntitySetMapping Name="Bans">
-            <EntityTypeMapping TypeName="QuanCaPheModel.Ban">
+            <EntityTypeMapping TypeName="QuanCaPhePBL3Model.Ban">
               <MappingFragment StoreEntitySet="Ban">
                 <ScalarProperty Name="MaBan" ColumnName="MaBan" />
                 <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
@@ -920,7 +920,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="CaTrucs">
-            <EntityTypeMapping TypeName="QuanCaPheModel.CaTruc">
+            <EntityTypeMapping TypeName="QuanCaPhePBL3Model.CaTruc">
               <MappingFragment StoreEntitySet="CaTruc">
                 <ScalarProperty Name="MaCT" ColumnName="MaCT" />
                 <ScalarProperty Name="NgayTruc" ColumnName="NgayTruc" />
@@ -930,7 +930,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="ChiTietHoaDons">
-            <EntityTypeMapping TypeName="QuanCaPheModel.ChiTietHoaDon">
+            <EntityTypeMapping TypeName="QuanCaPhePBL3Model.ChiTietHoaDon">
               <MappingFragment StoreEntitySet="ChiTietHoaDon">
                 <ScalarProperty Name="MaHD" ColumnName="MaHD" />
                 <ScalarProperty Name="MaBan" ColumnName="MaBan" />
@@ -942,7 +942,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="ChiTietNguyenLieux">
-            <EntityTypeMapping TypeName="QuanCaPheModel.ChiTietNguyenLieu">
+            <EntityTypeMapping TypeName="QuanCaPhePBL3Model.ChiTietNguyenLieu">
               <MappingFragment StoreEntitySet="ChiTietNguyenLieu">
                 <ScalarProperty Name="MaNL" ColumnName="MaNL" />
                 <ScalarProperty Name="NgayNhap" ColumnName="NgayNhap" />
@@ -951,7 +951,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="ChiTietSanPhams">
-            <EntityTypeMapping TypeName="QuanCaPheModel.ChiTietSanPham">
+            <EntityTypeMapping TypeName="QuanCaPhePBL3Model.ChiTietSanPham">
               <MappingFragment StoreEntitySet="ChiTietSanPham">
                 <ScalarProperty Name="MaSP" ColumnName="MaSP" />
                 <ScalarProperty Name="MaNL" ColumnName="MaNL" />
@@ -960,7 +960,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="ChucVus">
-            <EntityTypeMapping TypeName="QuanCaPheModel.ChucVu">
+            <EntityTypeMapping TypeName="QuanCaPhePBL3Model.ChucVu">
               <MappingFragment StoreEntitySet="ChucVu">
                 <ScalarProperty Name="MaCV" ColumnName="MaCV" />
                 <ScalarProperty Name="TenCV" ColumnName="TenCV" />
@@ -968,7 +968,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="DoanhThus">
-            <EntityTypeMapping TypeName="QuanCaPheModel.DoanhThu">
+            <EntityTypeMapping TypeName="QuanCaPhePBL3Model.DoanhThu">
               <MappingFragment StoreEntitySet="DoanhThu">
                 <ScalarProperty Name="MaCT" ColumnName="MaCT" />
                 <ScalarProperty Name="NgayTruc" ColumnName="NgayTruc" />
@@ -978,7 +978,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="DonHangs">
-            <EntityTypeMapping TypeName="QuanCaPheModel.DonHang">
+            <EntityTypeMapping TypeName="QuanCaPhePBL3Model.DonHang">
               <MappingFragment StoreEntitySet="DonHang">
                 <ScalarProperty Name="MaDH" ColumnName="MaDH" />
                 <ScalarProperty Name="MaSP" ColumnName="MaSP" />
@@ -987,7 +987,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="HoaDons">
-            <EntityTypeMapping TypeName="QuanCaPheModel.HoaDon">
+            <EntityTypeMapping TypeName="QuanCaPhePBL3Model.HoaDon">
               <MappingFragment StoreEntitySet="HoaDon">
                 <ScalarProperty Name="MaHD" ColumnName="MaHD" />
                 <ScalarProperty Name="MaDH" ColumnName="MaDH" />
@@ -998,7 +998,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="KhachHangs">
-            <EntityTypeMapping TypeName="QuanCaPheModel.KhachHang">
+            <EntityTypeMapping TypeName="QuanCaPhePBL3Model.KhachHang">
               <MappingFragment StoreEntitySet="KhachHang">
                 <ScalarProperty Name="MaKH" ColumnName="MaKH" />
                 <ScalarProperty Name="TenKH" ColumnName="TenKH" />
@@ -1008,7 +1008,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="KhuyenMais">
-            <EntityTypeMapping TypeName="QuanCaPheModel.KhuyenMai">
+            <EntityTypeMapping TypeName="QuanCaPhePBL3Model.KhuyenMai">
               <MappingFragment StoreEntitySet="KhuyenMai">
                 <ScalarProperty Name="MaKM" ColumnName="MaKM" />
                 <ScalarProperty Name="TenCT" ColumnName="TenCT" />
@@ -1020,7 +1020,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="LoaiKhachHangs">
-            <EntityTypeMapping TypeName="QuanCaPheModel.LoaiKhachHang">
+            <EntityTypeMapping TypeName="QuanCaPhePBL3Model.LoaiKhachHang">
               <MappingFragment StoreEntitySet="LoaiKhachHang">
                 <ScalarProperty Name="MaLKH" ColumnName="MaLKH" />
                 <ScalarProperty Name="TenLKH" ColumnName="TenLKH" />
@@ -1028,7 +1028,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="NguyenLieux">
-            <EntityTypeMapping TypeName="QuanCaPheModel.NguyenLieu">
+            <EntityTypeMapping TypeName="QuanCaPhePBL3Model.NguyenLieu">
               <MappingFragment StoreEntitySet="NguyenLieu">
                 <ScalarProperty Name="MaNL" ColumnName="MaNL" />
                 <ScalarProperty Name="TenNL" ColumnName="TenNL" />
@@ -1040,7 +1040,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="NhanViens">
-            <EntityTypeMapping TypeName="QuanCaPheModel.NhanVien">
+            <EntityTypeMapping TypeName="QuanCaPhePBL3Model.NhanVien">
               <MappingFragment StoreEntitySet="NhanVien">
                 <ScalarProperty Name="MaNV" ColumnName="MaNV" />
                 <ScalarProperty Name="MaCV" ColumnName="MaCV" />
@@ -1053,7 +1053,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="SanPhams">
-            <EntityTypeMapping TypeName="QuanCaPheModel.SanPham">
+            <EntityTypeMapping TypeName="QuanCaPhePBL3Model.SanPham">
               <MappingFragment StoreEntitySet="SanPham">
                 <ScalarProperty Name="MaSP" ColumnName="MaSP" />
                 <ScalarProperty Name="TenSP" ColumnName="TenSP" />
@@ -1065,7 +1065,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="TaiKhoans">
-            <EntityTypeMapping TypeName="QuanCaPheModel.TaiKhoan">
+            <EntityTypeMapping TypeName="QuanCaPhePBL3Model.TaiKhoan">
               <MappingFragment StoreEntitySet="TaiKhoan">
                 <ScalarProperty Name="MaNV" ColumnName="MaNV" />
                 <ScalarProperty Name="TenDangNhap" ColumnName="TenDangNhap" />
@@ -1073,7 +1073,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <AssociationSetMapping Name="ChiTietCaTruc" TypeName="QuanCaPheModel.ChiTietCaTruc" StoreEntitySet="ChiTietCaTruc">
+          <AssociationSetMapping Name="ChiTietCaTruc" TypeName="QuanCaPhePBL3Model.ChiTietCaTruc" StoreEntitySet="ChiTietCaTruc">
             <EndProperty Name="CaTruc">
               <ScalarProperty Name="MaCT" ColumnName="MaCT" />
               <ScalarProperty Name="NgayTruc" ColumnName="NgayTruc" />
@@ -1082,7 +1082,7 @@
               <ScalarProperty Name="MaNV" ColumnName="MaNV" />
             </EndProperty>
           </AssociationSetMapping>
-          <AssociationSetMapping Name="ChiTietKhuyenMai" TypeName="QuanCaPheModel.ChiTietKhuyenMai" StoreEntitySet="ChiTietKhuyenMai">
+          <AssociationSetMapping Name="ChiTietKhuyenMai" TypeName="QuanCaPhePBL3Model.ChiTietKhuyenMai" StoreEntitySet="ChiTietKhuyenMai">
             <EndProperty Name="KhuyenMai">
               <ScalarProperty Name="MaKM" ColumnName="MaKM" />
             </EndProperty>

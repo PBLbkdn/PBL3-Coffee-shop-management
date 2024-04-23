@@ -25,18 +25,18 @@ namespace PBL3.BUS
         private Ban_BLL() { }
         public List<Ban> GetListBan()
         {
-            QuanCaPheEntities quanCaPheEntities = new QuanCaPheEntities();
+            QuanCaPhePBL3Entities quanCaPheEntities = new QuanCaPhePBL3Entities();
             return quanCaPheEntities.Bans.ToList();
         }
         public void AddBan(Ban b)
         {
-            QuanCaPheEntities quanCaPheEntities = new QuanCaPheEntities();
+            QuanCaPhePBL3Entities quanCaPheEntities = new QuanCaPhePBL3Entities();
             quanCaPheEntities.Bans.Add(b);
             quanCaPheEntities.SaveChanges();
         }
         public void EditBan(Ban b)
         {
-            QuanCaPheEntities quanCaPheEntities = new QuanCaPheEntities();
+            QuanCaPhePBL3Entities quanCaPheEntities = new QuanCaPhePBL3Entities();
             Ban banEdit = quanCaPheEntities.Bans.Find(b.MaBan);
             banEdit.TrangThai = b.TrangThai;
             banEdit.ViTri = b.ViTri;
@@ -44,7 +44,7 @@ namespace PBL3.BUS
         }
         public void DeleteBan(int id)
         {
-            QuanCaPheEntities quanCaPheEntities = new QuanCaPheEntities();
+            QuanCaPhePBL3Entities quanCaPheEntities = new QuanCaPhePBL3Entities();
             Ban banDelete = quanCaPheEntities.Bans.Find(id);
             quanCaPheEntities.Bans.Remove(banDelete);
             quanCaPheEntities.SaveChanges();

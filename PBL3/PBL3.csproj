@@ -65,32 +65,37 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BUS\Ban_BLL.cs" />
-    <Compile Include="BUS\CaTruc.cs" />
-    <Compile Include="BUS\Class1.cs" />
-    <Compile Include="BUS\Class1.cs" />
+    <Compile Include="BUS\CaTruc_BLL.cs" />
+    <Compile Include="BUS\ChiTietHoaDon_BLL.cs" />
+    <Compile Include="BUS\ChiTietNguyenLieu_BLL.cs" />
+    <Compile Include="BUS\ChiTietSanPham_BLL.cs" />
+    <Compile Include="BUS\ChucVu_BLL.cs" />
+    <Compile Include="BUS\DoanhThu_BLL.cs" />
+    <Compile Include="BUS\DonHang_BLL.cs" />
+    <Compile Include="BUS\HoaDon_BLL.cs" />
     <Compile Include="DTO\Ban.cs">
-      <DependentUpon>QuanCaPhe.tt</DependentUpon>
+      <DependentUpon>QuanCaPhePBL3.tt</DependentUpon>
     </Compile>
     <Compile Include="DTO\CaTruc.cs">
-      <DependentUpon>QuanCaPhe.tt</DependentUpon>
+      <DependentUpon>QuanCaPhePBL3.tt</DependentUpon>
     </Compile>
     <Compile Include="DTO\ChiTietHoaDon.cs">
-      <DependentUpon>QuanCaPhe.tt</DependentUpon>
+      <DependentUpon>QuanCaPhePBL3.tt</DependentUpon>
     </Compile>
     <Compile Include="DTO\ChiTietNguyenLieu.cs">
-      <DependentUpon>QuanCaPhe.tt</DependentUpon>
+      <DependentUpon>QuanCaPhePBL3.tt</DependentUpon>
     </Compile>
     <Compile Include="DTO\ChiTietSanPham.cs">
-      <DependentUpon>QuanCaPhe.tt</DependentUpon>
+      <DependentUpon>QuanCaPhePBL3.tt</DependentUpon>
     </Compile>
     <Compile Include="DTO\ChucVu.cs">
-      <DependentUpon>QuanCaPhe.tt</DependentUpon>
+      <DependentUpon>QuanCaPhePBL3.tt</DependentUpon>
     </Compile>
     <Compile Include="DTO\DoanhThu.cs">
-      <DependentUpon>QuanCaPhe.tt</DependentUpon>
+      <DependentUpon>QuanCaPhePBL3.tt</DependentUpon>
     </Compile>
     <Compile Include="DTO\DonHang.cs">
-      <DependentUpon>QuanCaPhe.tt</DependentUpon>
+      <DependentUpon>QuanCaPhePBL3.tt</DependentUpon>
     </Compile>
     <Compile Include="DTO\Form1.cs">
       <SubType>Form</SubType>
@@ -99,43 +104,43 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="DTO\HoaDon.cs">
-      <DependentUpon>QuanCaPhe.tt</DependentUpon>
+      <DependentUpon>QuanCaPhePBL3.tt</DependentUpon>
     </Compile>
     <Compile Include="DTO\KhachHang.cs">
-      <DependentUpon>QuanCaPhe.tt</DependentUpon>
+      <DependentUpon>QuanCaPhePBL3.tt</DependentUpon>
     </Compile>
     <Compile Include="DTO\KhuyenMai.cs">
-      <DependentUpon>QuanCaPhe.tt</DependentUpon>
+      <DependentUpon>QuanCaPhePBL3.tt</DependentUpon>
     </Compile>
     <Compile Include="DTO\LoaiKhachHang.cs">
-      <DependentUpon>QuanCaPhe.tt</DependentUpon>
+      <DependentUpon>QuanCaPhePBL3.tt</DependentUpon>
     </Compile>
     <Compile Include="DTO\NguyenLieu.cs">
-      <DependentUpon>QuanCaPhe.tt</DependentUpon>
+      <DependentUpon>QuanCaPhePBL3.tt</DependentUpon>
     </Compile>
     <Compile Include="DTO\NhanVien.cs">
-      <DependentUpon>QuanCaPhe.tt</DependentUpon>
+      <DependentUpon>QuanCaPhePBL3.tt</DependentUpon>
     </Compile>
-    <Compile Include="DTO\QuanCaPhe.Context.cs">
+    <Compile Include="DTO\QuanCaPhePBL3.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>QuanCaPhe.Context.tt</DependentUpon>
+      <DependentUpon>QuanCaPhePBL3.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="DTO\QuanCaPhe.cs">
+    <Compile Include="DTO\QuanCaPhePBL3.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>QuanCaPhe.tt</DependentUpon>
+      <DependentUpon>QuanCaPhePBL3.tt</DependentUpon>
     </Compile>
-    <Compile Include="DTO\QuanCaPhe.Designer.cs">
+    <Compile Include="DTO\QuanCaPhePBL3.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>QuanCaPhe.edmx</DependentUpon>
+      <DependentUpon>QuanCaPhePBL3.edmx</DependentUpon>
     </Compile>
     <Compile Include="DTO\SanPham.cs">
-      <DependentUpon>QuanCaPhe.tt</DependentUpon>
+      <DependentUpon>QuanCaPhePBL3.tt</DependentUpon>
     </Compile>
     <Compile Include="DTO\TaiKhoan.cs">
-      <DependentUpon>QuanCaPhe.tt</DependentUpon>
+      <DependentUpon>QuanCaPhePBL3.tt</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -449,12 +454,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EntityDeploy Include="DTO\QuanCaPhe.edmx">
+    <EntityDeploy Include="DTO\QuanCaPhePBL3.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>QuanCaPhe.Designer.cs</LastGenOutput>
+      <LastGenOutput>QuanCaPhePBL3.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="DTO\QuanCaPhe.edmx.diagram">
-      <DependentUpon>QuanCaPhe.edmx</DependentUpon>
+    <None Include="DTO\QuanCaPhePBL3.edmx.diagram">
+      <DependentUpon>QuanCaPhePBL3.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -572,15 +577,15 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DTO\QuanCaPhe.Context.tt">
+    <Content Include="DTO\QuanCaPhePBL3.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>QuanCaPhe.edmx</DependentUpon>
-      <LastGenOutput>QuanCaPhe.Context.cs</LastGenOutput>
+      <DependentUpon>QuanCaPhePBL3.edmx</DependentUpon>
+      <LastGenOutput>QuanCaPhePBL3.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="DTO\QuanCaPhe.tt">
+    <Content Include="DTO\QuanCaPhePBL3.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>QuanCaPhe.edmx</DependentUpon>
-      <LastGenOutput>QuanCaPhe.cs</LastGenOutput>
+      <DependentUpon>QuanCaPhePBL3.edmx</DependentUpon>
+      <LastGenOutput>QuanCaPhePBL3.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
