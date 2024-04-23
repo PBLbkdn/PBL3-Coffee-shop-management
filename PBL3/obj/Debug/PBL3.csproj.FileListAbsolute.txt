@@ -39,6 +39,25 @@ D:\DEV\HK4\PBL3_Coffee_shop_management\PBL3\obj\Debug\PBL3.GUI.SuaMon.resources
 D:\DEV\HK4\PBL3_Coffee_shop_management\PBL3\obj\Debug\PBL3.GUI.ThemMaKM.resources
 D:\DEV\HK4\PBL3_Coffee_shop_management\PBL3\obj\Debug\PBL3.GUI.ThemMon.resources
 D:\DEV\HK4\PBL3_Coffee_shop_management\PBL3\obj\Debug\PBL3.GUI.ThemNhanVienVaoCa.resources
+<<<<<<< HEAD
+D:\DEV\HK4\PBL3_Coffee_shop_management\PBL3\obj\Debug\PBL3.GUI.Admin.KhachHang.resources
+D:\DEV\HK4\PBL3_Coffee_shop_management\PBL3\obj\Debug\PBL3.GUI.Admin.NguyenLieu.resources
+D:\DEV\HK4\PBL3_Coffee_shop_management\PBL3\obj\Debug\PBL3.GUI.Admin.NhanVien.resources
+D:\DEV\HK4\PBL3_Coffee_shop_management\PBL3\obj\Debug\PBL3.GUI.Admin.SuaTaiKhoan.resources
+D:\DEV\HK4\PBL3_Coffee_shop_management\PBL3\obj\Debug\PBL3.GUI.Admin.TaiKhoan.resources
+D:\DEV\HK4\PBL3_Coffee_shop_management\PBL3\obj\Debug\PBL3.GUI.Admin.ThemNguyenLieu.resources
+D:\DEV\HK4\PBL3_Coffee_shop_management\PBL3\obj\Debug\PBL3.GUI.Admin.SuaNhanVien.resources
+D:\DEV\HK4\PBL3_Coffee_shop_management\PBL3\obj\Debug\PBL3.GUI.Admin.SuaNguyenLieu.resources
+D:\DEV\HK4\PBL3_Coffee_shop_management\PBL3\obj\Debug\PBL3.GUI.Admin.ThemNhanVien.resources
+D:\DEV\HK4\PBL3_Coffee_shop_management\PBL3\obj\Debug\PBL3.GUI.Admin.ThemTaiKhoan.resources
+D:\DEV\HK4\PBL3_Coffee_shop_management\PBL3\obj\Debug\PBL3.GUI.Admin.ThongKe.resources
+D:\DEV\HK4\PBL3_Coffee_shop_management\PBL3\obj\Debug\PBL3.GUI.Admin.ThongKeCa.resources
+D:\DEV\HK4\PBL3_Coffee_shop_management\PBL3\obj\Debug\PBL3.GUI.Admin.ThongKeNgay.resources
+D:\DEV\HK4\PBL3_Coffee_shop_management\PBL3\obj\Debug\PBL3.GUI.Employee.ChonBan.resources
+D:\DEV\HK4\PBL3_Coffee_shop_management\PBL3\obj\Debug\PBL3.GUI.Employee.DatMon.resources
+D:\DEV\HK4\PBL3_Coffee_shop_management\PBL3\obj\Debug\PBL3.GUI.Employee.ManHinhChinh_NV.resources
+D:\DEV\HK4\PBL3_Coffee_shop_management\PBL3\obj\Debug\PBL3.GUI.Employee.Thanh.resources
+=======
 D:\sem4\pbl3\PBL3\obj\Debug\PBL3.DTO.Form1.resources
 D:\sem4\pbl3\PBL3\obj\Debug\PBL3.GUI.CaLamViec.resources
 D:\sem4\pbl3\PBL3\obj\Debug\PBL3.GUI.Khuyến_mãi.resources
@@ -52,3 +71,4 @@ D:\sem4\pbl3\PBL3\obj\Debug\PBL3.GUI.ThemMon.resources
 D:\sem4\pbl3\PBL3\obj\Debug\PBL3.GUI.ThemNhanVienVaoCa.resources
 D:\sem4\pbl3\PBL3\obj\Debug\PBL3.GUI.ThucDon.resources
 D:\sem4\pbl3\PBL3\bin\Debug\Guna.UI2.dll
+>>>>>>> 70b0ccdd29d7d819c1002b6bc9b23d284d76617f

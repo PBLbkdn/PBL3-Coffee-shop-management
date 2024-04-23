@@ -155,6 +155,12 @@
     <Compile Include="GUI\Admin\DangNhap.Designer.cs">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Admin\KhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin\KhachHang.Designer.cs">
+      <DependentUpon>KhachHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Admin\KhuyenMai.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,6 +172,12 @@
     </Compile>
     <Compile Include="GUI\Admin\ManHinhChinh.Designer.cs">
       <DependentUpon>ManHinhChinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin\NguyenLieu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin\NguyenLieu.Designer.cs">
+      <DependentUpon>NguyenLieu.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Admin\NhanVien.cs">
       <SubType>Form</SubType>
@@ -191,6 +203,30 @@
     <Compile Include="GUI\Admin\SuaMon.Designer.cs">
       <DependentUpon>SuaMon.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Admin\SuaTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin\SuaTaiKhoan.Designer.cs">
+      <DependentUpon>SuaTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin\TaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin\TaiKhoan.Designer.cs">
+      <DependentUpon>TaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin\ThemNguyenLieu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin\ThemNguyenLieu.Designer.cs">
+      <DependentUpon>ThemNguyenLieu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin\SuaNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin\SuaNhanVien.Designer.cs">
+      <DependentUpon>SuaNhanVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Admin\ThemMaKM.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -203,17 +239,95 @@
     <Compile Include="GUI\Admin\ThemMon.Designer.cs">
       <DependentUpon>ThemMon.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Admin\SuaNguyenLieu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin\SuaNguyenLieu.Designer.cs">
+      <DependentUpon>SuaNguyenLieu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin\ThemNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin\ThemNhanVien.Designer.cs">
+      <DependentUpon>ThemNhanVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Admin\ThemNhanVienVaoCa.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\Admin\ThemNhanVienVaoCa.Designer.cs">
       <DependentUpon>ThemNhanVienVaoCa.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Admin\ThemTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin\ThemTaiKhoan.Designer.cs">
+      <DependentUpon>ThemTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin\ThongKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin\ThongKe.Designer.cs">
+      <DependentUpon>ThongKe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin\ThongKeCa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin\ThongKeCa.Designer.cs">
+      <DependentUpon>ThongKeCa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin\ThongKeNgay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin\ThongKeNgay.Designer.cs">
+      <DependentUpon>ThongKeNgay.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Admin\ThucDon.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\Admin\ThucDon.Designer.cs">
       <DependentUpon>ThucDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Employee\ChonBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Employee\ChonBan.Designer.cs">
+      <DependentUpon>ChonBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Employee\DatMon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Employee\DatMon.Designer.cs">
+      <DependentUpon>DatMon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Employee\ManHinhChinh_NV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Employee\ManHinhChinh_NV.Designer.cs">
+      <DependentUpon>ManHinhChinh_NV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Employee\ThanhToan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Employee\ThanhToan.Designer.cs">
+      <DependentUpon>ThanhToan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HoaDon.cs">
+      <DependentUpon>QuanCaPhe.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KhachHang.cs">
+      <DependentUpon>QuanCaPhe.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KhuyenMai.cs">
+      <DependentUpon>QuanCaPhe.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LoaiKhachHang.cs">
+      <DependentUpon>QuanCaPhe.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NguyenLieu.cs">
+      <DependentUpon>QuanCaPhe.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NhanVien.cs">
+      <DependentUpon>QuanCaPhe.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -226,11 +340,17 @@
     <EmbeddedResource Include="GUI\Admin\DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Admin\KhachHang.resx">
+      <DependentUpon>KhachHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Admin\KhuyenMai.resx">
       <DependentUpon>KhuyenMai.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Admin\ManHinhChinh.resx">
       <DependentUpon>ManHinhChinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Admin\NguyenLieu.resx">
+      <DependentUpon>NguyenLieu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Admin\NhanVien.resx">
       <DependentUpon>NhanVien.cs</DependentUpon>
@@ -244,17 +364,80 @@
     <EmbeddedResource Include="GUI\Admin\SuaMon.resx">
       <DependentUpon>SuaMon.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Admin\SuaTaiKhoan.resx">
+      <DependentUpon>SuaTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Admin\TaiKhoan.resx">
+      <DependentUpon>TaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Admin\ThemNguyenLieu.resx">
+      <DependentUpon>ThemNguyenLieu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Admin\SuaNhanVien.resx">
+      <DependentUpon>SuaNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Admin\ThemMaKM.resx">
       <DependentUpon>ThemMaKM.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Admin\ThemMon.resx">
       <DependentUpon>ThemMon.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Admin\SuaNguyenLieu.resx">
+      <DependentUpon>SuaNguyenLieu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Admin\ThemNhanVien.resx">
+      <DependentUpon>ThemNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Admin\ThemNhanVienVaoCa.resx">
       <DependentUpon>ThemNhanVienVaoCa.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Admin\ThemTaiKhoan.resx">
+      <DependentUpon>ThemTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Admin\ThongKe.resx">
+      <DependentUpon>ThongKe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Admin\ThongKeCa.resx">
+      <DependentUpon>ThongKeCa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Admin\ThongKeNgay.resx">
+      <DependentUpon>ThongKeNgay.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Admin\ThucDon.resx">
       <DependentUpon>ThucDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="QuanCaPhe.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanCaPhe.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QuanCaPhe.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanCaPhe.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QuanCaPhe.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanCaPhe.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="SanPham.cs">
+      <DependentUpon>QuanCaPhe.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TaiKhoan.cs">
+      <DependentUpon>QuanCaPhe.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="GUI\Employee\ChonBan.resx">
+      <DependentUpon>ChonBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Employee\DatMon.resx">
+      <DependentUpon>DatMon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Employee\ManHinhChinh_NV.resx">
+      <DependentUpon>ManHinhChinh_NV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Employee\ThanhToan.resx">
+      <DependentUpon>ThanhToan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -372,6 +555,16 @@
     <None Include="Resources\icon hủy.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\carbon_gift.png" />
+    <None Include="Resources\Group %282%29.png" />
+    <None Include="Resources\Group %281%29.png" />
+    <None Include="Resources\Icon order.png" />
+    <None Include="Resources\Vector %283%29.png" />
+    <None Include="Resources\icons8-account-50 11.png" />
+    <None Include="Resources\icons8-account-50 1.png" />
+    <None Include="Resources\icons8-kawaii-bread-48 1.png" />
+    <None Include="Resources\image 51.png" />
+    <None Include="Resources\image 5.png" />
     <None Include="Resources\icons8-human-30 1.png" />
     <None Include="Resources\ba chấm.png" />
   </ItemGroup>

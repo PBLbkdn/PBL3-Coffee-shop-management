@@ -17,11 +17,6 @@ namespace PBL3.GUI
             InitializeComponent();
         }
 
-        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         /*private void ManHinhChinh_Load(object sender, EventArgs e)
         {
             pictureBox1.Image = Picture.Properties.Resources.chinh;

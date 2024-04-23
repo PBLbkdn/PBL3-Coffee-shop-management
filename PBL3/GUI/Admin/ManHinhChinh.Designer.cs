@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
@@ -39,7 +40,6 @@
             this.guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button8 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button9 = new Guna.UI2.WinForms.Guna2Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -55,7 +55,18 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1386, 88);
             this.guna2Panel1.TabIndex = 0;
-            this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
+           
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::PBL3.Properties.Resources.icons8_manage_50_1;
+            this.pictureBox1.InitialImage = global::PBL3.Properties.Resources.icons8_manage_50_1;
+            this.pictureBox1.Location = new System.Drawing.Point(42, 22);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(50, 48);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -87,6 +98,7 @@
             this.guna2Button1.Size = new System.Drawing.Size(200, 60);
             this.guna2Button1.TabIndex = 1;
             this.guna2Button1.Text = "Quản lý thực đơn";
+          
             // 
             // guna2Button2
             // 
@@ -106,6 +118,7 @@
             this.guna2Button2.Size = new System.Drawing.Size(200, 60);
             this.guna2Button2.TabIndex = 2;
             this.guna2Button2.Text = "Quản lý nhân viên";
+            
             // 
             // guna2Button3
             // 
@@ -125,6 +138,7 @@
             this.guna2Button3.Size = new System.Drawing.Size(200, 60);
             this.guna2Button3.TabIndex = 3;
             this.guna2Button3.Text = "Quản lý nguyên liệu";
+           
             // 
             // guna2Button4
             // 
@@ -144,6 +158,7 @@
             this.guna2Button4.Size = new System.Drawing.Size(200, 60);
             this.guna2Button4.TabIndex = 4;
             this.guna2Button4.Text = "Quản lý tài khoản";
+           
             // 
             // guna2Button5
             // 
@@ -163,6 +178,7 @@
             this.guna2Button5.Size = new System.Drawing.Size(200, 60);
             this.guna2Button5.TabIndex = 5;
             this.guna2Button5.Text = "Quản lý khuyến mãi";
+           
             // 
             // guna2Button6
             // 
@@ -182,6 +198,7 @@
             this.guna2Button6.Size = new System.Drawing.Size(200, 60);
             this.guna2Button6.TabIndex = 6;
             this.guna2Button6.Text = "Quản lý ca làm việc";
+            
             // 
             // guna2Button7
             // 
@@ -201,6 +218,7 @@
             this.guna2Button7.Size = new System.Drawing.Size(200, 60);
             this.guna2Button7.TabIndex = 7;
             this.guna2Button7.Text = "Quản lý khách hàng";
+            
             // 
             // guna2Button8
             // 
@@ -220,6 +238,7 @@
             this.guna2Button8.Size = new System.Drawing.Size(200, 60);
             this.guna2Button8.TabIndex = 8;
             this.guna2Button8.Text = "Thống kê";
+            
             // 
             // guna2Button9
             // 
@@ -239,17 +258,7 @@
             this.guna2Button9.Size = new System.Drawing.Size(200, 60);
             this.guna2Button9.TabIndex = 9;
             this.guna2Button9.Text = "Quản lý hóa đơn";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::PBL3.Properties.Resources.icons8_manage_50_1;
-            this.pictureBox1.InitialImage = global::PBL3.Properties.Resources.icons8_manage_50_1;
-            this.pictureBox1.Location = new System.Drawing.Point(42, 22);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(50, 48);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
+            
             // 
             // pictureBox10
             // 
@@ -260,6 +269,7 @@
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox10.TabIndex = 16;
             this.pictureBox10.TabStop = false;
+            
             // 
             // ManHinhChinh
             // 
@@ -281,6 +291,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ManHinhChinh";
             this.Text = "Form1";
+           
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
