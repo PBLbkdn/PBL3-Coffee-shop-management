@@ -29,23 +29,23 @@
         private void InitializeComponent()
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button8 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button9 = new Guna.UI2.WinForms.Guna2Button();
+            this.TDButton = new Guna.UI2.WinForms.Guna2Button();
+            this.NVButton = new Guna.UI2.WinForms.Guna2Button();
+            this.NLButton = new Guna.UI2.WinForms.Guna2Button();
+            this.TKButton = new Guna.UI2.WinForms.Guna2Button();
+            this.KMButton = new Guna.UI2.WinForms.Guna2Button();
+            this.CLVButton = new Guna.UI2.WinForms.Guna2Button();
+            this.KHButton = new Guna.UI2.WinForms.Guna2Button();
+            this.TKeButton = new Guna.UI2.WinForms.Guna2Button();
+            this.HDButton = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.guna2Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -55,19 +55,28 @@
             this.guna2Panel1.Controls.Add(this.pictureBox1);
             this.guna2Panel1.Controls.Add(this.label1);
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1848, 108);
+            this.guna2Panel1.Size = new System.Drawing.Size(1386, 88);
             this.guna2Panel1.TabIndex = 0;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::PBL3.Properties.Resources.nút_tắt;
+            this.pictureBox6.Location = new System.Drawing.Point(1328, 27);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 12;
+            this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::PBL3.Properties.Resources.icons8_manage_50_1;
             this.pictureBox1.InitialImage = global::PBL3.Properties.Resources.icons8_manage_50_1;
-            this.pictureBox1.Location = new System.Drawing.Point(56, 27);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Location = new System.Drawing.Point(42, 22);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(67, 59);
+            this.pictureBox1.Size = new System.Drawing.Size(50, 48);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
@@ -78,246 +87,222 @@
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(132)))), ((int)(((byte)(132)))));
             this.label1.Font = new System.Drawing.Font("Cambria", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(128, 33);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(96, 27);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(158, 47);
+            this.label1.Size = new System.Drawing.Size(127, 37);
             this.label1.TabIndex = 0;
             this.label1.Text = "Quản lý";
             // 
-            // guna2Button1
+            // TDButton
             // 
-            this.guna2Button1.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2Button1.BorderRadius = 10;
-            this.guna2Button1.BorderThickness = 2;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2Button1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button1.Location = new System.Drawing.Point(365, 610);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(267, 74);
-            this.guna2Button1.TabIndex = 1;
-            this.guna2Button1.Text = "Quản lý thực đơn";
+            this.TDButton.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.TDButton.BorderRadius = 10;
+            this.TDButton.BorderThickness = 2;
+            this.TDButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.TDButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.TDButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.TDButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.TDButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.TDButton.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.TDButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TDButton.ForeColor = System.Drawing.Color.Black;
+            this.TDButton.Location = new System.Drawing.Point(274, 496);
+            this.TDButton.Name = "TDButton";
+            this.TDButton.Size = new System.Drawing.Size(200, 60);
+            this.TDButton.TabIndex = 1;
+            this.TDButton.Text = "Quản lý thực đơn";
             // 
-            // guna2Button2
+            // NVButton
             // 
-            this.guna2Button2.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2Button2.BorderRadius = 10;
-            this.guna2Button2.BorderThickness = 2;
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2Button2.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button2.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button2.Location = new System.Drawing.Point(757, 318);
-            this.guna2Button2.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(267, 74);
-            this.guna2Button2.TabIndex = 2;
-            this.guna2Button2.Text = "Quản lý nhân viên";
-            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
+            this.NVButton.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.NVButton.BorderRadius = 10;
+            this.NVButton.BorderThickness = 2;
+            this.NVButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.NVButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.NVButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.NVButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.NVButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.NVButton.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.NVButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NVButton.ForeColor = System.Drawing.Color.Black;
+            this.NVButton.Location = new System.Drawing.Point(568, 258);
+            this.NVButton.Name = "NVButton";
+            this.NVButton.Size = new System.Drawing.Size(200, 60);
+            this.NVButton.TabIndex = 2;
+            this.NVButton.Text = "Quản lý nhân viên";
+            this.NVButton.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
-            // guna2Button3
+            // NLButton
             // 
-            this.guna2Button3.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2Button3.BorderRadius = 10;
-            this.guna2Button3.BorderThickness = 2;
-            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2Button3.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.guna2Button3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button3.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button3.Location = new System.Drawing.Point(757, 610);
-            this.guna2Button3.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.Size = new System.Drawing.Size(267, 74);
-            this.guna2Button3.TabIndex = 3;
-            this.guna2Button3.Text = "Quản lý nguyên liệu";
+            this.NLButton.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.NLButton.BorderRadius = 10;
+            this.NLButton.BorderThickness = 2;
+            this.NLButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.NLButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.NLButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.NLButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.NLButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.NLButton.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.NLButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NLButton.ForeColor = System.Drawing.Color.Black;
+            this.NLButton.Location = new System.Drawing.Point(568, 496);
+            this.NLButton.Name = "NLButton";
+            this.NLButton.Size = new System.Drawing.Size(200, 60);
+            this.NLButton.TabIndex = 3;
+            this.NLButton.Text = "Quản lý nguyên liệu";
             // 
-            // guna2Button4
+            // TKButton
             // 
-            this.guna2Button4.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2Button4.BorderRadius = 10;
-            this.guna2Button4.BorderThickness = 2;
-            this.guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2Button4.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.guna2Button4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button4.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button4.Location = new System.Drawing.Point(365, 318);
-            this.guna2Button4.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2Button4.Name = "guna2Button4";
-            this.guna2Button4.Size = new System.Drawing.Size(267, 74);
-            this.guna2Button4.TabIndex = 4;
-            this.guna2Button4.Text = "Quản lý tài khoản";
-            this.guna2Button4.Click += new System.EventHandler(this.guna2Button4_Click);
+            this.TKButton.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.TKButton.BorderRadius = 10;
+            this.TKButton.BorderThickness = 2;
+            this.TKButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.TKButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.TKButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.TKButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.TKButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.TKButton.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.TKButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TKButton.ForeColor = System.Drawing.Color.Black;
+            this.TKButton.Location = new System.Drawing.Point(274, 258);
+            this.TKButton.Name = "TKButton";
+            this.TKButton.Size = new System.Drawing.Size(200, 60);
+            this.TKButton.TabIndex = 4;
+            this.TKButton.Text = "Quản lý tài khoản";
+            this.TKButton.Click += new System.EventHandler(this.guna2Button4_Click);
             // 
-            // guna2Button5
+            // KMButton
             // 
-            this.guna2Button5.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2Button5.BorderRadius = 10;
-            this.guna2Button5.BorderThickness = 2;
-            this.guna2Button5.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2Button5.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.guna2Button5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button5.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button5.Location = new System.Drawing.Point(757, 465);
-            this.guna2Button5.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2Button5.Name = "guna2Button5";
-            this.guna2Button5.Size = new System.Drawing.Size(267, 74);
-            this.guna2Button5.TabIndex = 5;
-            this.guna2Button5.Text = "Quản lý khuyến mãi";
+            this.KMButton.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.KMButton.BorderRadius = 10;
+            this.KMButton.BorderThickness = 2;
+            this.KMButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.KMButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.KMButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.KMButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.KMButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.KMButton.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.KMButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.KMButton.ForeColor = System.Drawing.Color.Black;
+            this.KMButton.Location = new System.Drawing.Point(568, 378);
+            this.KMButton.Name = "KMButton";
+            this.KMButton.Size = new System.Drawing.Size(200, 60);
+            this.KMButton.TabIndex = 5;
+            this.KMButton.Text = "Quản lý khuyến mãi";
             // 
-            // guna2Button6
+            // CLVButton
             // 
-            this.guna2Button6.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2Button6.BorderRadius = 10;
-            this.guna2Button6.BorderThickness = 2;
-            this.guna2Button6.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button6.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button6.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button6.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2Button6.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.guna2Button6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button6.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button6.Location = new System.Drawing.Point(1145, 318);
-            this.guna2Button6.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2Button6.Name = "guna2Button6";
-            this.guna2Button6.Size = new System.Drawing.Size(267, 74);
-            this.guna2Button6.TabIndex = 6;
-            this.guna2Button6.Text = "Quản lý ca làm việc";
+            this.CLVButton.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.CLVButton.BorderRadius = 10;
+            this.CLVButton.BorderThickness = 2;
+            this.CLVButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.CLVButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.CLVButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.CLVButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.CLVButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.CLVButton.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.CLVButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CLVButton.ForeColor = System.Drawing.Color.Black;
+            this.CLVButton.Location = new System.Drawing.Point(859, 258);
+            this.CLVButton.Name = "CLVButton";
+            this.CLVButton.Size = new System.Drawing.Size(200, 60);
+            this.CLVButton.TabIndex = 6;
+            this.CLVButton.Text = "Quản lý ca làm việc";
             // 
-            // guna2Button7
+            // KHButton
             // 
-            this.guna2Button7.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2Button7.BorderRadius = 10;
-            this.guna2Button7.BorderThickness = 2;
-            this.guna2Button7.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button7.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button7.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button7.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button7.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2Button7.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.guna2Button7.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button7.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button7.Location = new System.Drawing.Point(365, 465);
-            this.guna2Button7.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2Button7.Name = "guna2Button7";
-            this.guna2Button7.Size = new System.Drawing.Size(267, 74);
-            this.guna2Button7.TabIndex = 7;
-            this.guna2Button7.Text = "Quản lý khách hàng";
+            this.KHButton.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.KHButton.BorderRadius = 10;
+            this.KHButton.BorderThickness = 2;
+            this.KHButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.KHButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.KHButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.KHButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.KHButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.KHButton.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.KHButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.KHButton.ForeColor = System.Drawing.Color.Black;
+            this.KHButton.Location = new System.Drawing.Point(274, 378);
+            this.KHButton.Name = "KHButton";
+            this.KHButton.Size = new System.Drawing.Size(200, 60);
+            this.KHButton.TabIndex = 7;
+            this.KHButton.Text = "Quản lý khách hàng";
             // 
-            // guna2Button8
+            // TKeButton
             // 
-            this.guna2Button8.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2Button8.BorderRadius = 10;
-            this.guna2Button8.BorderThickness = 2;
-            this.guna2Button8.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button8.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button8.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button8.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button8.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2Button8.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.guna2Button8.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button8.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button8.Location = new System.Drawing.Point(1145, 610);
-            this.guna2Button8.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2Button8.Name = "guna2Button8";
-            this.guna2Button8.Size = new System.Drawing.Size(267, 74);
-            this.guna2Button8.TabIndex = 8;
-            this.guna2Button8.Text = "Thống kê";
+            this.TKeButton.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.TKeButton.BorderRadius = 10;
+            this.TKeButton.BorderThickness = 2;
+            this.TKeButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.TKeButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.TKeButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.TKeButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.TKeButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.TKeButton.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.TKeButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TKeButton.ForeColor = System.Drawing.Color.Black;
+            this.TKeButton.Location = new System.Drawing.Point(859, 496);
+            this.TKeButton.Name = "TKeButton";
+            this.TKeButton.Size = new System.Drawing.Size(200, 60);
+            this.TKeButton.TabIndex = 8;
+            this.TKeButton.Text = "Thống kê";
             // 
-            // guna2Button9
+            // HDButton
             // 
-            this.guna2Button9.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2Button9.BorderRadius = 10;
-            this.guna2Button9.BorderThickness = 2;
-            this.guna2Button9.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button9.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button9.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button9.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button9.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2Button9.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.guna2Button9.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button9.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button9.Location = new System.Drawing.Point(1145, 465);
-            this.guna2Button9.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2Button9.Name = "guna2Button9";
-            this.guna2Button9.Size = new System.Drawing.Size(267, 74);
-            this.guna2Button9.TabIndex = 9;
-            this.guna2Button9.Text = "Quản lý hóa đơn";
+            this.HDButton.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.HDButton.BorderRadius = 10;
+            this.HDButton.BorderThickness = 2;
+            this.HDButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.HDButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.HDButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.HDButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.HDButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.HDButton.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.HDButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HDButton.ForeColor = System.Drawing.Color.Black;
+            this.HDButton.Location = new System.Drawing.Point(859, 378);
+            this.HDButton.Name = "HDButton";
+            this.HDButton.Size = new System.Drawing.Size(200, 60);
+            this.HDButton.TabIndex = 9;
+            this.HDButton.Text = "Quản lý hóa đơn";
             // 
             // pictureBox10
             // 
             this.pictureBox10.Image = global::PBL3.Properties.Resources.Vector__2_;
-            this.pictureBox10.Location = new System.Drawing.Point(1724, 158);
-            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox10.Location = new System.Drawing.Point(1293, 128);
             this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(53, 49);
+            this.pictureBox10.Size = new System.Drawing.Size(40, 40);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox10.TabIndex = 16;
             this.pictureBox10.TabStop = false;
             // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::PBL3.Properties.Resources.nút_tắt;
-            this.pictureBox6.Location = new System.Drawing.Point(1770, 33);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(40, 37);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 12;
-            this.pictureBox6.TabStop = false;
-            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
-            // 
             // ManHinhChinh
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(181)))), ((int)(((byte)(181)))));
-            this.ClientSize = new System.Drawing.Size(1848, 970);
+            this.ClientSize = new System.Drawing.Size(1386, 788);
             this.Controls.Add(this.pictureBox10);
-            this.Controls.Add(this.guna2Button9);
-            this.Controls.Add(this.guna2Button8);
-            this.Controls.Add(this.guna2Button7);
-            this.Controls.Add(this.guna2Button6);
-            this.Controls.Add(this.guna2Button5);
-            this.Controls.Add(this.guna2Button4);
-            this.Controls.Add(this.guna2Button3);
-            this.Controls.Add(this.guna2Button2);
-            this.Controls.Add(this.guna2Button1);
+            this.Controls.Add(this.HDButton);
+            this.Controls.Add(this.TKeButton);
+            this.Controls.Add(this.KHButton);
+            this.Controls.Add(this.CLVButton);
+            this.Controls.Add(this.KMButton);
+            this.Controls.Add(this.TKButton);
+            this.Controls.Add(this.NLButton);
+            this.Controls.Add(this.NVButton);
+            this.Controls.Add(this.TDButton);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ManHinhChinh";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -326,15 +311,15 @@
 
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
-        private Guna.UI2.WinForms.Guna2Button guna2Button4;
-        private Guna.UI2.WinForms.Guna2Button guna2Button5;
-        private Guna.UI2.WinForms.Guna2Button guna2Button6;
-        private Guna.UI2.WinForms.Guna2Button guna2Button7;
-        private Guna.UI2.WinForms.Guna2Button guna2Button8;
-        private Guna.UI2.WinForms.Guna2Button guna2Button9;
+        private Guna.UI2.WinForms.Guna2Button TDButton;
+        private Guna.UI2.WinForms.Guna2Button NVButton;
+        private Guna.UI2.WinForms.Guna2Button NLButton;
+        private Guna.UI2.WinForms.Guna2Button TKButton;
+        private Guna.UI2.WinForms.Guna2Button KMButton;
+        private Guna.UI2.WinForms.Guna2Button CLVButton;
+        private Guna.UI2.WinForms.Guna2Button KHButton;
+        private Guna.UI2.WinForms.Guna2Button TKeButton;
+        private Guna.UI2.WinForms.Guna2Button HDButton;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.PictureBox pictureBox6;

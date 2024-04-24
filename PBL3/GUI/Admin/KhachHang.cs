@@ -16,5 +16,10 @@ namespace PBL3.GUI.Admin
         {
             InitializeComponent();
         }
+
+        private void exitKH_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

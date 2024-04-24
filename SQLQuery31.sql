@@ -7,8 +7,6 @@ MatKhau nvarchar(255)
 );
 insert into TaiKhoan values (1, N'admin1', N'admin1');
 insert into TaiKhoan values (2, N'thungan1', N'thungan1');
-insert into TaiKhoan (MaNV) values (3);
-insert into TaiKhoan (MaNV) values (4);
 
 
 Create table ChucVu (
@@ -54,7 +52,8 @@ create table ChiTietCaTruc(
 MaCT int, 
 NgayTruc Date,
 MaNV int,
-Primary key (MaCT, NgayTruc, MaNV)
+Primary key (MaCT, NgayTruc, MaNV),
+constraint FK_ChiTietCaTruc_CaTruc Foreign Key (MaCT, NgayTruc) REFERENCES CaTruc(MaCT,NgayTruc)
 );
 
 insert into ChiTietCaTruc values (1, '2022-04-21', 1);
@@ -232,7 +231,7 @@ ALTER TABLE ChiTietCaTruc
 ADD CONSTRAINT FK_ChiTietCaTruc_CaTruc
 FOREIGN KEY (MaCT, NgayTruc)
 REFERENCES CaTruc(MaCT, NgayTruc);
-
+drop table ChiTietCaTruc;
 ALTER TABLE ChiTietCaTruc
 ADD CONSTRAINT FK_ChiTietCaTruc_NhanVien
 FOREIGN KEY (MaNV)

@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.exitKH = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
+            this.findTextbox = new Guna.UI2.WinForms.Guna2TextBox();
+            this.findButton = new Guna.UI2.WinForms.Guna2Button();
+            this.KHData = new System.Windows.Forms.DataGridView();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -48,12 +48,12 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.guna2Panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.exitKH)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.KHData)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -67,7 +67,7 @@
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(132)))), ((int)(((byte)(132)))));
-            this.guna2Panel1.Controls.Add(this.pictureBox6);
+            this.guna2Panel1.Controls.Add(this.exitKH);
             this.guna2Panel1.Controls.Add(this.pictureBox4);
             this.guna2Panel1.Controls.Add(this.pictureBox5);
             this.guna2Panel1.Controls.Add(this.panel2);
@@ -76,37 +76,16 @@
             this.guna2Panel1.Size = new System.Drawing.Size(1386, 54);
             this.guna2Panel1.TabIndex = 9;
             // 
-            // panel2
+            // exitKH
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(231)))), ((int)(((byte)(231)))));
-            this.panel2.Controls.Add(this.pictureBox11);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(60, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(180, 54);
-            this.panel2.TabIndex = 0;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(231)))), ((int)(((byte)(231)))));
-            this.label2.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(49, 15);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(126, 25);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Khách hàng";
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::PBL3.Properties.Resources.nút_tắt;
-            this.pictureBox6.Location = new System.Drawing.Point(1344, 12);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 3;
-            this.pictureBox6.TabStop = false;
+            this.exitKH.Image = global::PBL3.Properties.Resources.nút_tắt;
+            this.exitKH.Location = new System.Drawing.Point(1344, 12);
+            this.exitKH.Name = "exitKH";
+            this.exitKH.Size = new System.Drawing.Size(30, 30);
+            this.exitKH.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.exitKH.TabIndex = 3;
+            this.exitKH.TabStop = false;
+            this.exitKH.Click += new System.EventHandler(this.exitKH_Click);
             // 
             // pictureBox4
             // 
@@ -128,6 +107,16 @@
             this.pictureBox5.TabIndex = 2;
             this.pictureBox5.TabStop = false;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(231)))), ((int)(((byte)(231)))));
+            this.panel2.Controls.Add(this.pictureBox11);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Location = new System.Drawing.Point(60, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(180, 54);
+            this.panel2.TabIndex = 0;
+            // 
             // pictureBox11
             // 
             this.pictureBox11.Image = global::PBL3.Properties.Resources.icons8_human_30_1;
@@ -138,53 +127,65 @@
             this.pictureBox11.TabIndex = 3;
             this.pictureBox11.TabStop = false;
             // 
-            // guna2TextBox1
+            // label2
             // 
-            this.guna2TextBox1.BorderRadius = 5;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.IconLeft = global::PBL3.Properties.Resources.entypo_magnifying_glass;
-            this.guna2TextBox1.Location = new System.Drawing.Point(253, 100);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderText = "";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(200, 36);
-            this.guna2TextBox1.TabIndex = 24;
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(231)))), ((int)(((byte)(231)))));
+            this.label2.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(49, 15);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(126, 25);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Khách hàng";
             // 
-            // guna2Button4
+            // findTextbox
             // 
-            this.guna2Button4.BorderColor = System.Drawing.Color.DimGray;
-            this.guna2Button4.BorderRadius = 7;
-            this.guna2Button4.BorderThickness = 1;
-            this.guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2Button4.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button4.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button4.Location = new System.Drawing.Point(60, 96);
-            this.guna2Button4.Name = "guna2Button4";
-            this.guna2Button4.Size = new System.Drawing.Size(170, 40);
-            this.guna2Button4.TabIndex = 23;
-            this.guna2Button4.Text = "Tìm kiếm";
+            this.findTextbox.BorderRadius = 5;
+            this.findTextbox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.findTextbox.DefaultText = "";
+            this.findTextbox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.findTextbox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.findTextbox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.findTextbox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.findTextbox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.findTextbox.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.findTextbox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.findTextbox.IconLeft = global::PBL3.Properties.Resources.entypo_magnifying_glass;
+            this.findTextbox.Location = new System.Drawing.Point(253, 100);
+            this.findTextbox.Name = "findTextbox";
+            this.findTextbox.PasswordChar = '\0';
+            this.findTextbox.PlaceholderText = "";
+            this.findTextbox.SelectedText = "";
+            this.findTextbox.Size = new System.Drawing.Size(200, 36);
+            this.findTextbox.TabIndex = 24;
             // 
-            // dataGridView1
+            // findButton
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(60, 178);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1266, 529);
-            this.dataGridView1.TabIndex = 25;
+            this.findButton.BorderColor = System.Drawing.Color.DimGray;
+            this.findButton.BorderRadius = 7;
+            this.findButton.BorderThickness = 1;
+            this.findButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.findButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.findButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.findButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.findButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.findButton.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.findButton.ForeColor = System.Drawing.Color.Black;
+            this.findButton.Location = new System.Drawing.Point(60, 96);
+            this.findButton.Name = "findButton";
+            this.findButton.Size = new System.Drawing.Size(170, 40);
+            this.findButton.TabIndex = 23;
+            this.findButton.Text = "Tìm kiếm";
+            // 
+            // KHData
+            // 
+            this.KHData.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
+            this.KHData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.KHData.Location = new System.Drawing.Point(60, 178);
+            this.KHData.Name = "KHData";
+            this.KHData.Size = new System.Drawing.Size(1266, 529);
+            this.KHData.TabIndex = 25;
             // 
             // pictureBox10
             // 
@@ -290,21 +291,21 @@
             this.ClientSize = new System.Drawing.Size(1386, 788);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.pictureBox10);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.guna2TextBox1);
-            this.Controls.Add(this.guna2Button4);
+            this.Controls.Add(this.KHData);
+            this.Controls.Add(this.findTextbox);
+            this.Controls.Add(this.findButton);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "KhachHang";
             this.Text = "KhachHang";
             this.guna2Panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.exitKH)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.KHData)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
@@ -321,15 +322,15 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox exitKH;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button4;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private Guna.UI2.WinForms.Guna2TextBox findTextbox;
+        private Guna.UI2.WinForms.Guna2Button findButton;
+        private System.Windows.Forms.DataGridView KHData;
         private System.Windows.Forms.PictureBox pictureBox10;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private System.Windows.Forms.Label label1;

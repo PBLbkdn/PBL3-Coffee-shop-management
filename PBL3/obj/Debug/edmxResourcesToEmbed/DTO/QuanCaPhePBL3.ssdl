@@ -168,8 +168,8 @@
       <PropertyRef Name="MaNV" />
     </Key>
     <Property Name="MaNV" Type="int" Nullable="false" />
-    <Property Name="TenDangNhap" Type="varchar" MaxLength="255" />
-    <Property Name="MatKhau" Type="varchar" MaxLength="255" />
+    <Property Name="TenDangNhap" Type="nvarchar" MaxLength="255" />
+    <Property Name="MatKhau" Type="nvarchar" MaxLength="255" />
   </EntityType>
   <Association Name="FK_ChiTietCaTruc_CaTruc">
     <End Role="CaTruc" Type="Self.CaTruc" Multiplicity="1" />

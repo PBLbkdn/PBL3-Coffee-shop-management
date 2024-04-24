@@ -173,8 +173,8 @@
             <PropertyRef Name="MaNV" />
           </Key>
           <Property Name="MaNV" Type="int" Nullable="false" />
-          <Property Name="TenDangNhap" Type="varchar" MaxLength="255" />
-          <Property Name="MatKhau" Type="varchar" MaxLength="255" />
+          <Property Name="TenDangNhap" Type="nvarchar" MaxLength="255" />
+          <Property Name="MatKhau" Type="nvarchar" MaxLength="255" />
         </EntityType>
         <Association Name="FK_ChiTietCaTruc_CaTruc">
           <End Role="CaTruc" Type="Self.CaTruc" Multiplicity="1" />
@@ -656,8 +656,8 @@
             <PropertyRef Name="MaNV" />
           </Key>
           <Property Name="MaNV" Type="Int32" Nullable="false" />
-          <Property Name="TenDangNhap" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
-          <Property Name="MatKhau" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="TenDangNhap" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="MatKhau" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="NhanVien" Relationship="Self.FK_TaiKhoan_NhanVien" FromRole="TaiKhoan" ToRole="NhanVien" />
         </EntityType>
         <Association Name="FK_ChiTietHoaDon_Ban">
