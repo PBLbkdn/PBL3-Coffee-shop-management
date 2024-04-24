@@ -16,5 +16,13 @@ namespace PBL3.GUI.Employee
         {
             InitializeComponent();
         }
+
+        private void guna2Button4_Click(object sender, EventArgs e)
+        {
+            DatMon f = new DatMon();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
     }
 }

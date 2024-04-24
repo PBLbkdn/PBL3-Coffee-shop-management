@@ -16,5 +16,18 @@ namespace PBL3.GUI.Employee
         {
             InitializeComponent();
         }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            ChonBan f = new ChonBan();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PBL3.BUS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +20,7 @@ namespace PBL3.GUI.Admin
 
         private void NhanVien_Load(object sender, EventArgs e)
         {
-
+            dataGridView1.DataSource =  NhanVien_BLL.Instance.GetListNhanVien(0, null);
         }
 
         private void guna2Panel1_Paint(object sender, PaintEventArgs e)
@@ -65,6 +66,19 @@ namespace PBL3.GUI.Admin
         private void guna2Panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+           /* DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn đăng xuất?", "Xác nhận đăng xuất", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                this.Dispose();
+                DangNhap f = new DangNhap();
+                this.Hide();
+                f.ShowDialog();
+                this.Show();
+            }*/
         }
     }
 }

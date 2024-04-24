@@ -19,7 +19,7 @@ namespace PBL3
             /* Application.Run(new GUI.DangNhap());*/
             /*Application.Run(new GUI.ManHinhChinh());*/
             /*Application.Run(new GUI.CaLamViec());*/
-            Application.Run(new DTO.Form1());
+            Application.Run(new GUI.DangNhap());
         }
     }
 }

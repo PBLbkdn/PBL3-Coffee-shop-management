@@ -26,5 +26,10 @@ namespace PBL3.GUI.Employee
         {
 
         }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

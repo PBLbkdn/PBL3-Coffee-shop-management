@@ -65,6 +65,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BUS\Ban_BLL.cs" />
+    <Compile Include="BUS\KhachHang_BLL.cs" />
+    <Compile Include="BUS\KhuyenMai_BLL.cs" />
+    <Compile Include="BUS\LoaiKhachHang_BLL.cs" />
+    <Compile Include="BUS\NguyenLieu_BLL.cs" />
+    <Compile Include="BUS\NhanVien_BLL.cs" />
+    <Compile Include="BUS\SanPham_BLL.cs" />
+    <Compile Include="BUS\TaiKhoan_BLL.cs" />
     <Compile Include="BUS\CaTruc_BLL.cs" />
     <Compile Include="BUS\ChiTietHoaDon_BLL.cs" />
     <Compile Include="BUS\ChiTietNguyenLieu_BLL.cs" />
