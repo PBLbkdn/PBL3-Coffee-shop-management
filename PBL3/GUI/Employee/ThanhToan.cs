@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PBL3.GUI.Employee
 {
-    public partial class Thanh : Form
+    public partial class ThanhToan : Form
     {
-        public Thanh()
+        public ThanhToan()
         {
             InitializeComponent();
         }
