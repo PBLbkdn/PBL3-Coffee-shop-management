@@ -15,7 +15,7 @@ namespace PBL3.GUI.Employee
         public Ban()
         {
             InitializeComponent();
-            guna2DataGridView1.DataSource = BUS.Ban_BLL.Instance.GetListBan();
+            banData.DataSource = BUS.Ban_BLL.Instance.GetListBan();
         }
     }
 }

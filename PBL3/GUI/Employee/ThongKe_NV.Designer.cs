@@ -30,8 +30,8 @@
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
@@ -45,11 +45,11 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.guna2DateTimePicker2 = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.caTK = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.ngayTK = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.TKeData = new System.Windows.Forms.DataGridView();
             this.guna2Panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -64,7 +64,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TKeData)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -89,6 +89,16 @@
             this.panel2.Size = new System.Drawing.Size(180, 54);
             this.panel2.TabIndex = 3;
             // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::PBL3.Properties.Resources.Vector__3_;
+            this.pictureBox6.Location = new System.Drawing.Point(18, 13);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(27, 29);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 2;
+            this.pictureBox6.TabStop = false;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -100,16 +110,6 @@
             this.label2.Size = new System.Drawing.Size(102, 25);
             this.label2.TabIndex = 0;
             this.label2.Text = "Thống kê";
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::PBL3.Properties.Resources.Vector__3_;
-            this.pictureBox6.Location = new System.Drawing.Point(18, 13);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(27, 29);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 2;
-            this.pictureBox6.TabStop = false;
             // 
             // pictureBox4
             // 
@@ -241,8 +241,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(132)))), ((int)(((byte)(132)))));
-            this.panel1.Controls.Add(this.guna2ComboBox1);
-            this.panel1.Controls.Add(this.guna2DateTimePicker2);
+            this.panel1.Controls.Add(this.caTK);
+            this.panel1.Controls.Add(this.ngayTK);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.guna2TextBox1);
             this.panel1.Cursor = System.Windows.Forms.Cursors.Default;
@@ -251,36 +251,36 @@
             this.panel1.Size = new System.Drawing.Size(1266, 59);
             this.panel1.TabIndex = 28;
             // 
-            // guna2ComboBox1
+            // caTK
             // 
-            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox1.BorderRadius = 5;
-            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox1.ItemHeight = 30;
-            this.guna2ComboBox1.Location = new System.Drawing.Point(64, 12);
-            this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.Size = new System.Drawing.Size(167, 36);
-            this.guna2ComboBox1.TabIndex = 17;
+            this.caTK.BackColor = System.Drawing.Color.Transparent;
+            this.caTK.BorderRadius = 5;
+            this.caTK.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.caTK.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.caTK.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.caTK.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.caTK.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.caTK.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.caTK.ItemHeight = 30;
+            this.caTK.Location = new System.Drawing.Point(64, 12);
+            this.caTK.Name = "caTK";
+            this.caTK.Size = new System.Drawing.Size(167, 36);
+            this.caTK.TabIndex = 17;
             // 
-            // guna2DateTimePicker2
+            // ngayTK
             // 
-            this.guna2DateTimePicker2.BorderRadius = 5;
-            this.guna2DateTimePicker2.Checked = true;
-            this.guna2DateTimePicker2.FillColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.guna2DateTimePicker2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.guna2DateTimePicker2.Location = new System.Drawing.Point(694, 12);
-            this.guna2DateTimePicker2.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.guna2DateTimePicker2.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.guna2DateTimePicker2.Name = "guna2DateTimePicker2";
-            this.guna2DateTimePicker2.Size = new System.Drawing.Size(200, 36);
-            this.guna2DateTimePicker2.TabIndex = 18;
-            this.guna2DateTimePicker2.Value = new System.DateTime(2024, 4, 21, 11, 54, 4, 708);
+            this.ngayTK.BorderRadius = 5;
+            this.ngayTK.Checked = true;
+            this.ngayTK.FillColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ngayTK.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ngayTK.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.ngayTK.Location = new System.Drawing.Point(694, 12);
+            this.ngayTK.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.ngayTK.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.ngayTK.Name = "ngayTK";
+            this.ngayTK.Size = new System.Drawing.Size(200, 36);
+            this.ngayTK.TabIndex = 18;
+            this.ngayTK.Value = new System.DateTime(2024, 4, 21, 11, 54, 4, 708);
             // 
             // label4
             // 
@@ -314,15 +314,15 @@
             this.guna2TextBox1.Size = new System.Drawing.Size(200, 36);
             this.guna2TextBox1.TabIndex = 3;
             // 
-            // dataGridView1
+            // TKeData
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.dataGridView1.Location = new System.Drawing.Point(63, 225);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1266, 457);
-            this.dataGridView1.TabIndex = 27;
+            this.TKeData.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
+            this.TKeData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TKeData.Cursor = System.Windows.Forms.Cursors.Default;
+            this.TKeData.Location = new System.Drawing.Point(63, 225);
+            this.TKeData.Name = "TKeData";
+            this.TKeData.Size = new System.Drawing.Size(1266, 457);
+            this.TKeData.TabIndex = 27;
             // 
             // ThongKe_NV
             // 
@@ -332,7 +332,7 @@
             this.ClientSize = new System.Drawing.Size(1386, 788);
             this.Controls.Add(this.guna2Panel3);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.TKeData);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -356,7 +356,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TKeData)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -380,10 +380,10 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel1;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
-        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker2;
+        private Guna.UI2.WinForms.Guna2ComboBox caTK;
+        private Guna.UI2.WinForms.Guna2DateTimePicker ngayTK;
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView TKeData;
     }
 }

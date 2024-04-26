@@ -20,7 +20,7 @@ namespace PBL3.GUI.Admin
 
         private void NhanVien_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource =  NhanVien_BLL.Instance.GetListNhanVien(0, null);
+            NVData.DataSource =  NhanVien_BLL.Instance.GetListNhanVien(0, null);
         }
 
         private void guna2Panel1_Paint(object sender, PaintEventArgs e)
