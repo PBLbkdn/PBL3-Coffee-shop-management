@@ -155,7 +155,7 @@
             this.findTextbox.Location = new System.Drawing.Point(253, 100);
             this.findTextbox.Name = "findTextbox";
             this.findTextbox.PasswordChar = '\0';
-            this.findTextbox.PlaceholderText = "";
+            this.findTextbox.PlaceholderText = "Nhập số điện thoại";
             this.findTextbox.SelectedText = "";
             this.findTextbox.Size = new System.Drawing.Size(200, 36);
             this.findTextbox.TabIndex = 24;

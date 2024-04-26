@@ -38,6 +38,7 @@
             this.timKiemHoaDon = new Guna.UI2.WinForms.Guna2TextBox();
             this.hoaDonData = new System.Windows.Forms.DataGridView();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.findButton = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hoaDonExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -127,7 +128,7 @@
             // 
             this.timKiemHoaDon.BorderRadius = 10;
             this.timKiemHoaDon.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.timKiemHoaDon.DefaultText = "Nhập Mã/Tên hóa đơn cần tìm";
+            this.timKiemHoaDon.DefaultText = "";
             this.timKiemHoaDon.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.timKiemHoaDon.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.timKiemHoaDon.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -139,7 +140,7 @@
             this.timKiemHoaDon.Location = new System.Drawing.Point(60, 94);
             this.timKiemHoaDon.Name = "timKiemHoaDon";
             this.timKiemHoaDon.PasswordChar = '\0';
-            this.timKiemHoaDon.PlaceholderText = "";
+            this.timKiemHoaDon.PlaceholderText = "Nhập Mã/Tên hóa đơn cần tìm";
             this.timKiemHoaDon.SelectedText = "";
             this.timKiemHoaDon.Size = new System.Drawing.Size(421, 36);
             this.timKiemHoaDon.TabIndex = 34;
@@ -163,12 +164,32 @@
             this.pictureBox10.TabIndex = 38;
             this.pictureBox10.TabStop = false;
             // 
+            // findButton
+            // 
+            this.findButton.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.findButton.BorderRadius = 10;
+            this.findButton.BorderThickness = 2;
+            this.findButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.findButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.findButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.findButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.findButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.findButton.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.findButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.findButton.ForeColor = System.Drawing.Color.Black;
+            this.findButton.Location = new System.Drawing.Point(516, 86);
+            this.findButton.Name = "findButton";
+            this.findButton.Size = new System.Drawing.Size(161, 48);
+            this.findButton.TabIndex = 45;
+            this.findButton.Text = "Tìm kiếm";
+            // 
             // HoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(181)))), ((int)(((byte)(181)))));
             this.ClientSize = new System.Drawing.Size(1386, 788);
+            this.Controls.Add(this.findButton);
             this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.hoaDonData);
             this.Controls.Add(this.timKiemHoaDon);
@@ -202,5 +223,6 @@
         private Guna.UI2.WinForms.Guna2TextBox timKiemHoaDon;
         private System.Windows.Forms.DataGridView hoaDonData;
         private System.Windows.Forms.PictureBox pictureBox10;
+        private Guna.UI2.WinForms.Guna2Button findButton;
     }
 }

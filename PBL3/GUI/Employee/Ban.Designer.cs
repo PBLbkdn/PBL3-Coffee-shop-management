@@ -42,6 +42,7 @@
             this.datBan = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.timKiemBan = new Guna.UI2.WinForms.Guna2TextBox();
+            this.findButton = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.banExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -190,7 +191,7 @@
             this.datBan.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.datBan.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.datBan.ForeColor = System.Drawing.Color.Black;
-            this.datBan.Location = new System.Drawing.Point(539, 93);
+            this.datBan.Location = new System.Drawing.Point(729, 93);
             this.datBan.Name = "datBan";
             this.datBan.Size = new System.Drawing.Size(161, 48);
             this.datBan.TabIndex = 43;
@@ -210,7 +211,7 @@
             // 
             this.timKiemBan.BorderRadius = 10;
             this.timKiemBan.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.timKiemBan.DefaultText = "Nhập Mã/Tên bàn cần tìm";
+            this.timKiemBan.DefaultText = "";
             this.timKiemBan.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.timKiemBan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.timKiemBan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -222,10 +223,29 @@
             this.timKiemBan.Location = new System.Drawing.Point(60, 99);
             this.timKiemBan.Name = "timKiemBan";
             this.timKiemBan.PasswordChar = '\0';
-            this.timKiemBan.PlaceholderText = "";
+            this.timKiemBan.PlaceholderText = "Nhập Mã/Tên bàn cần tìm";
             this.timKiemBan.SelectedText = "";
             this.timKiemBan.Size = new System.Drawing.Size(421, 36);
             this.timKiemBan.TabIndex = 30;
+            // 
+            // findButton
+            // 
+            this.findButton.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.findButton.BorderRadius = 10;
+            this.findButton.BorderThickness = 2;
+            this.findButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.findButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.findButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.findButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.findButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.findButton.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.findButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.findButton.ForeColor = System.Drawing.Color.Black;
+            this.findButton.Location = new System.Drawing.Point(534, 93);
+            this.findButton.Name = "findButton";
+            this.findButton.Size = new System.Drawing.Size(161, 48);
+            this.findButton.TabIndex = 44;
+            this.findButton.Text = "Tìm kiếm";
             // 
             // Ban
             // 
@@ -233,6 +253,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(181)))), ((int)(((byte)(181)))));
             this.ClientSize = new System.Drawing.Size(1386, 788);
+            this.Controls.Add(this.findButton);
             this.Controls.Add(this.datBan);
             this.Controls.Add(this.banData);
             this.Controls.Add(this.pictureBox10);
@@ -267,5 +288,6 @@
         private System.Windows.Forms.PictureBox pictureBox10;
         private Guna.UI2.WinForms.Guna2DataGridView banData;
         private Guna.UI2.WinForms.Guna2Button datBan;
+        private Guna.UI2.WinForms.Guna2Button findButton;
     }
 }

@@ -81,7 +81,7 @@
             // 
             this.timKiemKH.BorderRadius = 5;
             this.timKiemKH.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.timKiemKH.DefaultText = "Nhập tên khách hàng";
+            this.timKiemKH.DefaultText = "";
             this.timKiemKH.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.timKiemKH.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.timKiemKH.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -93,7 +93,7 @@
             this.timKiemKH.Location = new System.Drawing.Point(840, 100);
             this.timKiemKH.Name = "timKiemKH";
             this.timKiemKH.PasswordChar = '\0';
-            this.timKiemKH.PlaceholderText = "";
+            this.timKiemKH.PlaceholderText = "Nhập tên khách hàng";
             this.timKiemKH.SelectedText = "";
             this.timKiemKH.Size = new System.Drawing.Size(200, 36);
             this.timKiemKH.TabIndex = 50;

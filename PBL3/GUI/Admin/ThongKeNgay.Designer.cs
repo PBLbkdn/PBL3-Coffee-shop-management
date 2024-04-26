@@ -193,6 +193,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(132)))), ((int)(((byte)(132)))));
             this.panel1.Controls.Add(this.guna2ComboBox1);
             this.panel1.Controls.Add(this.ngayTK);
             this.panel1.Controls.Add(this.label4);

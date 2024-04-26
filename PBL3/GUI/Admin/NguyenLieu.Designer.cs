@@ -313,7 +313,7 @@
             // 
             this.nameNLTb.BorderRadius = 5;
             this.nameNLTb.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.nameNLTb.DefaultText = "Tên nguyên liệu";
+            this.nameNLTb.DefaultText = "";
             this.nameNLTb.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.nameNLTb.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.nameNLTb.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -325,7 +325,7 @@
             this.nameNLTb.Location = new System.Drawing.Point(840, 102);
             this.nameNLTb.Name = "nameNLTb";
             this.nameNLTb.PasswordChar = '\0';
-            this.nameNLTb.PlaceholderText = "";
+            this.nameNLTb.PlaceholderText = "Tên nguyên liệu";
             this.nameNLTb.SelectedText = "";
             this.nameNLTb.Size = new System.Drawing.Size(200, 36);
             this.nameNLTb.TabIndex = 28;

@@ -323,7 +323,7 @@
             // 
             this.nameNVTb.BorderRadius = 5;
             this.nameNVTb.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.nameNVTb.DefaultText = "Tên nhân viên";
+            this.nameNVTb.DefaultText = "";
             this.nameNVTb.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.nameNVTb.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.nameNVTb.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -336,7 +336,7 @@
             this.nameNVTb.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.nameNVTb.Name = "nameNVTb";
             this.nameNVTb.PasswordChar = '\0';
-            this.nameNVTb.PlaceholderText = "";
+            this.nameNVTb.PlaceholderText = "Tên nhân viên";
             this.nameNVTb.SelectedText = "";
             this.nameNVTb.Size = new System.Drawing.Size(200, 36);
             this.nameNVTb.TabIndex = 22;

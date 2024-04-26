@@ -38,6 +38,7 @@
             this.donHangData = new System.Windows.Forms.DataGridView();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.timKiemDonHang = new Guna.UI2.WinForms.Guna2TextBox();
+            this.findButton = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.donHangExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -146,7 +147,7 @@
             // 
             this.timKiemDonHang.BorderRadius = 10;
             this.timKiemDonHang.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.timKiemDonHang.DefaultText = "Nhập Mã/Tên đơn hàng cần tìm";
+            this.timKiemDonHang.DefaultText = "";
             this.timKiemDonHang.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.timKiemDonHang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.timKiemDonHang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -158,10 +159,29 @@
             this.timKiemDonHang.Location = new System.Drawing.Point(60, 96);
             this.timKiemDonHang.Name = "timKiemDonHang";
             this.timKiemDonHang.PasswordChar = '\0';
-            this.timKiemDonHang.PlaceholderText = "";
+            this.timKiemDonHang.PlaceholderText = "Nhập Mã/Tên đơn hàng cần tìm";
             this.timKiemDonHang.SelectedText = "";
             this.timKiemDonHang.Size = new System.Drawing.Size(421, 36);
             this.timKiemDonHang.TabIndex = 33;
+            // 
+            // findButton
+            // 
+            this.findButton.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.findButton.BorderRadius = 10;
+            this.findButton.BorderThickness = 2;
+            this.findButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.findButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.findButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.findButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.findButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.findButton.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.findButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.findButton.ForeColor = System.Drawing.Color.Black;
+            this.findButton.Location = new System.Drawing.Point(515, 88);
+            this.findButton.Name = "findButton";
+            this.findButton.Size = new System.Drawing.Size(161, 48);
+            this.findButton.TabIndex = 45;
+            this.findButton.Text = "Tìm kiếm";
             // 
             // DonHang
             // 
@@ -169,6 +189,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(181)))), ((int)(((byte)(181)))));
             this.ClientSize = new System.Drawing.Size(1386, 788);
+            this.Controls.Add(this.findButton);
             this.Controls.Add(this.donHangData);
             this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.timKiemDonHang);
@@ -201,5 +222,6 @@
         private Guna.UI2.WinForms.Guna2TextBox timKiemDonHang;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.DataGridView donHangData;
+        private Guna.UI2.WinForms.Guna2Button findButton;
     }
 }
