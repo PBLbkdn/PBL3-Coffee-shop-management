@@ -11,6 +11,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Runtime.Remoting.Contexts;
+using PBL3.BUS;
+using Guna.UI2.WinForms;
 
 namespace PBL3.GUI
 {
@@ -20,18 +22,40 @@ namespace PBL3.GUI
         {
             InitializeComponent();
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        public void GetThongTin(int s)
         {
-            /*QuanCaPhe db = new QuanCaPhe();
+            string masp = guna2TextBox6.Text;
+            string tensp = guna2TextBox1.Text;
+            string giasp = guna2TextBox4.Text;
+            string loai = "";
+            string nhom = guna2TextBox5.Text;
+            string donvi = guna2TextBox2.Text;
+            SanPham_BLL.Instance.LayThongTinSanPham(s, ref masp, ref tensp, ref giasp, ref loai, ref nhom, ref donvi);
+            guna2TextBox6.Text = masp;
+            guna2TextBox1 .Text = tensp;    
+            guna2TextBox4 .Text = giasp;
+            guna2TextBox5.Text = nhom;
+            guna2TextBox2.Text = donvi;
+            if (loai == "Đồ uống")
+                rBdrink.Checked = true;
+            else rBdrink.Checked = false;
+        }
+        private void saveSP_Click(object sender, EventArgs e)
+        {
+            string loai;
+            if (rBdrink.Checked)
+            {
+                loai = "Đồ uống";
+            }
+            else loai = "Món ăn";
+            SanPham_BLL.Instance.EditSanPham(guna2TextBox6.Text, guna2TextBox1.Text, guna2TextBox4.Text, loai, guna2TextBox5.Text,guna2TextBox2.Text );
+            MessageBox.Show("Cập nhật sản phẩm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Dispose();
+        }
 
-            //1 list nhân viên thêm vào ca trực
-            List<NhanVien> listNV = db.NhanViens.ToList();
-            //thêm vào ca trực mã 1, ngày 01/01/2021, đã có trong bảng CaTruc
-            CaTruc ct = db.CaTrucs.Where(p => p.MaCT == 1 && p.NgayTruc == new DateTime(2021, 1, 1)).FirstOrDefault();
-            ct.NhanViens = listNV;
-            db.SaveChanges();
-            dataGridView1.DataSource= ct.NhanViens.ToList();*/
+        private void cancel_Click(object sender, EventArgs e)
+        {
+            Dispose();
         }
     }
 }

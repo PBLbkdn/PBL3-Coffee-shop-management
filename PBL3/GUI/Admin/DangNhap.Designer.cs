@@ -219,7 +219,7 @@
             this.exitLogin.Name = "exitLogin";
             this.exitLogin.Size = new System.Drawing.Size(45, 43);
             this.exitLogin.TabIndex = 4;
-            this.exitLogin.Click += new System.EventHandler(this.guna2Button2_Click);
+            this.exitLogin.Click += new System.EventHandler(this.exitButton2_Click);
             // 
             // DangNhap
             // 

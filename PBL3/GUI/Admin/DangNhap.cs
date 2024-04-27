@@ -18,12 +18,7 @@ namespace PBL3.GUI
         {
             InitializeComponent();
         }
-
-        private void guna2Button2_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
+     
         private void DangNhap_Load(object sender, EventArgs e)
         {
             
@@ -60,6 +55,11 @@ namespace PBL3.GUI
                     break;
             }
             
+        }
+
+        private void exitButton2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

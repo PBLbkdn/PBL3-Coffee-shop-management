@@ -23,21 +23,22 @@ namespace PBL3.BUS
             private set { }
         }
         private KhachHang_BLL() { }
-        public List<KhachHang> GetListKhachHang(int ID, string name)
+        public List<Object> GetListKhachHang(int ID, string name)
         {
             QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
-            if (ID == 0)
+
+            if (name == null)
             {
-                if (name == null)
-                    return db.KhachHangs.ToList();
-                else return db.KhachHangs.Where(p => p.TenKH.Contains(name)).ToList();
+                var l1 = db.KhachHangs.Select(p => new { p.MaKH, p.MaLKH, p.TenKH, p.SDT, p.LoaiKhachHang.TenLKH });
+                return l1.ToList<Object>();
             }
+
             else
             {
-                var l = db.KhachHangs.Where(p => p.MaKH == ID && p.TenKH.Contains(name));
-                return l.ToList();
+                var l1 = db.KhachHangs.Where(p => p.TenKH.Contains(name)).Select(p => new { p.MaKH, p.MaLKH, p.TenKH, p.SDT, p.LoaiKhachHang.TenLKH });
+                return l1.ToList<Object>();
             }
-        }
+        } 
         public void AddKhachHang(string maso, string hoten, string sdt, string maloaikh)
         {
             KhachHang s = new KhachHang

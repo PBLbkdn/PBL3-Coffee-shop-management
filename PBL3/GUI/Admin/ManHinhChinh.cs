@@ -19,16 +19,18 @@ namespace PBL3.GUI
         {
             InitializeComponent();
         }
-
-        private void guna2Button4_Click(object sender, EventArgs e)
+         
+        private void guna2Button6_Click(object sender, EventArgs e)
         {
-            Admin.TaiKhoan f = new Admin.TaiKhoan();
-            this.Hide();
-            f.ShowDialog();
-            this.Show();
+
         }
 
-        private void guna2Button2_Click(object sender, EventArgs e)
+        private void dangxuat_Click(object sender, EventArgs e)
+        {
+            Dispose();
+        }
+
+        private void quanlynhanvien_Click(object sender, EventArgs e)
         {
             Admin.NhanVien f = new Admin.NhanVien();
             this.Hide();
@@ -36,15 +38,17 @@ namespace PBL3.GUI
             this.Show();
         }
 
-        private void pictureBox6_Click(object sender, EventArgs e)
+        private void quanlytaikhoan_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn đăng xuất?", "Xác nhận đăng xuất", MessageBoxButtons.YesNo, MessageBoxIcon.Question);          
-            if (result == DialogResult.Yes)
-            {
-                this.Dispose();
-            }
+            Admin.TaiKhoan f = new Admin.TaiKhoan();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
         }
 
+<<<<<<< HEAD
+        private void quanlyKH_Click(object sender, EventArgs e)
+=======
 
         private void TKeButton_Click(object sender, EventArgs e)
         {
@@ -61,8 +65,20 @@ namespace PBL3.GUI
         }
 
         /*private void ManHinhChinh_Load(object sender, EventArgs e)
+>>>>>>> ad2a925fee2710b2773f06a3c7b20b28a3fd18e4
         {
-            pictureBox1.Image = Picture.Properties.Resources.chinh;
-        }*/
+            Admin.KhachHang f = new Admin.KhachHang();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
+
+        private void quanlySP_Click(object sender, EventArgs e)
+        {
+            ThucDon f = new ThucDon();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
     }
 }

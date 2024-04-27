@@ -27,13 +27,20 @@ namespace PBL3.BUS
             private set { }
         }
         private TaiKhoan_BLL() { }
-        public List<TaiKhoan> GetListTaiKhoan(int ID, string name)
+        public List<Object> GetListTaiKhoan(int ID, string name)
         {
             QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
 
             if (name == null)
-                return db.TaiKhoans.ToList();
-            else return db.TaiKhoans.Where(p => p.TenDangNhap.Contains(name)).ToList();
+            {
+                var l1 = db.TaiKhoans.Select(p => new { p.MaNV, p.NhanVien.HoTenNV, p.TenDangNhap, p.MatKhau });
+                return l1.ToList<Object>();
+            }
+            else
+            {
+                var l2 = db.TaiKhoans.Where(p => p.NhanVien.HoTenNV.Contains(name)).Select(p => new { p.MaNV, p.NhanVien.HoTenNV, p.TenDangNhap, p.MatKhau });
+                return l2.ToList<Object>();
+            }
 
         }
         public void AddTaiKhoan(string manv, string tendangnhap, string mk )
@@ -63,7 +70,7 @@ namespace PBL3.BUS
             db.TaiKhoans.Remove(nvDelete);
             db.SaveChanges();
         }
-        public void LayThongTinTaiKhoan(int s, string manv, string tendangnhap, string mk)
+        public void LayThongTinTaiKhoan(int s, ref string manv, ref string tendangnhap, ref string mk)
         {
             manv = s.ToString();
             using (QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities())
@@ -127,19 +134,3 @@ namespace PBL3.BUS
         }
     }
 }
-/*int x = TaiKhoan_BLL.Instance.Login(username.Text, password.Text, rbManager.Checked, rbStaff.Checked);
-switch (x)
-{
-    case 1:
-        MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        break;
-    case 2:
-        MessageBox.Show("Vui lòng chọn chức vụ!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-        break;
-    case 3:
-        MessageBox.Show("Chức vụ không phù hợp!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-        break;
-    case 4:
-        MessageBox.Show("Tên đăng nhập hoặc mật khẩu không đúng.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        break;
-}*/

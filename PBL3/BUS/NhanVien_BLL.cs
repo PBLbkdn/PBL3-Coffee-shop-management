@@ -32,25 +32,30 @@ namespace PBL3.BUS
                 if (name == null)
                 {
                     //return db.NhanViens.ToList();
-                    var l1 = db.NhanViens.Select(p => new { p.MaNV, p.ChucVu.TenCV, p.HoTenNV, p.NgaySinh, p.Luong, p.GioiTinh });
+                    var l1 = db.NhanViens.Select(p => new {  p.MaNV, p.ChucVu.TenCV, p.HoTenNV, p.NgaySinh, p.Luong, GioiTinh = (p.GioiTinh == true) ? "Nam" : "Nữ"  });
                     //var l1 = from p in db.NhanViens select new { p.MaNV};
                     return l1.ToList<Object>();
                 }
                 else
                 {
+<<<<<<< HEAD
+                   var l2 = db.NhanViens.Where(p => p.HoTenNV.Contains(name))
+                        .Select (p => new { p.MaNV, p.ChucVu.TenCV, p.HoTenNV, p.NgaySinh, p.Luong, GioiTinh = (p.GioiTinh == true) ? "Nam" : "Nữ" });
+=======
                     var l2 = db.NhanViens.Where(p => p.HoTenNV.Contains(name))
                          .Select(p => new { p.MaNV, p.ChucVu.TenCV, p.HoTenNV, p.NgaySinh, p.Luong, p.GioiTinh });
+>>>>>>> ad2a925fee2710b2773f06a3c7b20b28a3fd18e4
                     return l2.ToList<Object>();
                 }
             }
             else
             {
                 var l = db.NhanViens.Where(p => p.MaCV == ID && p.HoTenNV.Contains(name))
-                    .Select(p => new { p.MaNV, p.ChucVu.TenCV, p.HoTenNV, p.NgaySinh, p.Luong, p.GioiTinh });
+                    .Select(p => new { p.MaNV, p.ChucVu.TenCV, p.HoTenNV, p.NgaySinh, p.Luong, GioiTinh = (p.GioiTinh == true) ? "Nam" : "Nữ" });
                 return l.ToList<Object>();
             }
         }
-        public void AddNhanVien(string manv, string hoten, DateTime ns, string sdt, string luong, string macv, Boolean gioitinh)
+        public void AddNhanVien(string manv, string hoten, DateTime ns, string sdt, string luong, string macv, string gioitinh)
         {
             NhanVien s = new NhanVien
             {
@@ -60,22 +65,27 @@ namespace PBL3.BUS
                 SDT = sdt,
                 Luong = Convert.ToInt32(luong),
                 MaCV = Convert.ToInt32(macv),
-                GioiTinh = gioitinh
+                GioiTinh = (gioitinh == "Nam") ? true : false
             };
             QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
             db.NhanViens.Add(s);
             db.SaveChanges();
         }
-        public void EditNhanVien(string maso, string hoten, DateTime ns, string sdt, string luong, string macv, Boolean gioitinh)
+        public void EditNhanVien(string manv, string hoten, DateTime ns, string sdt, string luong, string macv, string gioitinh)
         {
+<<<<<<< HEAD
+            QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();            
+            NhanVien sedit = db.NhanViens.Find(Convert.ToInt32(manv));
+=======
             QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
             NhanVien sedit = db.NhanViens.Find(Convert.ToInt32(maso));
+>>>>>>> ad2a925fee2710b2773f06a3c7b20b28a3fd18e4
             sedit.HoTenNV = hoten;
             sedit.NgaySinh = ns;
             sedit.SDT = sdt;
             sedit.Luong = Convert.ToInt32(luong);
             sedit.MaCV = Convert.ToInt32(macv);
-            sedit.GioiTinh = gioitinh;
+            sedit.GioiTinh = (gioitinh == "Nam") ? true : false;
             db.SaveChanges();
         }
         public void DeleteNV(int id)
@@ -85,7 +95,7 @@ namespace PBL3.BUS
             db.NhanViens.Remove(nvDelete);
             db.SaveChanges();
         }
-        public void LayThongTinNV(int s, string manv, string hoten, DateTime ns, string sdt, string luong, string macv, Boolean gioitinh)
+        public void LayThongTinNV(int s, ref string manv, ref string hoten, ref DateTime ns, ref string sdt, ref string luong, ref string macv, ref string gioitinh)
         {
             manv = s.ToString();
             using (QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities())
@@ -99,8 +109,8 @@ namespace PBL3.BUS
                         luong = i.Luong.ToString();
                         macv = i.MaCV.ToString();
                         ns = Convert.ToDateTime(i.NgaySinh);
-                        if (Convert.ToBoolean(i.GioiTinh)) gioitinh = true;
-                        else gioitinh = false;
+                        if (Convert.ToBoolean(i.GioiTinh)) gioitinh = "Nam";
+                        else gioitinh = "Nữ";
                         break;
                     }
                 }

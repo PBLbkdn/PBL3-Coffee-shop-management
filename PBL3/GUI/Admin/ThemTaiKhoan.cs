@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using PBL3.BUS;
+using PBL3.DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +18,19 @@ namespace PBL3.GUI.Admin
         public ThemTaiKhoan()
         {
             InitializeComponent();
+        }
+
+        private void saveTK_Click(object sender, EventArgs e)
+        {
+            QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
+            TaiKhoan_BLL.Instance.AddTaiKhoan(maNVTextbox.Text, tenTKTextbox.Text, mkTextbox.Text);
+            MessageBox.Show("Thêm nhân viên thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Dispose();
+        }
+
+        private void huyTK_Click(object sender, EventArgs e)
+        {
+            Dispose();
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace PBL3.GUI.Employee
 {
-    partial class ThanhToan
+    partial class Thanh
     {
         /// <summary>
         /// Required designer variable.
@@ -678,7 +678,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "ThanhToan";
+            this.Name = "Thanh";
             this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.thanhToanExit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
