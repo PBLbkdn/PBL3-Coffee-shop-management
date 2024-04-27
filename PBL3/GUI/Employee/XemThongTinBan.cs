@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PBL3.BUS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,9 +18,26 @@ namespace PBL3.GUI.Employee
             InitializeComponent();
         }
 
-        private void label4_Click(object sender, EventArgs e)
+        public XemThongTinBan(int maBan)
         {
+            InitializeComponent();
+            Load();
+        }
 
+        private void Load()
+        {
+            MaBan.Visible = false;
+            TrangThai.Visible = false;
+            ViTri.Visible = false;
+            NhanVienPhucVu.Visible = false;
+            MaBan.Text = Ban_BLL.Instance.GetBan(1).MaBan.ToString();
+            TrangThai.Text = Ban_BLL.Instance.GetBan(1).TrangThai;
+            ViTri.Text = Ban_BLL.Instance.GetBan(1).ViTri;
+            //nhanvien
+            MaBan.Visible = true;
+            TrangThai.Visible = true;
+            ViTri.Visible = true;
+            NhanVienPhucVu.Visible = true;
         }
     }
 }

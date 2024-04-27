@@ -41,7 +41,7 @@
             this.banData = new Guna.UI2.WinForms.Guna2DataGridView();
             this.datBan = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.timKiemBan = new Guna.UI2.WinForms.Guna2TextBox();
+            this.search = new Guna.UI2.WinForms.Guna2TextBox();
             this.findButton = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.banExit)).BeginInit();
@@ -61,8 +61,9 @@
             this.guna2Panel1.Controls.Add(this.pictureBox5);
             this.guna2Panel1.Controls.Add(this.panel2);
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1386, 54);
+            this.guna2Panel1.Size = new System.Drawing.Size(2079, 83);
             this.guna2Panel1.TabIndex = 31;
             // 
             // banExit
@@ -79,6 +80,7 @@
             // 
             this.pictureBox4.Image = global::PBL3.Properties.Resources.nút_tắt;
             this.pictureBox4.Location = new System.Drawing.Point(60, 178);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(30, 30);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -89,6 +91,7 @@
             // 
             this.pictureBox5.Image = global::PBL3.Properties.Resources.bàn_Tầng_1__004;
             this.pictureBox5.Location = new System.Drawing.Point(15, 14);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(33, 28);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -100,15 +103,17 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(231)))), ((int)(((byte)(231)))));
             this.panel2.Controls.Add(this.pictureBox11);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(60, 0);
+            this.panel2.Location = new System.Drawing.Point(90, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(180, 54);
+            this.panel2.Size = new System.Drawing.Size(270, 83);
             this.panel2.TabIndex = 0;
             // 
             // pictureBox11
             // 
             this.pictureBox11.Image = global::PBL3.Properties.Resources.bàn_1;
             this.pictureBox11.Location = new System.Drawing.Point(51, 13);
+            this.pictureBox11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(27, 29);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -121,9 +126,10 @@
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(231)))), ((int)(((byte)(231)))));
             this.label2.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(84, 14);
+            this.label2.Location = new System.Drawing.Point(126, 22);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 25);
+            this.label2.Size = new System.Drawing.Size(74, 37);
             this.label2.TabIndex = 0;
             this.label2.Text = "Bàn";
             // 
@@ -154,6 +160,7 @@
             this.banData.Location = new System.Drawing.Point(60, 178);
             this.banData.Name = "banData";
             this.banData.RowHeadersVisible = false;
+            this.banData.RowHeadersWidth = 62;
             this.banData.Size = new System.Drawing.Size(1267, 539);
             this.banData.TabIndex = 35;
             this.banData.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -196,37 +203,40 @@
             this.datBan.Size = new System.Drawing.Size(161, 48);
             this.datBan.TabIndex = 43;
             this.datBan.Text = "Đặt bàn trước";
+            this.datBan.Click += new System.EventHandler(this.datBan_Click);
             // 
             // pictureBox10
             // 
             this.pictureBox10.Image = global::PBL3.Properties.Resources.Vector__2_;
-            this.pictureBox10.Location = new System.Drawing.Point(1287, 93);
+            this.pictureBox10.Location = new System.Drawing.Point(1930, 143);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox10.Size = new System.Drawing.Size(60, 62);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox10.TabIndex = 34;
             this.pictureBox10.TabStop = false;
             // 
-            // timKiemBan
+            // search
             // 
-            this.timKiemBan.BorderRadius = 10;
-            this.timKiemBan.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.timKiemBan.DefaultText = "";
-            this.timKiemBan.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.timKiemBan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.timKiemBan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.timKiemBan.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.timKiemBan.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.timKiemBan.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.timKiemBan.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.timKiemBan.IconLeft = global::PBL3.Properties.Resources.entypo_magnifying_glass;
-            this.timKiemBan.Location = new System.Drawing.Point(60, 99);
-            this.timKiemBan.Name = "timKiemBan";
-            this.timKiemBan.PasswordChar = '\0';
-            this.timKiemBan.PlaceholderText = "Nhập Mã/Tên bàn cần tìm";
-            this.timKiemBan.SelectedText = "";
-            this.timKiemBan.Size = new System.Drawing.Size(421, 36);
-            this.timKiemBan.TabIndex = 30;
+            this.search.BorderRadius = 10;
+            this.search.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.search.DefaultText = "";
+            this.search.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.search.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.search.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.search.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.search.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.search.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.search.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.search.IconLeft = global::PBL3.Properties.Resources.entypo_magnifying_glass;
+            this.search.Location = new System.Drawing.Point(90, 152);
+            this.search.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.search.Name = "search";
+            this.search.PasswordChar = '\0';
+            this.search.PlaceholderText = "Nhập Mã/Tên bàn cần tìm";
+            this.search.SelectedText = "";
+            this.search.Size = new System.Drawing.Size(632, 55);
+            this.search.TabIndex = 30;
             // 
             // findButton
             // 
@@ -246,20 +256,22 @@
             this.findButton.Size = new System.Drawing.Size(161, 48);
             this.findButton.TabIndex = 44;
             this.findButton.Text = "Tìm kiếm";
+            this.findButton.Click += new System.EventHandler(this.findButton_Click);
             // 
             // Ban
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(181)))), ((int)(((byte)(181)))));
             this.ClientSize = new System.Drawing.Size(1386, 788);
+            this.Controls.Add(this.search);
             this.Controls.Add(this.findButton);
             this.Controls.Add(this.datBan);
             this.Controls.Add(this.banData);
             this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.guna2Panel1);
-            this.Controls.Add(this.timKiemBan);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Ban";
             this.Text = "Ban";
             this.guna2Panel1.ResumeLayout(false);
@@ -277,6 +289,7 @@
 
         #endregion
 
+        private Guna.UI2.WinForms.Guna2TextBox search;
         private Guna.UI2.WinForms.Guna2TextBox timKiemBan;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.PictureBox banExit;

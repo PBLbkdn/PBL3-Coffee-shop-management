@@ -24,5 +24,18 @@ namespace PBL3.GUI.Employee
             f.ShowDialog();
             this.Show();
         }
+
+        private void banButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TKeButton_Click(object sender, EventArgs e)
+        {
+            ThongKe_NV f = new ThongKe_NV();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
     }
 }

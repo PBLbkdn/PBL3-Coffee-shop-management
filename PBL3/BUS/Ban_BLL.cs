@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using PBL3.DTO;
@@ -23,10 +24,35 @@ namespace PBL3.BUS
             private set { }
         }
         private Ban_BLL() { }
-        public List<Ban> GetListBan()
+
+        public List<Object> GetListBan()
         {
             QuanCaPhePBL3Entities quanCaPheEntities = new QuanCaPhePBL3Entities();
-            return quanCaPheEntities.Bans.ToList();
+            List<Ban> list2 = quanCaPheEntities.Bans.ToList();
+            var l1 = from p in list2 select new { p.MaBan, p.TrangThai, p.ViTri };
+            return l1.ToList<Object>();
+        }
+
+        public List<Object> GetBanByID(int MaBan)
+        {
+            QuanCaPhePBL3Entities quanCaPheEntities = new QuanCaPhePBL3Entities();
+            List<Ban> list2 = quanCaPheEntities.Bans.ToList();
+            var l1 = from p in list2 where p.MaBan == MaBan select new { p.MaBan, p.TrangThai, p.ViTri };
+            return l1.ToList<Object>();
+        }
+
+        public Ban GetBan(int MaBan)
+        {
+            QuanCaPhePBL3Entities quanCaPheEntities = new QuanCaPhePBL3Entities();
+            Ban ban = quanCaPheEntities.Bans.Find(MaBan);
+            return ban;
+        }
+        public List<Object> GetListBanFree()
+        {
+            QuanCaPhePBL3Entities quanCaPhePBL3Entities = new QuanCaPhePBL3Entities();
+            List<Ban> list2 = quanCaPhePBL3Entities.Bans.ToList();
+            var l1 = from p in list2 where p.TrangThai == "Bàn trống" select new { p.MaBan, p.TrangThai, p.ViTri };
+            return l1.ToList<Object>();
         }
         public void AddBan(Ban b)
         {
@@ -40,6 +66,14 @@ namespace PBL3.BUS
             Ban banEdit = quanCaPheEntities.Bans.Find(b.MaBan);
             banEdit.TrangThai = b.TrangThai;
             banEdit.ViTri = b.ViTri;
+            quanCaPheEntities.SaveChanges();
+        }
+
+        public void EditBan(int MaBan, string TrangThai)
+        {
+            QuanCaPhePBL3Entities quanCaPheEntities = new QuanCaPhePBL3Entities();
+            Ban banEdit = quanCaPheEntities.Bans.Find(MaBan);
+            banEdit.TrangThai = TrangThai;
             quanCaPheEntities.SaveChanges();
         }
         public void DeleteBan(int id)

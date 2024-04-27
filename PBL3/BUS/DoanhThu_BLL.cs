@@ -25,6 +25,41 @@ namespace PBL3.BUS
         }
         private DoanhThu_BLL() { }
 
+        public object GetDoanhThuCa(int maCa, string ngayTruc)
+        {
+            QuanCaPhePBL3Entities quanCaPheEntities = new QuanCaPhePBL3Entities();
+            List<DoanhThu> listDT = quanCaPheEntities.DoanhThus.ToList();
+            for (int j = 0; j < listDT.Count; j++)
+            {
+                if (listDT[j].MaCT == maCa && listDT[j].NgayTruc.ToString() == ngayTruc)
+                {
+                    return new
+                    {
+                        MaCT = listDT[j].MaCT,
+                        NgayTruc = listDT[j].NgayTruc,
+                        DoanhThuCT = listDT[j].DoanhThuCT,
+                        DoanhThuNT = listDT[j].DoanhThuNT
+                    };
+                }
+            }
+            return null;
+        }
+        public List<Object> GetListDoanhThuCa()
+        {
+            List<DoanhThu> listDT = GetListDoanhThu();
+            List<Object> list = new List<Object>();
+            for (int i = 0; i < listDT.Count; i++)
+            {
+                list.Add(new
+                {
+                    MaCT = listDT[i].MaCT,
+                    NgayTruc = listDT[i].NgayTruc,
+                    DoanhThuCT = listDT[i].DoanhThuCT,
+                    DoanhThuNT = listDT[i].DoanhThuNT
+                });
+            }
+            return list;
+        }
         public List<DoanhThu> GetListDoanhThu()
         {
             QuanCaPhePBL3Entities quanCaPheEntities = new QuanCaPhePBL3Entities();
@@ -106,6 +141,34 @@ namespace PBL3.BUS
 
             UpdateDoanhThu(MaCT, NgayTruc, DTNgay);
 
+        }
+
+        internal List<Object> GetListDoanhThuNgay()
+        {
+            var l1 = GetListDoanhThu().Select( p => new
+            {
+                NgayTruc = p.NgayTruc.ToString("MM/dd/yyyy"),
+                DoanhThuNT = p.DoanhThuNT
+            }).Distinct().ToList<Object>();
+            return l1;
+        }
+
+        internal List<Object> GetListDoanhThuThang()
+        {
+            List<Object> listDTN = GetListDoanhThu().Select(p => new
+            {
+                Thang = p.NgayTruc.ToString("MM/yyyy"),
+                DoanhThuNT = p.DoanhThuNT
+            }).Distinct().ToList<Object>();
+            List<Object> listMonth = GetListDoanhThu().Select(p => new
+            {
+                Thang = p.NgayTruc.ToString("MM/yyyy"),
+            }).Distinct().ToList<Object>();
+            /*for(int i=0; i < listDTN.Count; i++)
+            {
+                for (int j=)
+            }*/
+            return listMonth;
         }
     }
 }

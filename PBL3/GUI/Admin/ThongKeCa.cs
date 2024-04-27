@@ -15,6 +15,14 @@ namespace PBL3.GUI.Admin
         public ThongKeCa()
         {
             InitializeComponent();
+            setComboBox();
+        }
+
+        private void setComboBox()
+        {
+            CaCb.Items.Add("Ca 1");
+            CaCb.Items.Add("Ca 2");
+            CaCb.Items.Add("Ca 3");
         }
 
         private void ThongKeCa_Load(object sender, EventArgs e)
@@ -22,39 +30,11 @@ namespace PBL3.GUI.Admin
 
         }
 
-        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        private void CaCb_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            int maCa = CaCb.SelectedItem.ToString() == "Ca 1" ? 1 : CaCb.SelectedItem.ToString() == "Ca 2" ? 2 : 3;
+            TkeCaData.DataSource = BUS.DoanhThu_BLL.Instance.GetDoanhThuCa(maCa,ngayTK.ToString());
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2ComboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void guna2Panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pictureBox10_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

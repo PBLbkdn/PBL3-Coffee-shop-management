@@ -32,18 +32,22 @@ namespace PBL3.BUS
             return quanCaPheEntities.CaTrucs.ToList();
         }
 
-        public List<NhanVien> GetListNhanVien(int idCT, string day)
+        public List<Object> GetListNhanVien(int idCT, string day)
         {
-            QuanCaPhePBL3Entities quanCaPhePBL3Entities = new QuanCaPhePBL3Entities();
-            List<CaTruc> list = quanCaPhePBL3Entities.CaTrucs.ToList();
+            //lấy ra nhân viên trong ca trực 
+            QuanCaPhePBL3Entities quanCaPheEntities = new QuanCaPhePBL3Entities();
+            List<CaTruc> list = quanCaPheEntities.CaTrucs.ToList();
             for (int i = 0; i < list.Count; i++)
             {
                 if (list[i].MaCT == idCT && list[i].NgayTruc.ToString() == day)
                 {
-                    return list[i].NhanViens.ToList();
+                    //chỉ lấy một vài thông tin của nhân viên
+                    var l1 = from p in list[i].NhanViens select new { p.MaNV, p.ChucVu.TenCV, p.HoTenNV, p.NgaySinh, p.Luong, p.GioiTinh };
+                    return l1.ToList<Object>();
                 }
             }
-            return new List<NhanVien>();
+            return new List<Object>();
+            
         }
 
         public CaTruc newCaTruc1()
@@ -77,10 +81,18 @@ namespace PBL3.BUS
         {
             QuanCaPhePBL3Entities quanCaPheEntities = new QuanCaPhePBL3Entities();
             //kiểm tra có ca trực ngày hôm nay chưa
-            quanCaPheEntities.CaTrucs.Add(newCaTruc1());
-            quanCaPheEntities.CaTrucs.Add(newCaTruc2());
-            quanCaPheEntities.CaTrucs.Add(newCaTruc3());
-            quanCaPheEntities.SaveChanges();
+
+            List<CaTruc> list = quanCaPheEntities.CaTrucs.ToList();
+
+            if (list.ElementAt(list.Count - 1).NgayTruc.ToString("MM/dd/yyyy") == DateTime.Now.ToString("MM/dd/yyyy"))
+            {
+                return;
+            }
+             quanCaPheEntities.CaTrucs.Add(newCaTruc1());
+             quanCaPheEntities.CaTrucs.Add(newCaTruc2());
+             quanCaPheEntities.CaTrucs.Add(newCaTruc3());
+             quanCaPheEntities.SaveChanges();
+
         }
 
         public void AddNhanVienToCaTruc(int idNV, int id, string day)

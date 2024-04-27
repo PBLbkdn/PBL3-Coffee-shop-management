@@ -45,6 +45,21 @@ namespace PBL3.GUI
             }
         }
 
+
+        private void TKeButton_Click(object sender, EventArgs e)
+        {
+            ThongKe f = new ThongKe();
+            this.Hide();
+            f.ShowDialog(); 
+        }
+
+        private void CLVButton_Click(object sender, EventArgs e)
+        {
+            CaLamViec f = new CaLamViec();
+            this.Hide();
+            f.Show(); 
+        }
+
         /*private void ManHinhChinh_Load(object sender, EventArgs e)
         {
             pictureBox1.Image = Picture.Properties.Resources.chinh;

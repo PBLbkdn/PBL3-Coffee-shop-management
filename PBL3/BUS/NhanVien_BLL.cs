@@ -38,8 +38,8 @@ namespace PBL3.BUS
                 }
                 else
                 {
-                   var l2 = db.NhanViens.Where(p => p.HoTenNV.Contains(name))
-                        .Select (p => new { p.MaNV, p.ChucVu.TenCV, p.HoTenNV, p.NgaySinh, p.Luong, p.GioiTinh });
+                    var l2 = db.NhanViens.Where(p => p.HoTenNV.Contains(name))
+                         .Select(p => new { p.MaNV, p.ChucVu.TenCV, p.HoTenNV, p.NgaySinh, p.Luong, p.GioiTinh });
                     return l2.ToList<Object>();
                 }
             }
@@ -68,7 +68,7 @@ namespace PBL3.BUS
         }
         public void EditNhanVien(string maso, string hoten, DateTime ns, string sdt, string luong, string macv, Boolean gioitinh)
         {
-            QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();            
+            QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
             NhanVien sedit = db.NhanViens.Find(Convert.ToInt32(maso));
             sedit.HoTenNV = hoten;
             sedit.NgaySinh = ns;
@@ -119,6 +119,35 @@ namespace PBL3.BUS
                 }
             }
             return d;
+        }
+
+        public List<Int32> ListIDNV()
+        {
+            QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
+            List<Int32> list = new List<Int32>();
+            foreach (NhanVien i in db.NhanViens)
+            {
+                list.Add(i.MaNV);
+            }
+            return list;
+        }
+        public List<Object> ListNV()
+        {
+            QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
+            var l1 = db.NhanViens.Select(p => new { p.MaNV, p.ChucVu.TenCV, p.HoTenNV, p.NgaySinh, p.Luong, p.GioiTinh });
+            return l1.ToList<Object>();
+        }
+
+        public bool isValidCaTruc(int maNV, int maCa, DateTime day)
+        {
+            QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
+            List <CaTruc> list = db.NhanViens.Find(maNV).CaTrucs.ToList();
+            for(int i = 0; i < list.Count; i++)
+            {
+                if (list[i].NgayTruc == day && list[i].MaCT== maCa )
+                    return false;
+            }
+            return true;
         }
     }
 }

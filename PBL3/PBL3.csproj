@@ -660,8 +660,8 @@
   <ItemGroup>
     <Content Include="DTO\QuanCaPhePBL3.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>QuanCaPhePBL3.edmx</DependentUpon>
       <LastGenOutput>QuanCaPhePBL3.Context.cs</LastGenOutput>
+      <DependentUpon>QuanCaPhePBL3.edmx</DependentUpon>
     </Content>
     <Content Include="DTO\QuanCaPhePBL3.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
