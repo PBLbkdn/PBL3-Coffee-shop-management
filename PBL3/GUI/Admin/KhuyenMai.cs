@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PBL3.GUI
 {
-    public partial class Khuyến_mãi : Form
+    public partial class KhuyenMai : Form
     {
-        public Khuyến_mãi()
+        public KhuyenMai()
         {
             InitializeComponent();
         }

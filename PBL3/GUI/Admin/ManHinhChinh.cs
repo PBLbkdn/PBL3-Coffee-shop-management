@@ -64,6 +64,59 @@ namespace PBL3.GUI
             f.Show(); 
         }
 
+        private void CLVButton_Click(object sender, EventArgs e)
+        {
+            GUI.CaLamViec f = new GUI.CaLamViec();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
+
+        private void KHButton_Click(object sender, EventArgs e)
+        {
+            Admin.KhachHang f = new Admin.KhachHang();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
+
+        private void KMButton_Click(object sender, EventArgs e)
+        {
+            GUI.KhuyenMai f = new GUI.KhuyenMai();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
+
+        private void HDButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TDButton_Click(object sender, EventArgs e)
+        {
+            GUI.ThucDon f = new GUI.ThucDon();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
+
+        private void NLButton_Click(object sender, EventArgs e)
+        {
+            Admin.NguyenLieu f = new Admin.NguyenLieu();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
+
+        private void TKeButton_Click(object sender, EventArgs e)
+        {
+            Admin.ThongKe f = new Admin.ThongKe();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
+
         /*private void ManHinhChinh_Load(object sender, EventArgs e)
 >>>>>>> ad2a925fee2710b2773f06a3c7b20b28a3fd18e4
         {

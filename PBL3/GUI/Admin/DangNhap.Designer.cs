@@ -72,7 +72,7 @@
             this.guna2Panel1.Controls.Add(this.username);
             this.guna2Panel1.Location = new System.Drawing.Point(473, 276);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(434, 313);
+            this.guna2Panel1.Size = new System.Drawing.Size(434, 298);
             this.guna2Panel1.TabIndex = 3;
             // 
             // loginButton
@@ -93,7 +93,7 @@
             this.loginButton.ForeColor = System.Drawing.Color.White;
             this.loginButton.Location = new System.Drawing.Point(127, 234);
             this.loginButton.Name = "loginButton";
-            this.loginButton.Size = new System.Drawing.Size(170, 50);
+            this.loginButton.Size = new System.Drawing.Size(160, 44);
             this.loginButton.TabIndex = 6;
             this.loginButton.Text = "ĐĂNG NHẬP";
             this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
@@ -236,7 +236,6 @@
             this.Name = "DangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "DangNhap";
-            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.Load += new System.EventHandler(this.DangNhap_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();

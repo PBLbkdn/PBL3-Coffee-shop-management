@@ -191,6 +191,7 @@
             this.TDButton.Size = new System.Drawing.Size(300, 92);
             this.TDButton.TabIndex = 1;
             this.TDButton.Text = "Quản lý thực đơn";
+            this.TDButton.Click += new System.EventHandler(this.TDButton_Click);
             // 
             // NVButton
             // 
@@ -233,6 +234,7 @@
             this.NLButton.Size = new System.Drawing.Size(300, 92);
             this.NLButton.TabIndex = 3;
             this.NLButton.Text = "Quản lý nguyên liệu";
+            this.NLButton.Click += new System.EventHandler(this.NLButton_Click);
             // 
 <<<<<<< HEAD
             // quanlytaikhoan
@@ -297,6 +299,7 @@
             this.KMButton.Size = new System.Drawing.Size(300, 92);
             this.KMButton.TabIndex = 5;
             this.KMButton.Text = "Quản lý khuyến mãi";
+            this.KMButton.Click += new System.EventHandler(this.KMButton_Click);
             // 
             // CLVButton
             // 
@@ -379,7 +382,11 @@
             this.KHButton.Size = new System.Drawing.Size(300, 92);
             this.KHButton.TabIndex = 7;
             this.KHButton.Text = "Quản lý khách hàng";
+<<<<<<< HEAD
+            this.KHButton.Click += new System.EventHandler(this.KHButton_Click);
+=======
 >>>>>>> ad2a925fee2710b2773f06a3c7b20b28a3fd18e4
+>>>>>>> e25e0ed134b06f1631725ee50aec1f4972e160e3
             // 
             // TKeButton
             // 
@@ -421,6 +428,7 @@
             this.HDButton.Size = new System.Drawing.Size(300, 92);
             this.HDButton.TabIndex = 9;
             this.HDButton.Text = "Quản lý hóa đơn";
+            this.HDButton.Click += new System.EventHandler(this.HDButton_Click);
             // 
             // pictureBox10
             // 

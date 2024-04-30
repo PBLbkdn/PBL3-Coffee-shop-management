@@ -1,6 +1,6 @@
 ﻿namespace PBL3.GUI
 {
-    partial class Khuyến_mãi
+    partial class KhuyenMai
     {
         /// <summary>
         /// Required designer variable.
@@ -53,6 +53,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.findButton = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.KMexit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -285,6 +286,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.findButton);
             this.panel1.Controls.Add(this.toDay);
             this.panel1.Controls.Add(this.fromDay);
             this.panel1.Controls.Add(this.label4);
@@ -376,7 +378,25 @@
             this.pictureBox10.TabIndex = 15;
             this.pictureBox10.TabStop = false;
             // 
-            // Khuyến_mãi
+            // findButton
+            // 
+            this.findButton.BorderColor = System.Drawing.Color.DimGray;
+            this.findButton.BorderRadius = 7;
+            this.findButton.BorderThickness = 1;
+            this.findButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.findButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.findButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.findButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.findButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.findButton.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.findButton.ForeColor = System.Drawing.Color.Black;
+            this.findButton.Location = new System.Drawing.Point(858, 12);
+            this.findButton.Name = "findButton";
+            this.findButton.Size = new System.Drawing.Size(124, 36);
+            this.findButton.TabIndex = 22;
+            this.findButton.Text = "Tìm kiếm";
+            // 
+            // KhuyenMai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -391,7 +411,7 @@
             this.Controls.Add(this.addButton);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Khuyến_mãi";
+            this.Name = "KhuyenMai";
             this.Text = "Khuyến_mãi";
             this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.KMexit)).EndInit();
@@ -441,5 +461,6 @@
         private Guna.UI2.WinForms.Guna2DateTimePicker toDay;
         private Guna.UI2.WinForms.Guna2DateTimePicker fromDay;
         private System.Windows.Forms.Label label4;
+        private Guna.UI2.WinForms.Guna2Button findButton;
     }
 }
