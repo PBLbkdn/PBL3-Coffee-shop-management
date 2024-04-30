@@ -1,4 +1,6 @@
-﻿using System;
+﻿using PBL3.BUS;
+using PBL3.DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,21 @@ namespace PBL3.GUI.Admin
         public ThemNguyenLieu()
         {
             InitializeComponent();
+        }
+
+        private void saveNL_Click(object sender, EventArgs e)
+        {
+            QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
+            var s = db.NguyenLieux.OrderByDescending(p => p.MaNL).FirstOrDefault();
+            string manl = Convert.ToString(s.MaNL + 1);
+            // NguyenLieu_BLL.Instance.AddNguyenLieu(manl, tenNL.Text, slTK, ngayHetHan.Value, giaNhap.Text, donvi);
+            MessageBox.Show("Thêm nguyên liệu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Dispose();
+        }
+
+        private void cancelNL_Click(object sender, EventArgs e)
+        {
+            Dispose();
         }
     }
 }

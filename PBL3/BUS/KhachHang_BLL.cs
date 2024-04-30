@@ -38,7 +38,7 @@ namespace PBL3.BUS
                 var l1 = db.KhachHangs.Where(p => p.TenKH.Contains(name)).Select(p => new { p.MaKH, p.MaLKH, p.TenKH, p.SDT, p.LoaiKhachHang.TenLKH });
                 return l1.ToList<Object>();
             }
-        } 
+        }
         public void AddKhachHang(string maso, string hoten, string sdt, string maloaikh)
         {
             KhachHang s = new KhachHang
@@ -52,7 +52,7 @@ namespace PBL3.BUS
             db.KhachHangs.Add(s);
             db.SaveChanges();
         }
-        public void EditKhachHang(string maso, string hoten, string sdt,  string maloaikh)
+        public void EditKhachHang(string maso, string hoten, string sdt, string maloaikh)
         {
             QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
             KhachHang sedit = db.KhachHangs.Find(Convert.ToInt32(maso));

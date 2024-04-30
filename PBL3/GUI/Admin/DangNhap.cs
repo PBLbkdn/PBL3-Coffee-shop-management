@@ -18,10 +18,10 @@ namespace PBL3.GUI
         {
             InitializeComponent();
         }
-     
+
         private void DangNhap_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void loginButton_Click(object sender, EventArgs e)
@@ -48,13 +48,13 @@ namespace PBL3.GUI
                     MessageBox.Show("Vui lòng chọn chức vụ!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     break;
                 case 3:
-                    MessageBox.Show("Chức vụ không phù hợp!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);                    
+                    MessageBox.Show("Chức vụ không phù hợp!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     break;
                 case 4:
                     MessageBox.Show("Tên đăng nhập hoặc mật khẩu không đúng.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     break;
             }
-            
+
         }
 
         private void exitButton2_Click(object sender, EventArgs e)

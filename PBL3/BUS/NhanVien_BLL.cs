@@ -32,19 +32,14 @@ namespace PBL3.BUS
                 if (name == null)
                 {
                     //return db.NhanViens.ToList();
-                    var l1 = db.NhanViens.Select(p => new {  p.MaNV, p.ChucVu.TenCV, p.HoTenNV, p.NgaySinh, p.Luong, GioiTinh = (p.GioiTinh == true) ? "Nam" : "Nữ"  });
+                    var l1 = db.NhanViens.Select(p => new { p.MaNV, p.ChucVu.TenCV, p.HoTenNV, p.NgaySinh, p.Luong, GioiTinh = (p.GioiTinh == true) ? "Nam" : "Nữ" });
                     //var l1 = from p in db.NhanViens select new { p.MaNV};
                     return l1.ToList<Object>();
                 }
                 else
                 {
-<<<<<<< HEAD
-                   var l2 = db.NhanViens.Where(p => p.HoTenNV.Contains(name))
-                        .Select (p => new { p.MaNV, p.ChucVu.TenCV, p.HoTenNV, p.NgaySinh, p.Luong, GioiTinh = (p.GioiTinh == true) ? "Nam" : "Nữ" });
-=======
                     var l2 = db.NhanViens.Where(p => p.HoTenNV.Contains(name))
-                         .Select(p => new { p.MaNV, p.ChucVu.TenCV, p.HoTenNV, p.NgaySinh, p.Luong, p.GioiTinh });
->>>>>>> ad2a925fee2710b2773f06a3c7b20b28a3fd18e4
+                         .Select(p => new { p.MaNV, p.ChucVu.TenCV, p.HoTenNV, p.NgaySinh, p.Luong, GioiTinh = (p.GioiTinh == true) ? "Nam" : "Nữ" });
                     return l2.ToList<Object>();
                 }
             }
@@ -73,13 +68,8 @@ namespace PBL3.BUS
         }
         public void EditNhanVien(string manv, string hoten, DateTime ns, string sdt, string luong, string macv, string gioitinh)
         {
-<<<<<<< HEAD
-            QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();            
-            NhanVien sedit = db.NhanViens.Find(Convert.ToInt32(manv));
-=======
             QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
-            NhanVien sedit = db.NhanViens.Find(Convert.ToInt32(maso));
->>>>>>> ad2a925fee2710b2773f06a3c7b20b28a3fd18e4
+            NhanVien sedit = db.NhanViens.Find(Convert.ToInt32(manv));
             sedit.HoTenNV = hoten;
             sedit.NgaySinh = ns;
             sedit.SDT = sdt;
@@ -151,10 +141,10 @@ namespace PBL3.BUS
         public bool isValidCaTruc(int maNV, int maCa, DateTime day)
         {
             QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
-            List <CaTruc> list = db.NhanViens.Find(maNV).CaTrucs.ToList();
-            for(int i = 0; i < list.Count; i++)
+            List<CaTruc> list = db.NhanViens.Find(maNV).CaTrucs.ToList();
+            for (int i = 0; i < list.Count; i++)
             {
-                if (list[i].NgayTruc == day && list[i].MaCT== maCa )
+                if (list[i].NgayTruc == day && list[i].MaCT == maCa)
                     return false;
             }
             return true;

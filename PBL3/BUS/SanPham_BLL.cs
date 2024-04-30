@@ -25,9 +25,9 @@ namespace PBL3.BUS
         private SanPham_BLL() { }
         public List<Object> GetListSanPham(int ID, string name)
         {
-            QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();  
-                var l = db.SanPhams.Select(p => new {p.MaSP, p.TenSP, p.LoaiSP, p.NhomSP, p.DonViSP, p.GiaSP});
-                return l.ToList<Object>();                    
+            QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
+            var l = db.SanPhams.Select(p => new { p.MaSP, p.TenSP, p.LoaiSP, p.NhomSP, p.DonViSP, p.GiaSP });
+            return l.ToList<Object>();
 
         }
         public void AddSanPham(string masp, string tensp, string giasp, string loai, string nhom, string donvi)
@@ -63,7 +63,7 @@ namespace PBL3.BUS
             db.SanPhams.Remove(nlDelete);
             db.SaveChanges();
         }
-        public void LayThongTinSanPham(int s,ref string masp,ref string tensp, ref string giasp, ref string loai, ref string nhom, ref string donvi)
+        public void LayThongTinSanPham(int s, ref string masp, ref string tensp, ref string giasp, ref string loai, ref string nhom, ref string donvi)
         {
             masp = s.ToString();
             using (QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities())

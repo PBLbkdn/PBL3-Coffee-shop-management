@@ -22,25 +22,25 @@ namespace PBL3.GUI.Admin
         }
         public void setCBB1()
         {
-            guna2ComboBox1.Items.Add("1");
-            guna2ComboBox1.Items.Add("2");
-            guna2ComboBox1.Items.Add("3");
-            guna2ComboBox1.Items.Add("4");
+            maChucVu.Items.Add("1");
+            maChucVu.Items.Add("2");
+            maChucVu.Items.Add("3");
+            maChucVu.Items.Add("4");
         }
         public void setCBB2()
         {
-            guna2ComboBox2.Items.Add("Nam");
-            guna2ComboBox2.Items.Add("Nữ");
+            gioiTinh.Items.Add("Nam");
+            gioiTinh.Items.Add("Nữ");
         }
-        
-       
+
+
 
         private void saveNV_Click(object sender, EventArgs e)
         {
             QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
             var lastEmployee = db.NhanViens.OrderByDescending(p => p.MaNV).FirstOrDefault();
             string manv = Convert.ToString(lastEmployee.MaNV + 1);
-            NhanVien_BLL.Instance.AddNhanVien(manv, guna2TextBox1.Text, guna2DateTimePicker1.Value, guna2TextBox2.Text, guna2TextBox3.Text, guna2ComboBox1.SelectedItem.ToString(), guna2ComboBox2.SelectedItem.ToString());
+            NhanVien_BLL.Instance.AddNhanVien(manv, tenNV.Text, ngaySinh.Value, sdt.Text, luong.Text, maChucVu.SelectedItem.ToString(), gioiTinh.SelectedItem.ToString());
             MessageBox.Show("Thêm nhân viên thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Dispose();
         }

@@ -26,12 +26,12 @@ namespace PBL3.GUI
             var s = db.SanPhams.OrderByDescending(p => p.MaSP).FirstOrDefault();
             string masp = Convert.ToString(s.MaSP + 1);
             string loai;
-            if (rBdrink.Checked)
+            if (doUongRb.Checked)
             {
                 loai = "Đồ uống";
             }
             else loai = "Món ăn";
-            SanPham_BLL.Instance.AddSanPham(masp, guna2TextBox1.Text, guna2TextBox4.Text, loai, guna2TextBox5.Text, guna2TextBox2.Text);
+            SanPham_BLL.Instance.AddSanPham(masp, tenMon.Text, giaBan.Text, loai, nhomThucDon.Text, donViTinh.Text);
             MessageBox.Show("Thêm món thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Dispose();
         }

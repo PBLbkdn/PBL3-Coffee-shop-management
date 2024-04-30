@@ -23,13 +23,21 @@ namespace PBL3.BUS
             private set { }
         }
         private NguyenLieu_BLL() { }
-        public List<NguyenLieu> GetListNguyenLieu(int ID, string name)
+        public List<Object> GetListNguyenLieu(int ID, string name)
         {
             QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
 
             if (name == null)
-                return db.NguyenLieux.ToList();
-            else return db.NguyenLieux.Where(p => p.TenNL.Contains(name)).ToList();
+            {
+                var l1 = db.NguyenLieux.Select(p => new { p.MaNL, p.TenNL, p.NgayHetHan, p.GiaNhap, p.SLTonKho, p.DonViTinh });
+                return l1.ToList<Object>();
+            }
+            else
+            {
+                var l2 = db.NguyenLieux.Where(p => p.TenNL.Contains(name))
+                    .Select(p => new { p.MaNL, p.TenNL, p.NgayHetHan, p.GiaNhap, p.SLTonKho, p.DonViTinh });
+                return l2.ToList<Object>();
+            }
 
         }
         public void AddNguyenLieu(string manl, string tennl, string SLtonkho, DateTime ngayhethan, string gia, string donvi)
@@ -65,7 +73,7 @@ namespace PBL3.BUS
             db.NguyenLieux.Remove(nlDelete);
             db.SaveChanges();
         }
-        public void LayThongTinNguyenLieu(int s, string manl, string tennl, string SLtonkho, DateTime ngayhethan, string gia, string donvi)
+        public void LayThongTinNguyenLieu(int s, ref string manl, ref string tennl, ref string SLtonkho, ref DateTime ngayhethan, ref string gia, ref string donvi)
         {
             manl = s.ToString();
             using (QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities())

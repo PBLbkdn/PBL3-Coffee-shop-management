@@ -18,26 +18,20 @@ namespace PBL3.GUI.Admin
             InitializeComponent();
         }
 
-<<<<<<< HEAD
         private void KhachHang_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = KhachHang_BLL.Instance.GetListKhachHang(0, null);
+            KHData.DataSource = KhachHang_BLL.Instance.GetListKhachHang(0, null);
         }
 
         private void searchKH_Click(object sender, EventArgs e)
         {
-            string txt = textboxTenKH.Text;
-            dataGridView1.DataSource = KhachHang_BLL.Instance.GetListKhachHang(0, txt);
+            string txt = findTextbox.Text;
+            KHData.DataSource = KhachHang_BLL.Instance.GetListKhachHang(0, txt);
         }
 
         private void exitKH_Click(object sender, EventArgs e)
         {
             this.Dispose();
-=======
-        private void exitKH_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
->>>>>>> ad2a925fee2710b2773f06a3c7b20b28a3fd18e4
         }
     }
 }

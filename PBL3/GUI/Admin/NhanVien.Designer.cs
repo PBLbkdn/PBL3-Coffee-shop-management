@@ -29,11 +29,7 @@
         private void InitializeComponent()
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-<<<<<<< HEAD
-            this.exitNV = new System.Windows.Forms.PictureBox();
-=======
             this.NVExit = new System.Windows.Forms.PictureBox();
->>>>>>> ad2a925fee2710b2773f06a3c7b20b28a3fd18e4
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -48,16 +44,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-<<<<<<< HEAD
-            this.deleteNVButton = new Guna.UI2.WinForms.Guna2Button();
-            this.editNVButton = new Guna.UI2.WinForms.Guna2Button();
-            this.addNVButton = new Guna.UI2.WinForms.Guna2Button();
-            this.searchNVButton = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.guna2Panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.exitNV)).BeginInit();
-=======
             this.clearButton = new Guna.UI2.WinForms.Guna2Button();
             this.editButton = new Guna.UI2.WinForms.Guna2Button();
             this.addButton = new Guna.UI2.WinForms.Guna2Button();
@@ -66,7 +52,6 @@
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NVExit)).BeginInit();
->>>>>>> ad2a925fee2710b2773f06a3c7b20b28a3fd18e4
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel2.SuspendLayout();
@@ -85,11 +70,7 @@
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(132)))), ((int)(((byte)(132)))));
-<<<<<<< HEAD
-            this.guna2Panel1.Controls.Add(this.exitNV);
-=======
             this.guna2Panel1.Controls.Add(this.NVExit);
->>>>>>> ad2a925fee2710b2773f06a3c7b20b28a3fd18e4
             this.guna2Panel1.Controls.Add(this.pictureBox4);
             this.guna2Panel1.Controls.Add(this.pictureBox5);
             this.guna2Panel1.Controls.Add(this.panel2);
@@ -97,20 +78,8 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1386, 54);
             this.guna2Panel1.TabIndex = 8;
+            //this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
-<<<<<<< HEAD
-            // exitNV
-            // 
-            this.exitNV.Image = global::PBL3.Properties.Resources.nút_tắt;
-            this.exitNV.Location = new System.Drawing.Point(1792, 15);
-            this.exitNV.Margin = new System.Windows.Forms.Padding(4);
-            this.exitNV.Name = "exitNV";
-            this.exitNV.Size = new System.Drawing.Size(40, 37);
-            this.exitNV.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.exitNV.TabIndex = 3;
-            this.exitNV.TabStop = false;
-            this.exitNV.Click += new System.EventHandler(this.exitNV_Click);
-=======
             // NVExit
             // 
             this.NVExit.Image = global::PBL3.Properties.Resources.nút_tắt;
@@ -120,8 +89,7 @@
             this.NVExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.NVExit.TabIndex = 3;
             this.NVExit.TabStop = false;
-            this.NVExit.Click += new System.EventHandler(this.pictureBox6_Click);
->>>>>>> ad2a925fee2710b2773f06a3c7b20b28a3fd18e4
+            this.NVExit.Click += new System.EventHandler(this.exitNV_Click);
             // 
             // pictureBox4
             // 
@@ -177,18 +145,6 @@
             // 
             // NVData
             // 
-<<<<<<< HEAD
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(80, 219);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(1688, 651);
-            this.dataGridView1.TabIndex = 15;
-=======
             this.NVData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.NVData.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.NVData.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
@@ -198,8 +154,7 @@
             this.NVData.RowHeadersWidth = 51;
             this.NVData.Size = new System.Drawing.Size(1266, 529);
             this.NVData.TabIndex = 15;
-            this.NVData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
->>>>>>> ad2a925fee2710b2773f06a3c7b20b28a3fd18e4
+            // this.NVData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // guna2Panel2
             // 
@@ -215,6 +170,7 @@
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(1266, 37);
             this.guna2Panel2.TabIndex = 16;
+            //this.guna2Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel2_Paint);
             // 
             // label1
             // 
@@ -287,87 +243,6 @@
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
             // 
-<<<<<<< HEAD
-            // deleteNVButton
-            // 
-            this.deleteNVButton.BorderColor = System.Drawing.Color.DimGray;
-            this.deleteNVButton.BorderRadius = 7;
-            this.deleteNVButton.BorderThickness = 1;
-            this.deleteNVButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.deleteNVButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.deleteNVButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.deleteNVButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.deleteNVButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.deleteNVButton.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deleteNVButton.ForeColor = System.Drawing.Color.Black;
-            this.deleteNVButton.Location = new System.Drawing.Point(601, 118);
-            this.deleteNVButton.Margin = new System.Windows.Forms.Padding(4);
-            this.deleteNVButton.Name = "deleteNVButton";
-            this.deleteNVButton.Size = new System.Drawing.Size(227, 49);
-            this.deleteNVButton.TabIndex = 19;
-            this.deleteNVButton.Text = "Xóa";
-            this.deleteNVButton.Click += new System.EventHandler(this.deleteNV_Click);
-            // 
-            // editNVButton
-            // 
-            this.editNVButton.BorderColor = System.Drawing.Color.DimGray;
-            this.editNVButton.BorderRadius = 7;
-            this.editNVButton.BorderThickness = 1;
-            this.editNVButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.editNVButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.editNVButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.editNVButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.editNVButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.editNVButton.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editNVButton.ForeColor = System.Drawing.Color.Black;
-            this.editNVButton.Location = new System.Drawing.Point(343, 118);
-            this.editNVButton.Margin = new System.Windows.Forms.Padding(4);
-            this.editNVButton.Name = "editNVButton";
-            this.editNVButton.Size = new System.Drawing.Size(227, 49);
-            this.editNVButton.TabIndex = 18;
-            this.editNVButton.Text = "Sửa";
-            this.editNVButton.Click += new System.EventHandler(this.editNV_Click);
-            // 
-            // addNVButton
-            // 
-            this.addNVButton.BorderColor = System.Drawing.Color.DimGray;
-            this.addNVButton.BorderRadius = 7;
-            this.addNVButton.BorderThickness = 1;
-            this.addNVButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.addNVButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.addNVButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.addNVButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.addNVButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.addNVButton.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addNVButton.ForeColor = System.Drawing.Color.Black;
-            this.addNVButton.Location = new System.Drawing.Point(80, 118);
-            this.addNVButton.Margin = new System.Windows.Forms.Padding(4);
-            this.addNVButton.Name = "addNVButton";
-            this.addNVButton.Size = new System.Drawing.Size(227, 49);
-            this.addNVButton.TabIndex = 17;
-            this.addNVButton.Text = "Thêm";
-            this.addNVButton.Click += new System.EventHandler(this.addNV_Click);
-            // 
-            // searchNVButton
-            // 
-            this.searchNVButton.BorderColor = System.Drawing.Color.DimGray;
-            this.searchNVButton.BorderRadius = 7;
-            this.searchNVButton.BorderThickness = 1;
-            this.searchNVButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.searchNVButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.searchNVButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.searchNVButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.searchNVButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.searchNVButton.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchNVButton.ForeColor = System.Drawing.Color.Black;
-            this.searchNVButton.Location = new System.Drawing.Point(863, 118);
-            this.searchNVButton.Margin = new System.Windows.Forms.Padding(4);
-            this.searchNVButton.Name = "searchNVButton";
-            this.searchNVButton.Size = new System.Drawing.Size(227, 49);
-            this.searchNVButton.TabIndex = 21;
-            this.searchNVButton.Text = "Tìm kiếm";
-            this.searchNVButton.Click += new System.EventHandler(this.searchNV_Click);
-=======
             // clearButton
             // 
             this.clearButton.BorderColor = System.Drawing.Color.DimGray;
@@ -385,7 +260,7 @@
             this.clearButton.Size = new System.Drawing.Size(170, 40);
             this.clearButton.TabIndex = 19;
             this.clearButton.Text = "Xóa";
-            this.clearButton.Click += new System.EventHandler(this.guna2Button3_Click);
+            this.clearButton.Click += new System.EventHandler(this.deleteNV_Click);
             // 
             // editButton
             // 
@@ -404,7 +279,7 @@
             this.editButton.Size = new System.Drawing.Size(170, 40);
             this.editButton.TabIndex = 18;
             this.editButton.Text = "Sửa";
-            this.editButton.Click += new System.EventHandler(this.guna2Button2_Click);
+            this.editButton.Click += new System.EventHandler(this.editNV_Click);
             // 
             // addButton
             // 
@@ -423,7 +298,7 @@
             this.addButton.Size = new System.Drawing.Size(170, 40);
             this.addButton.TabIndex = 17;
             this.addButton.Text = "Thêm";
-            this.addButton.Click += new System.EventHandler(this.guna2Button1_Click);
+            this.addButton.Click += new System.EventHandler(this.addNV_Click);
             // 
             // findButton
             // 
@@ -442,32 +317,10 @@
             this.findButton.Size = new System.Drawing.Size(170, 40);
             this.findButton.TabIndex = 21;
             this.findButton.Text = "Tìm kiếm";
-            this.findButton.Click += new System.EventHandler(this.guna2Button4_Click);
->>>>>>> ad2a925fee2710b2773f06a3c7b20b28a3fd18e4
+            this.findButton.Click += new System.EventHandler(this.searchNV_Click);
             // 
             // nameNVTb
             // 
-<<<<<<< HEAD
-            this.guna2TextBox1.BorderRadius = 5;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.IconLeft = global::PBL3.Properties.Resources.entypo_magnifying_glass;
-            this.guna2TextBox1.Location = new System.Drawing.Point(1120, 123);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderText = "";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(267, 44);
-            this.guna2TextBox1.TabIndex = 22;
-=======
             this.nameNVTb.BorderRadius = 5;
             this.nameNVTb.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.nameNVTb.DefaultText = "";
@@ -487,8 +340,7 @@
             this.nameNVTb.SelectedText = "";
             this.nameNVTb.Size = new System.Drawing.Size(200, 36);
             this.nameNVTb.TabIndex = 22;
-            this.nameNVTb.TextChanged += new System.EventHandler(this.guna2TextBox1_TextChanged);
->>>>>>> ad2a925fee2710b2773f06a3c7b20b28a3fd18e4
+            // this.nameNVTb.TextChanged += new System.EventHandler(this.guna2TextBox1_TextChanged);
             // 
             // pictureBox10
             // 
@@ -499,21 +351,13 @@
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox10.TabIndex = 20;
             this.pictureBox10.TabStop = false;
+            //this.pictureBox10.Click += new System.EventHandler(this.pictureBox10_Click);
             // 
             // NhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(181)))), ((int)(((byte)(181)))));
-<<<<<<< HEAD
-            this.ClientSize = new System.Drawing.Size(1848, 970);
-            this.Controls.Add(this.guna2TextBox1);
-            this.Controls.Add(this.searchNVButton);
-            this.Controls.Add(this.pictureBox10);
-            this.Controls.Add(this.deleteNVButton);
-            this.Controls.Add(this.editNVButton);
-            this.Controls.Add(this.addNVButton);
-=======
             this.ClientSize = new System.Drawing.Size(1386, 788);
             this.Controls.Add(this.nameNVTb);
             this.Controls.Add(this.findButton);
@@ -521,7 +365,6 @@
             this.Controls.Add(this.clearButton);
             this.Controls.Add(this.editButton);
             this.Controls.Add(this.addButton);
->>>>>>> ad2a925fee2710b2773f06a3c7b20b28a3fd18e4
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.NVData);
             this.Controls.Add(this.guna2Panel1);
@@ -534,11 +377,7 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.NhanVien_Load);
             this.guna2Panel1.ResumeLayout(false);
-<<<<<<< HEAD
-            ((System.ComponentModel.ISupportInitialize)(this.exitNV)).EndInit();
-=======
             ((System.ComponentModel.ISupportInitialize)(this.NVExit)).EndInit();
->>>>>>> ad2a925fee2710b2773f06a3c7b20b28a3fd18e4
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panel2.ResumeLayout(false);
@@ -575,15 +414,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
-<<<<<<< HEAD
-        private Guna.UI2.WinForms.Guna2Button deleteNVButton;
-        private Guna.UI2.WinForms.Guna2Button editNVButton;
-        private Guna.UI2.WinForms.Guna2Button addNVButton;
-        private System.Windows.Forms.PictureBox pictureBox10;
-        private Guna.UI2.WinForms.Guna2Button searchNVButton;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        private System.Windows.Forms.PictureBox exitNV;
-=======
         private Guna.UI2.WinForms.Guna2Button clearButton;
         private Guna.UI2.WinForms.Guna2Button editButton;
         private Guna.UI2.WinForms.Guna2Button addButton;
@@ -591,6 +421,5 @@
         private Guna.UI2.WinForms.Guna2Button findButton;
         private Guna.UI2.WinForms.Guna2TextBox nameNVTb;
         private System.Windows.Forms.PictureBox NVExit;
->>>>>>> ad2a925fee2710b2773f06a3c7b20b28a3fd18e4
     }
 }

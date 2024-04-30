@@ -37,7 +37,7 @@ namespace PBL3.BUS
             LoaiKhachHang s = new LoaiKhachHang
             {
                 MaLKH = Convert.ToInt32(malkh),
-                TenLKH = tenlkh   
+                TenLKH = tenlkh
             };
             QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
             db.LoaiKhachHangs.Add(s);

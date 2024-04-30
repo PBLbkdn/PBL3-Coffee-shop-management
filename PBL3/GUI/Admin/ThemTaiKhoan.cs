@@ -23,7 +23,7 @@ namespace PBL3.GUI.Admin
         private void saveTK_Click(object sender, EventArgs e)
         {
             QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
-            TaiKhoan_BLL.Instance.AddTaiKhoan(maNVTextbox.Text, tenTKTextbox.Text, mkTextbox.Text);
+            TaiKhoan_BLL.Instance.AddTaiKhoan(maNV.Text, tenTK.Text, matKhau.Text);
             MessageBox.Show("Thêm nhân viên thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Dispose();
         }

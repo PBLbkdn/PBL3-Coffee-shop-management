@@ -43,13 +43,13 @@ namespace PBL3.BUS
             }
 
         }
-        public void AddTaiKhoan(string manv, string tendangnhap, string mk )
+        public void AddTaiKhoan(string manv, string tendangnhap, string mk)
         {
             TaiKhoan s = new TaiKhoan
             {
                 MaNV = Convert.ToInt32(manv),
                 TenDangNhap = tendangnhap,
-                MatKhau = mk           
+                MatKhau = mk
             };
             QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
             db.TaiKhoans.Add(s);
@@ -60,7 +60,7 @@ namespace PBL3.BUS
             QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
             TaiKhoan sedit = db.TaiKhoans.Find(Convert.ToInt32(manv));
             sedit.TenDangNhap = tendangnhap;
-            sedit.MatKhau = mk;            
+            sedit.MatKhau = mk;
             db.SaveChanges();
         }
         public void DeleteTaiKhoan(int id)
@@ -101,9 +101,9 @@ namespace PBL3.BUS
         }
         public int Login(string username, string password, bool chucvu1, bool chucvu2)
         {
-            if(!chucvu1 && !chucvu2)
+            if (!chucvu1 && !chucvu2)
             {
-                return 2;               
+                return 2;
             }
             else
             {
@@ -125,12 +125,12 @@ namespace PBL3.BUS
                         else
                         {
                             return 3;
-                            
+
                         }
                     }
                 }
                 return 4;
-            }    
+            }
         }
     }
 }

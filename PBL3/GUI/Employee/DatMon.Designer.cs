@@ -48,28 +48,45 @@
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 325c48bc9835b8c313490f561998ad3c7a00220c
 
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
 
+<<<<<<< HEAD
+
+            //this.pictureBox1 = new System.Windows.Forms.PictureBox();
+
+
+=======
 >>>>>>> ad2a925fee2710b2773f06a3c7b20b28a3fd18e4
 >>>>>>> e25e0ed134b06f1631725ee50aec1f4972e160e3
+>>>>>>> 325c48bc9835b8c313490f561998ad3c7a00220c
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel2.SuspendLayout();
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 =======
 <<<<<<< HEAD
+>>>>>>> 325c48bc9835b8c313490f561998ad3c7a00220c
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-=======
+
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            //((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             /*((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();*/
+<<<<<<< HEAD
+
+=======
 >>>>>>> ad2a925fee2710b2773f06a3c7b20b28a3fd18e4
 >>>>>>> e25e0ed134b06f1631725ee50aec1f4972e160e3
+>>>>>>> 325c48bc9835b8c313490f561998ad3c7a00220c
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.SuspendLayout();
@@ -89,14 +106,18 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = global::PBL3.Properties.Resources.nút_tắt;
-<<<<<<< HEAD
-=======
+
+
             this.pictureBox6.Location = new System.Drawing.Point(1344, 12);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(30, 30);
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 =======
 >>>>>>> ad2a925fee2710b2773f06a3c7b20b28a3fd18e4
+>>>>>>> 325c48bc9835b8c313490f561998ad3c7a00220c
             this.pictureBox6.Location = new System.Drawing.Point(1792, 15);
             this.pictureBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox6.Name = "pictureBox6";
@@ -109,23 +130,31 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::PBL3.Properties.Resources.nút_tắt;
-<<<<<<< HEAD
-=======
+
+
             this.pictureBox4.Location = new System.Drawing.Point(60, 178);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(30, 30);
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 =======
 >>>>>>> ad2a925fee2710b2773f06a3c7b20b28a3fd18e4
+>>>>>>> 325c48bc9835b8c313490f561998ad3c7a00220c
             this.pictureBox4.Location = new System.Drawing.Point(80, 219);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(40, 37);
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
+
+
+
+=======
 >>>>>>> ad2a925fee2710b2773f06a3c7b20b28a3fd18e4
 >>>>>>> e25e0ed134b06f1631725ee50aec1f4972e160e3
+>>>>>>> 325c48bc9835b8c313490f561998ad3c7a00220c
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 2;
             this.pictureBox4.TabStop = false;
@@ -133,15 +162,15 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = global::PBL3.Properties.Resources.bàn_Tầng_1__004;
-<<<<<<< HEAD
-=======
+
+
             this.pictureBox5.Location = new System.Drawing.Point(15, 14);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(33, 28);
 <<<<<<< HEAD
 =======
 
->>>>>>> ad2a925fee2710b2773f06a3c7b20b28a3fd18e4
+
             this.pictureBox5.Location = new System.Drawing.Point(20, 17);
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox5.Name = "pictureBox5";
@@ -179,17 +208,22 @@
             this.label2.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
 <<<<<<< HEAD
+
+
+=======
+<<<<<<< HEAD
             this.label2.Location = new System.Drawing.Point(49, 15);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(95, 25);
 =======
 <<<<<<< HEAD
 =======
+>>>>>>> 325c48bc9835b8c313490f561998ad3c7a00220c
             this.label2.Location = new System.Drawing.Point(56, 15);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(95, 25);
 
->>>>>>> ad2a925fee2710b2773f06a3c7b20b28a3fd18e4
+
             this.label2.Location = new System.Drawing.Point(65, 18);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
@@ -329,9 +363,14 @@
             this.guna2TextBox1.TabIndex = 29;
             // 
 <<<<<<< HEAD
+
+
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 325c48bc9835b8c313490f561998ad3c7a00220c
             // pictureBox1
             // 
             this.pictureBox1.Image = global::PBL3.Properties.Resources.Icon_order;
@@ -343,8 +382,12 @@
             this.pictureBox1.TabStop = false;
             // 
 
+<<<<<<< HEAD
+
+=======
 >>>>>>> ad2a925fee2710b2773f06a3c7b20b28a3fd18e4
 >>>>>>> e25e0ed134b06f1631725ee50aec1f4972e160e3
+>>>>>>> 325c48bc9835b8c313490f561998ad3c7a00220c
             // DatMon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -368,17 +411,25 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 =======
 <<<<<<< HEAD
+>>>>>>> 325c48bc9835b8c313490f561998ad3c7a00220c
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-=======
+
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
            /* ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();*/
+<<<<<<< HEAD
+
+=======
 >>>>>>> ad2a925fee2710b2773f06a3c7b20b28a3fd18e4
 >>>>>>> e25e0ed134b06f1631725ee50aec1f4972e160e3
+>>>>>>> 325c48bc9835b8c313490f561998ad3c7a00220c
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.ResumeLayout(false);
