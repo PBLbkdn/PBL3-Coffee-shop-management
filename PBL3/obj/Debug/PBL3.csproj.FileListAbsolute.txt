@@ -78,8 +78,6 @@ D:\sem4\pbl3\PBL3\obj\Debug\PBL3.GUI.Admin.SuaNguyenLieu.resources
 D:\sem4\pbl3\PBL3\obj\Debug\PBL3.GUI.Admin.ThemNhanVien.resources
 D:\sem4\pbl3\PBL3\obj\Debug\PBL3.GUI.Admin.ThemTaiKhoan.resources
 D:\sem4\pbl3\PBL3\obj\Debug\PBL3.GUI.Admin.ThongKe.resources
-D:\sem4\pbl3\PBL3\obj\Debug\PBL3.GUI.Admin.ThongKeCa.resources
-D:\sem4\pbl3\PBL3\obj\Debug\PBL3.GUI.Admin.ThongKeNgay.resources
 D:\sem4\pbl3\PBL3\obj\Debug\PBL3.GUI.Employee.ChonBan.resources
 D:\sem4\pbl3\PBL3\obj\Debug\PBL3.GUI.Employee.DatMon.resources
 D:\sem4\pbl3\PBL3\obj\Debug\PBL3.GUI.Employee.ManHinhChinh_NV.resources

@@ -22,12 +22,18 @@ namespace PBL3.GUI.Employee
                 MessageBox.Show("Không có bàn trống");
                 this.Close();
             }
-            Ban_BLL.Instance.EditBan(1, "Bàn trống");
-            Ban_BLL.Instance.EditBan(4, "Bàn trống");
-            datBanData.DataSource = Ban_BLL.Instance.GetListBanFree();
+
+            RefreshData();
             
         }
 
+        private void RefreshData()
+        {
+            datBanData.DataSource = Ban_BLL.Instance.GetListBanFree();
+            datBanData.Columns["MaBan"].HeaderText = "Mã Bàn";
+            datBanData.Columns["TrangThai"].HeaderText = "Trạng Thái";
+            datBanData.Columns["ViTri"].HeaderText = "Vị Trí";
+        }
 
         private void okButton_Click(object sender, EventArgs e)
         {
@@ -50,6 +56,9 @@ namespace PBL3.GUI.Employee
             this.Close();
         }
 
-        
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

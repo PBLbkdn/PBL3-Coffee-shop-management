@@ -240,15 +240,11 @@
             this.KHButton.Size = new System.Drawing.Size(267, 74);
             this.KHButton.TabIndex = 7;
             this.KHButton.Text = "Quản lý khách hàng";
-<<<<<<< HEAD
+
             this.KHButton.Click += new System.EventHandler(this.KHButton_Click);
-=======
-<<<<<<< HEAD
+
             this.KHButton.Click += new System.EventHandler(this.KHButton_Click);
-=======
->>>>>>> ad2a925fee2710b2773f06a3c7b20b28a3fd18e4
->>>>>>> e25e0ed134b06f1631725ee50aec1f4972e160e3
->>>>>>> 325c48bc9835b8c313490f561998ad3c7a00220c
+
             // 
             // TKeButton
             // 

@@ -94,6 +94,7 @@
             this.banExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.banExit.TabIndex = 3;
             this.banExit.TabStop = false;
+            this.banExit.Click += new System.EventHandler(this.banExit_Click);
             // 
             // pictureBox4
             // 

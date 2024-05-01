@@ -31,7 +31,7 @@ namespace PBL3.BUS
             List<DoanhThu> listDT = quanCaPheEntities.DoanhThus.ToList();
             for (int j = 0; j < listDT.Count; j++)
             {
-                if (listDT[j].MaCT == maCa && listDT[j].NgayTruc.ToString() == ngayTruc)
+                if (listDT[j].MaCT == maCa && listDT[j].NgayTruc.ToString("yyyy-MM-dd") == ngayTruc)
                 {
                     return new
                     {
@@ -151,6 +151,27 @@ namespace PBL3.BUS
                 DoanhThuNT = p.DoanhThuNT
             }).Distinct().ToList<Object>();
             return l1;
+        }
+
+        internal List<Object> GetListDoanhThuNgayByNgay(string Date)
+        {
+            QuanCaPhePBL3Entities quanCaPheEntities = new QuanCaPhePBL3Entities();
+            List<DoanhThu> listDT = quanCaPheEntities.DoanhThus.ToList();
+            List<Object> list = new List<object>();
+            for (int j = 0; j < listDT.Count; j++)
+            {
+                if (listDT[j].NgayTruc.ToString("yyyy-MM-dd") == Date)
+                {
+                    list.Add(new
+                    {
+                        MaCT = listDT[j].MaCT,
+                        NgayTruc = listDT[j].NgayTruc,
+                        DoanhThuCT = listDT[j].DoanhThuCT,
+                        DoanhThuNT = listDT[j].DoanhThuNT
+                    });
+                }
+            }
+            return list;
         }
 
         internal List<Object> GetListDoanhThuThang()

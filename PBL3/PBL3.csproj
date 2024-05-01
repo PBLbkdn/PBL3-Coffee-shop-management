@@ -275,18 +275,6 @@
     <Compile Include="GUI\Admin\ThongKe.Designer.cs">
       <DependentUpon>ThongKe.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Admin\ThongKeCa.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\Admin\ThongKeCa.Designer.cs">
-      <DependentUpon>ThongKeCa.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\Admin\ThongKeNgay.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\Admin\ThongKeNgay.Designer.cs">
-      <DependentUpon>ThongKeNgay.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\Admin\ThucDon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -459,12 +447,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Admin\ThongKe.resx">
       <DependentUpon>ThongKe.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Admin\ThongKeCa.resx">
-      <DependentUpon>ThongKeCa.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Admin\ThongKeNgay.resx">
-      <DependentUpon>ThongKeNgay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Admin\ThucDon.resx">
       <DependentUpon>ThucDon.cs</DependentUpon>

@@ -27,7 +27,10 @@ namespace PBL3.GUI.Employee
 
         private void banButton_Click(object sender, EventArgs e)
         {
-
+            Ban f = new Ban();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
         }
 
         private void TKeButton_Click(object sender, EventArgs e)

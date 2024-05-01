@@ -65,7 +65,7 @@
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(2079, 83);
+            this.guna2Panel1.Size = new System.Drawing.Size(2079, 82);
             this.guna2Panel1.TabIndex = 32;
             // 
             // pictureBox6
@@ -78,6 +78,7 @@
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 3;
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
             // pictureBox4
             // 
@@ -96,7 +97,7 @@
             this.pictureBox5.Location = new System.Drawing.Point(22, 22);
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(50, 43);
+            this.pictureBox5.Size = new System.Drawing.Size(50, 42);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 2;
             this.pictureBox5.TabStop = false;
@@ -109,7 +110,7 @@
             this.panel2.Location = new System.Drawing.Point(90, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(270, 83);
+            this.panel2.Size = new System.Drawing.Size(270, 82);
             this.panel2.TabIndex = 0;
             // 
             // pictureBox11
@@ -213,6 +214,7 @@
             this.datBanData.DefaultCellStyle = dataGridViewCellStyle3;
             this.datBanData.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.datBanData.Location = new System.Drawing.Point(408, 231);
+            this.datBanData.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.datBanData.Name = "datBanData";
             this.datBanData.RowHeadersVisible = false;
             this.datBanData.RowHeadersWidth = 62;
@@ -247,7 +249,7 @@
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(231)))), ((int)(((byte)(231)))));
             this.label1.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(401, 139);
+            this.label1.Location = new System.Drawing.Point(400, 139);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(359, 37);
@@ -270,7 +272,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(181)))), ((int)(((byte)(181)))));
-            this.ClientSize = new System.Drawing.Size(1946, 1106);
+            this.ClientSize = new System.Drawing.Size(2087, 1102);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.datBanData);

@@ -15,10 +15,17 @@ namespace PBL3.GUI.Employee
         public Ban()
         {
             InitializeComponent();
-            banData.DataSource = BUS.Ban_BLL.Instance.GetListBan();
+            RefreshData();
         }
 
-
+        private void RefreshData()
+        {
+            banData.DataSource = BUS.Ban_BLL.Instance.GetListBan();
+            banData.Columns["MaBan"].HeaderText = "Mã bàn";
+            banData.Columns["TrangThai"].HeaderText = "Trạng thái";
+            banData.Columns["ViTri"].HeaderText = "Vị trí";
+            
+        }
         private void findButton_Click(object sender, EventArgs e)
         {
             if (search.Text == "")
@@ -27,12 +34,17 @@ namespace PBL3.GUI.Employee
             }
             else
             {
-                if(BUS.Ban_BLL.Instance.GetBanByID(Convert.ToInt32(search.Text)).Count == 0)
+                if (BUS.Ban_BLL.Instance.GetBanByID(Convert.ToInt32(search.Text)).Count == 0)
                 {
                     MessageBox.Show("Không tìm thấy bàn");
                 }
                 else
-                banData.DataSource = BUS.Ban_BLL.Instance.GetBanByID(Convert.ToInt32(search.Text));
+                {
+                    banData.DataSource = BUS.Ban_BLL.Instance.GetBanByID(Convert.ToInt32(search.Text));
+                    banData.Columns["MaBan"].HeaderText = "Mã bàn";
+                    banData.Columns["TrangThai"].HeaderText = "Trạng thái";
+                    banData.Columns["ViTri"].HeaderText = "Vị trí";
+                }
             }
         }
 
@@ -42,12 +54,12 @@ namespace PBL3.GUI.Employee
             this.Hide();
             f.ShowDialog();
             this.Show();
-            reLoadData();
+            RefreshData();
         }
 
-        private void reLoadData()
+        private void banExit_Click(object sender, EventArgs e)
         {
-            banData.DataSource = BUS.Ban_BLL.Instance.GetListBan();
+            Application.Exit();
         }
     }
 }
