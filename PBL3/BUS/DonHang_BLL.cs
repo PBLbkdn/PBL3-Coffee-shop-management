@@ -48,27 +48,45 @@ namespace PBL3.BUS
             }
         } 
 
-        public List<DonHang> GetListDonHang()
+      
+        public List<Object> GetListDonHang()
         {
-            QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
-            return db.DonHangs.ToList();
+            QuanCaPhePBL3Entities quanCaPhePBL3Entities = new QuanCaPhePBL3Entities();
+            List<Object> list = new List<Object>();
+            List<DonHang> listDH = quanCaPhePBL3Entities.DonHangs.ToList();
+            for (int i = 0; i < listDH.Count; i++)
+            {
+                Object obj = new
+                {
+                    MaDH = listDH[i].MaDH,
+                    MaSP = listDH[i].MaSP,
+                    SoLuongSP = listDH[i].SoLuongSP
+                };
+                list.Add(obj);
+            }
+            return list;
         }
-
-        public List<DonHang> GetListDonHangByID(int MaDH)
+        
+        public List<Object> GetListDonHangByID(int MaDH)
         {
             QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
             List<DonHang> listDH = db.DonHangs.ToList();
-            List<DonHang> listDHByID = new List<DonHang>();
-            for(int i=0; i<listDH.Count; i++)
+            List<Object> listDHByID = new List<Object>();
+            for (int i = 0; i < listDH.Count; i++)
             {
-                if (listDH[i].MaDH==MaDH)
+                if (listDH[i].MaDH == MaDH)
                 {
-                    listDHByID.Add(listDH[i]);
+                    Object obj = new
+                    {
+                        MaDH = listDH[i].MaDH,
+                        MaSP = listDH[i].MaSP,
+                        SoLuongSP = listDH[i].SoLuongSP
+                    };
+                    listDHByID.Add(obj);
                 }
             }
             return listDHByID;
         }
-
         public DonHang GetDonHang(int maDH, int maSP, int SoLuongSP)
         {
             QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
@@ -87,7 +105,7 @@ namespace PBL3.BUS
         {
             long TongTien = 0;
             QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
-            List<DonHang> listDH = GetListDonHangByID(maHD);
+            List<Object> listDH = GetListDonHangByID(maHD);
             /*for(int i=0; i<listDH.Count; i++)
             {
                 SanPham sp = SanPham_BLL.Instance.GetSanPham(listDH[i].MaSP);

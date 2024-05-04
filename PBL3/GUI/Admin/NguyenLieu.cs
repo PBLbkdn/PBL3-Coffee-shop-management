@@ -14,14 +14,27 @@ namespace PBL3.GUI.Admin
 {
     public partial class NguyenLieu : Form
     {
+        private int maNV;
+
         public NguyenLieu()
         {
             InitializeComponent();
         }
 
+        public NguyenLieu(int maNV)
+        {
+            this.maNV = maNV;
+            InitializeComponent();
+            ten.Text = NhanVien_BLL.Instance.getTenNV(maNV);
+        }
+
         private void NLExit_Click(object sender, EventArgs e)
         {
-            Dispose();
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn thoát không?", "Xác nhận thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
 
         private void addNL_Click(object sender, EventArgs e)
@@ -74,6 +87,14 @@ namespace PBL3.GUI.Admin
         {
             string txt = nameNLTb.Text;
             NLData.DataSource = NguyenLieu_BLL.Instance.GetListNguyenLieu(0, txt);
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            ManHinhChinh f = new ManHinhChinh(maNV);
+            this.Hide();
+            f.ShowDialog();
+            Close();
         }
     }
 }

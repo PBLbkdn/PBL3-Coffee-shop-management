@@ -37,14 +37,18 @@
             this.HDButton = new Guna.UI2.WinForms.Guna2Button();
             this.datMonButton = new Guna.UI2.WinForms.Guna2Button();
             this.banButton = new Guna.UI2.WinForms.Guna2Button();
+            this.ten = new System.Windows.Forms.Label();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(132)))), ((int)(((byte)(132)))));
+            this.guna2Panel1.Controls.Add(this.pictureBox6);
             this.guna2Panel1.Controls.Add(this.pictureBox1);
             this.guna2Panel1.Controls.Add(this.label1);
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
@@ -103,6 +107,7 @@
             this.DHButton.Size = new System.Drawing.Size(200, 60);
             this.DHButton.TabIndex = 22;
             this.DHButton.Text = "Quản lý đơn hàng";
+            this.DHButton.Click += new System.EventHandler(this.DHButton_Click);
             // 
             // TKeButton
             // 
@@ -142,6 +147,7 @@
             this.HDButton.Size = new System.Drawing.Size(200, 60);
             this.HDButton.TabIndex = 20;
             this.HDButton.Text = "Quản lý hóa đơn";
+            this.HDButton.Click += new System.EventHandler(this.HDButton_Click);
             // 
             // datMonButton
             // 
@@ -183,12 +189,40 @@
             this.banButton.Text = "Quản lý bàn";
             this.banButton.Click += new System.EventHandler(this.banButton_Click);
             // 
+            // ten
+            // 
+            this.ten.AutoSize = true;
+            this.ten.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ten.Location = new System.Drawing.Point(1762, 225);
+            this.ten.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.ten.Name = "ten";
+            this.ten.Size = new System.Drawing.Size(0, 32);
+            this.ten.TabIndex = 23;
+            this.ten.Click += new System.EventHandler(this.ten_Click);
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::PBL3.Properties.Resources.nút_tắt;
+            this.pictureBox6.Location = new System.Drawing.Point(1974, 42);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(45, 46);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 24;
+            this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
+            // 
             // ManHinhChinh_NV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(181)))), ((int)(((byte)(181)))));
+
+            this.ClientSize = new System.Drawing.Size(2076, 908);
+            this.Controls.Add(this.ten);
+
             this.ClientSize = new System.Drawing.Size(1386, 788);
+
             this.Controls.Add(this.DHButton);
             this.Controls.Add(this.TKeButton);
             this.Controls.Add(this.HDButton);
@@ -200,12 +234,15 @@
             this.Name = "ManHinhChinh_NV";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ManHinhChinh_NV";
-            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
+            this.TopMost = true;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -220,5 +257,7 @@
         private Guna.UI2.WinForms.Guna2Button HDButton;
         private Guna.UI2.WinForms.Guna2Button datMonButton;
         private Guna.UI2.WinForms.Guna2Button banButton;
+        private System.Windows.Forms.Label ten;
+        private System.Windows.Forms.PictureBox pictureBox6;
     }
 }

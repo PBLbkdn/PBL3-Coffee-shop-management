@@ -50,6 +50,7 @@
             this.editButton = new Guna.UI2.WinForms.Guna2Button();
             this.nameNLTb = new Guna.UI2.WinForms.Guna2TextBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.ten = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NLExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -109,6 +110,7 @@
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 2;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // panel2
             // 
@@ -346,12 +348,30 @@
             this.pictureBox10.TabIndex = 26;
             this.pictureBox10.TabStop = false;
             // 
+            // ten
+            // 
+            this.ten.AutoSize = true;
+            this.ten.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(181)))), ((int)(((byte)(181)))));
+            this.ten.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ten.ForeColor = System.Drawing.Color.Black;
+            this.ten.Location = new System.Drawing.Point(1447, 143);
+            this.ten.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.ten.Name = "ten";
+            this.ten.Size = new System.Drawing.Size(133, 32);
+            this.ten.TabIndex = 48;
+            this.ten.Text = "Đơn hàng";
+            // 
             // NguyenLieu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(181)))), ((int)(((byte)(181)))));
+
+            this.ClientSize = new System.Drawing.Size(1837, 882);
+            this.Controls.Add(this.ten);
+
             this.ClientSize = new System.Drawing.Size(1386, 788);
+
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.nameNLTb);
             this.Controls.Add(this.findButton);
@@ -364,6 +384,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "NguyenLieu";
             this.Text = "NguyenLieu";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.NguyenLieu_Load);
             this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.NLExit)).EndInit();
@@ -383,6 +404,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -410,5 +432,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private Guna.UI2.WinForms.Guna2Button editButton;
+        private System.Windows.Forms.Label ten;
     }
 }

@@ -1,4 +1,5 @@
-﻿using PBL3.DTO;
+﻿using PBL3.BUS;
+using PBL3.DTO;
 using PBL3.GUI.Admin;
 using PBL3.GUI.Employee;
 using System;
@@ -15,91 +16,99 @@ namespace PBL3.GUI
 {
     public partial class ManHinhChinh : Form
     {
+        private int maNV;
+
         public ManHinhChinh()
         {
             InitializeComponent();
         }
 
-
-        private void dangxuat_Click(object sender, EventArgs e)
+        public ManHinhChinh(int maNV)
         {
-            Dispose();
+            this.maNV = maNV;
+            InitializeComponent();
+            ten.Text = NhanVien_BLL.Instance.getTenNV(maNV);
         }
 
         private void TKeButton_Click(object sender, EventArgs e)
         {
-            ThongKe f = new ThongKe();
+            ThongKe f = new ThongKe(maNV);
             this.Hide();
             f.ShowDialog();
+            this.Close();
         }
 
         private void CLVButton_Click(object sender, EventArgs e)
         {
-            CaLamViec f = new CaLamViec();
+            CaLamViec f = new CaLamViec(maNV);
             this.Hide();
             f.Show();
+            this.Close();
         }
 
 
         
         private void TKButton_Click(object sender, EventArgs e)
         {
-            Admin.TaiKhoan f = new Admin.TaiKhoan();
+            Admin.TaiKhoan f = new Admin.TaiKhoan(maNV);
             this.Hide();
             f.ShowDialog();
-            this.Show();
+            this.Close();
         }
 
         private void NVButton_Click(object sender, EventArgs e)
         {
-            Admin.NhanVien f = new Admin.NhanVien();
+            Admin.NhanVien f = new Admin.NhanVien(maNV);
             this.Hide();
             f.ShowDialog();
-            this.Show();
+            this.Close();
         }
 
         private void KHButton_Click(object sender, EventArgs e)
         {
-            Admin.KhachHang f = new Admin.KhachHang();
+            Admin.KhachHang f = new Admin.KhachHang(maNV);
             this.Hide();
             f.ShowDialog();
-            this.Show();
+            this.Close();
         }        
 
         private void KMButton_Click(object sender, EventArgs e)
         {
-            GUI.KhuyenMai f = new GUI.KhuyenMai();
+            GUI.KhuyenMai f = new GUI.KhuyenMai(maNV);
             this.Hide();
-            f.ShowDialog();
-            this.Show();
+            f.ShowDialog();Close();
         }
 
         private void HDButton_Click(object sender, EventArgs e)
         {
-
+            Employee.HoaDon f = new Employee.HoaDon(maNV);
+            this.Hide();
+            f.ShowDialog();
+            this.Close();
         }
 
         private void TDButton_Click(object sender, EventArgs e)
         {
-            GUI.ThucDon f = new GUI.ThucDon();
+            GUI.ThucDon f = new GUI.ThucDon(maNV);
             this.Hide();
             f.ShowDialog();
-            this.Show();
+            Close();
         }
 
         private void NLButton_Click(object sender, EventArgs e)
         {
-            Admin.NguyenLieu f = new Admin.NguyenLieu();
+            Admin.NguyenLieu f = new Admin.NguyenLieu(maNV);
             this.Hide();
-            f.ShowDialog();
-            this.Show();
+            f.ShowDialog();Close();
         }
 
-        
-        
-
-        
-
-     
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn đăng xuất?", "Xác nhận đăng xuất", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit(); 
+            }
+        }
     }
 }

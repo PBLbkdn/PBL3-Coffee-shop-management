@@ -12,14 +12,12 @@ namespace PBL3.DTO
     using System;
     using System.Collections.Generic;
     
-    public partial class ChiTietNguyenLieu
+    public partial class sysdiagram
     {
-        public int MaNL { get; set; }
-        public System.DateTime NgayNhap { get; set; }
-        public Nullable<int> SLNhap { get; set; }
-        public Nullable<System.DateTime> NgayHetHan { get; set; }
-        public Nullable<long> GiaNhap { get; set; }
-    
-        public virtual NguyenLieu NguyenLieu { get; set; }
+        public string name { get; set; }
+        public int principal_id { get; set; }
+        public int diagram_id { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }

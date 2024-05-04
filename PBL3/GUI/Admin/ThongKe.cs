@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PBL3.BUS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,21 @@ namespace PBL3.GUI.Admin
 {
     public partial class ThongKe : Form
     {
+        private int maNV;
+
         public ThongKe()
         {
             InitializeComponent();
+            setComboBox();
+            setComboBoxMaCa();
+        }
+
+        public ThongKe(int maNV)
+        {
+            this.maNV = maNV;
+            InitializeComponent();
+            ten.Text = NhanVien_BLL.Instance.getTenNV(maNV);
+            
             setComboBox();
             setComboBoxMaCa();
         }
@@ -130,5 +143,11 @@ namespace PBL3.GUI.Admin
             Application.Exit();
         }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            ManHinhChinh manHinhChinh = new ManHinhChinh(maNV);
+            manHinhChinh.Show();
+            this.Close();
+        }
     }
 }

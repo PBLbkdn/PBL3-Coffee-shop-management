@@ -140,6 +140,9 @@
     <Compile Include="DTO\SanPham.cs">
       <DependentUpon>QuanCaPhePBL3.tt</DependentUpon>
     </Compile>
+    <Compile Include="DTO\sysdiagram.cs">
+      <DependentUpon>QuanCaPhePBL3.tt</DependentUpon>
+    </Compile>
     <Compile Include="DTO\TaiKhoan.cs">
       <DependentUpon>QuanCaPhePBL3.tt</DependentUpon>
     </Compile>
@@ -638,12 +641,11 @@
     <None Include="Resources\icons8-order-48 1.png" />
     <None Include="Resources\bàn 1.png" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Content Include="DTO\QuanCaPhePBL3.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>QuanCaPhePBL3.Context.cs</LastGenOutput>
       <DependentUpon>QuanCaPhePBL3.edmx</DependentUpon>
+      <LastGenOutput>QuanCaPhePBL3.Context.cs</LastGenOutput>
     </Content>
     <Content Include="DTO\QuanCaPhePBL3.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

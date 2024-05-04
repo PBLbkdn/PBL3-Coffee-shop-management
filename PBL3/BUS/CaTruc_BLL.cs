@@ -32,6 +32,24 @@ namespace PBL3.BUS
             return quanCaPheEntities.CaTrucs.ToList();
         }
 
+        public int GetCaTrucCoNV(int maNV, string Day)
+        {
+            List<CaTruc> list = GetListCaTruc();
+            for (int i = 0; i < list.Count; i++)
+            {
+                if (list[i].NgayTruc.ToString("yyyy-MM-dd") == Day)
+                {
+                    for (int j = 0; j < list[i].NhanViens.Count; j++)
+                    {
+                        if (list[i].NhanViens.ElementAt(j).MaNV == maNV)
+                        {
+                            return list[i].MaCT;
+                        }
+                    }
+                }
+            }
+            return -1;
+        }
         public List<Object> GetListNhanVien(int idCT, string day)
         {
             //lấy ra nhân viên trong ca trực 
@@ -95,6 +113,66 @@ namespace PBL3.BUS
 
         }
 
+        public void TinhDoanhThuCa(string Day, int MaCa)
+        {
+            QuanCaPhePBL3Entities quanCaPhePBL3Entities = new QuanCaPhePBL3Entities();
+            List<HoaDon> hoaDons = quanCaPhePBL3Entities.HoaDons.ToList();
+            //giờ bắt đầu
+            TimeSpan timeStart = new TimeSpan();
+            //giờ kết thúc
+            TimeSpan timeEnd = new TimeSpan();
+            if (MaCa == 1)
+            {
+                timeStart = new TimeSpan(7, 0, 0);
+                timeEnd = new TimeSpan(12, 0, 0);
+            }
+            else if (MaCa == 2)
+            {
+                timeStart = new TimeSpan(12, 0, 0);
+                timeEnd = new TimeSpan(17, 0, 0);
+            }
+            else
+            {
+                timeStart = new TimeSpan(17, 0, 0);
+                timeEnd = new TimeSpan(22, 0, 0);   
+            }
+            string month = Day.Substring(0, 2);
+            string day = Day.Substring(3, 2);
+            string year = Day.Substring(6, 4);
+            //datetime bắt đầu tính cả giờ phút giây
+            DateTime start = new DateTime(Convert.ToInt32(year), Convert.ToInt32(month), Convert.ToInt32(day), timeStart.Hours, timeStart.Minutes, timeStart.Seconds);
+            //datetime kết thúc tính cả giờ phút giây
+            DateTime end = new DateTime(Convert.ToInt32(year), Convert.ToInt32(month), Convert.ToInt32(day), timeEnd.Hours, timeEnd.Minutes, timeEnd.Seconds);
+            long doanhThuCa = 0;
+            for(int i = 0; i < hoaDons.Count; i++)
+            {
+                if (hoaDons[i].ThoiGian >= start && hoaDons[i].ThoiGian <= end)
+                {
+                    //kiểm tra xem đã có doanh thu của ca trực chưa
+                    List<DoanhThu> listDT = quanCaPhePBL3Entities.DoanhThus.ToList();
+                    for (int j = 0; j < listDT.Count; j++)
+                    {
+                        if (listDT[j].MaCT == MaCa && listDT[j].NgayTruc.ToString("MM-dd-yyyy") == Day)
+                        {
+                            return;
+                        }
+                    }
+                    doanhThuCa += (long)hoaDons[i].TongTien;
+                }
+            }
+            if(hoaDons.Count == 0)
+            {
+                return;
+            }
+            //tạo mới doanh thu
+            DoanhThu doanhThu = new DoanhThu();
+            doanhThu.MaCT = MaCa;
+            doanhThu.NgayTruc = Convert.ToDateTime(Day);
+            doanhThu.DoanhThuCT = doanhThuCa;
+            doanhThu.DoanhThuNT = 0;
+            //kiểm tra xem đã có doanh thu của ca đó chưa
+            DoanhThu_BLL.Instance.AddDoanhThu(MaCa, Day, doanhThuCa);
+        }
         public void AddNhanVienToCaTruc(int idNV, int id, string day)
         {
             QuanCaPhePBL3Entities quanCaPheEntities = new QuanCaPhePBL3Entities();

@@ -7,6 +7,7 @@
     <Property Name="MaBan" Type="int" Nullable="false" />
     <Property Name="TrangThai" Type="nvarchar" MaxLength="255" />
     <Property Name="ViTri" Type="nvarchar" MaxLength="255" />
+    <Property Name="SDT" Type="varchar" MaxLength="1" />
   </EntityType>
   <EntityType Name="CaTruc">
     <Key>
@@ -56,6 +57,8 @@
     <Property Name="MaNL" Type="int" Nullable="false" />
     <Property Name="NgayNhap" Type="date" Nullable="false" />
     <Property Name="SLNhap" Type="int" />
+    <Property Name="NgayHetHan" Type="date" />
+    <Property Name="GiaNhap" Type="bigint" />
   </EntityType>
   <EntityType Name="ChiTietSanPham">
     <Key>
@@ -136,8 +139,6 @@
     <Property Name="MaNL" Type="int" Nullable="false" />
     <Property Name="TenNL" Type="nvarchar" MaxLength="255" />
     <Property Name="SLTonKho" Type="int" />
-    <Property Name="NgayHetHan" Type="date" />
-    <Property Name="GiaNhap" Type="bigint" />
     <Property Name="DonViTinh" Type="nvarchar" MaxLength="20" />
   </EntityType>
   <EntityType Name="NhanVien">
@@ -163,13 +164,23 @@
     <Property Name="NhomSP" Type="nvarchar" MaxLength="255" />
     <Property Name="DonViSP" Type="nvarchar" MaxLength="20" />
   </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
   <EntityType Name="TaiKhoan">
     <Key>
       <PropertyRef Name="MaNV" />
     </Key>
     <Property Name="MaNV" Type="int" Nullable="false" />
-    <Property Name="TenDangNhap" Type="nvarchar" MaxLength="255" />
-    <Property Name="MatKhau" Type="nvarchar" MaxLength="255" />
+    <Property Name="TenDangNhap" Type="varchar" MaxLength="255" />
+    <Property Name="MatKhau" Type="varchar" MaxLength="255" />
   </EntityType>
   <Association Name="FK_ChiTietCaTruc_CaTruc">
     <End Role="CaTruc" Type="Self.CaTruc" Multiplicity="1" />
@@ -397,6 +408,7 @@
     <EntitySet Name="NguyenLieu" EntityType="Self.NguyenLieu" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="NhanVien" EntityType="Self.NhanVien" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="SanPham" EntityType="Self.SanPham" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TaiKhoan" EntityType="Self.TaiKhoan" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_ChiTietCaTruc_CaTruc" Association="Self.FK_ChiTietCaTruc_CaTruc">
       <End Role="CaTruc" EntitySet="CaTruc" />

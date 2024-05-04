@@ -7,6 +7,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,11 +16,65 @@ namespace PBL3.GUI
 {
     public partial class ThemMon : Form
     {
+        private int maNV;
+
         public ThemMon()
         {
             InitializeComponent();
+            QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
+            nguyenLieu.DataSource= db.NguyenLieux.ToList();
+            DataTable dt = new DataTable(); 
+            dt.Columns.Add("MaNL");
+            dt.Columns.Add("TenNL");
+            dt.Columns.Add("SoLuong");
+            dt.Columns.Add("DonViTinh");
+            dinhLuong.DataSource = dt;
+            
         }
 
+        public ThemMon(int maNV)
+        {
+            this.maNV = maNV;
+            InitializeComponent();
+            QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
+            nguyenLieu.DataSource = db.NguyenLieux.ToList();
+            DataTable dt = new DataTable();
+            dt.Columns.Add("MaNL");
+            dt.Columns.Add("TenNL");
+            dt.Columns.Add("SoLuong");
+            dt.Columns.Add("DonViTinh");
+            dinhLuong.DataSource = dt;
+        }
+
+        private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //lấy dòng được chọn, thêm vào dinhluong
+            int index = e.RowIndex;
+            DataGridViewRow selectedRow = nguyenLieu.Rows[index];
+            //kiểm tra đã có nguyên liệu này trong bảng định lượng chưa
+            string manl = selectedRow.Cells[0].Value.ToString();
+            if (dinhLuong.Rows.Count > 0)
+            {
+                foreach (DataGridViewRow row in dinhLuong.Rows)
+                {
+                    if (row.Cells[0].Value != null)
+                    {
+                        if (row.Cells[0].Value.ToString() == manl)
+                        {
+                            MessageBox.Show("Nguyên liệu đã tồn tại trong bảng định lượng!");
+                            return;
+                        }
+                    }
+                }
+            }
+           
+            string tennl = selectedRow.Cells[1].Value.ToString();
+            string donvi = selectedRow.Cells[3].Value.ToString();
+            DataTable dt = (DataTable)dinhLuong.DataSource;
+            dt.Rows.Add(manl, tennl, "", donvi);
+            dinhLuong.DataSource = dt;
+            
+        }
         private void saveSP_Click(object sender, EventArgs e)
         {
             QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
@@ -40,5 +95,6 @@ namespace PBL3.GUI
         {
             Dispose();
         }
+
     }
 }

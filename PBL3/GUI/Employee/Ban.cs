@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PBL3.BUS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,20 @@ namespace PBL3.GUI.Employee
 {
     public partial class Ban : Form
     {
+        private int maNV;
+
         public Ban()
         {
             InitializeComponent();
+            RefreshData();
+        }
+
+        public Ban(int maNV)
+        {
+            this.maNV = maNV;
+            InitializeComponent();
+            ten.Text = NhanVien_BLL.Instance.getTenNV(maNV);
+            
             RefreshData();
         }
 
@@ -50,7 +62,7 @@ namespace PBL3.GUI.Employee
 
         private void datBan_Click(object sender, EventArgs e)
         {
-            DatBan f = new DatBan();
+            DatBan f = new DatBan(maNV);
             this.Hide();
             f.ShowDialog();
             this.Show();
@@ -59,7 +71,19 @@ namespace PBL3.GUI.Employee
 
         private void banExit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn thoát?", "Thoát", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            ManHinhChinh_NV manHinhChinh = new ManHinhChinh_NV(maNV);
+            this.Hide();
+            manHinhChinh.Show();
+            this.Close();
         }
     }
 }

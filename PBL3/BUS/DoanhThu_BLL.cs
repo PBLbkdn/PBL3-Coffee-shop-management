@@ -126,6 +126,7 @@ namespace PBL3.BUS
         {
             QuanCaPhePBL3Entities quanCaPheEntities = new QuanCaPhePBL3Entities();
             List<DoanhThu> listDT = quanCaPheEntities.DoanhThus.ToList();
+            
 
             long DTNgay = listDT.Where(p => p.NgayTruc.ToString() == NgayTruc).Sum(p => p.DoanhThuCT).Value;
 
@@ -134,9 +135,18 @@ namespace PBL3.BUS
             doanhThu.NgayTruc = Convert.ToDateTime(NgayTruc);
             doanhThu.DoanhThuCT = DTCa;
             doanhThu.DoanhThuNT = DTNgay + DTCa;
+            
             quanCaPheEntities.DoanhThus.Add(doanhThu);
             DTNgay = doanhThu.DoanhThuNT.Value;
+            for(int i=0;i<listDT.Count; i++)
+            {
+                if (listDT[i].NgayTruc.ToString("MM-dd-yyyy") == NgayTruc && listDT[i].MaCT == MaCT)
 
+                {
+                    return;
+                }
+            }
+            
             quanCaPheEntities.SaveChanges();
 
             UpdateDoanhThu(MaCT, NgayTruc, DTNgay);

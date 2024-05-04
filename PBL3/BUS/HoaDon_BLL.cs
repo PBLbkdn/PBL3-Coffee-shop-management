@@ -37,22 +37,45 @@ namespace PBL3.BUS
             db.SaveChanges();
         }
 
-        public List<HoaDon> GetListHoaDon()
+      
+        public List<Object> GetListHoaDon()
         {
             QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
-            return db.HoaDons.ToList();
+            List<HoaDon> listHD = db.HoaDons.ToList();  
+            List<Object> res = new List<Object>();
+            foreach (HoaDon hd in listHD)
+            {
+                Object obj = new
+                {
+                    MaHD = hd.MaHD,
+                    MaDH = hd.MaDH,
+                    MaKH = hd.MaKH,
+                    ThoiGian = hd.ThoiGian,
+                    TongTien = hd.TongTien
+                };
+                res.Add(obj);
+            }
+            return res;
         }
 
-        public List<HoaDon> GetListHoaDonByID(int MaHD)
+        public List<Object> GetListHoaDonByID(int MaHD)
         {
-            QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
-            List<HoaDon> listHD = db.HoaDons.ToList();
-            List<HoaDon> res = new List<HoaDon>();
+            QuanCaPhePBL3Entities quanCaPhePBL3Entities = new QuanCaPhePBL3Entities();
+            List<HoaDon> listHD = quanCaPhePBL3Entities.HoaDons.ToList();
+            List<Object> res = new List<Object>();
             foreach (HoaDon hd in listHD)
             {
                 if (hd.MaHD == MaHD)
                 {
-                    res.Add(hd);
+                    Object obj = new
+                    {
+                        MaHD = hd.MaHD,
+                        MaDH = hd.MaDH,
+                        MaKH = hd.MaKH,
+                        ThoiGian = hd.ThoiGian,
+                        TongTien = hd.TongTien
+                    };
+                    res.Add(obj);
                 }
             }
             return res;

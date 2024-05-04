@@ -80,6 +80,10 @@
             // timKiemKH
             // 
 
+           
+
+
+
             this.timKiemKH.BorderRadius = 5;
             this.timKiemKH.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.timKiemKH.DefaultText = "";
@@ -98,6 +102,9 @@
             this.timKiemKH.SelectedText = "";
             this.timKiemKH.Size = new System.Drawing.Size(200, 36);
             this.timKiemKH.TabIndex = 50;
+
+
+
 
             // 
             // findButton

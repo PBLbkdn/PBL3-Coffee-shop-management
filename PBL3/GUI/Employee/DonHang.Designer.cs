@@ -33,20 +33,29 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.donHangData = new System.Windows.Forms.DataGridView();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
+
+
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.guna2Panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+
             this.timKiemDonHang = new Guna.UI2.WinForms.Guna2TextBox();
             this.findButton = new Guna.UI2.WinForms.Guna2Button();
+            this.ten = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.donHangExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+
+
+
 
             ((System.ComponentModel.ISupportInitialize)(this.donHangData)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -61,26 +70,30 @@
             this.guna2Panel1.Controls.Add(this.panel2);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1386, 54);
+            this.guna2Panel1.Size = new System.Drawing.Size(1859, 66);
             this.guna2Panel1.TabIndex = 32;
             // 
             // donHangExit
             // 
             this.donHangExit.Image = global::PBL3.Properties.Resources.nút_tắt;
-            this.donHangExit.Location = new System.Drawing.Point(1344, 12);
+            this.donHangExit.Location = new System.Drawing.Point(1792, 14);
+            this.donHangExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.donHangExit.Name = "donHangExit";
-            this.donHangExit.Size = new System.Drawing.Size(30, 30);
+            this.donHangExit.Size = new System.Drawing.Size(40, 37);
             this.donHangExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.donHangExit.TabIndex = 3;
             this.donHangExit.TabStop = false;
+            this.donHangExit.Click += new System.EventHandler(this.donHangExit_Click);
             // 
             // pictureBox4
             // 
             this.pictureBox4.Image = global::PBL3.Properties.Resources.nút_tắt;
-            this.pictureBox4.Location = new System.Drawing.Point(60, 178);
+            this.pictureBox4.Location = new System.Drawing.Point(80, 219);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox4.Size = new System.Drawing.Size(40, 37);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 2;
             this.pictureBox4.TabStop = false;
@@ -88,22 +101,36 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = global::PBL3.Properties.Resources.bàn_Tầng_1__004;
-            this.pictureBox5.Location = new System.Drawing.Point(15, 14);
+            this.pictureBox5.Location = new System.Drawing.Point(20, 18);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(33, 28);
+            this.pictureBox5.Size = new System.Drawing.Size(44, 34);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 2;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(231)))), ((int)(((byte)(231)))));
             this.panel2.Controls.Add(this.pictureBox11);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(60, 0);
+            this.panel2.Location = new System.Drawing.Point(80, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(180, 54);
+            this.panel2.Size = new System.Drawing.Size(240, 66);
             this.panel2.TabIndex = 0;
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.Image = global::PBL3.Properties.Resources.icons8_order_48_1;
+            this.pictureBox11.Location = new System.Drawing.Point(35, 14);
+            this.pictureBox11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(36, 36);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox11.TabIndex = 3;
+            this.pictureBox11.TabStop = false;
             // 
             // label2
             // 
@@ -111,31 +138,41 @@
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(231)))), ((int)(((byte)(231)))));
             this.label2.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(59, 14);
+            this.label2.Location = new System.Drawing.Point(78, 18);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(107, 25);
+            this.label2.Size = new System.Drawing.Size(133, 32);
             this.label2.TabIndex = 0;
             this.label2.Text = "Đơn hàng";
             // 
             // donHangData
             // 
+            this.donHangData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.donHangData.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.donHangData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.donHangData.Location = new System.Drawing.Point(60, 178);
+            this.donHangData.Location = new System.Drawing.Point(80, 219);
+            this.donHangData.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.donHangData.Name = "donHangData";
-            this.donHangData.Size = new System.Drawing.Size(1266, 529);
+            this.donHangData.RowHeadersWidth = 62;
+            this.donHangData.Size = new System.Drawing.Size(1688, 651);
             this.donHangData.TabIndex = 36;
             // 
             // pictureBox10
             // 
             this.pictureBox10.Image = global::PBL3.Properties.Resources.Vector__2_;
-            this.pictureBox10.Location = new System.Drawing.Point(1286, 96);
+            this.pictureBox10.Location = new System.Drawing.Point(1715, 118);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox10.Size = new System.Drawing.Size(53, 50);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox10.TabIndex = 35;
             this.pictureBox10.TabStop = false;
             // 
+
+            // timKiemDonHang
+            // 
+
+
             this.timKiemDonHang.BorderRadius = 10;
             this.timKiemDonHang.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.timKiemDonHang.DefaultText = "";
@@ -147,12 +184,13 @@
             this.timKiemDonHang.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.timKiemDonHang.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.timKiemDonHang.IconLeft = global::PBL3.Properties.Resources.entypo_magnifying_glass;
-            this.timKiemDonHang.Location = new System.Drawing.Point(60, 96);
+            this.timKiemDonHang.Location = new System.Drawing.Point(80, 118);
+            this.timKiemDonHang.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.timKiemDonHang.Name = "timKiemDonHang";
             this.timKiemDonHang.PasswordChar = '\0';
             this.timKiemDonHang.PlaceholderText = "Nhập Mã/Tên đơn hàng cần tìm";
             this.timKiemDonHang.SelectedText = "";
-            this.timKiemDonHang.Size = new System.Drawing.Size(421, 36);
+            this.timKiemDonHang.Size = new System.Drawing.Size(562, 44);
             this.timKiemDonHang.TabIndex = 33;
             // 
             // findButton
@@ -168,11 +206,28 @@
             this.findButton.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.findButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.findButton.ForeColor = System.Drawing.Color.Black;
-            this.findButton.Location = new System.Drawing.Point(515, 88);
+            this.findButton.Location = new System.Drawing.Point(686, 108);
+            this.findButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.findButton.Name = "findButton";
-            this.findButton.Size = new System.Drawing.Size(161, 48);
+            this.findButton.Size = new System.Drawing.Size(215, 59);
             this.findButton.TabIndex = 45;
             this.findButton.Text = "Tìm kiếm";
+
+            this.findButton.Click += new System.EventHandler(this.findButton_Click);
+            // 
+            // ten
+            // 
+            this.ten.AutoSize = true;
+            this.ten.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(181)))), ((int)(((byte)(181)))));
+            this.ten.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ten.ForeColor = System.Drawing.Color.Black;
+            this.ten.Location = new System.Drawing.Point(1490, 136);
+            this.ten.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.ten.Name = "ten";
+            this.ten.Size = new System.Drawing.Size(133, 32);
+            this.ten.TabIndex = 46;
+            this.ten.Text = "Đơn hàng";
+
             // 
             // pictureBox4
             // 
@@ -203,32 +258,42 @@
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox11.TabIndex = 3;
             this.pictureBox11.TabStop = false;
+
             // 
             // DonHang
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(181)))), ((int)(((byte)(181)))));
-            this.ClientSize = new System.Drawing.Size(1386, 788);
+            this.ClientSize = new System.Drawing.Size(1859, 882);
+            this.Controls.Add(this.ten);
             this.Controls.Add(this.findButton);
             this.Controls.Add(this.donHangData);
             this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.timKiemDonHang);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "DonHang";
             this.Text = "DonHang";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.guna2Panel1.ResumeLayout(false);
+
+
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+
             ((System.ComponentModel.ISupportInitialize)(this.donHangExit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.donHangData)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -245,5 +310,6 @@
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.DataGridView donHangData;
         private Guna.UI2.WinForms.Guna2Button findButton;
+        private System.Windows.Forms.Label ten;
     }
 }

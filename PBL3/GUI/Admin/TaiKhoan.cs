@@ -13,8 +13,17 @@ namespace PBL3.GUI.Admin
 {
     public partial class TaiKhoan : Form
     {
+        private int maNV;
+
         public TaiKhoan()
         {
+            InitializeComponent();
+        }
+
+        public TaiKhoan(int maNV)
+        {
+            this.maNV = maNV;
+            ten.Text = NhanVien_BLL.Instance.getTenNV(maNV);
             InitializeComponent();
         }
 
@@ -25,7 +34,7 @@ namespace PBL3.GUI.Admin
 
         private void addTK_Click(object sender, EventArgs e)
         {
-            ThemTaiKhoan f = new ThemTaiKhoan();
+            ThemTaiKhoan f = new ThemTaiKhoan(maNV);
             this.Hide();
             f.ShowDialog();
             this.Show();
@@ -39,7 +48,7 @@ namespace PBL3.GUI.Admin
             {
                 Manv = Convert.ToInt32(TKData.SelectedRows[0].Cells["MaNV"].Value.ToString());
             }
-            SuaTaiKhoan f = new SuaTaiKhoan();
+            SuaTaiKhoan f = new SuaTaiKhoan(maNV);
             f.GetThongTin(Manv);
             this.Hide();
             f.ShowDialog();

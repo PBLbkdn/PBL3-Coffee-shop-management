@@ -121,6 +121,11 @@ namespace PBL3.BUS
             return d;
         }
 
+        public string getTenNV(int maNV)
+        {
+            QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
+            return db.NhanViens.Find(maNV).HoTenNV;
+        }
         public List<Int32> ListIDNV()
         {
             QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
@@ -148,6 +153,12 @@ namespace PBL3.BUS
                     return false;
             }
             return true;
+        }
+
+        public int getmaCV(int maNV)
+        {
+            QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
+            return db.NhanViens.Find(maNV).MaCV;
         }
     }
 }

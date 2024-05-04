@@ -104,6 +104,7 @@
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 2;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // panel2
             // 
@@ -236,36 +237,64 @@
             // TrangThai
             // 
             this.TrangThai.AutoSize = true;
+
+            this.TrangThai.Location = new System.Drawing.Point(454, 71);
+            this.TrangThai.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.TrangThai.Name = "TrangThai";
+            this.TrangThai.Size = new System.Drawing.Size(84, 20);
+
             this.TrangThai.Location = new System.Drawing.Point(303, 46);
             this.TrangThai.Name = "TrangThai";
             this.TrangThai.Size = new System.Drawing.Size(58, 13);
+
             this.TrangThai.TabIndex = 7;
             this.TrangThai.Text = "Trạng thái:";
             // 
             // ViTri
             // 
             this.ViTri.AutoSize = true;
+
+            this.ViTri.Location = new System.Drawing.Point(454, 32);
+            this.ViTri.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.ViTri.Name = "ViTri";
+            this.ViTri.Size = new System.Drawing.Size(45, 20);
+
             this.ViTri.Location = new System.Drawing.Point(303, 21);
             this.ViTri.Name = "ViTri";
             this.ViTri.Size = new System.Drawing.Size(32, 13);
+
             this.ViTri.TabIndex = 6;
             this.ViTri.Text = "Tầng";
             // 
             // NhanVienPhucVu
             // 
             this.NhanVienPhucVu.AutoSize = true;
+
+            this.NhanVienPhucVu.Location = new System.Drawing.Point(103, 71);
+            this.NhanVienPhucVu.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.NhanVienPhucVu.Name = "NhanVienPhucVu";
+            this.NhanVienPhucVu.Size = new System.Drawing.Size(69, 20);
+
             this.NhanVienPhucVu.Location = new System.Drawing.Point(69, 46);
             this.NhanVienPhucVu.Name = "NhanVienPhucVu";
             this.NhanVienPhucVu.Size = new System.Drawing.Size(50, 13);
+
             this.NhanVienPhucVu.TabIndex = 5;
             this.NhanVienPhucVu.Text = "Phục vụ:";
             // 
             // MaBan
             // 
             this.MaBan.AutoSize = true;
+
+            this.MaBan.Location = new System.Drawing.Point(103, 32);
+            this.MaBan.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.MaBan.Name = "MaBan";
+            this.MaBan.Size = new System.Drawing.Size(38, 20);
+
             this.MaBan.Location = new System.Drawing.Point(69, 21);
             this.MaBan.Name = "MaBan";
             this.MaBan.Size = new System.Drawing.Size(26, 13);
+
             this.MaBan.TabIndex = 4;
             this.MaBan.Text = "Bàn";
             // 
@@ -339,6 +368,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "XemThongTinBan";
             this.Text = "XemThongTinBan";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();

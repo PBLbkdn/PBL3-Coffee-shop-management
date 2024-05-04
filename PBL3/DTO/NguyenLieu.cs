@@ -24,8 +24,6 @@ namespace PBL3.DTO
         public int MaNL { get; set; }
         public string TenNL { get; set; }
         public Nullable<int> SLTonKho { get; set; }
-        public Nullable<System.DateTime> NgayHetHan { get; set; }
-        public Nullable<long> GiaNhap { get; set; }
         public string DonViTinh { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
