@@ -19,7 +19,13 @@ namespace PBL3.GUI.Employee
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn đăng xuất không?", "Thông báo", MessageBoxButtons.YesNo);
+            if(dialogResult == DialogResult.Yes)
+            {
+                DangNhap dangNhap = new DangNhap();
+                dangNhap.Show();
+                this.Close();
+            }
         }
     }
 }

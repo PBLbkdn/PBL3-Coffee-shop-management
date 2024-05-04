@@ -26,25 +26,27 @@ namespace PBL3.GUI
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-            if(username.Text == "" || password.Text == "")
+            if(username.Text.Equals("") || password.Text.Equals(""))
             {
-                MessageBox.Show("Vui lòng nhập đầy đủ thông tin tài khoản và mật khẩu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             int x = TaiKhoan_BLL.Instance.Login(username.Text, password.Text, rbManager.Checked, rbStaff.Checked);
+            
             switch (x)
             {
                 case 1:
                     MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    int maNV = TaiKhoan_BLL.Instance.GetMaNV(username.Text, password.Text);
                     if (rbManager.Checked)
                     {
-                        ManHinhChinh f = new ManHinhChinh();
+                        ManHinhChinh f = new ManHinhChinh(maNV);
                         this.Hide();
                         f.Show();
                     }
                     else
                     {
-                        ManHinhChinh_NV f = new ManHinhChinh_NV();
+                        ManHinhChinh_NV f = new ManHinhChinh_NV(maNV);
                         this.Hide();
                         f.Show();
                     }

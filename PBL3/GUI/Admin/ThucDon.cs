@@ -14,14 +14,24 @@ namespace PBL3.GUI
 {
     public partial class ThucDon : Form
     {
+        private int maNV;
+
         public ThucDon()
         {
             InitializeComponent();
         }
 
+        public ThucDon(int maNV)
+        {
+            this.maNV = maNV;
+
+            InitializeComponent();
+            ten.Text = NhanVien_BLL.Instance.getTenNV(maNV);
+        }
+
         private void addSp_Click(object sender, EventArgs e)
         {
-            ThemMon f = new ThemMon();
+            ThemMon f = new ThemMon(maNV);
             this.Hide();
             f.ShowDialog();
             this.Show();
@@ -67,7 +77,20 @@ namespace PBL3.GUI
 
         private void exitSP_Click(object sender, EventArgs e)
         {
-            Dispose();
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn thoát không?", "Xác nhận thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                DangNhap dangNhap = new DangNhap();
+                dangNhap.Show();
+                this.Close();
+            }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            ManHinhChinh manHinhChinh = new ManHinhChinh(maNV);
+            manHinhChinh.Show();
+            this.Close();
         }
     }
 }

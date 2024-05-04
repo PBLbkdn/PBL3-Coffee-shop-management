@@ -14,12 +14,13 @@ namespace PBL3.GUI.Admin
 {
     public partial class NguyenLieu : Form
     {
+        private int maNV;
+
         public NguyenLieu()
         {
             InitializeComponent();
         }
 
-<<<<<<< HEAD
         public NguyenLieu(int maNV)
         {
             this.maNV = maNV;
@@ -27,42 +28,22 @@ namespace PBL3.GUI.Admin
             ten.Text = NhanVien_BLL.Instance.getTenNV(maNV);
         }
 
-        private void RefreshData()
-        {
-            if (NLData.Columns["MaNL"] != null)
-            {
-                NLData.Columns["MaNL"].HeaderText = "Mã nguyên liệu";
-            }
-            if (NLData.Columns["TenNL"] != null)
-            {
-                NLData.Columns["TenNL"].HeaderText = "Tên nguyên liệu";
-            }
-            if (NLData.Columns["SLTonKho"] != null)
-            {
-                NLData.Columns["SLTonKho"].HeaderText = "Số lượng tồn kho";
-            }
-            if (NLData.Columns["DonViTinh"] != null)
-            {
-                NLData.Columns["DonViTinh"].HeaderText = "Đơn vị tính";
-            }   
-
-        }
-
-=======
->>>>>>> 9d8423669730f19c9633237d6286879ceacbfaac
         private void NLExit_Click(object sender, EventArgs e)
         {
-            Dispose();
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn thoát không?", "Xác nhận thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
 
         private void addNL_Click(object sender, EventArgs e)
         {
-            ThemNguyenLieu f = new ThemNguyenLieu(maNV);
+            ThemNguyenLieu f = new ThemNguyenLieu();
             this.Hide();
             f.ShowDialog();
             this.Show();
             NLData.DataSource = NguyenLieu_BLL.Instance.GetListNguyenLieu(0, null);
-            RefreshData();
         }
 
         private void editNL_Click(object sender, EventArgs e)
@@ -78,7 +59,6 @@ namespace PBL3.GUI.Admin
             f.ShowDialog();
             this.Show();
             NLData.DataSource = NguyenLieu_BLL.Instance.GetListNguyenLieu(0, null);
-            RefreshData();
         }
 
         private void clearNL_Click(object sender, EventArgs e)
@@ -96,20 +76,27 @@ namespace PBL3.GUI.Admin
                     NLData.DataSource = NguyenLieu_BLL.Instance.GetListNguyenLieu(0, null);
                 }
             }
-            RefreshData();
         }
 
         private void NguyenLieu_Load(object sender, EventArgs e)
         {
             NLData.DataSource = NguyenLieu_BLL.Instance.GetListNguyenLieu(0, null);
-            RefreshData();
         }
 
         private void searchNL_Click(object sender, EventArgs e)
         {
             string txt = nameNLTb.Text;
             NLData.DataSource = NguyenLieu_BLL.Instance.GetListNguyenLieu(0, txt);
-            RefreshData();
+        }
+
+        
+
+        private void pictureBox5_Click_1(object sender, EventArgs e)
+        {
+            ManHinhChinh f = new ManHinhChinh(maNV);
+            this.Hide();
+            f.ShowDialog();
+            Close();
         }
     }
 }

@@ -16,5 +16,10 @@ namespace PBL3.GUI.Employee
         {
             InitializeComponent();
         }
+
+        private void cancelButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

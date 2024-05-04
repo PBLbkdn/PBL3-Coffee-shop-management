@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PBL3.BUS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,21 @@ namespace PBL3.GUI.Admin
 {
     public partial class ThongKe : Form
     {
+        private int maNV;
+
         public ThongKe()
         {
             InitializeComponent();
+            setComboBox();
+            setComboBoxMaCa();
+        }
+
+        public ThongKe(int maNV)
+        {
+            this.maNV = maNV;
+            InitializeComponent();
+            ten.Text = NhanVien_BLL.Instance.getTenNV(maNV);
+
             setComboBox();
             setComboBoxMaCa();
         }
@@ -59,7 +72,7 @@ namespace PBL3.GUI.Admin
         private void TkeCb_SelectedIndexChanged(object sender, EventArgs e)
         {
             string ThongKe = TkeCb.SelectedItem.ToString();
-            if(ThongKe.Equals("Thống kê theo ca làm việc"))
+            if (ThongKe.Equals("Thống kê theo ca làm việc"))
             {
                 thongKeData.DataSource = BUS.DoanhThu_BLL.Instance.GetListDoanhThuCa();
                 RefreshData();
@@ -70,7 +83,7 @@ namespace PBL3.GUI.Admin
                 ThoiGian.Enabled = true;
                 Tim.Visible = true;
             }
-            else if(ThongKe.Equals("Thống kê theo ngày"))
+            else if (ThongKe.Equals("Thống kê theo ngày"))
             {
                 labelCaLamViec.Visible = false;
                 MaCaCB.Visible = false;
@@ -82,20 +95,20 @@ namespace PBL3.GUI.Admin
                 thongKeData.DataSource = BUS.DoanhThu_BLL.Instance.GetListDoanhThuNgay();
                 RefreshData();
             }
-            else if(ThongKe.Equals("Thống kê theo tháng"))
+            else if (ThongKe.Equals("Thống kê theo tháng"))
             {
                 thongKeData.DataSource = BUS.DoanhThu_BLL.Instance.GetListDoanhThuThang();
                 RefreshData();
-            }   
+            }
         }
 
         private void Tim_Click(object sender, EventArgs e)
         {
-            if(MaCaCB.SelectedItem == null && MaCaCB.Visible==true)
+            if (MaCaCB.SelectedItem == null && MaCaCB.Visible == true)
             {
                 MessageBox.Show("Vui lòng chọn ca làm việc");
             }
-            else if(ThoiGian.Value > DateTime.Now && ThoiGian.Visible == true)
+            else if (ThoiGian.Value > DateTime.Now && ThoiGian.Visible == true)
             {
                 MessageBox.Show("Vui lòng chọn thời gian hợp lệ");
             }
@@ -105,9 +118,9 @@ namespace PBL3.GUI.Admin
                 if (MaCaCB.Visible == false)
                 {
                     thongKeData.DataSource = null;
-                    
-                    data=BUS.DoanhThu_BLL.Instance.GetListDoanhThuNgayByNgay(ThoiGian.Value.ToString("yyyy-MM-dd"));
-                    
+
+                    data = BUS.DoanhThu_BLL.Instance.GetListDoanhThuNgayByNgay(ThoiGian.Value.ToString("yyyy-MM-dd"));
+
                 }
                 else
                 {
@@ -130,5 +143,12 @@ namespace PBL3.GUI.Admin
             Application.Exit();
         }
 
+        
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+            ManHinhChinh manHinhChinh = new ManHinhChinh(maNV);
+            manHinhChinh.Show();
+            this.Close();
+        }
     }
 }

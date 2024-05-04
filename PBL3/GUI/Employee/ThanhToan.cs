@@ -12,13 +12,38 @@ namespace PBL3.GUI.Employee
 {
     public partial class Thanh : Form
     {
+        private int maNV;
         public Thanh()
         {
             InitializeComponent();
         }
 
+        public Thanh(int maNV)
+        {
+            InitializeComponent();
+            this.maNV = maNV;
+        }
         private void label7_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void thanhToanExit_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn thoát không?", "Thoát", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                DangNhap dangNhap = new DangNhap();
+                dangNhap.Show();
+                this.Close();
+            }
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            ManHinhChinh_NV manHinhChinh = new ManHinhChinh_NV(maNV);
+            manHinhChinh.Show();
+            this.Close();
 
         }
     }

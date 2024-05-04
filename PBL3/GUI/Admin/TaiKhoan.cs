@@ -13,19 +13,44 @@ namespace PBL3.GUI.Admin
 {
     public partial class TaiKhoan : Form
     {
+        private int maNV;
+
         public TaiKhoan()
         {
             InitializeComponent();
         }
 
-        private void TaiKhoan_Load(object sender, EventArgs e)
+        public TaiKhoan(int maNV)
         {
+            this.maNV = maNV; InitializeComponent();
+            ten.Text = NhanVien_BLL.Instance.getTenNV(maNV);
             TKData.DataSource = TaiKhoan_BLL.Instance.GetListTaiKhoan(0, null);
+            RefreshData();
         }
+        private void RefreshData()
+        {
+            if (TKData.Columns["MaNV"] != null)
+            {
+                TKData.Columns["MaNV"].HeaderText = "Mã nhân viên";
+            }   
+            if (TKData.Columns["HoTenNV"] != null)
+            {
+                TKData.Columns["TenNV"].HeaderText = "Tên nhân viên";
+            }
+            if (TKData.Columns["TenDangNhap"] != null)
+            {
+                TKData.Columns["TenDangNhap"].HeaderText = "Tên tài khoản";
+            }
+            if (TKData.Columns["MatKhau"] != null)
+            {
+                TKData.Columns["MatKhau"].HeaderText = "Mật khẩu";
+            }
+        }
+
 
         private void addTK_Click(object sender, EventArgs e)
         {
-            ThemTaiKhoan f = new ThemTaiKhoan();
+            ThemTaiKhoan f = new ThemTaiKhoan(maNV);
             this.Hide();
             f.ShowDialog();
             this.Show();
@@ -39,7 +64,7 @@ namespace PBL3.GUI.Admin
             {
                 Manv = Convert.ToInt32(TKData.SelectedRows[0].Cells["MaNV"].Value.ToString());
             }
-            SuaTaiKhoan f = new SuaTaiKhoan();
+            SuaTaiKhoan f = new SuaTaiKhoan(maNV);
             f.GetThongTin(Manv);
             this.Hide();
             f.ShowDialog();
@@ -64,14 +89,23 @@ namespace PBL3.GUI.Admin
             }
         }
 
-        private void exitTK_Click(object sender, EventArgs e)
-        {
-            this.Dispose();
-        }
-
+       
         private void TKExit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn thoát không?", "Xác nhận thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                DangNhap dangNhap = new DangNhap();
+                dangNhap.Show();
+                this.Close();
+            }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            ManHinhChinh manHinhChinh = new ManHinhChinh(maNV);
+            manHinhChinh.Show();
+            this.Close();
         }
     }
 }

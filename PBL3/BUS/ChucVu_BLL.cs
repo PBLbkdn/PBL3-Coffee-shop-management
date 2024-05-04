@@ -29,7 +29,11 @@ namespace PBL3.BUS
             QuanCaPhePBL3Entities quanCaPheEntities = new QuanCaPhePBL3Entities();
             return quanCaPheEntities.ChucVus.ToList();
         }
-
+        public string getTenChucVu(int maCV)
+        {
+            QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
+            return db.ChucVus.Where(p => p.MaCV == maCV).Select(p => p.TenCV).FirstOrDefault();
+        }
         public ChucVu GetChucVu(int MaCV)
         {
             QuanCaPhePBL3Entities quanCaPheEntities = new QuanCaPhePBL3Entities();

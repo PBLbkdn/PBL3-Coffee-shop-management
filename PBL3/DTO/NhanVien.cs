@@ -18,6 +18,7 @@ namespace PBL3.DTO
         public NhanVien()
         {
             this.ChiTietHoaDons = new HashSet<ChiTietHoaDon>();
+            this.CaTrucs = new HashSet<CaTruc>();
         }
     
         public int MaNV { get; set; }
@@ -32,5 +33,7 @@ namespace PBL3.DTO
         public virtual ICollection<ChiTietHoaDon> ChiTietHoaDons { get; set; }
         public virtual ChucVu ChucVu { get; set; }
         public virtual TaiKhoan TaiKhoan { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CaTruc> CaTrucs { get; set; }
     }
 }

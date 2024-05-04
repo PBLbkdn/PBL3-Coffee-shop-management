@@ -57,7 +57,6 @@ D:\DEV\HK4\PBL3_Coffee_shop_management\PBL3\obj\Debug\PBL3.GUI.Employee.DatMon.r
 D:\DEV\HK4\PBL3_Coffee_shop_management\PBL3\obj\Debug\PBL3.GUI.Employee.ManHinhChinh_NV.resources
 D:\DEV\HK4\PBL3_Coffee_shop_management\PBL3\obj\Debug\PBL3.GUI.Employee.Thanh.resources
 D:\sem4\pbl3\PBL3\obj\Debug\PBL3.GUI.CaLamViec.resources
-D:\sem4\pbl3\PBL3\obj\Debug\PBL3.GUI.Khuyến_mãi.resources
 D:\sem4\pbl3\PBL3\obj\Debug\PBL3.GUI.ManHinhChinh.resources
 D:\sem4\pbl3\PBL3\obj\Debug\PBL3.GUI.Admin.NhanVien.resources
 D:\sem4\pbl3\PBL3\obj\Debug\PBL3.GUI.NhanVienTrongCa.resources
@@ -167,7 +166,6 @@ D:\DEV\HK4\PBL3_Coffee_shop_management\PBL3\obj\Debug\PBL3.GUI.Employee.ThongKe_
 D:\DEV\HK4\PBL3_Coffee_shop_management\PBL3\obj\Debug\PBL3.GUI.Employee.ThongTinNhanVien.resources
 D:\DEV\HK4\PBL3_Coffee_shop_management\PBL3\obj\Debug\PBL3.GUI.Employee.XemThongTinBan.resources
 D:\DEV\HK4\PBL3_Coffee_shop_management\PBL3\obj\Debug\PBL3.GUI.KhuyenMai.resources
-D:\sem4\pbl3\PBL3\obj\Debug\PBL3.GUI.Employee.ThanhToan.resources
 D:\DEV\HK4\PBL3_CoffeeShopManagement\PBL3\obj\Debug\PBL3.csproj.AssemblyReference.cache
 D:\DEV\HK4\PBL3_CoffeeShopManagement\PBL3\obj\Debug\PBL3.GUI.CaLamViec.resources
 D:\DEV\HK4\PBL3_CoffeeShopManagement\PBL3\obj\Debug\PBL3.GUI.DangNhap.resources
@@ -222,3 +220,6 @@ D:\DEV\HK4\PBL3_CoffeeShopManagement\PBL3\bin\Debug\Guna.UI2.dll
 D:\DEV\HK4\PBL3_CoffeeShopManagement\PBL3\bin\Debug\EntityFramework.xml
 D:\DEV\HK4\PBL3_CoffeeShopManagement\PBL3\bin\Debug\EntityFramework.SqlServer.xml
 D:\DEV\HK4\PBL3_CoffeeShopManagement\PBL3\obj\Debug\PBL3.csproj.CopyComplete
+D:\sem4\pbl3\PBL3\obj\Debug\PBL3.GUI.KhuyenMai.resources
+D:\sem4\pbl3\PBL3\obj\Debug\PBL3.GUI.Employee.Thanh.resources
+D:\sem4\pbl3\PBL3\obj\Debug\PBL3.GUI.Employee.ThemMon.resources

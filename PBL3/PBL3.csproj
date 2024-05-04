@@ -86,9 +86,6 @@
     <Compile Include="DTO\CaTruc.cs">
       <DependentUpon>QuanCaPhePBL3.tt</DependentUpon>
     </Compile>
-    <Compile Include="DTO\ChiTietCaTruc.cs">
-      <DependentUpon>QuanCaPhePBL3.tt</DependentUpon>
-    </Compile>
     <Compile Include="DTO\ChiTietHoaDon.cs">
       <DependentUpon>QuanCaPhePBL3.tt</DependentUpon>
     </Compile>

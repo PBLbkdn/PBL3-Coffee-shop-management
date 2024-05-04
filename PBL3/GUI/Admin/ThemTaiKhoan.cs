@@ -15,8 +15,16 @@ namespace PBL3.GUI.Admin
 {
     public partial class ThemTaiKhoan : Form
     {
+        private int maNV1;
+
         public ThemTaiKhoan()
         {
+            InitializeComponent();
+        }
+
+        public ThemTaiKhoan(int maNV1)
+        {
+            this.maNV1 = maNV1;
             InitializeComponent();
         }
 

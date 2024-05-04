@@ -15,7 +15,9 @@ namespace PBL3.GUI
     public partial class NhanVienTrongCa : Form
     {
         private int MaCa;
-        private DateTime Day;   
+        private DateTime Day;
+        private int maNV;
+
         public NhanVienTrongCa()
         {
             InitializeComponent();
@@ -27,7 +29,21 @@ namespace PBL3.GUI
             MaCa = maCa;
             Day = day;
             dayTb.Text = day.Day.ToString();
-            monthTb.Text = "Tháng "+day.Month.ToString();
+            monthTb.Text = "Tháng " + day.Month.ToString();
+            dayTb.Enabled = false;
+            monthTb.Enabled = false;
+            RefreshData();
+        }
+
+        public NhanVienTrongCa(int maCa, DateTime day, int maNV) : this(maCa, day)
+        {
+            this.maNV = maNV;
+            ten.Text = NhanVien_BLL.Instance.getTenNV(maNV);
+            InitializeComponent();
+            MaCa = maCa;
+            Day = day;
+            dayTb.Text = day.Day.ToString();
+            monthTb.Text = "Tháng " + day.Month.ToString();
             dayTb.Enabled = false;
             monthTb.Enabled = false;
             RefreshData();
@@ -36,36 +52,30 @@ namespace PBL3.GUI
         private void RefreshData()
         {
             NVCadata.DataSource = CaTruc_BLL.Instance.GetListNhanVien(MaCa, Day.ToString());
-            NVCadata.Columns["MaNV"].HeaderText = "Mã nhân viên";
-            NVCadata.Columns["HoTenNV"].HeaderText = "Họ tên nhân viên";
-            NVCadata.Columns["TenCV"].HeaderText = "Chức vụ";
-            NVCadata.Columns["NgaySinh"].HeaderText = "Ngày sinh";
-            NVCadata.Columns["GioiTinh"].HeaderText = "Giới tính";
-            NVCadata.Columns["Luong"].HeaderText = "Lương";
+            if (NVCadata.Columns["MaNV"] != null)
+                NVCadata.Columns["MaNV"].HeaderText = "Mã nhân viên";
+            if (NVCadata.Columns["HoTenNV"] != null)
+                NVCadata.Columns["HoTenNV"].HeaderText = "Họ tên nhân viên";
+            if (NVCadata.Columns["TenCV"] != null)
+                NVCadata.Columns["TenCV"].HeaderText = "Chức vụ";
+            if (NVCadata.Columns["NgaySinh"] != null)
+                NVCadata.Columns["NgaySinh"].HeaderText = "Ngày sinh";
+            if (NVCadata.Columns["GioiTinh"] != null)
+                NVCadata.Columns["GioiTinh"].HeaderText = "Giới tính";
+            if (NVCadata.Columns["Luong"] != null)
+                NVCadata.Columns["Luong"].HeaderText = "Lương";
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn đăng xuất?", "Xác nhận", MessageBoxButtons.YesNo);
-            if (dialogResult == DialogResult.Yes)
-            {
-                DangNhap dangNhap = new DangNhap();
-                dangNhap.Show();
-                this.Close();
-            }
+            Application.Exit();
         }
 
 
         private void addButton_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
             ThemNhanVienVaoCa f = new ThemNhanVienVaoCa(MaCa, Day, maNV);
-            this.Hide();
-=======
-            ThemNhanVienVaoCa f = new ThemNhanVienVaoCa(MaCa, Day);
->>>>>>> 9d8423669730f19c9633237d6286879ceacbfaac
             f.ShowDialog();
-            this.Show();
             RefreshData();
         }
 
@@ -82,7 +92,6 @@ namespace PBL3.GUI
                 RefreshData();
             }
         }
-<<<<<<< HEAD
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
@@ -90,18 +99,5 @@ namespace PBL3.GUI
             manHinhChinh.Show();
             this.Close();
         }
-
-        private void exitCa_Click(object sender, EventArgs e)
-        {
-            DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn đăng xuất?", "Xác nhận", MessageBoxButtons.YesNo);
-            if(dialogResult == DialogResult.Yes)
-            {
-                DangNhap dangNhap = new DangNhap();
-                dangNhap.Show();
-                this.Close();
-            }
-        }
-=======
->>>>>>> 9d8423669730f19c9633237d6286879ceacbfaac
     }
 }

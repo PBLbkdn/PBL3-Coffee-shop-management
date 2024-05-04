@@ -14,17 +14,32 @@ namespace PBL3.GUI.Employee
 {
     public partial class DatBan : Form
     {
+        private int maNV;
+
         public DatBan()
         {
             InitializeComponent();
-            if(Ban_BLL.Instance.GetListBanFree().Count == 0)
+            if (Ban_BLL.Instance.GetListBanFree().Count == 0)
             {
                 MessageBox.Show("Không có bàn trống");
                 this.Close();
             }
 
             RefreshData();
-            
+
+        }
+
+        public DatBan(int maNV)
+        {
+            this.maNV = maNV;
+            InitializeComponent();
+            if (Ban_BLL.Instance.GetListBanFree().Count == 0)
+            {
+                MessageBox.Show("Không có bàn trống");
+                this.Close();
+            }
+
+            RefreshData();
         }
 
         private void RefreshData()
@@ -37,7 +52,7 @@ namespace PBL3.GUI.Employee
 
         private void okButton_Click(object sender, EventArgs e)
         {
-            if(datBanData.SelectedRows.Count == 0)
+            if (datBanData.SelectedRows.Count == 0)
             {
                 MessageBox.Show("Vui lòng chọn bàn");
             }
@@ -58,7 +73,20 @@ namespace PBL3.GUI.Employee
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult dialogResult = MessageBox.Show("Bạn có muốn đăng xuất không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialogResult == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        
+
+        private void pictureBox5_Click_1(object sender, EventArgs e)
+        {
+            ManHinhChinh_NV manHinhChinh = new ManHinhChinh_NV(maNV);
+            manHinhChinh.Show();
+            this.Close();
         }
     }
 }
