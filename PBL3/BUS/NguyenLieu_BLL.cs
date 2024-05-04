@@ -47,21 +47,28 @@ namespace PBL3.BUS
             var l1 = db.NguyenLieux.Select(p => new { p.MaNL, p.TenNL, p.SLTonKho, p.DonViTinh });
             return l1.ToList<Object>();
         }
-        public void AddNguyenLieu(string manl, string tennl, string SLtonkho, DateTime ngayhethan, string gia, string donvi)
+        public int GetIDNguyenLieu()
         {
-            NguyenLieu s = new NguyenLieu
-            {
-                MaNL = Convert.ToInt32(manl),
-                TenNL = tennl,
-                SLTonKho = Convert.ToInt32(SLtonkho),
-
-                DonViTinh = donvi
-            };
             QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
-            db.NguyenLieux.Add(s);
-            db.SaveChanges();
+            return db.NguyenLieux.Count() + 1;
         }
-        public void EditNguyenLieu(string manl, string tennl, string SLtonkho, DateTime ngayhethan, string gia, string donvi)
+        //add nguyên liệu mới
+        public void AddNguyenLieu(string tennl, int SLtonkho, string donvi, DateTime ngayNhap, DateTime ngayHetHan, int giaNhap)
+        {
+            QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
+            NguyenLieu nl = new NguyenLieu();
+            int manl=db.NguyenLieux.Count() + 1;
+            nl.MaNL = manl;
+            nl.TenNL = tennl;
+            nl.SLTonKho = 0;
+            nl.DonViTinh = donvi;
+            db.NguyenLieux.Add(nl);
+            db.SaveChanges();
+
+            ChiTietNguyenLieu_BLL.Instance.AddChiTietNguyenLieu(manl, ngayNhap, SLtonkho, ngayHetHan, giaNhap);
+
+        }
+        public void EditNguyenLieu(string manl, string tennl, string SLtonkho, string donvi)
         {
             QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
             NguyenLieu sedit = db.NguyenLieux.Find(Convert.ToInt32(manl));
@@ -75,6 +82,9 @@ namespace PBL3.BUS
         {
             QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
             NguyenLieu nlDelete = db.NguyenLieux.Find(id);
+            
+            ChiTietNguyenLieu_BLL.Instance.DelChiTietNguyenLieu(id);
+
             db.NguyenLieux.Remove(nlDelete);
             db.SaveChanges();
         }
@@ -108,6 +118,12 @@ namespace PBL3.BUS
                 }
             }
             return d;
+        }
+
+        internal NguyenLieu GetNguyenLieu(int maNL)
+        {
+            QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
+            return db.NguyenLieux.Find(maNL);
         }
     }
 }

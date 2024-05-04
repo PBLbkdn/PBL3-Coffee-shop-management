@@ -19,6 +19,17 @@ namespace PBL3.GUI.Admin
         public ThemNguyenLieu()
         {
             InitializeComponent();
+            RefreshData();
+            dvtcb.Items.Add("Kg");
+            dvtcb.Items.Add("Lít");
+            dvtcb.Items.Add("Hộp");
+            maNL.Enabled = false;
+            tenNL.Enabled = false;
+            soLuongNhap.Enabled = false;
+            giaNhap.Enabled = false;
+            ngayNhap.Enabled = false;
+            ngayHetHan.Enabled = false;
+            dvtcb.Enabled = false;
         }
 
         public ThemNguyenLieu(int maNV)
@@ -42,14 +53,34 @@ namespace PBL3.GUI.Admin
                 MessageBox.Show("Ngày nhập không thể sau ngày hết hạn");
                 return;
             }
+            if(Convert.ToInt32(soLuongNhap.Text) <= 0 || Convert.ToInt32(giaNhap.Text) <= 0)
+            {
+                MessageBox.Show("Số lượng nhập và giá nhập phải lớn hơn 0");
+                return;
+            }
+            if(dvtcb.Text == "")
+            {
+                MessageBox.Show("Vui lòng chọn đơn vị tính");
+                return;
+            }
+            if(ChiTietNguyenLieu_BLL.Instance.ValidAdd(Convert.ToInt32(maNL.Text), ngayNhap.Value.ToString("yyyy-MM-dd")) == false)
+            {
+                MessageBox.Show("Nguyên liệu đã được nhập vào thời gian này");
+                return;
+            }
             if(tenNL.Enabled == true)
             {
-                
+                //tạo 1 nguyên liệu mới
+                NguyenLieu_BLL.Instance.AddNguyenLieu(tenNL.Text, Convert.ToInt32(soLuongNhap.Text), dvtcb.Text, ngayNhap.Value, ngayHetHan.Value, Convert.ToInt32(giaNhap.Text));
+                NLData.DataSource = NguyenLieu_BLL.Instance.GetListNguyenLieu();
             }
             else
             {
                 ChiTietNguyenLieu_BLL.Instance.AddChiTietNguyenLieu(Convert.ToInt32(maNL.Text), ngayNhap.Value, Convert.ToInt32(soLuongNhap.Text), ngayHetHan.Value, Convert.ToInt32(giaNhap.Text));
             }
+            RefreshData();
+            MessageBox.Show("Thêm nguyên liệu thành công");
+            this.Close();
         }
 
         private void cancelNL_Click(object sender, EventArgs e)
@@ -61,7 +92,25 @@ namespace PBL3.GUI.Admin
         {
             maNL.Text = NLData.CurrentRow.Cells[0].Value.ToString();
             tenNL.Text = NLData.CurrentRow.Cells[1].Value.ToString();
-            tenNL.Enabled = false;
+            soLuongNhap.Enabled = true;
+            giaNhap.Enabled = true;
+            ngayNhap.Enabled = true;
+            ngayHetHan.Enabled = true;
+            dvtcb.Text = NLData.CurrentRow.Cells[3].Value.ToString();
+            btTNLM.Enabled=false;
+        }
+
+        private void themNLMoi_Click(object sender, EventArgs e)
+        {
+            maNL.Enabled = true;
+            tenNL.Enabled = true;
+            soLuongNhap.Enabled = true;
+            giaNhap.Enabled = true;
+            ngayNhap.Enabled = true;
+            ngayHetHan.Enabled = true;
+            dvtcb.Enabled = true;
+            NLData.Enabled = false;
+            maNL.Text = NguyenLieu_BLL.Instance.GetIDNguyenLieu().ToString();
         }
     }
 }

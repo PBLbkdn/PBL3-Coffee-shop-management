@@ -35,7 +35,7 @@ namespace PBL3.GUI.Admin
             }   
             if (TKData.Columns["HoTenNV"] != null)
             {
-                TKData.Columns["TenNV"].HeaderText = "Tên nhân viên";
+                TKData.Columns["HoTenNV"].HeaderText = "Tên nhân viên";
             }
             if (TKData.Columns["TenDangNhap"] != null)
             {

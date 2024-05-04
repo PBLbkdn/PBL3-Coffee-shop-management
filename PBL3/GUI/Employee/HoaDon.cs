@@ -48,7 +48,7 @@ namespace PBL3.GUI.Employee
             InitializeComponent();
             ten.Text = NhanVien_BLL.Instance.getTenNV(maNV);
 
-            hoaDonData.DataSource = HoaDon_BLL.Instance.GetListHoaDon();
+            hoaDonData.DataSource = HoaDon_BLL.Instance.GetListObject();
             RefreshData();
         }
 

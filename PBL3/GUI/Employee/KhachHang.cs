@@ -25,6 +25,33 @@ namespace PBL3.GUI.Employee
             this.maNV = maNV;
             InitializeComponent();
             ten.Text=NhanVien_BLL.Instance.getTenNV(maNV);
+            KHData.DataSource = KhachHang_BLL.Instance.GetListKhachHang();
+            RefreshData();
+        }
+
+        private void RefreshData()
+        {
+            if (KHData.Columns["MaKH"]!=null)
+            {
+                KHData.Columns["MaKH"].HeaderText = "Mã khách hàng";
+            }
+            if (KHData.Columns["TenKH"] != null)
+            {
+                KHData.Columns["TenKH"].HeaderText = "Họ tên khách hàng";
+            }
+            if (KHData.Columns["SDT"] != null)
+            {
+                KHData.Columns["SDT"].HeaderText = "Số điện thoại";
+            }
+            if (KHData.Columns["MaLKH"]!= null)
+            {
+                KHData.Columns["MaLKH"].HeaderText = "Mã loại khách hàng";
+            }
+            if (KHData.Columns["LoaiKH"] != null)
+            {
+                KHData.Columns["LoaiKH"].HeaderText = "Loại khách hàng";
+            }
+
         }
 
         private void KHExit_Click(object sender, EventArgs e)
@@ -44,5 +71,6 @@ namespace PBL3.GUI.Employee
             manHinhChinh.Show();
             this.Close();
         }
+
     }
 }

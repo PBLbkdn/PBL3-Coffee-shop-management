@@ -58,7 +58,19 @@ namespace PBL3.BUS
             }
             return listCTNLByMaNL;
         }   
-
+        public bool ValidAdd(int MaNL, string NgayNhap)
+        {
+            QuanCaPhePBL3Entities quanCaPhePBL3Entities = new QuanCaPhePBL3Entities();
+            List<ChiTietNguyenLieu> listCTNL = quanCaPhePBL3Entities.ChiTietNguyenLieux.ToList();
+            for (int i = 0; i < listCTNL.Count; i++)
+            {
+                if (listCTNL[i].MaNL == MaNL && listCTNL[i].NgayNhap.ToString("yyyy-MM-dd") == NgayNhap)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
         public void AddChiTietNguyenLieu(int MaNL, DateTime NgayNhap, int SLNhap, DateTime NgayHetHan, int giaNhap)
         {
             QuanCaPhePBL3Entities quanCaPheEntities = new QuanCaPhePBL3Entities();
@@ -70,6 +82,10 @@ namespace PBL3.BUS
             ctnl.GiaNhap = giaNhap;
             quanCaPheEntities.ChiTietNguyenLieux.Add(ctnl);
             quanCaPheEntities.SaveChanges();
+
+            NguyenLieu nl = NguyenLieu_BLL.Instance.GetNguyenLieu(MaNL);
+            nl.SLTonKho += SLNhap;
+            NguyenLieu_BLL.Instance.EditNguyenLieu(MaNL.ToString(), nl.TenNL, nl.SLTonKho.ToString(), nl.DonViTinh);
         }
 
         public void UpdateChiTietNguyenLieu(int MaNL, DateTime NgayNhap, int SLNhap)

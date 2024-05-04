@@ -30,6 +30,28 @@ namespace PBL3.BUS
                 .Select(p => new { p.MaKM, p.TenCT, p.TGBatDau, p.TGKetThuc, p.MoTa, p.GiaTriKM });
             return l.ToList<Object>();
         }
+
+        public List<Object> GetListKhuyenMaiTheoTGian(DateTime BatDau, DateTime KetThuc)
+        {
+            QuanCaPhePBL3Entities quanCaPhePBL3Entities = new QuanCaPhePBL3Entities();
+            List<Object> list = new List<Object>();
+            foreach (KhuyenMai i in quanCaPhePBL3Entities.KhuyenMais)
+            {
+                if ((i.TGBatDau<=BatDau && i.TGKetThuc>BatDau)||(i.TGBatDau>=BatDau && i.TGBatDau<KetThuc)||(i.TGKetThuc==i.TGBatDau && i.TGBatDau==BatDau)||(i.TGBatDau==i.TGKetThuc && i.TGBatDau==KetThuc))
+                {
+                    list.Add(new
+                    {
+                        MaKM= i.MaKM,
+                        TenCT = i.TenCT,
+                        TGBatDau = i.TGBatDau,
+                        TGKetThuc = i.TGKetThuc,
+                        MoTa = i.MoTa,
+                        GiaTriKM = i.GiaTriKM
+                    });
+                }
+            }
+            return list;
+        }
         public List<Object> GetAllKM()
         {
             QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();

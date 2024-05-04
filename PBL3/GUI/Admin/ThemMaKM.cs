@@ -33,5 +33,10 @@ namespace PBL3.GUI
         {
             Dispose();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Dispose();
+        }
     }
 }

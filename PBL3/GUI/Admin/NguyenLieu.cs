@@ -37,6 +37,26 @@ namespace PBL3.GUI.Admin
             }
         }
 
+        private void RefreshData()
+        {
+            if (NLData.Columns["MaNL"] != null)
+            {
+                NLData.Columns["MaNL"].HeaderText = "Mã nguyên liệu";
+            }
+            if (NLData.Columns["TenNL"] != null)
+            {
+                NLData.Columns["TenNL"].HeaderText = "Tên nguyên liệu";
+            }
+            if (NLData.Columns["DonViTinh"] != null)
+            {
+                NLData.Columns["DonViTinh"].HeaderText = "Đơn vị tính";
+            }
+            if (NLData.Columns["SLTonKho"]!= null)
+            {
+                NLData.Columns["SLTonKho"].HeaderText = "Số lượng tồn kho";
+            }
+        }
+
         private void addNL_Click(object sender, EventArgs e)
         {
             ThemNguyenLieu f = new ThemNguyenLieu();
@@ -48,6 +68,11 @@ namespace PBL3.GUI.Admin
 
         private void editNL_Click(object sender, EventArgs e)
         {
+            if(NLData.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Vui lòng chọn nguyên liệu cần sửa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             int Manl = 0;
             if (NLData.SelectedRows.Count == 1)
             {
@@ -59,6 +84,7 @@ namespace PBL3.GUI.Admin
             f.ShowDialog();
             this.Show();
             NLData.DataSource = NguyenLieu_BLL.Instance.GetListNguyenLieu(0, null);
+            RefreshData();
         }
 
         private void clearNL_Click(object sender, EventArgs e)
@@ -74,6 +100,7 @@ namespace PBL3.GUI.Admin
                         NguyenLieu_BLL.Instance.DeleteNguyenLieu(Manl);
                     }
                     NLData.DataSource = NguyenLieu_BLL.Instance.GetListNguyenLieu(0, null);
+                    RefreshData();
                 }
             }
         }
@@ -81,12 +108,18 @@ namespace PBL3.GUI.Admin
         private void NguyenLieu_Load(object sender, EventArgs e)
         {
             NLData.DataSource = NguyenLieu_BLL.Instance.GetListNguyenLieu(0, null);
+            RefreshData();
         }
 
         private void searchNL_Click(object sender, EventArgs e)
         {
             string txt = nameNLTb.Text;
+            if (txt == "")
+            {
+                MessageBox.Show("Vui lòng nhập tên nguyên liệu cần tìm!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
             NLData.DataSource = NguyenLieu_BLL.Instance.GetListNguyenLieu(0, txt);
+            RefreshData();
         }
 
         

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace PBL3.BUS
 {
@@ -38,6 +39,43 @@ namespace PBL3.BUS
                 var l1 = db.KhachHangs.Where(p => p.TenKH.Contains(name)).Select(p => new { p.MaKH, p.MaLKH, p.TenKH, p.SDT, p.LoaiKhachHang.TenLKH });
                 return l1.ToList<Object>();
             }
+        }
+        public List<Object> GetListKHBySDT(string sdt)
+        {
+            QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
+            List <object> l = new List<object>();
+            foreach (KhachHang i in db.KhachHangs)
+            {
+                if (i.SDT == sdt)
+                {
+                    l.Add(new
+                    {
+                        MaKH = i.MaKH,
+                        TenKH = i.TenKH,
+                        SDT = i.SDT,
+                        MaLKH = i.MaLKH,
+                        LKH = i.LoaiKhachHang.TenLKH
+                    });
+                }
+            }
+            return l;
+        }
+        public List<Object> GetListKhachHang()
+        {
+            QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
+            List<Object> list = new List<Object>();
+            foreach (KhachHang i in db.KhachHangs)
+            {
+                list.Add(new
+                {
+                    MaKH = i.MaKH,
+                    TenKH = i.TenKH,
+                    SDT = i.SDT,
+                    MaLKH = i.MaLKH,
+                    LKH =i.LoaiKhachHang.TenLKH
+                });
+            }
+            return list;
         }
         public void AddKhachHang(string maso, string hoten, string sdt, string maloaikh)
         {

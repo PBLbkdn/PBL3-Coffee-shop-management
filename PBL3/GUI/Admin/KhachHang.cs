@@ -25,8 +25,34 @@ namespace PBL3.GUI.Admin
             this.maNV = maNV;
             InitializeComponent();
             ten.Text = NhanVien_BLL.Instance.getTenNV(maNV);
+            KHData.DataSource = KhachHang_BLL.Instance.GetListKhachHang();
+            RefreshData();
         }
 
+        private void RefreshData()
+        {
+            if (KHData.Columns["MaKH"] != null)
+            {
+                KHData.Columns["MaKH"].HeaderText = "Mã khách hàng";
+            }
+            if (KHData.Columns["TenKH"] != null)
+            {
+                KHData.Columns["TenKH"].HeaderText = "Họ tên khách hàng";
+            }
+            if (KHData.Columns["SDT"] != null)
+            {
+                KHData.Columns["SDT"].HeaderText = "Số điện thoại";
+            }
+            if (KHData.Columns["MaLKH"] != null)
+            {
+                KHData.Columns["MaLKH"].HeaderText = "Mã loại khách hàng";
+            }
+            if (KHData.Columns["LKH"] != null)
+            {
+                KHData.Columns["LKH"].HeaderText = "Loại khách hàng";
+            }
+
+        }
         private void KhachHang_Load(object sender, EventArgs e)
         {
             KHData.DataSource = KhachHang_BLL.Instance.GetListKhachHang(0, null);
@@ -35,12 +61,65 @@ namespace PBL3.GUI.Admin
         private void searchKH_Click(object sender, EventArgs e)
         {
             string txt = findTextbox.Text;
-            KHData.DataSource = KhachHang_BLL.Instance.GetListKhachHang(0, txt);
+            if (txt == "")
+            {
+                MessageBox.Show("Vui lòng nhập tên/ số điện thoại khách hàng cần tìm kiếm");
+                return;
+            }
+            //kiểm tra txt là toàn chữ hay toàn số
+            bool isNumber = true;
+            foreach (char c in txt)
+            {
+                if (!Char.IsDigit(c))
+                {
+                    isNumber = false;
+                    break;
+                }
+            }
+            if (isNumber)
+            {//tìm theo sđt
+                KHData.DataSource=KhachHang_BLL.Instance.GetListKHBySDT(txt);
+
+                RefreshData();
+            }
+            else
+            {
+                bool isChar = true;
+                foreach (char c in txt)
+                {
+                    if (!Char.IsLetter(c) && c != ' ')
+                    {
+                        isChar = false;
+                        break;
+                    }
+                }
+                if (!isChar)
+                {
+                    MessageBox.Show("Vui lòng nhập đúng định dạng tên/ số điện thoại của khách hàng");
+                    return;
+                }
+                //tìm theo tên
+
+                KHData.DataSource = KhachHang_BLL.Instance.GetListKhachHang(0, txt);
+            }
+            RefreshData();
         }
 
         private void exitKH_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn thoát?", "Thoát", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            ManHinhChinh manHinhChinh = new ManHinhChinh(maNV);
+            this.Hide();
+            manHinhChinh.ShowDialog();
+            this.Close();
         }
     }
 }

@@ -27,6 +27,38 @@ namespace PBL3.GUI
 
             InitializeComponent();
             ten.Text = NhanVien_BLL.Instance.getTenNV(maNV);
+
+            ThucDonData.DataSource = SanPham_BLL.Instance.GetListSanPham(0, null);
+            RefreshData();
+        }
+
+        private void RefreshData()
+        {
+            //p.MaSP, p.TenSP, p.LoaiSP, p.NhomSP, p.DonViSP, p.GiaSP
+            if (ThucDonData.Columns["MaSP"] != null)
+            {
+                ThucDonData.Columns["MaSP"].HeaderText = "Mã sản phẩm";
+            }
+            if (ThucDonData.Columns["TenSP"] != null)
+            {
+                ThucDonData.Columns["TenSP"].HeaderText = "Tên sản phẩm";
+            }
+            if (ThucDonData.Columns["LoaiSP"] != null)
+            {
+                ThucDonData.Columns["LoaiSP"].HeaderText = "Loại sản phẩm";
+            }   
+            if (ThucDonData.Columns["NhomSP"] != null)
+            {
+                ThucDonData.Columns["NhomSP"].HeaderText = "Nhóm sản phẩm";
+            }
+            if (ThucDonData.Columns["DonViSP"] != null)
+            {
+                ThucDonData.Columns["DonViSP"].HeaderText = "Đơn vị";
+            }
+            if (ThucDonData.Columns["GiaSP"] != null)
+            {
+                ThucDonData.Columns["GiaSP"].HeaderText = "Giá";
+            }
         }
 
         private void addSp_Click(object sender, EventArgs e)

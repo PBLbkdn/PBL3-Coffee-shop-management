@@ -91,7 +91,14 @@ namespace PBL3.GUI
 
         private void exitKM_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn thoát?", "Thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialogResult == DialogResult.Yes)
+            {
+                DangNhap dangNhap = new DangNhap();
+                this.Hide();
+                dangNhap.ShowDialog();
+                Close();
+            }
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
@@ -100,6 +107,20 @@ namespace PBL3.GUI
             this.Hide();
             manHinhChinh.ShowDialog();
             Close();
+        }
+
+        private void findButton_Click(object sender, EventArgs e)
+        {
+            if(fromDay.Value>toDay.Value)
+            {
+                MessageBox.Show("Thời gian không hợp lệ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            KMData.DataSource=KhuyenMai_BLL.Instance.GetListKhuyenMaiTheoTGian(fromDay.Value, toDay.Value);
+            if(KMData.Rows.Count==0)
+            {
+                MessageBox.Show("Hiện không có khuyến mãi trong khoảng thời gian này", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }

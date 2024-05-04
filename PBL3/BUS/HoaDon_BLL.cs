@@ -42,22 +42,32 @@ namespace PBL3.BUS
             QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
             return db.HoaDons.ToList();
         }
-
-        public List<HoaDon> GetListHoaDonByID(int MaHD)
+        public List<Object> GetListObject()
         {
             QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
             List<HoaDon> listHD = db.HoaDons.ToList();
-            List<HoaDon> res = new List<HoaDon>();
+            List<Object> res = new List<Object>();
+            foreach (HoaDon hd in listHD)
+            {
+                res.Add(new { hd.MaHD, hd.MaDH, hd.MaKH, hd.ThoiGian, hd.TongTien });
+            }
+            return res;
+        }
+        
+        public List<Object> GetListHoaDonByID(int MaHD)
+        {
+            QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
+            List<HoaDon> listHD = db.HoaDons.ToList();
+            List<Object> res = new List<Object>();
             foreach (HoaDon hd in listHD)
             {
                 if (hd.MaHD == MaHD)
                 {
-                    res.Add(hd);
+                    res.Add(new { hd.MaHD, hd.MaDH, hd.MaKH, hd.ThoiGian, hd.TongTien });
                 }
             }
             return res;
         }
-
         public void DeleteHoaDon(int MaHD)
         {
             QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
