@@ -55,20 +55,18 @@
             this.guna2Panel1.Controls.Add(this.label6);
             this.guna2Panel1.Controls.Add(this.cancelButton);
             this.guna2Panel1.Controls.Add(this.saveButton);
-            this.guna2Panel1.Location = new System.Drawing.Point(99, 103);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2Panel1.Location = new System.Drawing.Point(66, 67);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1890, 1072);
+            this.guna2Panel1.Size = new System.Drawing.Size(1260, 697);
             this.guna2Panel1.TabIndex = 4;
             // 
             // data
             // 
             this.data.AutoSize = true;
             this.data.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.data.Location = new System.Drawing.Point(646, 58);
-            this.data.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.data.Location = new System.Drawing.Point(431, 38);
             this.data.Name = "data";
-            this.data.Size = new System.Drawing.Size(241, 32);
+            this.data.Size = new System.Drawing.Size(156, 21);
             this.data.TabIndex = 30;
             this.data.Text = "Danh sách nhân viên";
             // 
@@ -95,12 +93,11 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.NVData.DefaultCellStyle = dataGridViewCellStyle3;
             this.NVData.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.NVData.Location = new System.Drawing.Point(652, 115);
-            this.NVData.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.NVData.Location = new System.Drawing.Point(435, 75);
             this.NVData.Name = "NVData";
             this.NVData.RowHeadersVisible = false;
             this.NVData.RowHeadersWidth = 62;
-            this.NVData.Size = new System.Drawing.Size(1144, 751);
+            this.NVData.Size = new System.Drawing.Size(763, 488);
             this.NVData.TabIndex = 29;
             this.NVData.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.NVData.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -134,20 +131,18 @@
             this.maNVCb.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.maNVCb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.maNVCb.ItemHeight = 30;
-            this.maNVCb.Location = new System.Drawing.Point(284, 115);
-            this.maNVCb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.maNVCb.Location = new System.Drawing.Point(189, 75);
             this.maNVCb.Name = "maNVCb";
-            this.maNVCb.Size = new System.Drawing.Size(208, 36);
+            this.maNVCb.Size = new System.Drawing.Size(140, 36);
             this.maNVCb.TabIndex = 28;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(69, 119);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(46, 77);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(196, 32);
+            this.label6.Size = new System.Drawing.Size(127, 21);
             this.label6.TabIndex = 27;
             this.label6.Text = "Mã nhân viên (*)";
             // 
@@ -164,10 +159,9 @@
             this.cancelButton.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.cancelButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cancelButton.ForeColor = System.Drawing.Color.Black;
-            this.cancelButton.Location = new System.Drawing.Point(286, 238);
-            this.cancelButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cancelButton.Location = new System.Drawing.Point(191, 155);
             this.cancelButton.Name = "cancelButton";
-            this.cancelButton.Size = new System.Drawing.Size(242, 74);
+            this.cancelButton.Size = new System.Drawing.Size(161, 48);
             this.cancelButton.TabIndex = 23;
             this.cancelButton.Text = "Hủy";
             this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
@@ -185,10 +179,9 @@
             this.saveButton.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.saveButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.saveButton.ForeColor = System.Drawing.Color.Black;
-            this.saveButton.Location = new System.Drawing.Point(38, 238);
-            this.saveButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.saveButton.Location = new System.Drawing.Point(25, 155);
             this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(240, 74);
+            this.saveButton.Size = new System.Drawing.Size(160, 48);
             this.saveButton.TabIndex = 22;
             this.saveButton.Text = "Lưu";
             this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
@@ -199,35 +192,32 @@
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(156)))), ((int)(((byte)(156)))));
             this.label2.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
-            this.label2.Location = new System.Drawing.Point(92, 37);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(61, 24);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(537, 42);
+            this.label2.Size = new System.Drawing.Size(357, 28);
             this.label2.TabIndex = 5;
             this.label2.Text = "Thêm nhân viên vào ca làm việc";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::PBL3.Properties.Resources.akar_icons_circle_x_fill;
-            this.pictureBox1.Location = new System.Drawing.Point(1994, 22);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox1.Location = new System.Drawing.Point(1329, 14);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(63, 62);
+            this.pictureBox1.Size = new System.Drawing.Size(42, 40);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
             // ThemNhanVienVaoCa
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(156)))), ((int)(((byte)(156)))));
-            this.ClientSize = new System.Drawing.Size(1946, 1106);
+            this.ClientSize = new System.Drawing.Size(1386, 788);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ThemNhanVienVaoCa";
             this.Text = "ThemNhanVienVaoCa";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

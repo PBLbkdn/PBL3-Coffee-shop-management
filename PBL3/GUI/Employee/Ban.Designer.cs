@@ -32,42 +32,25 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-<<<<<<< HEAD
-=======
             this.banExit = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
->>>>>>> ad2a925fee2710b2773f06a3c7b20b28a3fd18e4
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.banData = new Guna.UI2.WinForms.Guna2DataGridView();
             this.datBan = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
-<<<<<<< HEAD
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2Panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-=======
             this.search = new Guna.UI2.WinForms.Guna2TextBox();
             this.findButton = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.banExit)).BeginInit();
->>>>>>> ad2a925fee2710b2773f06a3c7b20b28a3fd18e4
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-<<<<<<< HEAD
-=======
             ((System.ComponentModel.ISupportInitialize)(this.banData)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
->>>>>>> ad2a925fee2710b2773f06a3c7b20b28a3fd18e4
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -78,19 +61,17 @@
             this.guna2Panel1.Controls.Add(this.pictureBox5);
             this.guna2Panel1.Controls.Add(this.panel2);
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(2079, 83);
+            this.guna2Panel1.Size = new System.Drawing.Size(1386, 54);
             this.guna2Panel1.TabIndex = 31;
             // 
-<<<<<<< HEAD
-=======
             // banExit
             // 
             this.banExit.Image = global::PBL3.Properties.Resources.nút_tắt;
-            this.banExit.Location = new System.Drawing.Point(1344, 12);
+            this.banExit.Location = new System.Drawing.Point(896, 8);
+            this.banExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.banExit.Name = "banExit";
-            this.banExit.Size = new System.Drawing.Size(30, 30);
+            this.banExit.Size = new System.Drawing.Size(20, 20);
             this.banExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.banExit.TabIndex = 3;
             this.banExit.TabStop = false;
@@ -99,10 +80,9 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::PBL3.Properties.Resources.nút_tắt;
-            this.pictureBox4.Location = new System.Drawing.Point(60, 178);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox4.Location = new System.Drawing.Point(40, 116);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox4.Size = new System.Drawing.Size(20, 20);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 2;
             this.pictureBox4.TabStop = false;
@@ -110,50 +90,42 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = global::PBL3.Properties.Resources.bàn_Tầng_1__004;
-            this.pictureBox5.Location = new System.Drawing.Point(15, 14);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox5.Location = new System.Drawing.Point(10, 9);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(33, 28);
+            this.pictureBox5.Size = new System.Drawing.Size(22, 18);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 2;
             this.pictureBox5.TabStop = false;
             // 
->>>>>>> ad2a925fee2710b2773f06a3c7b20b28a3fd18e4
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(231)))), ((int)(((byte)(231)))));
             this.panel2.Controls.Add(this.pictureBox11);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(90, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel2.Location = new System.Drawing.Point(60, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(270, 83);
+            this.panel2.Size = new System.Drawing.Size(180, 54);
             this.panel2.TabIndex = 0;
             // 
-<<<<<<< HEAD
-=======
             // pictureBox11
             // 
             this.pictureBox11.Image = global::PBL3.Properties.Resources.bàn_1;
-            this.pictureBox11.Location = new System.Drawing.Point(51, 13);
-            this.pictureBox11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox11.Location = new System.Drawing.Point(34, 8);
             this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(27, 29);
+            this.pictureBox11.Size = new System.Drawing.Size(18, 19);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox11.TabIndex = 3;
             this.pictureBox11.TabStop = false;
             // 
->>>>>>> ad2a925fee2710b2773f06a3c7b20b28a3fd18e4
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(231)))), ((int)(((byte)(231)))));
             this.label2.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(126, 22);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(84, 14);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 37);
+            this.label2.Size = new System.Drawing.Size(50, 25);
             this.label2.TabIndex = 0;
             this.label2.Text = "Bàn";
             // 
@@ -181,11 +153,12 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.banData.DefaultCellStyle = dataGridViewCellStyle3;
             this.banData.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.banData.Location = new System.Drawing.Point(60, 178);
+            this.banData.Location = new System.Drawing.Point(40, 116);
+            this.banData.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.banData.Name = "banData";
             this.banData.RowHeadersVisible = false;
             this.banData.RowHeadersWidth = 62;
-            this.banData.Size = new System.Drawing.Size(1267, 539);
+            this.banData.Size = new System.Drawing.Size(845, 350);
             this.banData.TabIndex = 35;
             this.banData.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.banData.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -222,9 +195,10 @@
             this.datBan.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.datBan.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.datBan.ForeColor = System.Drawing.Color.Black;
-            this.datBan.Location = new System.Drawing.Point(729, 93);
+            this.datBan.Location = new System.Drawing.Point(486, 60);
+            this.datBan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.datBan.Name = "datBan";
-            this.datBan.Size = new System.Drawing.Size(161, 48);
+            this.datBan.Size = new System.Drawing.Size(107, 31);
             this.datBan.TabIndex = 43;
             this.datBan.Text = "Đặt bàn trước";
             this.datBan.Click += new System.EventHandler(this.datBan_Click);
@@ -232,76 +206,13 @@
             // pictureBox10
             // 
             this.pictureBox10.Image = global::PBL3.Properties.Resources.Vector__2_;
-            this.pictureBox10.Location = new System.Drawing.Point(1930, 143);
-            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox10.Location = new System.Drawing.Point(1287, 93);
             this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(60, 62);
+            this.pictureBox10.Size = new System.Drawing.Size(40, 40);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox10.TabIndex = 34;
             this.pictureBox10.TabStop = false;
             // 
-<<<<<<< HEAD
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::PBL3.Properties.Resources.nút_tắt;
-            this.pictureBox6.Location = new System.Drawing.Point(1344, 12);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 3;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::PBL3.Properties.Resources.nút_tắt;
-            this.pictureBox4.Location = new System.Drawing.Point(60, 178);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 2;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::PBL3.Properties.Resources.bàn_Tầng_1__004;
-            this.pictureBox5.Location = new System.Drawing.Point(15, 14);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(33, 28);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 2;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox11
-            // 
-            this.pictureBox11.Image = global::PBL3.Properties.Resources.bàn_1;
-            this.pictureBox11.Location = new System.Drawing.Point(51, 13);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(27, 29);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox11.TabIndex = 3;
-            this.pictureBox11.TabStop = false;
-            // 
-            // guna2TextBox1
-            // 
-            this.guna2TextBox1.BorderRadius = 10;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "Nhập Mã/Tên món cần tìm";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.IconLeft = global::PBL3.Properties.Resources.entypo_magnifying_glass;
-            this.guna2TextBox1.Location = new System.Drawing.Point(60, 99);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderText = "";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(421, 36);
-            this.guna2TextBox1.TabIndex = 30;
-=======
             // search
             // 
             this.search.BorderRadius = 10;
@@ -315,13 +226,13 @@
             this.search.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.search.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.search.IconLeft = global::PBL3.Properties.Resources.entypo_magnifying_glass;
-            this.search.Location = new System.Drawing.Point(90, 152);
-            this.search.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.search.Location = new System.Drawing.Point(60, 99);
+            this.search.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.search.Name = "search";
             this.search.PasswordChar = '\0';
             this.search.PlaceholderText = "Nhập Mã/Tên bàn cần tìm";
             this.search.SelectedText = "";
-            this.search.Size = new System.Drawing.Size(632, 55);
+            this.search.Size = new System.Drawing.Size(421, 36);
             this.search.TabIndex = 30;
             // 
             // findButton
@@ -337,17 +248,17 @@
             this.findButton.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.findButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.findButton.ForeColor = System.Drawing.Color.Black;
-            this.findButton.Location = new System.Drawing.Point(534, 93);
+            this.findButton.Location = new System.Drawing.Point(356, 60);
+            this.findButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.findButton.Name = "findButton";
-            this.findButton.Size = new System.Drawing.Size(161, 48);
+            this.findButton.Size = new System.Drawing.Size(107, 31);
             this.findButton.TabIndex = 44;
             this.findButton.Text = "Tìm kiếm";
             this.findButton.Click += new System.EventHandler(this.findButton_Click);
->>>>>>> ad2a925fee2710b2773f06a3c7b20b28a3fd18e4
             // 
             // Ban
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(181)))), ((int)(((byte)(181)))));
             this.ClientSize = new System.Drawing.Size(1386, 788);
@@ -358,27 +269,17 @@
             this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Ban";
             this.Text = "Ban";
             this.guna2Panel1.ResumeLayout(false);
-<<<<<<< HEAD
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-=======
             ((System.ComponentModel.ISupportInitialize)(this.banExit)).EndInit();
->>>>>>> ad2a925fee2710b2773f06a3c7b20b28a3fd18e4
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-<<<<<<< HEAD
-=======
             ((System.ComponentModel.ISupportInitialize)(this.banData)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
->>>>>>> ad2a925fee2710b2773f06a3c7b20b28a3fd18e4
             this.ResumeLayout(false);
 
         }
