@@ -12,7 +12,7 @@
           <Property Name="MaBan" Type="int" Nullable="false" />
           <Property Name="TrangThai" Type="nvarchar" MaxLength="255" />
           <Property Name="ViTri" Type="nvarchar" MaxLength="255" />
-          <Property Name="SDT" Type="varchar" MaxLength="1" />
+          <Property Name="SDT" Type="nvarchar" MaxLength="255" />
         </EntityType>
         <EntityType Name="CaTruc">
           <Key>
@@ -184,8 +184,8 @@
             <PropertyRef Name="MaNV" />
           </Key>
           <Property Name="MaNV" Type="int" Nullable="false" />
-          <Property Name="TenDangNhap" Type="varchar" MaxLength="255" />
-          <Property Name="MatKhau" Type="varchar" MaxLength="255" />
+          <Property Name="TenDangNhap" Type="nvarchar" MaxLength="255" />
+          <Property Name="MatKhau" Type="nvarchar" MaxLength="255" />
         </EntityType>
         <Association Name="FK_ChiTietCaTruc_CaTruc">
           <End Role="CaTruc" Type="Self.CaTruc" Multiplicity="1" />
@@ -198,18 +198,6 @@
             <Dependent Role="ChiTietCaTruc">
               <PropertyRef Name="MaCT" />
               <PropertyRef Name="NgayTruc" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_ChiTietCaTruc_NhanVien">
-          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="1" />
-          <End Role="ChiTietCaTruc" Type="Self.ChiTietCaTruc" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="NhanVien">
-              <PropertyRef Name="MaNV" />
-            </Principal>
-            <Dependent Role="ChiTietCaTruc">
-              <PropertyRef Name="MaNV" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -419,10 +407,6 @@
             <End Role="CaTruc" EntitySet="CaTruc" />
             <End Role="ChiTietCaTruc" EntitySet="ChiTietCaTruc" />
           </AssociationSet>
-          <AssociationSet Name="FK_ChiTietCaTruc_NhanVien" Association="Self.FK_ChiTietCaTruc_NhanVien">
-            <End Role="NhanVien" EntitySet="NhanVien" />
-            <End Role="ChiTietCaTruc" EntitySet="ChiTietCaTruc" />
-          </AssociationSet>
           <AssociationSet Name="FK_ChiTietHoaDon_Ban" Association="Self.FK_ChiTietHoaDon_Ban">
             <End Role="Ban" EntitySet="Ban" />
             <End Role="ChiTietHoaDon" EntitySet="ChiTietHoaDon" />
@@ -496,7 +480,7 @@
           <Property Name="MaBan" Type="Int32" Nullable="false" />
           <Property Name="TrangThai" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="ViTri" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Name="SDT" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="SDT" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="ChiTietHoaDons" Relationship="Self.FK_ChiTietHoaDon_Ban" FromRole="Ban" ToRole="ChiTietHoaDon" />
         </EntityType>
         <EntityType Name="CaTruc">
@@ -508,8 +492,19 @@
           <Property Name="NgayTruc" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="ThoiGianBD" Type="Time" Precision="7" />
           <Property Name="ThoiGianKT" Type="Time" Precision="7" />
+          <NavigationProperty Name="ChiTietCaTrucs" Relationship="Self.FK_ChiTietCaTruc_CaTruc" FromRole="CaTruc" ToRole="ChiTietCaTruc" />
           <NavigationProperty Name="DoanhThu" Relationship="Self.FK_DoanhThu_CaTruc" FromRole="CaTruc" ToRole="DoanhThu" />
-          <NavigationProperty Name="NhanViens" Relationship="Self.ChiTietCaTruc" FromRole="CaTruc" ToRole="NhanVien" />
+        </EntityType>
+        <EntityType Name="ChiTietCaTruc">
+          <Key>
+            <PropertyRef Name="MaCT" />
+            <PropertyRef Name="NgayTruc" />
+            <PropertyRef Name="MaNV" />
+          </Key>
+          <Property Name="MaCT" Type="Int32" Nullable="false" />
+          <Property Name="NgayTruc" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="MaNV" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="CaTruc" Relationship="Self.FK_ChiTietCaTruc_CaTruc" FromRole="ChiTietCaTruc" ToRole="CaTruc" />
         </EntityType>
         <EntityType Name="ChiTietHoaDon">
           <Key>
@@ -648,7 +643,6 @@
           <NavigationProperty Name="ChiTietHoaDons" Relationship="Self.FK_ChiTietHoaDon_NhanVien" FromRole="NhanVien" ToRole="ChiTietHoaDon" />
           <NavigationProperty Name="ChucVu" Relationship="Self.FK_MaChucVu" FromRole="NhanVien" ToRole="ChucVu" />
           <NavigationProperty Name="TaiKhoan" Relationship="Self.FK_TaiKhoan_NhanVien" FromRole="NhanVien" ToRole="TaiKhoan" />
-          <NavigationProperty Name="CaTrucs" Relationship="Self.ChiTietCaTruc" FromRole="NhanVien" ToRole="CaTruc" />
         </EntityType>
         <EntityType Name="SanPham">
           <Key>
@@ -679,8 +673,8 @@
             <PropertyRef Name="MaNV" />
           </Key>
           <Property Name="MaNV" Type="Int32" Nullable="false" />
-          <Property Name="TenDangNhap" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
-          <Property Name="MatKhau" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="TenDangNhap" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="MatKhau" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="NhanVien" Relationship="Self.FK_TaiKhoan_NhanVien" FromRole="TaiKhoan" ToRole="NhanVien" />
         </EntityType>
         <Association Name="FK_ChiTietHoaDon_Ban">
@@ -692,6 +686,20 @@
             </Principal>
             <Dependent Role="ChiTietHoaDon">
               <PropertyRef Name="MaBan" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ChiTietCaTruc_CaTruc">
+          <End Role="CaTruc" Type="Self.CaTruc" Multiplicity="1" />
+          <End Role="ChiTietCaTruc" Type="Self.ChiTietCaTruc" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CaTruc">
+              <PropertyRef Name="MaCT" />
+              <PropertyRef Name="NgayTruc" />
+            </Principal>
+            <Dependent Role="ChiTietCaTruc">
+              <PropertyRef Name="MaCT" />
+              <PropertyRef Name="NgayTruc" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -841,10 +849,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="ChiTietCaTruc">
-          <End Role="CaTruc" Type="Self.CaTruc" Multiplicity="*" />
-          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="*" />
-        </Association>
         <Association Name="ChiTietKhuyenMai">
           <End Role="KhuyenMai" Type="Self.KhuyenMai" Multiplicity="*" />
           <End Role="LoaiKhachHang" Type="Self.LoaiKhachHang" Multiplicity="*" />
@@ -852,6 +856,7 @@
         <EntityContainer Name="QuanCaPhePBL3Entities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Bans" EntityType="Self.Ban" />
           <EntitySet Name="CaTrucs" EntityType="Self.CaTruc" />
+          <EntitySet Name="ChiTietCaTrucs" EntityType="Self.ChiTietCaTruc" />
           <EntitySet Name="ChiTietHoaDons" EntityType="Self.ChiTietHoaDon" />
           <EntitySet Name="ChiTietNguyenLieux" EntityType="Self.ChiTietNguyenLieu" />
           <EntitySet Name="ChiTietSanPhams" EntityType="Self.ChiTietSanPham" />
@@ -870,6 +875,10 @@
           <AssociationSet Name="FK_ChiTietHoaDon_Ban" Association="Self.FK_ChiTietHoaDon_Ban">
             <End Role="Ban" EntitySet="Bans" />
             <End Role="ChiTietHoaDon" EntitySet="ChiTietHoaDons" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ChiTietCaTruc_CaTruc" Association="Self.FK_ChiTietCaTruc_CaTruc">
+            <End Role="CaTruc" EntitySet="CaTrucs" />
+            <End Role="ChiTietCaTruc" EntitySet="ChiTietCaTrucs" />
           </AssociationSet>
           <AssociationSet Name="FK_DoanhThu_CaTruc" Association="Self.FK_DoanhThu_CaTruc">
             <End Role="CaTruc" EntitySet="CaTrucs" />
@@ -919,10 +928,6 @@
             <End Role="NhanVien" EntitySet="NhanViens" />
             <End Role="TaiKhoan" EntitySet="TaiKhoans" />
           </AssociationSet>
-          <AssociationSet Name="ChiTietCaTruc" Association="Self.ChiTietCaTruc">
-            <End Role="CaTruc" EntitySet="CaTrucs" />
-            <End Role="NhanVien" EntitySet="NhanViens" />
-          </AssociationSet>
           <AssociationSet Name="ChiTietKhuyenMai" Association="Self.ChiTietKhuyenMai">
             <End Role="KhuyenMai" EntitySet="KhuyenMais" />
             <End Role="LoaiKhachHang" EntitySet="LoaiKhachHangs" />
@@ -951,6 +956,15 @@
                 <ScalarProperty Name="NgayTruc" ColumnName="NgayTruc" />
                 <ScalarProperty Name="ThoiGianBD" ColumnName="ThoiGianBD" />
                 <ScalarProperty Name="ThoiGianKT" ColumnName="ThoiGianKT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ChiTietCaTrucs">
+            <EntityTypeMapping TypeName="QuanCaPhePBL3Model.ChiTietCaTruc">
+              <MappingFragment StoreEntitySet="ChiTietCaTruc">
+                <ScalarProperty Name="MaCT" ColumnName="MaCT" />
+                <ScalarProperty Name="NgayTruc" ColumnName="NgayTruc" />
+                <ScalarProperty Name="MaNV" ColumnName="MaNV" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1109,15 +1123,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <AssociationSetMapping Name="ChiTietCaTruc" TypeName="QuanCaPhePBL3Model.ChiTietCaTruc" StoreEntitySet="ChiTietCaTruc">
-            <EndProperty Name="CaTruc">
-              <ScalarProperty Name="MaCT" ColumnName="MaCT" />
-              <ScalarProperty Name="NgayTruc" ColumnName="NgayTruc" />
-            </EndProperty>
-            <EndProperty Name="NhanVien">
-              <ScalarProperty Name="MaNV" ColumnName="MaNV" />
-            </EndProperty>
-          </AssociationSetMapping>
           <AssociationSetMapping Name="ChiTietKhuyenMai" TypeName="QuanCaPhePBL3Model.ChiTietKhuyenMai" StoreEntitySet="ChiTietKhuyenMai">
             <EndProperty Name="KhuyenMai">
               <ScalarProperty Name="MaKM" ColumnName="MaKM" />

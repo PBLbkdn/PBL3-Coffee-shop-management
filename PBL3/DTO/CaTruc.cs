@@ -17,7 +17,7 @@ namespace PBL3.DTO
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public CaTruc()
         {
-            this.NhanViens = new HashSet<NhanVien>();
+            this.ChiTietCaTrucs = new HashSet<ChiTietCaTruc>();
         }
     
         public int MaCT { get; set; }
@@ -25,8 +25,8 @@ namespace PBL3.DTO
         public Nullable<System.TimeSpan> ThoiGianBD { get; set; }
         public Nullable<System.TimeSpan> ThoiGianKT { get; set; }
     
-        public virtual DoanhThu DoanhThu { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<NhanVien> NhanViens { get; set; }
+        public virtual ICollection<ChiTietCaTruc> ChiTietCaTrucs { get; set; }
+        public virtual DoanhThu DoanhThu { get; set; }
     }
 }

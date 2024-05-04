@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace PBL3.GUI.Employee
 {
-    public partial class HoaDon : Form
+    public partial class ThemMon : Form
     {
-        public HoaDon()
+        public ThemMon()
         {
             InitializeComponent();
         }
 
-        private void HoaDon_Load(object sender, EventArgs e)
+        private void pictureBox6_Click(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
     }
 }

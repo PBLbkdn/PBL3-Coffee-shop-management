@@ -13,18 +13,9 @@ namespace PBL3.GUI.Admin
 {
     public partial class KhachHang : Form
     {
-        private int maNV;
-
         public KhachHang()
         {
             InitializeComponent();
-        }
-
-        public KhachHang(int maNV)
-        {
-            this.maNV = maNV;
-            InitializeComponent();
-            ten.Text = NhanVien_BLL.Instance.getTenNV(maNV);
         }
 
         private void KhachHang_Load(object sender, EventArgs e)

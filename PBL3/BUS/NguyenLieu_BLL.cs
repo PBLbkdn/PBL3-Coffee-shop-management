@@ -35,7 +35,7 @@ namespace PBL3.BUS
             else
             {
                 var l2 = db.NguyenLieux.Where(p => p.TenNL.Contains(name))
-                    .Select(p => new { p.MaNL, p.TenNL, p.SLTonKho, p.DonViTinh });
+                    .Select(p => new { p.MaNL, p.TenNL,  p.SLTonKho, p.DonViTinh });
                 return l2.ToList<Object>();
             }
 
@@ -47,6 +47,7 @@ namespace PBL3.BUS
                 MaNL = Convert.ToInt32(manl),
                 TenNL = tennl,
                 SLTonKho = Convert.ToInt32(SLtonkho),
+
                 DonViTinh = donvi
             };
             QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
@@ -59,6 +60,7 @@ namespace PBL3.BUS
             NguyenLieu sedit = db.NguyenLieux.Find(Convert.ToInt32(manl));
             sedit.TenNL = tennl;
             sedit.SLTonKho = Convert.ToInt32(SLtonkho);
+
             sedit.DonViTinh = donvi;
             db.SaveChanges();
         }
@@ -80,6 +82,7 @@ namespace PBL3.BUS
                     {
                         tennl = i.TenNL;
                         SLtonkho = i.SLTonKho.ToString();
+
                         donvi = i.DonViTinh.ToString();
                     }
                 }

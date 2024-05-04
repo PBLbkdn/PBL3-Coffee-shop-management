@@ -14,8 +14,6 @@ namespace PBL3.GUI.Employee
 {
     public partial class DatBan : Form
     {
-        private int maNV;
-
         public DatBan()
         {
             InitializeComponent();
@@ -27,19 +25,6 @@ namespace PBL3.GUI.Employee
 
             RefreshData();
             
-        }
-
-        public DatBan(int maNV)
-        {
-            this.maNV = maNV;
-            InitializeComponent();
-            if (Ban_BLL.Instance.GetListBanFree().Count == 0)
-            {
-                MessageBox.Show("Không có bàn trống");
-                this.Close();
-            }
-
-            RefreshData();
         }
 
         private void RefreshData()
@@ -73,18 +58,7 @@ namespace PBL3.GUI.Employee
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Bạn có muốn đăng xuất không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dialogResult == DialogResult.Yes)
-            {
-                Application.Exit();
-            }
-        }
-
-        private void pictureBox5_Click(object sender, EventArgs e)
-        {
-            ManHinhChinh_NV manHinhChinh = new ManHinhChinh_NV(maNV);
-            manHinhChinh.Show();
-            this.Close();
+            Application.Exit();
         }
     }
 }

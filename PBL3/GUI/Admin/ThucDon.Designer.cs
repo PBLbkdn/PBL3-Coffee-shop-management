@@ -47,7 +47,6 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.ten = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TDExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -71,10 +70,6 @@
             this.guna2Panel1.Controls.Add(this.pictureBox1);
             this.guna2Panel1.Controls.Add(this.panel1);
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
-
-
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1386, 54);
             this.guna2Panel1.TabIndex = 1;
@@ -82,12 +77,7 @@
             // TDExit
             // 
             this.TDExit.Image = global::PBL3.Properties.Resources.nút_tắt;
-
-            this.TDExit.Location = new System.Drawing.Point(1756, 15);
-            this.TDExit.Margin = new System.Windows.Forms.Padding(4);
-
             this.TDExit.Location = new System.Drawing.Point(1317, 12);
-
             this.TDExit.Name = "TDExit";
             this.TDExit.Size = new System.Drawing.Size(30, 30);
             this.TDExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -98,12 +88,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::PBL3.Properties.Resources.bàn_Tầng_1__004;
-
-            this.pictureBox1.Location = new System.Drawing.Point(20, 17);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-
             this.pictureBox1.Location = new System.Drawing.Point(15, 14);
-
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(33, 28);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -115,12 +100,7 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(231)))), ((int)(((byte)(231)))));
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.label1);
-
-            this.panel1.Location = new System.Drawing.Point(80, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
-
             this.panel1.Location = new System.Drawing.Point(60, 0);
-
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(180, 54);
             this.panel1.TabIndex = 0;
@@ -128,12 +108,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::PBL3.Properties.Resources.icon_thực_đơn1;
-
-            this.pictureBox2.Location = new System.Drawing.Point(24, 16);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
-
             this.pictureBox2.Location = new System.Drawing.Point(18, 13);
-
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(27, 29);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -164,12 +139,7 @@
             this.AddButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.AddButton.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddButton.ForeColor = System.Drawing.Color.Black;
-
-            this.AddButton.Location = new System.Drawing.Point(77, 106);
-            this.AddButton.Margin = new System.Windows.Forms.Padding(4);
-
             this.AddButton.Location = new System.Drawing.Point(58, 86);
-
             this.AddButton.Name = "AddButton";
             this.AddButton.Size = new System.Drawing.Size(170, 40);
             this.AddButton.TabIndex = 2;
@@ -188,12 +158,7 @@
             this.EditButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.EditButton.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EditButton.ForeColor = System.Drawing.Color.Black;
-
-            this.EditButton.Location = new System.Drawing.Point(340, 106);
-            this.EditButton.Margin = new System.Windows.Forms.Padding(4);
-
             this.EditButton.Location = new System.Drawing.Point(255, 86);
-
             this.EditButton.Name = "EditButton";
             this.EditButton.Size = new System.Drawing.Size(170, 40);
             this.EditButton.TabIndex = 3;
@@ -212,12 +177,7 @@
             this.ClearButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.ClearButton.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ClearButton.ForeColor = System.Drawing.Color.Black;
-
-            this.ClearButton.Location = new System.Drawing.Point(599, 106);
-            this.ClearButton.Margin = new System.Windows.Forms.Padding(4);
-
             this.ClearButton.Location = new System.Drawing.Point(449, 86);
-
             this.ClearButton.Name = "ClearButton";
             this.ClearButton.Size = new System.Drawing.Size(170, 40);
             this.ClearButton.TabIndex = 4;
@@ -228,12 +188,7 @@
             // 
             this.ThucDonData.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.ThucDonData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-
-            this.ThucDonData.Location = new System.Drawing.Point(77, 196);
-            this.ThucDonData.Margin = new System.Windows.Forms.Padding(4);
-
             this.ThucDonData.Location = new System.Drawing.Point(58, 159);
-
             this.ThucDonData.Name = "ThucDonData";
             this.ThucDonData.RowHeadersWidth = 51;
             this.ThucDonData.Size = new System.Drawing.Size(1266, 529);
@@ -249,12 +204,7 @@
             this.guna2Panel2.Controls.Add(this.pictureBox6);
             this.guna2Panel2.Controls.Add(this.pictureBox5);
             this.guna2Panel2.Controls.Add(this.pictureBox4);
-
-            this.guna2Panel2.Location = new System.Drawing.Point(77, 847);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4);
-
             this.guna2Panel2.Location = new System.Drawing.Point(58, 688);
-
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(1266, 37);
             this.guna2Panel2.TabIndex = 6;
@@ -273,12 +223,7 @@
             // pictureBox9
             // 
             this.pictureBox9.Image = global::PBL3.Properties.Resources.Line_5;
-
-            this.pictureBox9.Location = new System.Drawing.Point(337, 7);
-            this.pictureBox9.Margin = new System.Windows.Forms.Padding(4);
-
             this.pictureBox9.Location = new System.Drawing.Point(253, 6);
-
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(14, 25);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -288,12 +233,7 @@
             // pictureBox8
             // 
             this.pictureBox8.Image = global::PBL3.Properties.Resources.Line_5;
-
-            this.pictureBox8.Location = new System.Drawing.Point(143, 7);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4);
-
             this.pictureBox8.Location = new System.Drawing.Point(107, 6);
-
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(14, 25);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -303,12 +243,7 @@
             // pictureBox7
             // 
             this.pictureBox7.Image = global::PBL3.Properties.Resources.bytesize_chevron_top__1_;
-
-            this.pictureBox7.Location = new System.Drawing.Point(364, 11);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4);
-
             this.pictureBox7.Location = new System.Drawing.Point(273, 9);
-
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(26, 20);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -318,12 +253,7 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = global::PBL3.Properties.Resources.Group_171;
-
-            this.pictureBox6.Location = new System.Drawing.Point(407, 11);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4);
-
             this.pictureBox6.Location = new System.Drawing.Point(305, 9);
-
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(37, 20);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -333,12 +263,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = global::PBL3.Properties.Resources.bytesize_chevron_top;
-
-            this.pictureBox5.Location = new System.Drawing.Point(100, 11);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4);
-
             this.pictureBox5.Location = new System.Drawing.Point(75, 9);
-
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(26, 20);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -348,12 +273,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::PBL3.Properties.Resources.Group_170;
-
-            this.pictureBox4.Location = new System.Drawing.Point(43, 11);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
-
             this.pictureBox4.Location = new System.Drawing.Point(32, 9);
-
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(37, 20);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -363,42 +283,19 @@
             // pictureBox10
             // 
             this.pictureBox10.Image = global::PBL3.Properties.Resources.Vector__2_;
-
-            this.pictureBox10.Location = new System.Drawing.Point(1712, 106);
-            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4);
-
             this.pictureBox10.Location = new System.Drawing.Point(1284, 86);
-
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(40, 40);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox10.TabIndex = 16;
             this.pictureBox10.TabStop = false;
             // 
-            // ten
-            // 
-            this.ten.AutoSize = true;
-            this.ten.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(181)))), ((int)(((byte)(181)))));
-            this.ten.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ten.ForeColor = System.Drawing.Color.Black;
-            this.ten.Location = new System.Drawing.Point(1530, 123);
-            this.ten.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.ten.Name = "ten";
-            this.ten.Size = new System.Drawing.Size(133, 32);
-            this.ten.TabIndex = 48;
-            this.ten.Text = "Đơn hàng";
-            // 
             // ThucDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(181)))), ((int)(((byte)(181)))));
-
-            this.ClientSize = new System.Drawing.Size(1848, 970);
-            this.Controls.Add(this.ten);
-
             this.ClientSize = new System.Drawing.Size(1386, 788);
-
             this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.ThucDonData);
@@ -407,10 +304,6 @@
             this.Controls.Add(this.AddButton);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-
-            this.Margin = new System.Windows.Forms.Padding(4);
-
-
             this.Name = "ThucDon";
             this.Text = "ThucDon";
             this.guna2Panel1.ResumeLayout(false);
@@ -430,7 +323,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -455,6 +347,5 @@
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox10;
-        private System.Windows.Forms.Label ten;
     }
 }

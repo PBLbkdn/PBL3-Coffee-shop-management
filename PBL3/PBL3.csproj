@@ -86,6 +86,9 @@
     <Compile Include="DTO\CaTruc.cs">
       <DependentUpon>QuanCaPhePBL3.tt</DependentUpon>
     </Compile>
+    <Compile Include="DTO\ChiTietCaTruc.cs">
+      <DependentUpon>QuanCaPhePBL3.tt</DependentUpon>
+    </Compile>
     <Compile Include="DTO\ChiTietHoaDon.cs">
       <DependentUpon>QuanCaPhePBL3.tt</DependentUpon>
     </Compile>
@@ -368,6 +371,12 @@
     <Compile Include="GUI\Employee\ThemKhachHang.Designer.cs">
       <DependentUpon>ThemKhachHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Employee\ThemMon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Employee\ThemMon.Designer.cs">
+      <DependentUpon>ThemMon.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Employee\ThongKe_NV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -495,6 +504,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Employee\ThemKhachHang.resx">
       <DependentUpon>ThemKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Employee\ThemMon.resx">
+      <DependentUpon>ThemMon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Employee\ThongKe_NV.resx">
       <DependentUpon>ThongKe_NV.cs</DependentUpon>

@@ -12,16 +12,8 @@ namespace PBL3.GUI.Employee
 {
     public partial class DatMon : Form
     {
-        private int maNV;
-
         public DatMon()
         {
-            InitializeComponent();
-        }
-
-        public DatMon(int maNV)
-        {
-            this.maNV = maNV;
             InitializeComponent();
         }
 

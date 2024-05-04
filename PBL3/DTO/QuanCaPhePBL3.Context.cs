@@ -27,6 +27,7 @@ namespace PBL3.DTO
     
         public virtual DbSet<Ban> Bans { get; set; }
         public virtual DbSet<CaTruc> CaTrucs { get; set; }
+        public virtual DbSet<ChiTietCaTruc> ChiTietCaTrucs { get; set; }
         public virtual DbSet<ChiTietHoaDon> ChiTietHoaDons { get; set; }
         public virtual DbSet<ChiTietNguyenLieu> ChiTietNguyenLieux { get; set; }
         public virtual DbSet<ChiTietSanPham> ChiTietSanPhams { get; set; }

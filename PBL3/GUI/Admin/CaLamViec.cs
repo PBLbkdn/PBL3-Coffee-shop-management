@@ -14,23 +14,18 @@ namespace PBL3.GUI
 {
     public partial class CaLamViec : Form
     {
-        private int maNV;
-
         public CaLamViec()
         {
             InitializeComponent();
             setMonth(); 
             setYear();
+            Label[] week = { dayOfMonday, dayOfTuesday, dayOfWednesday, dayOfThursday, dayOfFriday, dayOfSaturday, dayOfSunday };
+            for (int i = 0; i < 7; i++)
+            {
+                week[i].Visible = false;
+            }
+            CaTruc_BLL.Instance.AddCaTruc();
             
-        }
-
-        public CaLamViec(int maNV)
-        {
-            this.maNV = maNV;
-            InitializeComponent();
-            ten.Text = NhanVien_BLL.Instance.getTenNV(maNV);
-            setMonth();
-            setYear();
         }
 
         private void setMonth()
@@ -41,26 +36,6 @@ namespace PBL3.GUI
             }
         }
 
-        private void Check()
-        {
-            Label[] week = { dayOfMonday, dayOfTuesday, dayOfWednesday, dayOfThursday, dayOfFriday, dayOfSaturday, dayOfSunday };
-            Guna2Button[] buttons = { guna2Button8, guna2Button9, guna2Button10, guna2Button11, guna2Button12, guna2Button13, guna2Button14, guna2Button15, guna2Button16, guna2Button17, guna2Button18, guna2Button19, guna2Button20, guna2Button21, guna2Button22, guna2Button23, guna2Button24, guna2Button25, guna2Button26, guna2Button27, guna2Button28 };
-            for (int i = 0; i < 7; i++)
-            {
-                if (week[i].Text == "")
-                {
-                    buttons[14-i-8].Enabled = false;
-                    buttons[21-i-8].Enabled = false;
-                    buttons[28 - i - 8].Enabled = false;
-                }
-                else
-                {
-                    buttons[14 - i - 8].Enabled = true;
-                    buttons[21 - i - 8].Enabled = true;
-                    buttons[28 - i - 8].Enabled = true;
-                }
-            }
-        }
         private void setYear()
         {
             for (int i = 2024; i <= DateTime.Now.Year; i++)
@@ -69,9 +44,29 @@ namespace PBL3.GUI
             }            
         }
 
-
         private void setCalendar()
         {
+            guna2Button8.Enabled = true;
+            guna2Button9.Enabled = true;
+            guna2Button10.Enabled = true;
+            guna2Button11.Enabled = true;
+            guna2Button12.Enabled = true;
+            guna2Button13.Enabled = true;
+            guna2Button14.Enabled = true;
+            guna2Button15.Enabled = true;
+            guna2Button16.Enabled = true;
+            guna2Button17.Enabled = true;
+            guna2Button18.Enabled = true;
+            guna2Button19.Enabled = true;
+            guna2Button20.Enabled = true;
+            guna2Button21.Enabled = true;
+            guna2Button22.Enabled = true;
+            guna2Button23.Enabled = true;
+            guna2Button24.Enabled = true;
+            guna2Button25.Enabled = true;
+            guna2Button26.Enabled = true;   
+            guna2Button27.Enabled = true;   
+            guna2Button28.Enabled = true;   
             //hiện lịch tháng lên màn hình
             int month = Convert.ToInt32(monthCbb.SelectedItem);
             int year = Convert.ToInt32(yearCbb.SelectedItem);
@@ -122,7 +117,6 @@ namespace PBL3.GUI
             }
 
             label1.Text = "Trang 1/" + weekOfMonth;
-            Check();
         }
 
         
@@ -160,7 +154,7 @@ namespace PBL3.GUI
             int year = Convert.ToInt32(yearCbb.SelectedItem);
             DateTime today = new DateTime(year, month, dayNum);
             this.Hide();
-            NhanVienTrongCa nhanVienTrongCa = new NhanVienTrongCa(Convert.ToInt32(maCa), today, maNV);
+            NhanVienTrongCa nhanVienTrongCa = new NhanVienTrongCa(Convert.ToInt32(maCa), today);
             nhanVienTrongCa.Show();
         }
 
@@ -180,7 +174,7 @@ namespace PBL3.GUI
             int year = Convert.ToInt32(yearCbb.SelectedItem);
             DateTime today = new DateTime(year, month, dayNum);
             this.Hide();
-            NhanVienTrongCa nhanVienTrongCa = new NhanVienTrongCa(Convert.ToInt32(maCa), today, maNV);
+            NhanVienTrongCa nhanVienTrongCa = new NhanVienTrongCa(Convert.ToInt32(maCa), today);
             nhanVienTrongCa.Show();
         }
 
@@ -195,7 +189,7 @@ namespace PBL3.GUI
             int year = Convert.ToInt32(yearCbb.SelectedItem);
             DateTime today = new DateTime(year, month, dayNum);
             this.Hide();
-            NhanVienTrongCa nhanVienTrongCa = new NhanVienTrongCa(Convert.ToInt32(maCa), today, maNV);
+            NhanVienTrongCa nhanVienTrongCa = new NhanVienTrongCa(Convert.ToInt32(maCa), today);
             nhanVienTrongCa.Show();
         }
 
@@ -210,7 +204,7 @@ namespace PBL3.GUI
             int year = Convert.ToInt32(yearCbb.SelectedItem);
             DateTime today = new DateTime(year, month, dayNum);
             this.Hide();
-            NhanVienTrongCa nhanVienTrongCa = new NhanVienTrongCa(Convert.ToInt32(maCa), today, maNV);
+            NhanVienTrongCa nhanVienTrongCa = new NhanVienTrongCa(Convert.ToInt32(maCa), today);
             nhanVienTrongCa.Show();
         }
 
@@ -225,7 +219,7 @@ namespace PBL3.GUI
             int year = Convert.ToInt32(yearCbb.SelectedItem);
             DateTime today = new DateTime(year, month, dayNum);
             this.Hide();
-            NhanVienTrongCa nhanVienTrongCa = new NhanVienTrongCa(Convert.ToInt32(maCa), today, maNV);
+            NhanVienTrongCa nhanVienTrongCa = new NhanVienTrongCa(Convert.ToInt32(maCa), today);
             nhanVienTrongCa.Show();
 
         }
@@ -241,7 +235,7 @@ namespace PBL3.GUI
             int year = Convert.ToInt32(yearCbb.SelectedItem);
             DateTime today = new DateTime(year, month, dayNum);
             this.Hide();
-            NhanVienTrongCa nhanVienTrongCa = new NhanVienTrongCa(Convert.ToInt32(maCa), today, maNV);
+            NhanVienTrongCa nhanVienTrongCa = new NhanVienTrongCa(Convert.ToInt32(maCa), today);
             nhanVienTrongCa.Show();
 
         }
@@ -257,7 +251,7 @@ namespace PBL3.GUI
             int year = Convert.ToInt32(yearCbb.SelectedItem);
             DateTime today = new DateTime(year, month, dayNum);
             this.Hide();
-            NhanVienTrongCa nhanVienTrongCa = new NhanVienTrongCa(Convert.ToInt32(maCa), today, maNV);
+            NhanVienTrongCa nhanVienTrongCa = new NhanVienTrongCa(Convert.ToInt32(maCa), today);
             nhanVienTrongCa.Show();
         }
 
@@ -272,7 +266,7 @@ namespace PBL3.GUI
             int year = Convert.ToInt32(yearCbb.SelectedItem);
             DateTime today = new DateTime(year, month, dayNum);
             this.Hide();
-            NhanVienTrongCa nhanVienTrongCa = new NhanVienTrongCa(Convert.ToInt32(maCa), today, maNV);
+            NhanVienTrongCa nhanVienTrongCa = new NhanVienTrongCa(Convert.ToInt32(maCa), today);
             nhanVienTrongCa.Show();
         }
 
@@ -287,7 +281,7 @@ namespace PBL3.GUI
             int year = Convert.ToInt32(yearCbb.SelectedItem);
             DateTime today = new DateTime(year, month, dayNum);
             this.Hide();
-            NhanVienTrongCa nhanVienTrongCa = new NhanVienTrongCa(Convert.ToInt32(maCa), today, maNV);
+            NhanVienTrongCa nhanVienTrongCa = new NhanVienTrongCa(Convert.ToInt32(maCa), today);
             nhanVienTrongCa.Show();
         }
 
@@ -302,7 +296,7 @@ namespace PBL3.GUI
             int year = Convert.ToInt32(yearCbb.SelectedItem);
             DateTime today = new DateTime(year, month, dayNum);
             this.Hide();
-            NhanVienTrongCa nhanVienTrongCa = new NhanVienTrongCa(Convert.ToInt32(maCa), today, maNV);
+            NhanVienTrongCa nhanVienTrongCa = new NhanVienTrongCa(Convert.ToInt32(maCa), today);
             nhanVienTrongCa.Show();
         }
 
@@ -317,7 +311,7 @@ namespace PBL3.GUI
             int year = Convert.ToInt32(yearCbb.SelectedItem);
             DateTime today = new DateTime(year, month, dayNum);
             this.Hide();
-            NhanVienTrongCa nhanVienTrongCa = new NhanVienTrongCa(Convert.ToInt32(maCa), today, maNV);
+            NhanVienTrongCa nhanVienTrongCa = new NhanVienTrongCa(Convert.ToInt32(maCa), today);
             nhanVienTrongCa.Show();
         }
 
@@ -332,7 +326,7 @@ namespace PBL3.GUI
             int year = Convert.ToInt32(yearCbb.SelectedItem);
             DateTime today = new DateTime(year, month, dayNum);
             this.Hide();
-            NhanVienTrongCa nhanVienTrongCa = new NhanVienTrongCa(Convert.ToInt32(maCa), today, maNV);
+            NhanVienTrongCa nhanVienTrongCa = new NhanVienTrongCa(Convert.ToInt32(maCa), today);
             nhanVienTrongCa.Show();
         }
 
@@ -347,7 +341,7 @@ namespace PBL3.GUI
             int year = Convert.ToInt32(yearCbb.SelectedItem);
             DateTime today = new DateTime(year, month, dayNum);
             this.Hide();
-            NhanVienTrongCa nhanVienTrongCa = new NhanVienTrongCa(Convert.ToInt32(maCa), today, maNV);
+            NhanVienTrongCa nhanVienTrongCa = new NhanVienTrongCa(Convert.ToInt32(maCa), today);
             nhanVienTrongCa.Show();
         }
 
@@ -362,7 +356,7 @@ namespace PBL3.GUI
             int year = Convert.ToInt32(yearCbb.SelectedItem);
             DateTime today = new DateTime(year, month, dayNum);
             this.Hide();
-            NhanVienTrongCa nhanVienTrongCa = new NhanVienTrongCa(Convert.ToInt32(maCa), today, maNV);
+            NhanVienTrongCa nhanVienTrongCa = new NhanVienTrongCa(Convert.ToInt32(maCa), today);
             nhanVienTrongCa.Show();
         }
 
@@ -377,7 +371,7 @@ namespace PBL3.GUI
             int year = Convert.ToInt32(yearCbb.SelectedItem);
             DateTime today = new DateTime(year, month, dayNum);
             this.Hide();
-            NhanVienTrongCa nhanVienTrongCa = new NhanVienTrongCa(Convert.ToInt32(maCa), today, maNV);
+            NhanVienTrongCa nhanVienTrongCa = new NhanVienTrongCa(Convert.ToInt32(maCa), today);
             nhanVienTrongCa.Show();
         }
 
@@ -392,7 +386,7 @@ namespace PBL3.GUI
             int year = Convert.ToInt32(yearCbb.SelectedItem);
             DateTime today = new DateTime(year, month, dayNum);
             this.Hide();
-            NhanVienTrongCa nhanVienTrongCa = new NhanVienTrongCa(Convert.ToInt32(maCa), today, maNV);
+            NhanVienTrongCa nhanVienTrongCa = new NhanVienTrongCa(Convert.ToInt32(maCa), today);
             nhanVienTrongCa.Show();
         }
 
@@ -407,7 +401,7 @@ namespace PBL3.GUI
             int year = Convert.ToInt32(yearCbb.SelectedItem);
             DateTime today = new DateTime(year, month, dayNum);
             this.Hide();
-            NhanVienTrongCa nhanVienTrongCa = new NhanVienTrongCa(Convert.ToInt32(maCa), today, maNV);
+            NhanVienTrongCa nhanVienTrongCa = new NhanVienTrongCa(Convert.ToInt32(maCa), today);
             nhanVienTrongCa.Show();
         }
 
@@ -422,7 +416,7 @@ namespace PBL3.GUI
             int year = Convert.ToInt32(yearCbb.SelectedItem);
             DateTime today = new DateTime(year, month, dayNum);
             this.Hide();
-            NhanVienTrongCa nhanVienTrongCa = new NhanVienTrongCa(Convert.ToInt32(maCa), today, maNV);
+            NhanVienTrongCa nhanVienTrongCa = new NhanVienTrongCa(Convert.ToInt32(maCa), today);
             nhanVienTrongCa.Show();
         }
 
@@ -437,7 +431,7 @@ namespace PBL3.GUI
             int year = Convert.ToInt32(yearCbb.SelectedItem);
             DateTime today = new DateTime(year, month, dayNum);
             this.Hide();
-            NhanVienTrongCa nhanVienTrongCa = new NhanVienTrongCa(Convert.ToInt32(maCa), today, maNV);
+            NhanVienTrongCa nhanVienTrongCa = new NhanVienTrongCa(Convert.ToInt32(maCa), today);
             nhanVienTrongCa.Show();
         }
 
@@ -453,7 +447,7 @@ namespace PBL3.GUI
             int year = Convert.ToInt32(yearCbb.SelectedItem);
             DateTime today = new DateTime(year, month, dayNum);
             this.Hide();
-            NhanVienTrongCa nhanVienTrongCa = new NhanVienTrongCa(Convert.ToInt32(maCa), today, maNV);
+            NhanVienTrongCa nhanVienTrongCa = new NhanVienTrongCa(Convert.ToInt32(maCa), today);
             nhanVienTrongCa.Show();
         }
 
@@ -468,7 +462,7 @@ namespace PBL3.GUI
             int year = Convert.ToInt32(yearCbb.SelectedItem);
             DateTime today = new DateTime(year, month, dayNum);
             this.Hide();
-            NhanVienTrongCa nhanVienTrongCa = new NhanVienTrongCa(Convert.ToInt32(maCa), today, maNV);
+            NhanVienTrongCa nhanVienTrongCa = new NhanVienTrongCa(Convert.ToInt32(maCa), today);
             nhanVienTrongCa.Show();
         }
 
@@ -541,7 +535,6 @@ namespace PBL3.GUI
                 weekOfMonth++;
             }
             label1.Text = "Trang " + number + "/" + weekOfMonth;
-            Check();
         }
 
         private void lastPage_Click(object sender, EventArgs e)
@@ -577,7 +570,6 @@ namespace PBL3.GUI
                 weekOfMonth++;
             }
             label1.Text = "Trang " + weekOfMonth+"/"+weekOfMonth;
-            Check();
         }
 
         private void firstPage_Click(object sender, EventArgs e)
@@ -588,6 +580,7 @@ namespace PBL3.GUI
                 return;
             }
             setCalendar();
+            
         }
 
         private void prePage_Click(object sender, EventArgs e)
@@ -643,14 +636,6 @@ namespace PBL3.GUI
                 weekOfMonth++;
             }
             label1.Text = "Trang " + number + "/" + weekOfMonth;
-            Check();
-        }
-
-        private void menu_Click(object sender, EventArgs e)
-        {
-            ManHinhChinh manHinhChinh = new ManHinhChinh();
-            manHinhChinh.Show();
-            this.Close();
         }
     }
 }

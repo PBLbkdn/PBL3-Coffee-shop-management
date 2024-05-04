@@ -63,29 +63,6 @@ namespace PBL3.BUS
             sedit.MatKhau = mk;
             db.SaveChanges();
         }
-
-        public void EditTaiKhoanNV(string maNV, string mkCu, string tenDangNhap, string mk, string mkMoi)
-        {
-            QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
-            TaiKhoan sedit = db.TaiKhoans.Find(Convert.ToInt32(maNV));
-            if (sedit.MatKhau == mkCu)
-            {
-                if (mk == mkMoi)
-                {
-                    sedit.TenDangNhap = tenDangNhap;
-                    sedit.MatKhau = mk;
-                    db.SaveChanges();
-                }
-                else
-                {
-                    MessageBox.Show("Mật khẩu mới không trùng khớp. Vui lòng nhập lại.");
-                }
-            }
-            else
-            {
-                MessageBox.Show("Mật khẩu cũ không đúng. Vui lòng nhập lại.");
-            }
-        }
         public void DeleteTaiKhoan(int id)
         {
             QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
@@ -108,28 +85,6 @@ namespace PBL3.BUS
                 }
             }
         }
-        public int GetMaNV(string tenDangNhap, string MatKhau)
-        {
-            QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
-            var account = db.TaiKhoans.FirstOrDefault(a => a.TenDangNhap == tenDangNhap && a.MatKhau == MatKhau);
-            if (account != null)
-            {
-                return account.MaNV;
-            }
-            return 0;
-        }
-
-        internal string getTenTK(int maNV1)
-        {
-            QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
-            var account = db.TaiKhoans.FirstOrDefault(a => a.MaNV == maNV1);
-            if (account != null)
-            {
-                return account.TenDangNhap;
-            }
-            return "";
-        }
-
         public int Check(string s)
         {
             int d = 0;
@@ -177,7 +132,5 @@ namespace PBL3.BUS
                 return 4;
             }
         }
-
-        
     }
 }

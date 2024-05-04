@@ -15,45 +15,18 @@ namespace PBL3.GUI
 {
     public partial class KhuyenMai : Form
     {
-        private int maNV;
-
         public KhuyenMai()
         {
             InitializeComponent();
-            RefreshData();
         }
 
-        public KhuyenMai(int maNV)
-        {
-            this.maNV = maNV;
-            InitializeComponent();
-            ten.Text = NhanVien_BLL.Instance.getTenNV(maNV);
-            RefreshData();
-        }
-
-        private void RefreshData()
-        {
-            KMData.DataSource = KhuyenMai_BLL.Instance.GetAllKM();
-            if (KMData.Columns["MaKM"] != null)
-                KMData.Columns["MaKM"].HeaderText = "Mã khuyến mãi";
-            if (KMData.Columns["TenCT"] != null)
-                KMData.Columns["TenCT"].HeaderText = "Tên chương trình";
-            if (KMData.Columns["TGBatDau"] != null)
-                KMData.Columns["TGBatDau"].HeaderText = "Thời gian bắt đầu";
-            if (KMData.Columns["TGKetThuc"] != null)
-                KMData.Columns["TGKetThuc"].HeaderText = "Thời gian kết thúc";
-            if (KMData.Columns["MoTa"] != null)
-                KMData.Columns["MoTa"].HeaderText = "Mô tả";
-            if (KMData.Columns["GiaTriKM"] != null)
-                KMData.Columns["GiaTriKM"].HeaderText = "Giá trị khuyến mãi";
-        }
         private void addKM_Click(object sender, EventArgs e)
         {
             ThemMaKM f = new ThemMaKM();
             this.Hide();
             f.ShowDialog();
             this.Show();
-            RefreshData();
+            KMData.DataSource = KhuyenMai_BLL.Instance.GetAllKM();
         }
 
         private void editKM_Click(object sender, EventArgs e)
@@ -68,7 +41,7 @@ namespace PBL3.GUI
             this.Hide();
             f.ShowDialog();
             this.Show();
-            RefreshData();
+            KMData.DataSource = KhuyenMai_BLL.Instance.GetAllKM();
         }
 
         private void deleteKM_Click(object sender, EventArgs e)
@@ -86,20 +59,11 @@ namespace PBL3.GUI
                     KhuyenMai_BLL.Instance.GetAllKM();
                 }
             }
-            RefreshData();
         }
 
         private void exitKM_Click(object sender, EventArgs e)
         {
             this.Dispose();
-        }
-
-        private void pictureBox5_Click(object sender, EventArgs e)
-        {
-            ManHinhChinh manHinhChinh = new ManHinhChinh(maNV);
-            this.Hide();
-            manHinhChinh.ShowDialog();
-            Close();
         }
     }
 }

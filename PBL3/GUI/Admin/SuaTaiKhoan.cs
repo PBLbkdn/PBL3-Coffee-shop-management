@@ -14,19 +14,10 @@ namespace PBL3.GUI.Admin
 {
     public partial class SuaTaiKhoan : Form
     {
-        private int maNV1;
-
         public SuaTaiKhoan()
         {
             InitializeComponent();
         }
-
-        public SuaTaiKhoan(int maNV1)
-        {
-            this.maNV1 = maNV1;
-            InitializeComponent();
-        }
-
         public void GetThongTin(int s)
         {
             string manv = maNV.Text;

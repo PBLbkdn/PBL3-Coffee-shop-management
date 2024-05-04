@@ -21,6 +21,15 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="ChiTietCaTrucs">
+      <EntityTypeMapping TypeName="QuanCaPhePBL3Model.ChiTietCaTruc">
+        <MappingFragment StoreEntitySet="ChiTietCaTruc">
+          <ScalarProperty Name="MaCT" ColumnName="MaCT" />
+          <ScalarProperty Name="NgayTruc" ColumnName="NgayTruc" />
+          <ScalarProperty Name="MaNV" ColumnName="MaNV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="ChiTietHoaDons">
       <EntityTypeMapping TypeName="QuanCaPhePBL3Model.ChiTietHoaDon">
         <MappingFragment StoreEntitySet="ChiTietHoaDon">
@@ -176,15 +185,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <AssociationSetMapping Name="ChiTietCaTruc" TypeName="QuanCaPhePBL3Model.ChiTietCaTruc" StoreEntitySet="ChiTietCaTruc">
-      <EndProperty Name="CaTruc">
-        <ScalarProperty Name="MaCT" ColumnName="MaCT" />
-        <ScalarProperty Name="NgayTruc" ColumnName="NgayTruc" />
-      </EndProperty>
-      <EndProperty Name="NhanVien">
-        <ScalarProperty Name="MaNV" ColumnName="MaNV" />
-      </EndProperty>
-    </AssociationSetMapping>
     <AssociationSetMapping Name="ChiTietKhuyenMai" TypeName="QuanCaPhePBL3Model.ChiTietKhuyenMai" StoreEntitySet="ChiTietKhuyenMai">
       <EndProperty Name="KhuyenMai">
         <ScalarProperty Name="MaKM" ColumnName="MaKM" />

@@ -39,12 +39,5 @@ namespace PBL3.GUI.Employee
             ViTri.Visible = true;
             NhanVienPhucVu.Visible = true;
         }
-
-        private void pictureBox5_Click(object sender, EventArgs e)
-        {
-            ManHinhChinh_NV manHinhChinh = new ManHinhChinh_NV();
-            manHinhChinh.Show();
-            this.Close();
-        }
     }
 }

@@ -31,5 +31,10 @@ namespace PBL3.GUI.Employee
         {
             
         }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            Application.Exit(); 
+        }
     }
 }

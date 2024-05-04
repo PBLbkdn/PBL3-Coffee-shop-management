@@ -14,24 +14,14 @@ namespace PBL3.GUI
 {
     public partial class ThucDon : Form
     {
-        private int maNV;
-
         public ThucDon()
         {
             InitializeComponent();
         }
 
-        public ThucDon(int maNV)
-        {
-            this.maNV = maNV;
-
-            InitializeComponent();
-            ten.Text=NhanVien_BLL.Instance.getTenNV(maNV);
-        }
-
         private void addSp_Click(object sender, EventArgs e)
         {
-            ThemMon f = new ThemMon(maNV);
+            ThemMon f = new ThemMon();
             this.Hide();
             f.ShowDialog();
             this.Show();

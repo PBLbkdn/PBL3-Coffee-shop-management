@@ -13,18 +13,9 @@ namespace PBL3.GUI.Admin
 {
     public partial class NhanVien : Form
     {
-        private int maNV;
-
         public NhanVien()
         {
             InitializeComponent();
-        }
-
-        public NhanVien(int maNV)
-        {
-            this.maNV = maNV;
-            InitializeComponent();
-            ten.Text = NhanVien_BLL.Instance.getTenNV(maNV);
         }
 
         private void NhanVien_Load(object sender, EventArgs e)
@@ -83,23 +74,16 @@ namespace PBL3.GUI.Admin
 
         private void exitNV_Click(object sender, EventArgs e)
         {
-             DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn đăng xuất?", "Xác nhận đăng xuất", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            this.Dispose();
+            /* DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn đăng xuất?", "Xác nhận đăng xuất", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
              if (result == DialogResult.Yes)
              {
                  this.Dispose();
                  DangNhap f = new DangNhap();
                  this.Hide();
                  f.ShowDialog();
-                this.Close();
-             }
-        }
-
-        private void pictureBox5_Click(object sender, EventArgs e)
-        {
-            ManHinhChinh manHinhChinh = new ManHinhChinh(maNV);
-            this.Hide();
-            manHinhChinh.ShowDialog();
-            this.Close();
+                 this.Show();
+             }*/
         }
     }
 }

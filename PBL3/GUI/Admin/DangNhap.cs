@@ -31,16 +31,15 @@ namespace PBL3.GUI
             {
                 case 1:
                     MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    int maNV= TaiKhoan_BLL.Instance.GetMaNV(username.Text, password.Text);
                     if (rbManager.Checked)
                     {
-                        ManHinhChinh f = new ManHinhChinh(maNV);
+                        ManHinhChinh f = new ManHinhChinh();
                         this.Hide();
                         f.Show();
                     }
                     else
                     {
-                        ManHinhChinh_NV f = new ManHinhChinh_NV(maNV);
+                        ManHinhChinh_NV f = new ManHinhChinh_NV();
                         this.Hide();
                         f.Show();
                     }

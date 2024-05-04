@@ -54,10 +54,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
-
-            this.ten = new System.Windows.Forms.Label();
-
-
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.KMexit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -106,7 +102,6 @@
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 2;
             this.pictureBox5.TabStop = false;
-            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // panel2
             // 
@@ -228,7 +223,6 @@
             // 
             // KMData
             // 
-            this.KMData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.KMData.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.KMData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.KMData.Location = new System.Drawing.Point(60, 229);
@@ -319,16 +313,10 @@
             this.findButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.findButton.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.findButton.ForeColor = System.Drawing.Color.Black;
-
-            this.findButton.Location = new System.Drawing.Point(858, 12);
-            this.findButton.Name = "findButton";
-            this.findButton.Size = new System.Drawing.Size(124, 36);
-
             this.findButton.Location = new System.Drawing.Point(893, 18);
             this.findButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.findButton.Name = "findButton";
             this.findButton.Size = new System.Drawing.Size(93, 29);
-
             this.findButton.TabIndex = 22;
             this.findButton.Text = "Tìm kiếm";
             // 
@@ -414,33 +402,12 @@
             this.pictureBox10.TabIndex = 15;
             this.pictureBox10.TabStop = false;
             // 
-
-            // ten
-            // 
-            this.ten.AutoSize = true;
-            this.ten.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(181)))), ((int)(((byte)(181)))));
-            this.ten.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ten.ForeColor = System.Drawing.Color.Black;
-            this.ten.Location = new System.Drawing.Point(1509, 123);
-            this.ten.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.ten.Name = "ten";
-            this.ten.Size = new System.Drawing.Size(133, 32);
-            this.ten.TabIndex = 48;
-            this.ten.Text = "Đơn hàng";
-            // 
-
-
             // KhuyenMai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(181)))), ((int)(((byte)(181)))));
-
-            this.ClientSize = new System.Drawing.Size(1726, 882);
-            this.Controls.Add(this.ten);
-
             this.ClientSize = new System.Drawing.Size(1386, 788);
-
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.clearButton);
@@ -450,14 +417,7 @@
             this.Controls.Add(this.addButton);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "KhuyenMai";
-            this.Text = "Khuyến_mãi";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-
-            this.Name = "KhuyenMai";
-
             this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.KMexit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -477,7 +437,6 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -508,6 +467,5 @@
         private Guna.UI2.WinForms.Guna2DateTimePicker fromDay;
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2Button findButton;
-        private System.Windows.Forms.Label ten;
     }
 }

@@ -15,8 +15,6 @@ namespace PBL3.GUI
     {
         private int MaCa;
         private DateTime Day;
-        private int maNV;
-
         public ThemNhanVienVaoCa()
         {
             InitializeComponent();
@@ -32,16 +30,6 @@ namespace PBL3.GUI
             ListNV();
         }
 
-        public ThemNhanVienVaoCa(int maCa, DateTime day, int maNV) : this(maCa, day)
-        {
-            this.maNV = maNV;
-            InitializeComponent();
-            MaCa = maCa;
-            Day = day;
-            setComboBox();
-            ListNV();
-        }
-
         private void setComboBox()
         {
             maNVCb.DataSource = NhanVien_BLL.Instance.ListIDNV();
@@ -49,18 +37,6 @@ namespace PBL3.GUI
         private void ListNV()
         {
             NVData.DataSource = NhanVien_BLL.Instance.ListNV();
-            if (NVData.Columns["MaNV"] != null)
-                NVData.Columns["MaNV"].HeaderText = "Mã nhân viên";
-            if (NVData.Columns["HoTenNV"] != null)
-                NVData.Columns["HoTenNV"].HeaderText = "Họ tên nhân viên";
-            if (NVData.Columns["TenCV"] != null)
-                NVData.Columns["TenCV"].HeaderText = "Chức vụ";
-            if (NVData.Columns["NgaySinh"] != null)
-                NVData.Columns["NgaySinh"].HeaderText = "Ngày sinh";
-            if (NVData.Columns["GioiTinh"] != null)
-                NVData.Columns["GioiTinh"].HeaderText = "Giới tính";
-            if (NVData.Columns["Luong"] != null)
-                NVData.Columns["Luong"].HeaderText = "Lương";
         }
         private void saveButton_Click(object sender, EventArgs e)
         {
