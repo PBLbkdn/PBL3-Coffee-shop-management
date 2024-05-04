@@ -28,8 +28,22 @@ namespace PBL3.GUI
             
         }
 
+<<<<<<< HEAD
+        public CaLamViec(int maNV)
+        {
+            this.maNV = maNV;
+            InitializeComponent();
+
+            ten.Text = NhanVien_BLL.Instance.getTenNV(maNV);
+            setMonth();
+            setYear();
+        }
+
+=======
+>>>>>>> 9d8423669730f19c9633237d6286879ceacbfaac
         private void setMonth()
         {
+
             for (int i = 1; i <= 12; i++)
             {
                 monthCbb.Items.Add(i);
@@ -156,12 +170,9 @@ namespace PBL3.GUI
             this.Hide();
             NhanVienTrongCa nhanVienTrongCa = new NhanVienTrongCa(Convert.ToInt32(maCa), today);
             nhanVienTrongCa.Show();
+            this.Close();
         }
 
-        private void CaLamViec_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void chieuT2(object sender, EventArgs e)
         {
@@ -636,6 +647,17 @@ namespace PBL3.GUI
                 weekOfMonth++;
             }
             label1.Text = "Trang " + number + "/" + weekOfMonth;
+<<<<<<< HEAD
+            Check();
+        }
+
+        private void menu_Click(object sender, EventArgs e)
+        {
+            ManHinhChinh manHinhChinh = new ManHinhChinh(maNV);
+            manHinhChinh.Show();
+            this.Close();
+=======
+>>>>>>> 9d8423669730f19c9633237d6286879ceacbfaac
         }
     }
 }

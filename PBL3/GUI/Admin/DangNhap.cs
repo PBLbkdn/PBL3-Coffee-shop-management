@@ -26,6 +26,11 @@ namespace PBL3.GUI
 
         private void loginButton_Click(object sender, EventArgs e)
         {
+            if(username.Text == "" || password.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin tài khoản và mật khẩu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             int x = TaiKhoan_BLL.Instance.Login(username.Text, password.Text, rbManager.Checked, rbStaff.Checked);
             switch (x)
             {

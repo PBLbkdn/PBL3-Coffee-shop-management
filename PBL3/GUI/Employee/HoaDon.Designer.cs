@@ -29,8 +29,13 @@
         private void InitializeComponent()
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+<<<<<<< HEAD
+
+
+=======
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
+>>>>>>> 9d8423669730f19c9633237d6286879ceacbfaac
             this.hoaDonExit = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -62,6 +67,12 @@
             this.guna2Panel1.Size = new System.Drawing.Size(1386, 54);
             this.guna2Panel1.TabIndex = 33;
             // 
+<<<<<<< HEAD
+
+            // hoaDonExit
+
+            
+=======
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(231)))), ((int)(((byte)(231)))));
@@ -83,6 +94,7 @@
             this.label2.Size = new System.Drawing.Size(95, 25);
             this.label2.TabIndex = 0;
             this.label2.Text = "Hóa đơn";
+>>>>>>> 9d8423669730f19c9633237d6286879ceacbfaac
             // 
             // pictureBox6
             // 

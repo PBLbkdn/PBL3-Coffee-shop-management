@@ -76,7 +76,12 @@
             this.dayTb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.dayTb.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dayTb.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+<<<<<<< HEAD
+            this.dayTb.Location = new System.Drawing.Point(764, 132);
+            this.dayTb.Margin = new System.Windows.Forms.Padding(5);
+=======
             this.dayTb.Location = new System.Drawing.Point(573, 108);
+>>>>>>> 9d8423669730f19c9633237d6286879ceacbfaac
             this.dayTb.Name = "dayTb";
             this.dayTb.PasswordChar = '\0';
             this.dayTb.PlaceholderText = "";
@@ -96,7 +101,12 @@
             this.monthTb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.monthTb.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.monthTb.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+<<<<<<< HEAD
+            this.monthTb.Location = new System.Drawing.Point(945, 133);
+            this.monthTb.Margin = new System.Windows.Forms.Padding(5);
+=======
             this.monthTb.Location = new System.Drawing.Point(709, 108);
+>>>>>>> 9d8423669730f19c9633237d6286879ceacbfaac
             this.monthTb.Name = "monthTb";
             this.monthTb.PasswordChar = '\0';
             this.monthTb.PlaceholderText = "";
@@ -125,7 +135,12 @@
             this.guna2Panel2.Controls.Add(this.pictureBox1);
             this.guna2Panel2.Controls.Add(this.pictureBox2);
             this.guna2Panel2.Controls.Add(this.pictureBox3);
+<<<<<<< HEAD
+            this.guna2Panel2.Location = new System.Drawing.Point(80, 870);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(5);
+=======
             this.guna2Panel2.Location = new System.Drawing.Point(60, 707);
+>>>>>>> 9d8423669730f19c9633237d6286879ceacbfaac
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(1266, 37);
             this.guna2Panel2.TabIndex = 15;
@@ -144,7 +159,12 @@
             // pictureBox9
             // 
             this.pictureBox9.Image = global::PBL3.Properties.Resources.Line_5;
+<<<<<<< HEAD
+            this.pictureBox9.Location = new System.Drawing.Point(337, 7);
+            this.pictureBox9.Margin = new System.Windows.Forms.Padding(5);
+=======
             this.pictureBox9.Location = new System.Drawing.Point(253, 6);
+>>>>>>> 9d8423669730f19c9633237d6286879ceacbfaac
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(14, 25);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -154,7 +174,12 @@
             // pictureBox8
             // 
             this.pictureBox8.Image = global::PBL3.Properties.Resources.Line_5;
+<<<<<<< HEAD
+            this.pictureBox8.Location = new System.Drawing.Point(143, 7);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(5);
+=======
             this.pictureBox8.Location = new System.Drawing.Point(107, 6);
+>>>>>>> 9d8423669730f19c9633237d6286879ceacbfaac
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(14, 25);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -164,7 +189,12 @@
             // pictureBox7
             // 
             this.pictureBox7.Image = global::PBL3.Properties.Resources.bytesize_chevron_top__1_;
+<<<<<<< HEAD
+            this.pictureBox7.Location = new System.Drawing.Point(364, 11);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(5);
+=======
             this.pictureBox7.Location = new System.Drawing.Point(273, 9);
+>>>>>>> 9d8423669730f19c9633237d6286879ceacbfaac
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(26, 20);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -174,7 +204,12 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::PBL3.Properties.Resources.Group_171;
+<<<<<<< HEAD
+            this.pictureBox1.Location = new System.Drawing.Point(407, 11);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(5);
+=======
             this.pictureBox1.Location = new System.Drawing.Point(305, 9);
+>>>>>>> 9d8423669730f19c9633237d6286879ceacbfaac
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(37, 20);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -184,7 +219,12 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::PBL3.Properties.Resources.bytesize_chevron_top;
+<<<<<<< HEAD
+            this.pictureBox2.Location = new System.Drawing.Point(100, 11);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(5);
+=======
             this.pictureBox2.Location = new System.Drawing.Point(75, 9);
+>>>>>>> 9d8423669730f19c9633237d6286879ceacbfaac
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(26, 20);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -194,7 +234,12 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::PBL3.Properties.Resources.Group_170;
+<<<<<<< HEAD
+            this.pictureBox3.Location = new System.Drawing.Point(43, 11);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(5);
+=======
             this.pictureBox3.Location = new System.Drawing.Point(32, 9);
+>>>>>>> 9d8423669730f19c9633237d6286879ceacbfaac
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(37, 20);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -204,13 +249,34 @@
             // pictureBox10
             // 
             this.pictureBox10.Image = global::PBL3.Properties.Resources.Vector__2_;
+<<<<<<< HEAD
+            this.pictureBox10.Location = new System.Drawing.Point(1715, 117);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(5);
+=======
             this.pictureBox10.Location = new System.Drawing.Point(1286, 95);
+>>>>>>> 9d8423669730f19c9633237d6286879ceacbfaac
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(40, 40);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox10.TabIndex = 17;
             this.pictureBox10.TabStop = false;
             // 
+<<<<<<< HEAD
+            // ten
+            // 
+            this.ten.AutoSize = true;
+            this.ten.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(181)))), ((int)(((byte)(181)))));
+            this.ten.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ten.ForeColor = System.Drawing.Color.Black;
+            this.ten.Location = new System.Drawing.Point(1429, 131);
+            this.ten.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.ten.Name = "ten";
+            this.ten.Size = new System.Drawing.Size(133, 32);
+            this.ten.TabIndex = 48;
+            this.ten.Text = "Đơn hàng";
+            // 
+=======
+>>>>>>> 9d8423669730f19c9633237d6286879ceacbfaac
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(132)))), ((int)(((byte)(132)))));
@@ -219,24 +285,46 @@
             this.guna2Panel1.Controls.Add(this.panel2);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
+<<<<<<< HEAD
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(5);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(1622, 66);
+=======
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1386, 54);
+>>>>>>> 9d8423669730f19c9633237d6286879ceacbfaac
             this.guna2Panel1.TabIndex = 20;
             // 
             // exitCa
             // 
             this.exitCa.Image = global::PBL3.Properties.Resources.nút_tắt;
+<<<<<<< HEAD
+            this.exitCa.Location = new System.Drawing.Point(1755, 16);
+            this.exitCa.Margin = new System.Windows.Forms.Padding(4);
+            this.exitCa.Name = "exitCa";
+            this.exitCa.Size = new System.Drawing.Size(40, 37);
+            this.exitCa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.exitCa.TabIndex = 2;
+            this.exitCa.TabStop = false;
+            this.exitCa.Click += new System.EventHandler(this.exitCa_Click);
+=======
             this.exitCa.Location = new System.Drawing.Point(1316, 13);
             this.exitCa.Name = "exitCa";
             this.exitCa.Size = new System.Drawing.Size(30, 30);
             this.exitCa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.exitCa.TabIndex = 2;
             this.exitCa.TabStop = false;
+>>>>>>> 9d8423669730f19c9633237d6286879ceacbfaac
             // 
             // pictureBox5
             // 
             this.pictureBox5.Image = global::PBL3.Properties.Resources.bàn_Tầng_1__004;
+<<<<<<< HEAD
+            this.pictureBox5.Location = new System.Drawing.Point(20, 17);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(5);
+=======
             this.pictureBox5.Location = new System.Drawing.Point(15, 14);
+>>>>>>> 9d8423669730f19c9633237d6286879ceacbfaac
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(33, 28);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -248,7 +336,12 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(231)))), ((int)(((byte)(231)))));
             this.panel2.Controls.Add(this.pictureBox6);
             this.panel2.Controls.Add(this.label2);
+<<<<<<< HEAD
+            this.panel2.Location = new System.Drawing.Point(80, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(5);
+=======
             this.panel2.Location = new System.Drawing.Point(60, 0);
+>>>>>>> 9d8423669730f19c9633237d6286879ceacbfaac
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(180, 54);
             this.panel2.TabIndex = 0;
@@ -256,9 +349,16 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = global::PBL3.Properties.Resources.Nhân_viên;
+<<<<<<< HEAD
+            this.pictureBox6.Location = new System.Drawing.Point(20, 16);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(36, 36);
+=======
             this.pictureBox6.Location = new System.Drawing.Point(15, 13);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(27, 29);
+>>>>>>> 9d8423669730f19c9633237d6286879ceacbfaac
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 2;
             this.pictureBox6.TabStop = false;
@@ -315,8 +415,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(181)))), ((int)(((byte)(181)))));
+<<<<<<< HEAD
+            this.ClientSize = new System.Drawing.Size(1622, 922);
+            this.Controls.Add(this.ten);
+=======
             this.ClientSize = new System.Drawing.Size(1386, 788);
+>>>>>>> 9d8423669730f19c9633237d6286879ceacbfaac
             this.Controls.Add(this.clearButton);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.addButton);
@@ -326,7 +432,12 @@
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.NVCadata);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+<<<<<<< HEAD
+            this.Margin = new System.Windows.Forms.Padding(5);
+=======
+>>>>>>> 9d8423669730f19c9633237d6286879ceacbfaac
             this.Name = "NhanVienTrongCa";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "NhanVienTrongCa";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.NVCadata)).EndInit();

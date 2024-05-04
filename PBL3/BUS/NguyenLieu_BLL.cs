@@ -40,6 +40,13 @@ namespace PBL3.BUS
             }
 
         }
+
+        public List<Object> GetListNguyenLieu()
+        {
+            QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
+            var l1 = db.NguyenLieux.Select(p => new { p.MaNL, p.TenNL, p.SLTonKho, p.DonViTinh });
+            return l1.ToList<Object>();
+        }
         public void AddNguyenLieu(string manl, string tennl, string SLtonkho, DateTime ngayhethan, string gia, string donvi)
         {
             NguyenLieu s = new NguyenLieu

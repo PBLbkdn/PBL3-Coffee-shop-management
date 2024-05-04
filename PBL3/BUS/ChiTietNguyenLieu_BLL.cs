@@ -59,13 +59,15 @@ namespace PBL3.BUS
             return listCTNLByMaNL;
         }   
 
-        public void AddChiTietNguyenLieu(int MaNL, DateTime NgayNhap, int SLNhap)
+        public void AddChiTietNguyenLieu(int MaNL, DateTime NgayNhap, int SLNhap, DateTime NgayHetHan, int giaNhap)
         {
             QuanCaPhePBL3Entities quanCaPheEntities = new QuanCaPhePBL3Entities();
             ChiTietNguyenLieu ctnl = new ChiTietNguyenLieu();
             ctnl.MaNL = MaNL;
             ctnl.NgayNhap = NgayNhap;
             ctnl.SLNhap = SLNhap;
+            ctnl.NgayHetHan = NgayHetHan;
+            ctnl.GiaNhap = giaNhap;
             quanCaPheEntities.ChiTietNguyenLieux.Add(ctnl);
             quanCaPheEntities.SaveChanges();
         }

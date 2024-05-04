@@ -49,6 +49,7 @@ namespace PBL3.GUI
                 if (test == false)
                 {
                     MessageBox.Show("Nhân viên đã có trong ca trực");
+                    MessageBox.Show(Convert.ToInt32(maNVCb.SelectedItem).ToString() + " " + MaCa.ToString() + " " + Day.ToString());
                     return;
                 }
                 else

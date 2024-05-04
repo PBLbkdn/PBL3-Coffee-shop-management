@@ -281,6 +281,22 @@
             this.pictureBox10.TabIndex = 16;
             this.pictureBox10.TabStop = false;
             // 
+<<<<<<< HEAD
+            // ten
+            // 
+            this.ten.AutoSize = true;
+            this.ten.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(181)))), ((int)(((byte)(181)))));
+            this.ten.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ten.ForeColor = System.Drawing.Color.Black;
+            this.ten.Location = new System.Drawing.Point(1473, 175);
+            this.ten.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.ten.Name = "ten";
+            this.ten.Size = new System.Drawing.Size(131, 32);
+            this.ten.TabIndex = 49;
+            this.ten.Text = "Xin chào, ";
+            // 
+=======
+>>>>>>> 9d8423669730f19c9633237d6286879ceacbfaac
             // ManHinhChinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);

@@ -46,14 +46,26 @@ namespace PBL3.GUI
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn đăng xuất?", "Xác nhận", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                DangNhap dangNhap = new DangNhap();
+                dangNhap.Show();
+                this.Close();
+            }
         }
 
 
         private void addButton_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
+            ThemNhanVienVaoCa f = new ThemNhanVienVaoCa(MaCa, Day, maNV);
+            this.Hide();
+=======
             ThemNhanVienVaoCa f = new ThemNhanVienVaoCa(MaCa, Day);
+>>>>>>> 9d8423669730f19c9633237d6286879ceacbfaac
             f.ShowDialog();
+            this.Show();
             RefreshData();
         }
 
@@ -70,5 +82,26 @@ namespace PBL3.GUI
                 RefreshData();
             }
         }
+<<<<<<< HEAD
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            ManHinhChinh manHinhChinh = new ManHinhChinh(maNV);
+            manHinhChinh.Show();
+            this.Close();
+        }
+
+        private void exitCa_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn đăng xuất?", "Xác nhận", MessageBoxButtons.YesNo);
+            if(dialogResult == DialogResult.Yes)
+            {
+                DangNhap dangNhap = new DangNhap();
+                dangNhap.Show();
+                this.Close();
+            }
+        }
+=======
+>>>>>>> 9d8423669730f19c9633237d6286879ceacbfaac
     }
 }
