@@ -53,21 +53,63 @@ namespace PBL3.BUS
             QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
             return db.DonHangs.ToList();
         }
-
-        public List<DonHang> GetListDonHangByID(int MaDH)
+        public List<Object> getListObjectMaDH()
         {
             QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
             List<DonHang> listDH = db.DonHangs.ToList();
-            List<DonHang> listDHByID = new List<DonHang>();
+            List<Object> listObjectDH = new List<Object>();
             for(int i=0; i<listDH.Count; i++)
             {
-                if (listDH[i].MaDH==MaDH)
+                Object obj = new
                 {
-                    listDHByID.Add(listDH[i]);
+                    MaDH = listDH[i].MaDH,
+                };
+                listObjectDH.Add(obj);
+            }
+            List<Object> listMaDH = listObjectDH.Distinct().ToList();
+            return listMaDH;
+        }
+
+        public List<Object> getListObjectMaDH(int maDH)
+        {
+            QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
+            List<DonHang> listDH = db.DonHangs.ToList();
+            List<Object> listObjectDH = new List<Object>();
+            for (int i = 0; i < listDH.Count; i++)
+            {
+                if (listDH[i].MaDH == maDH) { 
+                    Object obj = new
+                    {
+                        MaDH = listDH[i].MaDH,
+                    };
+                    listObjectDH.Add(obj);
+                    break;
                 }
             }
-            return listDHByID;
+            return listObjectDH;
         }
+
+
+        public List<Object> GetListDonHangByID(int MaDH)
+        {
+            QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
+            List<DonHang> listDH = db.DonHangs.ToList();
+            List<Object> listObjectDH = new List<Object>();
+            for (int i = 0; i < listDH.Count; i++)
+            {
+                if (listDH[i].MaDH == MaDH)
+                {
+                    Object obj = new
+                    {
+                        MaSP = listDH[i].MaSP,
+                        SoLuongSP = listDH[i].SoLuongSP,
+                        TenSP = SanPham_BLL.Instance.getTenSP(listDH[i].MaSP)
+                    };
+                    listObjectDH.Add(obj);
+                }
+            }
+            return listObjectDH;
+        }   
 
         public DonHang GetDonHang(int maDH, int maSP, int SoLuongSP)
         {
@@ -87,7 +129,7 @@ namespace PBL3.BUS
         {
             long TongTien = 0;
             QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
-            List<DonHang> listDH = GetListDonHangByID(maHD);
+            //List<DonHang> listDH = GetListDonHangByID(maHD);
             /*for(int i=0; i<listDH.Count; i++)
             {
                 SanPham sp = SanPham_BLL.Instance.GetSanPham(listDH[i].MaSP);

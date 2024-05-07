@@ -138,5 +138,20 @@ namespace PBL3.BUS
             }
             return listCTHDByMaHD;
         }
+
+        public List<Object> GetListObjectCTHDByMaHD(int MaHD)
+        {
+            QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
+            List<ChiTietHoaDon> listCTHD = db.ChiTietHoaDons.ToList();
+            List<Object> res = new List<Object>();
+            foreach (ChiTietHoaDon cthd in listCTHD)
+            {
+                if (cthd.MaHD == MaHD)
+                {
+                    res.Add(new { cthd.MaSP, cthd.SanPham.TenSP, cthd.SoLuongSP, cthd.SanPham.GiaSP, cthd.SanPham.LoaiSP, cthd.SanPham.NhomSP});
+                }
+            }
+            return res;
+        }
     }
 }

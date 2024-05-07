@@ -39,7 +39,7 @@ namespace PBL3.GUI.Employee
         {
             Ban f = new Ban(maNV);
             this.Hide();
-            f.Show();
+            f.ShowDialog();
             this.Close();
         }
 
@@ -47,7 +47,7 @@ namespace PBL3.GUI.Employee
         {
             ThongKe_NV f = new ThongKe_NV(maNV);
             this.Hide();
-            f.Show();
+            f.ShowDialog();
             this.Close();
         }
 
@@ -88,6 +88,26 @@ namespace PBL3.GUI.Employee
             this.Hide();
             thongTinNhanVien.ShowDialog();
             this.Close();
+        }
+
+        private void KHbt_Click(object sender, EventArgs e)
+        {
+            KhachHang khachHang = new KhachHang(maNV);
+            this.Hide();
+            khachHang.ShowDialog();
+            this.Close();
+        }
+
+        private void hoaDonExit_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn thoát?", "Thoát", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                DangNhap dangNhap = new DangNhap();
+                this.Hide();
+                dangNhap.ShowDialog();
+                this.Close();
+            }
         }
     }
 }

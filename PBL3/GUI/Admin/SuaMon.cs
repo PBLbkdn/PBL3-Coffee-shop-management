@@ -57,5 +57,10 @@ namespace PBL3.GUI
         {
             Dispose();
         }
+
+        private void suaMonExit_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

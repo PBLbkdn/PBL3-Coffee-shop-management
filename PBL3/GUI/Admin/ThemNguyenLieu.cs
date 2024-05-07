@@ -40,6 +40,22 @@ namespace PBL3.GUI.Admin
         private void RefreshData()
         {
             NLData.DataSource = NguyenLieu_BLL.Instance.GetListNguyenLieu();
+            if (NLData.Columns["MaNL"] != null)
+            {
+                NLData.Columns["MaNL"].HeaderText = "Mã nguyên liệu";
+            }
+            if (NLData.Columns["TenNL"] != null)
+            {
+                NLData.Columns["TenNL"].HeaderText = "Tên nguyên liệu";
+            }
+            if (NLData.Columns["DonViTinh"] != null)
+            {
+                NLData.Columns["DonViTinh"].HeaderText = "Đơn vị tính";
+            }
+            if (NLData.Columns["SLTonKho"] != null)
+            {
+                NLData.Columns["SLTonKho"].HeaderText = "Số lượng tồn kho";
+            }
         }
         private void saveNL_Click(object sender, EventArgs e)
         {
@@ -111,6 +127,11 @@ namespace PBL3.GUI.Admin
             dvtcb.Enabled = true;
             NLData.Enabled = false;
             maNL.Text = NguyenLieu_BLL.Instance.GetIDNguyenLieu().ToString();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Dispose();
         }
     }
 }

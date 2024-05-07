@@ -130,6 +130,17 @@ namespace PBL3.BUS
             return "";
         }
 
+        internal string getPass(int maNV1)
+        {
+            QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
+            var account = db.TaiKhoans.FirstOrDefault(a => a.MaNV == maNV1);
+            if (account != null)
+            {
+                return account.MatKhau;
+            }
+            return "";
+        }
+
         public int Check(string s)
         {
             int d = 0;

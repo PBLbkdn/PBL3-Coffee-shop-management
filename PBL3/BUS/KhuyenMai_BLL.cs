@@ -27,7 +27,7 @@ namespace PBL3.BUS
         {
             QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
             var l = db.KhuyenMais.Where(p => p.TenCT.Contains(name) && p.TGBatDau >= tgianbd && p.TGKetThuc <= tgiankt)
-                .Select(p => new { p.MaKM, p.TenCT, p.TGBatDau, p.TGKetThuc, p.MoTa, p.GiaTriKM });
+                .Select(p => new { p.MaKM, p.TenCT, p.TGBatDau, p.TGKetThuc, p.MoTa, p.GiaTriKM, p.GiaTriDHToiThieu });
             return l.ToList<Object>();
         }
 
@@ -46,7 +46,8 @@ namespace PBL3.BUS
                         TGBatDau = i.TGBatDau,
                         TGKetThuc = i.TGKetThuc,
                         MoTa = i.MoTa,
-                        GiaTriKM = i.GiaTriKM
+                        GiaTriKM = i.GiaTriKM,
+                        GiaTriDHToiThieu = i.GiaTriDHToiThieu
                     });
                 }
             }
@@ -60,16 +61,18 @@ namespace PBL3.BUS
         }
         public void AddKhuyenMai(string maso, string ten, DateTime BD, DateTime KT, string mota, string gtri)
         {
+
+            QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
+            int maKM = db.KhuyenMais.Count() + 1;
             KhuyenMai s = new KhuyenMai
             {
-                MaKM = Convert.ToInt32(maso),
+                MaKM = maKM,
                 TenCT = ten,
                 TGBatDau = BD,
                 TGKetThuc = KT,
                 MoTa = mota,
                 GiaTriKM = Convert.ToDecimal(gtri)
             };
-            QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
             db.KhuyenMais.Add(s);
             db.SaveChanges();
         }
@@ -122,6 +125,12 @@ namespace PBL3.BUS
                 }
             }
             return d;
+        }
+
+        public KhuyenMai GetKhuyenMai(int maKM)
+        {
+            QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
+            return db.KhuyenMais.Find(maKM);
         }
     }
 }

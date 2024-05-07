@@ -12,9 +12,11 @@ namespace PBL3.GUI.Employee
 {
     public partial class ThemMon : Form
     {
-        public ThemMon()
+        private int maNV;
+        public ThemMon(int maNV)
         {
             InitializeComponent();
+            this.maNV = maNV;
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)
@@ -23,9 +25,18 @@ namespace PBL3.GUI.Employee
             if(dialogResult == DialogResult.Yes)
             {
                 DangNhap dangNhap = new DangNhap();
+                this.Hide();
                 dangNhap.Show();
                 this.Close();
             }
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            ManHinhChinh_NV manHinhChinh = new ManHinhChinh_NV(maNV);
+            this.Hide();
+            manHinhChinh.Show();
+            this.Close();
         }
     }
 }

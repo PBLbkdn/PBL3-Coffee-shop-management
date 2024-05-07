@@ -24,14 +24,14 @@ namespace PBL3.GUI.Employee
         {
             this.maNV = maNV;
             InitializeComponent();
-            ten.Text=NhanVien_BLL.Instance.getTenNV(maNV);
+            ten.Text = NhanVien_BLL.Instance.getTenNV(maNV);
             KHData.DataSource = KhachHang_BLL.Instance.GetListKhachHang();
             RefreshData();
         }
 
         private void RefreshData()
         {
-            if (KHData.Columns["MaKH"]!=null)
+            if (KHData.Columns["MaKH"] != null)
             {
                 KHData.Columns["MaKH"].HeaderText = "Mã khách hàng";
             }
@@ -43,13 +43,13 @@ namespace PBL3.GUI.Employee
             {
                 KHData.Columns["SDT"].HeaderText = "Số điện thoại";
             }
-            if (KHData.Columns["MaLKH"]!= null)
+            if (KHData.Columns["MaLKH"] != null)
             {
                 KHData.Columns["MaLKH"].HeaderText = "Mã loại khách hàng";
             }
-            if (KHData.Columns["LoaiKH"] != null)
+            if (KHData.Columns["LKH"] != null)
             {
-                KHData.Columns["LoaiKH"].HeaderText = "Loại khách hàng";
+                KHData.Columns["LKH"].HeaderText = "Loại khách hàng";
             }
 
         }
@@ -60,7 +60,8 @@ namespace PBL3.GUI.Employee
             if (dialogResult == DialogResult.Yes)
             {
                 DangNhap dangNhap = new DangNhap();
-                dangNhap.Show();
+                this.Hide();
+                dangNhap.ShowDialog();
                 this.Close();
             }
         }
@@ -68,9 +69,119 @@ namespace PBL3.GUI.Employee
         private void pictureBox5_Click(object sender, EventArgs e)
         {
             ManHinhChinh_NV manHinhChinh = new ManHinhChinh_NV(maNV);
-            manHinhChinh.Show();
+            this.Hide();
+            manHinhChinh.ShowDialog();
             this.Close();
         }
 
+        private void findButton_Click(object sender, EventArgs e)
+        {
+            string txt = timKiemKH.Text;
+            if (txt == "")
+            {
+                MessageBox.Show("Vui lòng nhập tên/ số điện thoại khách hàng cần tìm kiếm");
+                return;
+            }
+            //kiểm tra txt là toàn chữ hay toàn số
+            bool isNumber = true;
+            foreach (char c in txt)
+            {
+                if (!Char.IsDigit(c))
+                {
+                    isNumber = false;
+                    break;
+                }
+            }
+            if (isNumber)
+            {//tìm theo sđt
+                KHData.DataSource = KhachHang_BLL.Instance.GetListKHBySDT(txt);
+
+                RefreshData();
+            }
+            else
+            {
+                bool isChar = true;
+                foreach (char c in txt)
+                {
+                    if (!Char.IsLetter(c) && c != ' ')
+                    {
+                        isChar = false;
+                        break;
+                    }
+                }
+                if (!isChar)
+                {
+                    MessageBox.Show("Vui lòng nhập đúng định dạng tên/ số điện thoại của khách hàng");
+                    return;
+                }
+                //tìm theo tên
+
+                KHData.DataSource = KhachHang_BLL.Instance.GetListKhachHang(0, txt);
+            }
+            if (KHData.Rows.Count == 0)
+            {
+                MessageBox.Show("Không tìm thấy khách hàng được yêu cầu");
+                KHData.DataSource = KhachHang_BLL.Instance.GetListKhachHang();
+            }
+            RefreshData();
+        }
+
+        private void addButton_Click(object sender, EventArgs e)
+        {
+            ThemKhachHang themKhachHang = new ThemKhachHang();
+            this.Hide();
+            themKhachHang.ShowDialog();
+            this.Show();
+            KHData.DataSource = KhachHang_BLL.Instance.GetListKhachHang();
+            RefreshData();
+        }
+
+        private void editButton_Click(object sender, EventArgs e)
+        {
+            if(KHData.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Vui lòng chọn khách hàng cần sửa thông tin");
+                return;
+            }
+            DataGridViewRow row = KHData.SelectedRows[0];
+            string maKH = row.Cells["MaKH"].Value.ToString();
+            string tenKH = row.Cells["TenKH"].Value.ToString();
+            string sdt = row.Cells["SDT"].Value.ToString();
+            string maLKH = row.Cells["MaLKH"].Value.ToString();
+            SuaKhachHang suaKhachHang = new SuaKhachHang(maKH, tenKH, sdt, maLKH);
+            this.Hide();
+            suaKhachHang.ShowDialog();
+            this.Show();
+            KHData.DataSource = KhachHang_BLL.Instance.GetListKhachHang();
+            RefreshData();
+        }
+
+        private void clearButton_Click(object sender, EventArgs e)
+        {
+            if (KHData.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Vui lòng chọn khách hàng cần xóa thông tin");
+                return;
+            }
+            DataGridViewRow row = KHData.SelectedRows[0];
+            string maKH = row.Cells["MaKH"].Value.ToString();
+            KhachHang_BLL.Instance.DeleteKH(Convert.ToInt32(maKH));
+            KHData.DataSource = KhachHang_BLL.Instance.GetListKhachHang();  
+            RefreshData();
+        }
+
+        private void dsKH_Click(object sender, EventArgs e)
+        {
+            KHData.DataSource = KhachHang_BLL.Instance.GetListKhachHang();
+            RefreshData();
+        }
+
+        private void enter(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == (char)Keys.Enter)
+            {
+                findButton_Click(sender, e);
+            }
+        }
     }
 }

@@ -17,11 +17,6 @@ namespace PBL3.GUI
         private DateTime Day;
         private int maNV;
 
-        public ThemNhanVienVaoCa()
-        {
-            InitializeComponent();
-
-        }
 
         public ThemNhanVienVaoCa(int maCa, DateTime day)
         {
@@ -32,15 +27,6 @@ namespace PBL3.GUI
             ListNV();
         }
 
-        public ThemNhanVienVaoCa(int maCa, DateTime day, int maNV) : this(maCa, day)
-        {
-            this.maNV = maNV;
-            InitializeComponent();
-            MaCa = maCa;
-            Day = day;
-            setComboBox();
-            ListNV();
-        }
 
         private void setComboBox()
         {
@@ -53,8 +39,8 @@ namespace PBL3.GUI
                 NVData.Columns["MaNV"].HeaderText = "Mã nhân viên";
             if (NVData.Columns["HoTenNV"] != null)
                 NVData.Columns["HoTenNV"].HeaderText = "Họ tên nhân viên";
-            if (NVData.Columns["TenCV"] != null)
-                NVData.Columns["TenCV"].HeaderText = "Chức vụ";
+            if (NVData.Columns["ChucVu"] != null)
+                NVData.Columns["ChucVu"].HeaderText = "Chức vụ";
             if (NVData.Columns["NgaySinh"] != null)
                 NVData.Columns["NgaySinh"].HeaderText = "Ngày sinh";
             if (NVData.Columns["GioiTinh"] != null)
@@ -89,6 +75,11 @@ namespace PBL3.GUI
         private void cancelButton_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

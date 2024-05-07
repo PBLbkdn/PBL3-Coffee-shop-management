@@ -55,42 +55,54 @@ namespace PBL3.BUS
             //lấy ra nhân viên trong ca trực 
             QuanCaPhePBL3Entities quanCaPheEntities = new QuanCaPhePBL3Entities();
             List<CaTruc> list = quanCaPheEntities.CaTrucs.ToList();
+            List<Object> res= new List<Object>();
             for (int i = 0; i < list.Count; i++)
             {
-                if (list[i].MaCT == idCT && list[i].NgayTruc.ToString() == day)
+                if (list[i].MaCT == idCT && list[i].NgayTruc.ToString("yyyy-MM-dd") == day)
                 {
-                    //chỉ lấy một vài thông tin của nhân viên
-                    var l1 = from p in list[i].NhanViens select new { p.MaNV, p.ChucVu.TenCV, p.HoTenNV, p.NgaySinh, p.Luong, p.GioiTinh };
-                    return l1.ToList<Object>();
+                    List<NhanVien> listNV = list[i].NhanViens.ToList();
+                    foreach (NhanVien j in listNV)
+                    {
+                        res.Add(new
+                        {
+                            MaNV = j.MaNV,
+                            HoTenNV = j.HoTenNV,
+                            ChucVu = j.ChucVu.TenCV,
+                            NgaySinh = j.NgaySinh,
+                            Luong = j.Luong,
+                            GioiTinh = (j.GioiTinh == true) ? "Nữ" : "Nam"
+                        });
+                    }
                 }
             }
-            return new List<Object>();
+            return res;
 
         }
 
-        public CaTruc newCaTruc1()
+
+        public CaTruc newCaTruc1(DateTime day)
         {
             CaTruc ca1 = new CaTruc();
             ca1.MaCT = 1;
-            ca1.NgayTruc = DateTime.Now;
+            ca1.NgayTruc = day;
             ca1.ThoiGianBD = new TimeSpan(7, 0, 0);
             ca1.ThoiGianKT = new TimeSpan(12, 0, 0);
             return ca1;
         }
-        public CaTruc newCaTruc2()
+        public CaTruc newCaTruc2(DateTime day)
         {
             CaTruc ca2 = new CaTruc();
             ca2.MaCT = 2;
-            ca2.NgayTruc = DateTime.Now;
+            ca2.NgayTruc = day;
             ca2.ThoiGianBD = new TimeSpan(12, 0, 0);
             ca2.ThoiGianKT = new TimeSpan(17, 0, 0);
             return ca2;
         }
-        public CaTruc newCaTruc3()
+        public CaTruc newCaTruc3(DateTime day)
         {
             CaTruc ca3 = new CaTruc();
             ca3.MaCT = 3;
-            ca3.NgayTruc = DateTime.Now;
+            ca3.NgayTruc = day;
             ca3.ThoiGianBD = new TimeSpan(17, 0, 0);
             ca3.ThoiGianKT = new TimeSpan(22, 0, 0);
             return ca3;
@@ -98,22 +110,51 @@ namespace PBL3.BUS
         public void AddCaTruc()
         {
             QuanCaPhePBL3Entities quanCaPheEntities = new QuanCaPhePBL3Entities();
-            //kiểm tra có ca trực ngày hôm nay chưa
+            //kiểm tra có ca trực tháng nay chưa
 
             List<CaTruc> list = quanCaPheEntities.CaTrucs.ToList();
-
-            if (list.ElementAt(list.Count - 1).NgayTruc.ToString("MM/dd/yyyy") == DateTime.Now.ToString("MM/dd/yyyy"))
+            for(int i = 0; i < list.Count; i++)
             {
-                return;
+                if (list[i].NgayTruc.Month == DateTime.Now.Month && list[i].NgayTruc.Year == DateTime.Now.Year)
+                {
+                    return;
+                }
             }
-            quanCaPheEntities.CaTrucs.Add(newCaTruc1());
-            quanCaPheEntities.CaTrucs.Add(newCaTruc2());
-            quanCaPheEntities.CaTrucs.Add(newCaTruc3());
-            quanCaPheEntities.SaveChanges();
+            //số ngày trong tháng
+            int days = DateTime.DaysInMonth(DateTime.Now.Year, DateTime.Now.Month);
+            for(int i = 1; i <= days; i++)
+            {
+                quanCaPheEntities.CaTrucs.Add(newCaTruc1(new DateTime(DateTime.Now.Year, DateTime.Now.Month, i)));
+                quanCaPheEntities.CaTrucs.Add(newCaTruc2(new DateTime(DateTime.Now.Year, DateTime.Now.Month, i)));
+                quanCaPheEntities.CaTrucs.Add(newCaTruc3(new DateTime(DateTime.Now.Year, DateTime.Now.Month, i)));
+
+                quanCaPheEntities.SaveChanges();
+            }
 
         }
 
-        public void TinhDoanhThuCa(string Day, int MaCa)
+        public void AddCaTruc(DateTime day)
+        {
+            QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
+            DateTime date = new DateTime(day.Year, day.Month, day.Day);
+            int days= DateTime.DaysInMonth(date.Year, date.Month);
+            for(int i=0;i<db.CaTrucs.Count();i++)
+            {
+                if (db.CaTrucs.ToList()[i].NgayTruc.Month == date.Month && db.CaTrucs.ToList()[i].NgayTruc.Year == date.Year)
+                {
+                    return;
+                }
+            }
+            for (int i = 1; i <= days; i++)
+            {
+                db.CaTrucs.Add(newCaTruc1(new DateTime(date.Year, date.Month, i)));
+                db.CaTrucs.Add(newCaTruc2(new DateTime(date.Year, date.Month, i)));
+                db.CaTrucs.Add(newCaTruc3(new DateTime(date.Year, date.Month, i)));
+                db.SaveChanges();
+            }
+        }
+
+        public long TinhDoanhThuCa(string Day, int MaCa)
         {
             QuanCaPhePBL3Entities quanCaPhePBL3Entities = new QuanCaPhePBL3Entities();
             List<HoaDon> hoaDons = quanCaPhePBL3Entities.HoaDons.ToList();
@@ -136,42 +177,26 @@ namespace PBL3.BUS
                 timeStart = new TimeSpan(17, 0, 0);
                 timeEnd = new TimeSpan(22, 0, 0);
             }
-            string month = Day.Substring(0, 2);
-            string day = Day.Substring(3, 2);
-            string year = Day.Substring(6, 4);
+            string month = Day.Substring(5, 2);
+            string day = Day.Substring(8, 2);
+            string year = Day.Substring(0, 4);
             //datetime bắt đầu tính cả giờ phút giây
             DateTime start = new DateTime(Convert.ToInt32(year), Convert.ToInt32(month), Convert.ToInt32(day), timeStart.Hours, timeStart.Minutes, timeStart.Seconds);
             //datetime kết thúc tính cả giờ phút giây
             DateTime end = new DateTime(Convert.ToInt32(year), Convert.ToInt32(month), Convert.ToInt32(day), timeEnd.Hours, timeEnd.Minutes, timeEnd.Seconds);
-            long doanhThuCa = 0;
-            for (int i = 0; i < hoaDons.Count; i++)
+            long dtCa = 0;
+            foreach(HoaDon hoaDon in hoaDons)
             {
-                if (hoaDons[i].ThoiGian >= start && hoaDons[i].ThoiGian <= end)
+                if (hoaDon.ThoiGian.Value.ToString("yyyy-MM-dd") == Day)
                 {
-                    //kiểm tra xem đã có doanh thu của ca trực chưa
-                    List<DoanhThu> listDT = quanCaPhePBL3Entities.DoanhThus.ToList();
-                    for (int j = 0; j < listDT.Count; j++)
+                    if (hoaDon.ThoiGian.Value >= start && hoaDon.ThoiGian.Value <= end)
                     {
-                        if (listDT[j].MaCT == MaCa && listDT[j].NgayTruc.ToString("MM-dd-yyyy") == Day)
-                        {
-                            return;
-                        }
+                        dtCa += hoaDon.TongTien.Value;
                     }
-                    doanhThuCa += (long)hoaDons[i].TongTien;
                 }
             }
-            if (hoaDons.Count == 0)
-            {
-                return;
-            }
-            //tạo mới doanh thu
-            DoanhThu doanhThu = new DoanhThu();
-            doanhThu.MaCT = MaCa;
-            doanhThu.NgayTruc = Convert.ToDateTime(Day);
-            doanhThu.DoanhThuCT = doanhThuCa;
-            doanhThu.DoanhThuNT = 0;
-            //kiểm tra xem đã có doanh thu của ca đó chưa
-            DoanhThu_BLL.Instance.AddDoanhThu(MaCa, Day, doanhThuCa);
+            DoanhThu_BLL.Instance.AddDoanhThu(MaCa, Day, dtCa);
+            return dtCa;
         }
         public void AddNhanVienToCaTruc(int idNV, int id, string day)
         {

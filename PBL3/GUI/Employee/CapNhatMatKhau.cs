@@ -33,7 +33,8 @@ namespace PBL3.GUI.Employee
         private void cancelButton_Click_1(object sender, EventArgs e)
         {
             ManHinhChinh_NV manHinhChinh = new ManHinhChinh_NV(maNV1);
-            manHinhChinh.Show();
+            this.Hide();
+            manHinhChinh.ShowDialog();
             this.Close();
         }
 
@@ -46,7 +47,8 @@ namespace PBL3.GUI.Employee
             }
             TaiKhoan_BLL.Instance.EditTaiKhoanNV(maNV1.ToString(), matKhauCu.Text, tenTK.Text, matKhauMoi.Text, nhapLaiMK.Text);
             ManHinhChinh_NV manHinhChinh = new ManHinhChinh_NV(maNV1);
-            manHinhChinh.Show();
+            this.Hide();
+            manHinhChinh.ShowDialog();
             this.Close();
         }
     }

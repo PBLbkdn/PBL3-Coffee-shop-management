@@ -19,6 +19,11 @@ namespace PBL3.GUI.Admin
             InitializeComponent();
             setCBB1();
             setCBB2();
+            chucVu.DataSource=ChucVu_BLL.Instance.GetListChucVu();
+            if (chucVu.Columns["MaCV"] != null)
+                chucVu.Columns["MaCV"].HeaderText = "Mã chức vụ";
+            if (chucVu.Columns["TenCV"] != null)
+                chucVu.Columns["TenCV"].HeaderText = "Tên chức vụ";
         }
         public void setCBB1()
         {
@@ -37,10 +42,22 @@ namespace PBL3.GUI.Admin
 
         private void saveNV_Click(object sender, EventArgs e)
         {
-            QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
-            var lastEmployee = db.NhanViens.OrderByDescending(p => p.MaNV).FirstOrDefault();
-            string manv = Convert.ToString(lastEmployee.MaNV + 1);
-            NhanVien_BLL.Instance.AddNhanVien(manv, tenNV.Text, ngaySinh.Value, sdt.Text, luong.Text, maChucVu.SelectedItem.ToString(), gioiTinh.SelectedItem.ToString());
+            if (tenNV.Text == "" || sdt.Text == "" || luong.Text == "" || gioiTinh.Text == "" || maChucVu.Text == ""||luong.Text=="")
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if(ngaySinh.Value>DateTime.Now)
+            {
+                MessageBox.Show("Ngày sinh không hợp lệ!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if(sdt.Text.Length!=10)
+            {
+                MessageBox.Show("Số điện thoại không hợp lệ!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            NhanVien_BLL.Instance.AddNhanVien(int.Parse(maChucVu.Text), tenNV.Text, ngaySinh.Value, sdt.Text, gioiTinh.Text, int.Parse(luong.Text));
             MessageBox.Show("Thêm nhân viên thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Dispose();
         }
@@ -48,6 +65,11 @@ namespace PBL3.GUI.Admin
         private void huy_Click(object sender, EventArgs e)
         {
             Dispose();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

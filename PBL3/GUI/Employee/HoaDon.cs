@@ -80,7 +80,10 @@ namespace PBL3.GUI.Employee
             DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn đăng xuất?", "Xác nhận đăng xuất", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
-                Application.Exit();
+                DangNhap f = new DangNhap();
+                this.Hide();
+                f.ShowDialog();
+                this.Close();
             }
         }
 
@@ -99,6 +102,25 @@ namespace PBL3.GUI.Employee
                 this.Hide();
                 f.ShowDialog();
                 this.Close();
+            }
+        }
+
+        private void chiTietHoaDon(object sender, DataGridViewCellEventArgs e)
+        {
+            int row = e.RowIndex;
+            int maHD = int.Parse(hoaDonData.Rows[row].Cells[0].Value.ToString());
+            
+            ChiTietHoaDon f = new ChiTietHoaDon(maHD, maNV);
+            this.Hide();
+            f.ShowDialog();
+            this.Close();
+        }
+
+        private void enter(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar==(char)Keys.Enter)
+            {
+                findButton_Click(sender, e);
             }
         }
     }

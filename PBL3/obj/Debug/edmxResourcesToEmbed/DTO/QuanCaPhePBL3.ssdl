@@ -124,6 +124,7 @@
     <Property Name="TGKetThuc" Type="date" />
     <Property Name="MoTa" Type="nvarchar" MaxLength="255" />
     <Property Name="GiaTriKM" Type="decimal" Precision="3" Scale="2" />
+    <Property Name="GiaTriDHToiThieu" Type="bigint" />
   </EntityType>
   <EntityType Name="LoaiKhachHang">
     <Key>

@@ -41,7 +41,8 @@ namespace PBL3.GUI.Employee
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             ManHinhChinh_NV manHinhChinh = new ManHinhChinh_NV(maNV);
-            manHinhChinh.Show();
+            this.Hide();
+            manHinhChinh.ShowDialog();
             this.Close();
         }
 
@@ -51,7 +52,8 @@ namespace PBL3.GUI.Employee
             if (dialogResult == DialogResult.Yes)
             {
                 DangNhap dangNhap = new DangNhap();
-                dangNhap.Show();
+                this.Hide();
+                dangNhap.ShowDialog();
                 this.Close();
             }
         }

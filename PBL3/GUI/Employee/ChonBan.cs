@@ -34,7 +34,14 @@ namespace PBL3.GUI.Employee
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
-            Application.Exit(); 
+            DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn thoát?", "Thoát", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                DangNhap f = new DangNhap();
+                this.Hide();
+                f.ShowDialog();
+                this.Close();
+            }
         }
     }
 }

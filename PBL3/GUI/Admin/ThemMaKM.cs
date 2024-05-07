@@ -21,10 +21,18 @@ namespace PBL3.GUI
 
         private void saveKM_Click(object sender, EventArgs e)
         {
-            QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
-            var s = db.KhuyenMais.OrderByDescending(p => p.MaKM).FirstOrDefault();
-            string makm = Convert.ToString(s.MaKM + 1);
-            KhuyenMai_BLL.Instance.AddKhuyenMai(makm, tenKM.Text, guna2DateTimePicker1.Value, guna2DateTimePicker2.Value, moTa.Text, giaTri.Text);
+            if(startDay.Value > endDay.Value)
+            {
+                MessageBox.Show("Thời gian bắt đầu không thể sau thời gian kết thúc!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (tenKM.Text == "" || giaTri.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            //KhuyenMai_BLL.Instance.AddKhuyenMai(tenKM.Text, startDay.Value, endDay.Value, moTa.Text, giaTri.Text);
             MessageBox.Show("Thêm khuyến mãi thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Dispose();
         }
@@ -38,5 +46,6 @@ namespace PBL3.GUI
         {
             Dispose();
         }
+
     }
 }

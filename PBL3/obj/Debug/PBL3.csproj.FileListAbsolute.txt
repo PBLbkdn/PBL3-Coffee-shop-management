@@ -73,7 +73,6 @@ D:\sem4\pbl3\PBL3\obj\Debug\PBL3.GUI.Admin.SuaTaiKhoan.resources
 D:\sem4\pbl3\PBL3\obj\Debug\PBL3.GUI.Admin.TaiKhoan.resources
 D:\sem4\pbl3\PBL3\obj\Debug\PBL3.GUI.Admin.ThemNguyenLieu.resources
 D:\sem4\pbl3\PBL3\obj\Debug\PBL3.GUI.Admin.SuaNhanVien.resources
-D:\sem4\pbl3\PBL3\obj\Debug\PBL3.GUI.Admin.SuaNguyenLieu.resources
 D:\sem4\pbl3\PBL3\obj\Debug\PBL3.GUI.Admin.ThemNhanVien.resources
 D:\sem4\pbl3\PBL3\obj\Debug\PBL3.GUI.Admin.ThemTaiKhoan.resources
 D:\sem4\pbl3\PBL3\obj\Debug\PBL3.GUI.Admin.ThongKe.resources
@@ -223,3 +222,5 @@ D:\DEV\HK4\PBL3_CoffeeShopManagement\PBL3\obj\Debug\PBL3.csproj.CopyComplete
 D:\sem4\pbl3\PBL3\obj\Debug\PBL3.GUI.KhuyenMai.resources
 D:\sem4\pbl3\PBL3\obj\Debug\PBL3.GUI.Employee.Thanh.resources
 D:\sem4\pbl3\PBL3\obj\Debug\PBL3.GUI.Employee.ThemMon.resources
+D:\sem4\pbl3\PBL3\obj\Debug\PBL3.GUI.ThanhCong.resources
+D:\sem4\pbl3\PBL3\obj\Debug\PBL3.GUI.ThatBai.resources

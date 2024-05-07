@@ -131,7 +131,7 @@ namespace PBL3.GUI.Admin
                 }
                 thongKeData.DataSource = data;
                 RefreshData();
-                if (thongKeData.DataSource == null)
+                if (thongKeData.Rows.Count==0)
                 {
                     MessageBox.Show("Không có dữ liệu");
                 }
@@ -140,14 +140,22 @@ namespace PBL3.GUI.Admin
 
         private void TkeExit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn thoát?", "Thoát", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                DangNhap f = new DangNhap();
+                this.Hide();
+                f.ShowDialog();
+                this.Close();
+            }
         }
 
         
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
             ManHinhChinh manHinhChinh = new ManHinhChinh(maNV);
-            manHinhChinh.Show();
+            this.Hide();
+            manHinhChinh.ShowDialog();
             this.Close();
         }
     }

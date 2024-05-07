@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -130,7 +131,13 @@ namespace PBL3.GUI
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn đăng xuất không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialogResult == DialogResult.Yes)
+            {
+                DangNhap dangNhap = new DangNhap();
+                dangNhap.ShowDialog();
+                this.Close();
+            }
         }
 
         private void monthCbb_SelectedIndexChanged(object sender, EventArgs e)
@@ -161,7 +168,7 @@ namespace PBL3.GUI
             DateTime today = new DateTime(year, month, dayNum);
             this.Hide();
             NhanVienTrongCa nhanVienTrongCa = new NhanVienTrongCa(Convert.ToInt32(maCa), today, maNV);
-            nhanVienTrongCa.Show();
+            nhanVienTrongCa.ShowDialog();
         }
 
         private void CaLamViec_Load(object sender, EventArgs e)
@@ -181,7 +188,7 @@ namespace PBL3.GUI
             DateTime today = new DateTime(year, month, dayNum);
             this.Hide();
             NhanVienTrongCa nhanVienTrongCa = new NhanVienTrongCa(Convert.ToInt32(maCa), today, maNV);
-            nhanVienTrongCa.Show();
+            nhanVienTrongCa.ShowDialog();
         }
 
         private void toiThuHai(object sender, EventArgs e)
@@ -196,7 +203,7 @@ namespace PBL3.GUI
             DateTime today = new DateTime(year, month, dayNum);
             this.Hide();
             NhanVienTrongCa nhanVienTrongCa = new NhanVienTrongCa(Convert.ToInt32(maCa), today, maNV);
-            nhanVienTrongCa.Show();
+            nhanVienTrongCa.ShowDialog();
         }
 
         private void sangThuSau_Click(object sender, EventArgs e)
@@ -211,7 +218,7 @@ namespace PBL3.GUI
             DateTime today = new DateTime(year, month, dayNum);
             this.Hide();
             NhanVienTrongCa nhanVienTrongCa = new NhanVienTrongCa(Convert.ToInt32(maCa), today, maNV);
-            nhanVienTrongCa.Show();
+            nhanVienTrongCa.ShowDialog();
         }
 
         private void sangThuBa_Click(object sender, EventArgs e)
@@ -226,7 +233,7 @@ namespace PBL3.GUI
             DateTime today = new DateTime(year, month, dayNum);
             this.Hide();
             NhanVienTrongCa nhanVienTrongCa = new NhanVienTrongCa(Convert.ToInt32(maCa), today, maNV);
-            nhanVienTrongCa.Show();
+            nhanVienTrongCa.ShowDialog();
 
         }
 
@@ -242,7 +249,7 @@ namespace PBL3.GUI
             DateTime today = new DateTime(year, month, dayNum);
             this.Hide();
             NhanVienTrongCa nhanVienTrongCa = new NhanVienTrongCa(Convert.ToInt32(maCa), today, maNV);
-            nhanVienTrongCa.Show();
+            nhanVienTrongCa.ShowDialog();
 
         }
 
@@ -258,7 +265,7 @@ namespace PBL3.GUI
             DateTime today = new DateTime(year, month, dayNum);
             this.Hide();
             NhanVienTrongCa nhanVienTrongCa = new NhanVienTrongCa(Convert.ToInt32(maCa), today, maNV);
-            nhanVienTrongCa.Show();
+            nhanVienTrongCa.ShowDialog();
         }
 
         private void sangThuBay_Click(object sender, EventArgs e)
@@ -273,7 +280,7 @@ namespace PBL3.GUI
             DateTime today = new DateTime(year, month, dayNum);
             this.Hide();
             NhanVienTrongCa nhanVienTrongCa = new NhanVienTrongCa(Convert.ToInt32(maCa), today, maNV);
-            nhanVienTrongCa.Show();
+            nhanVienTrongCa.ShowDialog();
         }
 
         private void sangChuNhat_Click(object sender, EventArgs e)
@@ -288,7 +295,7 @@ namespace PBL3.GUI
             DateTime today = new DateTime(year, month, dayNum);
             this.Hide();
             NhanVienTrongCa nhanVienTrongCa = new NhanVienTrongCa(Convert.ToInt32(maCa), today, maNV);
-            nhanVienTrongCa.Show();
+            nhanVienTrongCa.ShowDialog();
         }
 
         private void chieuThuBa_Click(object sender, EventArgs e)
@@ -303,7 +310,7 @@ namespace PBL3.GUI
             DateTime today = new DateTime(year, month, dayNum);
             this.Hide();
             NhanVienTrongCa nhanVienTrongCa = new NhanVienTrongCa(Convert.ToInt32(maCa), today, maNV);
-            nhanVienTrongCa.Show();
+            nhanVienTrongCa.ShowDialog();
         }
 
         private void chieuThuTu_Click(object sender, EventArgs e)
@@ -318,7 +325,7 @@ namespace PBL3.GUI
             DateTime today = new DateTime(year, month, dayNum);
             this.Hide();
             NhanVienTrongCa nhanVienTrongCa = new NhanVienTrongCa(Convert.ToInt32(maCa), today, maNV);
-            nhanVienTrongCa.Show();
+            nhanVienTrongCa.ShowDialog();
         }
 
         private void chieuThuNam_Click(object sender, EventArgs e)
@@ -333,7 +340,7 @@ namespace PBL3.GUI
             DateTime today = new DateTime(year, month, dayNum);
             this.Hide();
             NhanVienTrongCa nhanVienTrongCa = new NhanVienTrongCa(Convert.ToInt32(maCa), today, maNV);
-            nhanVienTrongCa.Show();
+            nhanVienTrongCa.ShowDialog();
         }
 
         private void ChieuThuSau_Click(object sender, EventArgs e)
@@ -348,7 +355,7 @@ namespace PBL3.GUI
             DateTime today = new DateTime(year, month, dayNum);
             this.Hide();
             NhanVienTrongCa nhanVienTrongCa = new NhanVienTrongCa(Convert.ToInt32(maCa), today, maNV);
-            nhanVienTrongCa.Show();
+            nhanVienTrongCa.ShowDialog();
         }
 
         private void ChieuThuBay_Click(object sender, EventArgs e)
@@ -363,7 +370,7 @@ namespace PBL3.GUI
             DateTime today = new DateTime(year, month, dayNum);
             this.Hide();
             NhanVienTrongCa nhanVienTrongCa = new NhanVienTrongCa(Convert.ToInt32(maCa), today, maNV);
-            nhanVienTrongCa.Show();
+            nhanVienTrongCa.ShowDialog();
         }
 
         private void ChieuChuNhat_Click(object sender, EventArgs e)
@@ -378,7 +385,7 @@ namespace PBL3.GUI
             DateTime today = new DateTime(year, month, dayNum);
             this.Hide();
             NhanVienTrongCa nhanVienTrongCa = new NhanVienTrongCa(Convert.ToInt32(maCa), today, maNV);
-            nhanVienTrongCa.Show();
+            nhanVienTrongCa.ShowDialog();
         }
 
         private void toiThuBa_Click(object sender, EventArgs e)
@@ -393,7 +400,7 @@ namespace PBL3.GUI
             DateTime today = new DateTime(year, month, dayNum);
             this.Hide();
             NhanVienTrongCa nhanVienTrongCa = new NhanVienTrongCa(Convert.ToInt32(maCa), today, maNV);
-            nhanVienTrongCa.Show();
+            nhanVienTrongCa.ShowDialog();
         }
 
         private void toiThuTu_Click(object sender, EventArgs e)
@@ -408,7 +415,7 @@ namespace PBL3.GUI
             DateTime today = new DateTime(year, month, dayNum);
             this.Hide();
             NhanVienTrongCa nhanVienTrongCa = new NhanVienTrongCa(Convert.ToInt32(maCa), today, maNV);
-            nhanVienTrongCa.Show();
+            nhanVienTrongCa.ShowDialog();
         }
 
         private void toiThuNam_Click(object sender, EventArgs e)
@@ -423,7 +430,7 @@ namespace PBL3.GUI
             DateTime today = new DateTime(year, month, dayNum);
             this.Hide();
             NhanVienTrongCa nhanVienTrongCa = new NhanVienTrongCa(Convert.ToInt32(maCa), today, maNV);
-            nhanVienTrongCa.Show();
+            nhanVienTrongCa.ShowDialog();
         }
 
         private void toiThuSau_Click(object sender, EventArgs e)
@@ -438,7 +445,7 @@ namespace PBL3.GUI
             DateTime today = new DateTime(year, month, dayNum);
             this.Hide();
             NhanVienTrongCa nhanVienTrongCa = new NhanVienTrongCa(Convert.ToInt32(maCa), today, maNV);
-            nhanVienTrongCa.Show();
+            nhanVienTrongCa.ShowDialog();
         }
 
         private void toiThuBay_Click(object sender, EventArgs e)
@@ -454,7 +461,7 @@ namespace PBL3.GUI
             DateTime today = new DateTime(year, month, dayNum);
             this.Hide();
             NhanVienTrongCa nhanVienTrongCa = new NhanVienTrongCa(Convert.ToInt32(maCa), today, maNV);
-            nhanVienTrongCa.Show();
+            nhanVienTrongCa.ShowDialog();
         }
 
         private void toiChuNhat_Click(object sender, EventArgs e)
@@ -469,7 +476,7 @@ namespace PBL3.GUI
             DateTime today = new DateTime(year, month, dayNum);
             this.Hide();
             NhanVienTrongCa nhanVienTrongCa = new NhanVienTrongCa(Convert.ToInt32(maCa), today, maNV);
-            nhanVienTrongCa.Show();
+            nhanVienTrongCa.ShowDialog();
         }
 
         private void nextPage_Click(object sender, EventArgs e)

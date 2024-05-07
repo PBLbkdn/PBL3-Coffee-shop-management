@@ -113,7 +113,7 @@ namespace PBL3.GUI
             if (result == DialogResult.Yes)
             {
                 DangNhap dangNhap = new DangNhap();
-                dangNhap.Show();
+                dangNhap.ShowDialog();
                 this.Close();
             }
         }
@@ -121,7 +121,7 @@ namespace PBL3.GUI
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             ManHinhChinh manHinhChinh = new ManHinhChinh(maNV);
-            manHinhChinh.Show();
+            manHinhChinh.ShowDialog();
             this.Close();
         }
     }

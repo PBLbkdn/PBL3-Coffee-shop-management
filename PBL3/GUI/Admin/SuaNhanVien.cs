@@ -13,11 +13,22 @@ namespace PBL3.GUI.Admin
 {
     public partial class SuaNhanVien : Form
     {
-        public SuaNhanVien()
+        public SuaNhanVien(int maNV)
         {
             InitializeComponent();
             setCBB1();
             setCBB2();
+            DTO.NhanVien nv = NhanVien_BLL.Instance.GetNhanVien(maNV);
+            this.maNV.Text = maNV.ToString();
+            this.tenNV.Text = nv.HoTenNV;
+            this.ngaySinh.Value = (DateTime)nv.NgaySinh;
+            this.soDienThoai.Text = nv.SDT;
+            this.luong.Text = nv.Luong.ToString();
+            this.maCV.SelectedItem = nv.MaCV.ToString();
+            this.gender.SelectedItem = (nv.GioiTinh==true)?"Nữ":"Nam";
+            note.DataSource = ChucVu_BLL.Instance.GetListChucVu();
+            note.Columns["MaCV"].HeaderText = "Mã chức vụ";
+            note.Columns["TenCV"].HeaderText = "Tên chức vụ";
         }
         public void setCBB1()
         {
@@ -31,26 +42,6 @@ namespace PBL3.GUI.Admin
             gender.Items.Add("Nam");
             gender.Items.Add("Nữ");
         }
-        public void GetThongTin(int s)
-        {
-            string manv = maNV.Text;
-            string hoten = tenNV.Text;
-            DateTime ns = ngaySinh.Value;
-            string sdt = soDienThoai.Text;
-            string Luong = luong.Text;
-            string macv = maCV.SelectedText;
-            string gioitinh = gender.SelectedText;
-
-            NhanVien_BLL.Instance.LayThongTinNV(s, ref manv, ref hoten, ref ns, ref sdt, ref Luong, ref macv, ref gioitinh);
-
-            maNV.Text = manv;
-            tenNV.Text = hoten;
-            ngaySinh.Value = ns;
-            soDienThoai.Text = sdt;
-            luong.Text = Luong;
-            maCV.SelectedItem = macv;
-            gender.SelectedItem = gioitinh;
-        }
 
         private void saveNV_Click(object sender, EventArgs e)
         {
@@ -62,6 +53,11 @@ namespace PBL3.GUI.Admin
         private void cancelNV_Click(object sender, EventArgs e)
         {
             Dispose();
+        }
+
+        private void suaNVExit_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

@@ -24,6 +24,12 @@ namespace PBL3.BUS
             private set { }
         }
         private NhanVien_BLL() { }
+
+        public NhanVien GetNhanVien(int maNV)
+        {
+            QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
+            return db.NhanViens.Find(maNV);
+        }
         public List<Object> GetListNhanVien(int ID, string name)
         {
             QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
@@ -31,16 +37,40 @@ namespace PBL3.BUS
             {
                 if (name == null)
                 {
-                    //return db.NhanViens.ToList();
-                    var l1 = db.NhanViens.Select(p => new { p.MaNV, p.ChucVu.TenCV, p.HoTenNV, p.NgaySinh, p.Luong, GioiTinh = (p.GioiTinh == true) ? "Nam" : "Nữ" });
-                    //var l1 = from p in db.NhanViens select new { p.MaNV};
-                    return l1.ToList<Object>();
+                    List<Object> result = new List<Object>();
+                    foreach (NhanVien i in db.NhanViens)
+                    {
+                        result.Add(new
+                        {
+                            MaNV = i.MaNV,
+                            HoTenNV = i.HoTenNV,
+                            ChucVu = i.ChucVu.TenCV,
+                            NgaySinh = i.NgaySinh,
+                            Luong = i.Luong,
+                            GioiTinh = (i.GioiTinh == true) ? "Nữ" : "Nam"
+                        });
+                    }
+                    return result;
                 }
                 else
                 {
-                    var l2 = db.NhanViens.Where(p => p.HoTenNV.Contains(name))
-                         .Select(p => new { p.MaNV, p.ChucVu.TenCV, p.HoTenNV, p.NgaySinh, p.Luong, GioiTinh = (p.GioiTinh == true) ? "Nam" : "Nữ" });
-                    return l2.ToList<Object>();
+                    List<Object> result = new List<Object>();
+                    foreach (NhanVien i in db.NhanViens)
+                    {
+                        string temp = i.HoTenNV.ToLower();
+                        string temp2 = name.ToLower();
+                        if(temp.Contains(temp2))
+                        result.Add(new
+                        {
+                            MaNV = i.MaNV,
+                            HoTenNV = i.HoTenNV,
+                            ChucVu = i.ChucVu.TenCV,
+                            NgaySinh = i.NgaySinh,
+                            Luong = i.Luong,
+                            GioiTinh = (i.GioiTinh == true) ? "Nữ" : "Nam"
+                        });
+                    }
+                    return result;
                 }
             }
             else
@@ -50,22 +80,25 @@ namespace PBL3.BUS
                 return l.ToList<Object>();
             }
         }
-        public void AddNhanVien(string manv, string hoten, DateTime ns, string sdt, string luong, string macv, string gioitinh)
+     
+       
+        public void AddNhanVien(int maCV, string hoten, DateTime ns, string sdt, string gioitinh, int luong)
         {
+            QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
+            int maNV = db.NhanViens.Count() + 1;
             NhanVien s = new NhanVien
             {
-                MaNV = Convert.ToInt32(manv),
+                MaNV = maNV,
                 HoTenNV = hoten,
                 NgaySinh = ns,
                 SDT = sdt,
-                Luong = Convert.ToInt32(luong),
-                MaCV = Convert.ToInt32(macv),
-                GioiTinh = (gioitinh == "Nam") ? true : false
+                Luong = luong,
+                MaCV = maCV,
+                GioiTinh = (gioitinh == "Nam") ? false : true,
             };
-            QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
             db.NhanViens.Add(s);
             db.SaveChanges();
-        }
+        }   
         public void EditNhanVien(string manv, string hoten, DateTime ns, string sdt, string luong, string macv, string gioitinh)
         {
             QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
@@ -75,7 +108,7 @@ namespace PBL3.BUS
             sedit.SDT = sdt;
             sedit.Luong = Convert.ToInt32(luong);
             sedit.MaCV = Convert.ToInt32(macv);
-            sedit.GioiTinh = (gioitinh == "Nam") ? true : false;
+            sedit.GioiTinh = (gioitinh == "Nam") ? false : true;
             db.SaveChanges();
         }
         public void DeleteNV(int id)
@@ -99,8 +132,8 @@ namespace PBL3.BUS
                         luong = i.Luong.ToString();
                         macv = i.MaCV.ToString();
                         ns = Convert.ToDateTime(i.NgaySinh);
-                        if (Convert.ToBoolean(i.GioiTinh)) gioitinh = "Nam";
-                        else gioitinh = "Nữ";
+                        if (Convert.ToBoolean(i.GioiTinh)) gioitinh = "Nữ";
+                        else gioitinh = "Nam";
                         break;
                     }
                 }
@@ -139,8 +172,20 @@ namespace PBL3.BUS
         public List<Object> ListNV()
         {
             QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
-            var l1 = db.NhanViens.Select(p => new { p.MaNV, p.ChucVu.TenCV, p.HoTenNV, p.NgaySinh, p.Luong, p.GioiTinh });
-            return l1.ToList<Object>();
+            List<Object> result = new List<Object>();
+            foreach (NhanVien i in db.NhanViens)
+            {
+                result.Add(new
+                {
+                    MaNV = i.MaNV,
+                    HoTenNV = i.HoTenNV,
+                    ChucVu = i.ChucVu.TenCV,
+                    NgaySinh = i.NgaySinh,
+                    Luong = i.Luong,
+                    GioiTinh = (i.GioiTinh == true) ? "Nữ" : "Nam"
+                });
+            }
+            return result;
         }
 
         public bool isValidCaTruc(int maNV, int maCa, DateTime day)
@@ -149,7 +194,7 @@ namespace PBL3.BUS
             List<CaTruc> list = db.NhanViens.Find(maNV).CaTrucs.ToList();
             for (int i = 0; i < list.Count; i++)
             {
-                if (list[i].NgayTruc == day && list[i].MaCT == maCa)
+                if (list[i].NgayTruc.ToString("yyyy-MM-dd") == day.ToString("yyyy-MM-dd") && list[i].MaCT == maCa)
                     return false;
             }
             return true;
@@ -159,6 +204,34 @@ namespace PBL3.BUS
         {
             QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
             return db.NhanViens.Find(maNV).MaCV;
+        }
+
+        public List<Object> getListQLTN()
+        {
+            QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
+            List<Object> result = new List<Object>();
+            foreach (NhanVien i in db.NhanViens)
+            {
+                if (i.MaCV == 1 && i.TaiKhoan == null)
+                {
+                    result.Add(new
+                    {
+                        MaNV = i.MaNV,
+                        HoTenNV = i.HoTenNV,
+                        ChucVu = i.ChucVu.TenCV,
+                    });
+                }
+                if (i.MaCV == 2 && i.TaiKhoan==null)
+                {
+                    result.Add(new
+                    {
+                        MaNV = i.MaNV,
+                        HoTenNV = i.HoTenNV,
+                        ChucVu = i.ChucVu.TenCV,
+                    });
+                }
+            }
+            return result;
         }
     }
 }

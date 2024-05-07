@@ -42,7 +42,7 @@ namespace PBL3.GUI
         {
             CaLamViec f = new CaLamViec(maNV);
             this.Hide();
-            f.Show();
+            f.ShowDialog();
             this.Close();
         }
 
@@ -107,7 +107,10 @@ namespace PBL3.GUI
             DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn đăng xuất?", "Xác nhận đăng xuất", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
-                Application.Exit();
+                DangNhap f = new DangNhap();
+                this.Hide();
+                f.ShowDialog();
+                this.Close();
             }
         }
     }

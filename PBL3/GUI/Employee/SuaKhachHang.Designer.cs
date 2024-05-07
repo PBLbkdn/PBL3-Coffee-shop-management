@@ -30,12 +30,12 @@
         {
             this.label2 = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.sdt = new Guna.UI2.WinForms.Guna2TextBox();
+            this.sdtKH = new Guna.UI2.WinForms.Guna2TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.cancelButton = new Guna.UI2.WinForms.Guna2Button();
             this.saveButton = new Guna.UI2.WinForms.Guna2Button();
-            this.tenKH = new Guna.UI2.WinForms.Guna2TextBox();
+            this.tenKhachHang = new Guna.UI2.WinForms.Guna2TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
@@ -58,40 +58,40 @@
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.guna2Panel1.BorderRadius = 3123;
-            this.guna2Panel1.Controls.Add(this.sdt);
+            this.guna2Panel1.Controls.Add(this.sdtKH);
             this.guna2Panel1.Controls.Add(this.label7);
             this.guna2Panel1.Controls.Add(this.label8);
             this.guna2Panel1.Controls.Add(this.cancelButton);
             this.guna2Panel1.Controls.Add(this.saveButton);
-            this.guna2Panel1.Controls.Add(this.tenKH);
+            this.guna2Panel1.Controls.Add(this.tenKhachHang);
             this.guna2Panel1.Controls.Add(this.label4);
             this.guna2Panel1.Controls.Add(this.label3);
             this.guna2Panel1.Location = new System.Drawing.Point(88, 82);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1680, 858);
             this.guna2Panel1.TabIndex = 10;
             // 
-            // sdt
+            // sdtKH
             // 
-            this.sdt.BorderRadius = 10;
-            this.sdt.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.sdt.DefaultText = "";
-            this.sdt.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.sdt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.sdt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.sdt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.sdt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.sdt.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.sdt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.sdt.Location = new System.Drawing.Point(644, 354);
-            this.sdt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.sdt.Name = "sdt";
-            this.sdt.PasswordChar = '\0';
-            this.sdt.PlaceholderText = "";
-            this.sdt.SelectedText = "";
-            this.sdt.Size = new System.Drawing.Size(579, 63);
-            this.sdt.TabIndex = 31;
+            this.sdtKH.BorderRadius = 10;
+            this.sdtKH.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.sdtKH.DefaultText = "";
+            this.sdtKH.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.sdtKH.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.sdtKH.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.sdtKH.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.sdtKH.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.sdtKH.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.sdtKH.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.sdtKH.Location = new System.Drawing.Point(644, 354);
+            this.sdtKH.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.sdtKH.Name = "sdtKH";
+            this.sdtKH.PasswordChar = '\0';
+            this.sdtKH.PlaceholderText = "";
+            this.sdtKH.SelectedText = "";
+            this.sdtKH.Size = new System.Drawing.Size(579, 63);
+            this.sdtKH.TabIndex = 31;
             // 
             // label7
             // 
@@ -128,7 +128,7 @@
             this.cancelButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cancelButton.ForeColor = System.Drawing.Color.Black;
             this.cancelButton.Location = new System.Drawing.Point(1341, 795);
-            this.cancelButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cancelButton.Margin = new System.Windows.Forms.Padding(4);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(215, 59);
             this.cancelButton.TabIndex = 23;
@@ -149,32 +149,33 @@
             this.saveButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.saveButton.ForeColor = System.Drawing.Color.Black;
             this.saveButton.Location = new System.Drawing.Point(1120, 795);
-            this.saveButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.saveButton.Margin = new System.Windows.Forms.Padding(4);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(213, 59);
             this.saveButton.TabIndex = 22;
             this.saveButton.Text = "Lưu";
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
-            // tenKH
+            // tenKhachHang
             // 
-            this.tenKH.BorderRadius = 10;
-            this.tenKH.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tenKH.DefaultText = "";
-            this.tenKH.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tenKH.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.tenKH.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tenKH.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tenKH.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tenKH.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.tenKH.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tenKH.Location = new System.Drawing.Point(644, 263);
-            this.tenKH.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tenKH.Name = "tenKH";
-            this.tenKH.PasswordChar = '\0';
-            this.tenKH.PlaceholderText = "";
-            this.tenKH.SelectedText = "";
-            this.tenKH.Size = new System.Drawing.Size(579, 63);
-            this.tenKH.TabIndex = 9;
+            this.tenKhachHang.BorderRadius = 10;
+            this.tenKhachHang.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tenKhachHang.DefaultText = "";
+            this.tenKhachHang.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.tenKhachHang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.tenKhachHang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tenKhachHang.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tenKhachHang.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tenKhachHang.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tenKhachHang.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tenKhachHang.Location = new System.Drawing.Point(644, 263);
+            this.tenKhachHang.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tenKhachHang.Name = "tenKhachHang";
+            this.tenKhachHang.PasswordChar = '\0';
+            this.tenKhachHang.PlaceholderText = "";
+            this.tenKhachHang.SelectedText = "";
+            this.tenKhachHang.Size = new System.Drawing.Size(579, 63);
+            this.tenKhachHang.TabIndex = 9;
             // 
             // label4
             // 
@@ -206,9 +207,10 @@
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "SuaKhachHang";
             this.Text = "SuaKhachHang";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -220,12 +222,12 @@
 
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2TextBox sdt;
+        private Guna.UI2.WinForms.Guna2TextBox sdtKH;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private Guna.UI2.WinForms.Guna2Button cancelButton;
         private Guna.UI2.WinForms.Guna2Button saveButton;
-        private Guna.UI2.WinForms.Guna2TextBox tenKH;
+        private Guna.UI2.WinForms.Guna2TextBox tenKhachHang;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
     }

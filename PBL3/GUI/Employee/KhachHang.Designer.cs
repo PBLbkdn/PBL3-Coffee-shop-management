@@ -35,14 +35,6 @@
             this.clearButton = new Guna.UI2.WinForms.Guna2Button();
             this.editButton = new Guna.UI2.WinForms.Guna2Button();
             this.addButton = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.KHData = new System.Windows.Forms.DataGridView();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.KHExit = new System.Windows.Forms.PictureBox();
@@ -52,14 +44,8 @@
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.ten = new System.Windows.Forms.Label();
+            this.dsKH = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            this.guna2Panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.KHData)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.KHExit)).BeginInit();
@@ -100,6 +86,7 @@
             this.timKiemKH.SelectedText = "";
             this.timKiemKH.Size = new System.Drawing.Size(267, 44);
             this.timKiemKH.TabIndex = 50;
+            this.timKiemKH.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.enter);
             // 
             // findButton
             // 
@@ -113,12 +100,13 @@
             this.findButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.findButton.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.findButton.ForeColor = System.Drawing.Color.Black;
-            this.findButton.Location = new System.Drawing.Point(863, 118);
+            this.findButton.Location = new System.Drawing.Point(942, 118);
             this.findButton.Margin = new System.Windows.Forms.Padding(4);
             this.findButton.Name = "findButton";
-            this.findButton.Size = new System.Drawing.Size(227, 49);
+            this.findButton.Size = new System.Drawing.Size(150, 49);
             this.findButton.TabIndex = 49;
             this.findButton.Text = "Tìm kiếm";
+            this.findButton.Click += new System.EventHandler(this.findButton_Click);
             // 
             // pictureBox10
             // 
@@ -143,12 +131,13 @@
             this.clearButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.clearButton.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clearButton.ForeColor = System.Drawing.Color.Black;
-            this.clearButton.Location = new System.Drawing.Point(601, 118);
+            this.clearButton.Location = new System.Drawing.Point(445, 118);
             this.clearButton.Margin = new System.Windows.Forms.Padding(4);
             this.clearButton.Name = "clearButton";
-            this.clearButton.Size = new System.Drawing.Size(227, 49);
+            this.clearButton.Size = new System.Drawing.Size(150, 49);
             this.clearButton.TabIndex = 47;
             this.clearButton.Text = "Xóa";
+            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
             // 
             // editButton
             // 
@@ -162,12 +151,13 @@
             this.editButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.editButton.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.editButton.ForeColor = System.Drawing.Color.Black;
-            this.editButton.Location = new System.Drawing.Point(343, 118);
+            this.editButton.Location = new System.Drawing.Point(258, 118);
             this.editButton.Margin = new System.Windows.Forms.Padding(4);
             this.editButton.Name = "editButton";
-            this.editButton.Size = new System.Drawing.Size(227, 49);
+            this.editButton.Size = new System.Drawing.Size(150, 49);
             this.editButton.TabIndex = 46;
             this.editButton.Text = "Sửa";
+            this.editButton.Click += new System.EventHandler(this.editButton_Click);
             // 
             // addButton
             // 
@@ -184,106 +174,14 @@
             this.addButton.Location = new System.Drawing.Point(80, 118);
             this.addButton.Margin = new System.Windows.Forms.Padding(4);
             this.addButton.Name = "addButton";
-            this.addButton.Size = new System.Drawing.Size(227, 49);
+            this.addButton.Size = new System.Drawing.Size(150, 49);
             this.addButton.TabIndex = 45;
             this.addButton.Text = "Thêm";
-            // 
-            // guna2Panel2
-            // 
-            this.guna2Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(132)))), ((int)(((byte)(132)))));
-            this.guna2Panel2.Controls.Add(this.label1);
-            this.guna2Panel2.Controls.Add(this.pictureBox9);
-            this.guna2Panel2.Controls.Add(this.pictureBox8);
-            this.guna2Panel2.Controls.Add(this.pictureBox7);
-            this.guna2Panel2.Controls.Add(this.pictureBox1);
-            this.guna2Panel2.Controls.Add(this.pictureBox2);
-            this.guna2Panel2.Controls.Add(this.pictureBox3);
-            this.guna2Panel2.Location = new System.Drawing.Point(80, 871);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(1688, 46);
-            this.guna2Panel2.TabIndex = 44;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(209, 12);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 23);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Trang 1/7";
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.Image = global::PBL3.Properties.Resources.Line_5;
-            this.pictureBox9.Location = new System.Drawing.Point(337, 7);
-            this.pictureBox9.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(19, 31);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox9.TabIndex = 5;
-            this.pictureBox9.TabStop = false;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = global::PBL3.Properties.Resources.Line_5;
-            this.pictureBox8.Location = new System.Drawing.Point(143, 7);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(19, 31);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox8.TabIndex = 4;
-            this.pictureBox8.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = global::PBL3.Properties.Resources.bytesize_chevron_top__1_;
-            this.pictureBox7.Location = new System.Drawing.Point(364, 11);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(35, 25);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 3;
-            this.pictureBox7.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::PBL3.Properties.Resources.Group_171;
-            this.pictureBox1.Location = new System.Drawing.Point(407, 11);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(49, 25);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::PBL3.Properties.Resources.bytesize_chevron_top;
-            this.pictureBox2.Location = new System.Drawing.Point(100, 11);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(35, 25);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::PBL3.Properties.Resources.Group_170;
-            this.pictureBox3.Location = new System.Drawing.Point(43, 11);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(49, 25);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 0;
-            this.pictureBox3.TabStop = false;
+            this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
             // KHData
             // 
+            this.KHData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.KHData.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.KHData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.KHData.Location = new System.Drawing.Point(80, 219);
@@ -388,12 +286,33 @@
             this.ten.TabIndex = 51;
             this.ten.Text = "Hóa đơn";
             // 
+            // dsKH
+            // 
+            this.dsKH.BorderColor = System.Drawing.Color.DimGray;
+            this.dsKH.BorderRadius = 7;
+            this.dsKH.BorderThickness = 1;
+            this.dsKH.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.dsKH.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.dsKH.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.dsKH.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.dsKH.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.dsKH.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dsKH.ForeColor = System.Drawing.Color.Black;
+            this.dsKH.Location = new System.Drawing.Point(623, 118);
+            this.dsKH.Margin = new System.Windows.Forms.Padding(4);
+            this.dsKH.Name = "dsKH";
+            this.dsKH.Size = new System.Drawing.Size(290, 49);
+            this.dsKH.TabIndex = 52;
+            this.dsKH.Text = "Danh sách khách hàng";
+            this.dsKH.Click += new System.EventHandler(this.dsKH_Click);
+            // 
             // KhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(181)))), ((int)(((byte)(181)))));
             this.ClientSize = new System.Drawing.Size(1848, 970);
+            this.Controls.Add(this.dsKH);
             this.Controls.Add(this.ten);
             this.Controls.Add(this.timKiemKH);
             this.Controls.Add(this.findButton);
@@ -401,7 +320,6 @@
             this.Controls.Add(this.clearButton);
             this.Controls.Add(this.editButton);
             this.Controls.Add(this.addButton);
-            this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.KHData);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.label6);
@@ -411,14 +329,6 @@
             this.Text = "KhachHang";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            this.guna2Panel2.ResumeLayout(false);
-            this.guna2Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.KHData)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.KHExit)).EndInit();
@@ -441,14 +351,6 @@
         private Guna.UI2.WinForms.Guna2Button clearButton;
         private Guna.UI2.WinForms.Guna2Button editButton;
         private Guna.UI2.WinForms.Guna2Button addButton;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox9;
-        private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.DataGridView KHData;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.PictureBox KHExit;
@@ -458,5 +360,6 @@
         private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label ten;
+        private Guna.UI2.WinForms.Guna2Button dsKH;
     }
 }

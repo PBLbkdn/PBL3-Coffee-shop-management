@@ -29,7 +29,7 @@ namespace PBL3.BUS
         {
             QuanCaPhePBL3Entities quanCaPheEntities = new QuanCaPhePBL3Entities();
             List<Ban> list2 = quanCaPheEntities.Bans.ToList();
-            var l1 = from p in list2 select new { p.MaBan, p.TrangThai, p.ViTri };
+            var l1 = from p in list2 select new { p.MaBan, p.TrangThai, p.ViTri, p.SDT};
             return l1.ToList<Object>();
         }
 

@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace PBL3.GUI.Admin
 {
@@ -20,11 +21,30 @@ namespace PBL3.GUI.Admin
             InitializeComponent();
         }
 
+        private void RefreshData()
+        {
+            if (NVData.Columns["MaNV"] != null)
+                NVData.Columns["MaNV"].HeaderText = "Mã nhân viên";
+            if (NVData.Columns["HoTenNV"] != null)
+                NVData.Columns["HoTenNV"].HeaderText = "Họ tên nhân viên";
+            if (NVData.Columns["ChucVu"] != null)
+                NVData.Columns["ChucVu"].HeaderText = "Chức vụ";
+            if (NVData.Columns["NgaySinh"] != null)
+                NVData.Columns["NgaySinh"].HeaderText = "Ngày sinh";
+            if (NVData.Columns["GioiTinh"] != null)
+                NVData.Columns["GioiTinh"].HeaderText = "Giới tính";
+            if (NVData.Columns["Luong"] != null)
+                NVData.Columns["Luong"].HeaderText = "Lương";
+        }
+
         public NhanVien(int maNV)
         {
             this.maNV = maNV;
             InitializeComponent();
             ten.Text = NhanVien_BLL.Instance.getTenNV(maNV);
+
+            NVData.DataSource = NhanVien_BLL.Instance.GetListNhanVien(0, null);
+            RefreshData();
         }
 
         private void NhanVien_Load(object sender, EventArgs e)
@@ -40,45 +60,64 @@ namespace PBL3.GUI.Admin
             f.ShowDialog();
             this.Show();
             NVData.DataSource = NhanVien_BLL.Instance.GetListNhanVien(0, null);
-
+            RefreshData();
         }
 
         private void editNV_Click(object sender, EventArgs e)
         {
             int Manv = 0;
+            if(NVData.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Vui lòng chọn nhân viên cần sửa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             if (NVData.SelectedRows.Count == 1)
             {
+
                 Manv = Convert.ToInt32(NVData.SelectedRows[0].Cells["MaNV"].Value.ToString());
             }
-            SuaNhanVien f = new SuaNhanVien();
-            f.GetThongTin(Manv);
+            SuaNhanVien f = new SuaNhanVien(Manv);
             this.Hide();
             f.ShowDialog();
             this.Show();
             NVData.DataSource = NhanVien_BLL.Instance.GetListNhanVien(0, null);
+            RefreshData();
         }
 
         private void deleteNV_Click(object sender, EventArgs e)
         {
+            if(NVData.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Vui lòng chọn nhân viên cần xóa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa nhân viên này không?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
-                if (NVData.SelectedRows.Count > 0)
-                {
-                    foreach (DataGridViewRow i in NVData.SelectedRows)
-                    {
-                        int MaNV = Convert.ToInt32(NVData.SelectedRows[0].Cells["MaNV"].Value.ToString());
-                        NhanVien_BLL.Instance.DeleteNV(MaNV);
-                    }
-                    NVData.DataSource = NhanVien_BLL.Instance.GetListNhanVien(0, null);
-                }
+                
+                int MaNV = Convert.ToInt32(NVData.SelectedRows[0].Cells["MaNV"].Value.ToString());
+                NhanVien_BLL.Instance.DeleteNV(MaNV);
+                   
+                NVData.DataSource = NhanVien_BLL.Instance.GetListNhanVien(0, null);
+                RefreshData();
+                
             }
         }
 
         private void searchNV_Click(object sender, EventArgs e)
         {
+            if(nameNVTb.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập tên nhân viên cần tìm!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             string txt = nameNVTb.Text;
             NVData.DataSource = NhanVien_BLL.Instance.GetListNhanVien(0, txt);
+            if(NVData.Rows.Count == 0)
+            {
+                MessageBox.Show("Không tìm thấy nhân viên được yêu cầu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            RefreshData();
         }
 
         private void exitNV_Click(object sender, EventArgs e)
@@ -86,7 +125,6 @@ namespace PBL3.GUI.Admin
             DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn đăng xuất?", "Xác nhận đăng xuất", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
-                this.Dispose();
                 DangNhap f = new DangNhap();
                 this.Hide();
                 f.ShowDialog();
@@ -100,6 +138,20 @@ namespace PBL3.GUI.Admin
             this.Hide();
             manHinhChinh.ShowDialog();
             this.Close();
+        }
+
+        private void dsnvbt_Click(object sender, EventArgs e)
+        {
+            NVData.DataSource = NhanVien_BLL.Instance.GetListNhanVien(0, null);
+            RefreshData();
+        }
+
+        private void enter(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar==(char)Keys.Enter)
+            {
+                searchNV_Click(sender, e);
+            }
         }
     }
 }

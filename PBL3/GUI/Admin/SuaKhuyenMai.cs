@@ -45,5 +45,10 @@ namespace PBL3.GUI
         {
             Dispose();
         }
+
+        private void SuaKMExit_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

@@ -46,6 +46,8 @@ namespace PBL3.GUI
                 KMData.Columns["MoTa"].HeaderText = "Mô tả";
             if (KMData.Columns["GiaTriKM"] != null)
                 KMData.Columns["GiaTriKM"].HeaderText = "Giá trị khuyến mãi";
+            if (KMData.Columns["GiaTriDHToiThieu"] != null)
+                KMData.Columns["GiaTriDHToiThieu"].HeaderText = "Giá trị đơn hàng tối thiểu";
         }
         private void addKM_Click(object sender, EventArgs e)
         {
@@ -56,6 +58,7 @@ namespace PBL3.GUI
             RefreshData();
         }
 
+        //ktra edit
         private void editKM_Click(object sender, EventArgs e)
         {
             int Makm = 0;
@@ -71,20 +74,20 @@ namespace PBL3.GUI
             RefreshData();
         }
 
+        //ktra del
         private void deleteKM_Click(object sender, EventArgs e)
         {
+            if(KMData.SelectedRows.Count==0)
+            {
+                MessageBox.Show("Vui lòng chọn khuyến mãi cần xóa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa khuyến mãi này không?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
-                if (KMData.SelectedRows.Count > 0)
-                {
-                    foreach (DataGridViewRow i in KMData.SelectedRows)
-                    {
-                        int MaKM = Convert.ToInt32(KMData.SelectedRows[0].Cells["MaKM"].Value.ToString());
-                        KhuyenMai_BLL.Instance.DeleteKM(MaKM);
-                    }
-                    KhuyenMai_BLL.Instance.GetAllKM();
-                }
+               int MaKM = Convert.ToInt32(KMData.SelectedRows[0].Cells["MaKM"].Value.ToString());
+               KhuyenMai_BLL.Instance.DeleteKM(MaKM);
+               KMData.DataSource= KhuyenMai_BLL.Instance.GetAllKM();
             }
             RefreshData();
         }

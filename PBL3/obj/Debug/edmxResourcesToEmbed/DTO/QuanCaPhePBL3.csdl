@@ -123,6 +123,7 @@
     <Property Name="TGKetThuc" Type="DateTime" Precision="0" />
     <Property Name="MoTa" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
     <Property Name="GiaTriKM" Type="Decimal" Precision="3" Scale="2" />
+    <Property Name="GiaTriDHToiThieu" Type="Int64" />
     <NavigationProperty Name="LoaiKhachHangs" Relationship="Self.ChiTietKhuyenMai" FromRole="KhuyenMai" ToRole="LoaiKhachHang" />
   </EntityType>
   <EntityType Name="LoaiKhachHang">

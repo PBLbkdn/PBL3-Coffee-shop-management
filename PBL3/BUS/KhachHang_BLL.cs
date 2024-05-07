@@ -90,6 +90,22 @@ namespace PBL3.BUS
             db.KhachHangs.Add(s);
             db.SaveChanges();
         }
+        //thêm khách hàng mới
+        public void AddKhachHang(string hoten, string sdt)
+        {
+
+            QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
+            int maKH = db.KhachHangs.Count() + 1;
+            KhachHang s = new KhachHang
+            {
+                MaKH = maKH,
+                TenKH = hoten,
+                SDT = sdt,
+                MaLKH = 2,
+            };
+            db.KhachHangs.Add(s);
+            db.SaveChanges();
+        }
         public void EditKhachHang(string maso, string hoten, string sdt, string maloaikh)
         {
             QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
@@ -135,6 +151,37 @@ namespace PBL3.BUS
                 }
             }
             return d;
+        }
+
+        public string getTenKH(int maKH)
+        {
+            QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
+            return db.KhachHangs.Find(maKH).TenKH;
+        }
+
+        public void UpdateListKHTT()
+        {
+            QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
+            List<KhachHang> listKH = db.KhachHangs.ToList();
+            foreach(KhachHang kh in listKH)
+            {
+                UpdateLKHTT(kh.MaKH);
+            }
+        }
+
+
+        private void UpdateLKHTT(int maKH)
+        {
+            QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
+            DateTime firstDay = new DateTime(DateTime.Now.Year, 1, 1);
+            List<HoaDon> listHD = db.HoaDons.Where(p => p.MaKH == maKH && p.ThoiGian.Value<=DateTime.Now && p.ThoiGian.Value>=firstDay).ToList();
+            if(listHD.Count >= 10)
+            {
+                KhachHang kh = db.KhachHangs.Find(maKH);
+                kh.MaLKH = 1;
+                db.SaveChanges();
+            }
+
         }
     }
 }

@@ -24,10 +24,19 @@ namespace PBL3.BUS
         }
         private ChucVu_BLL() { }
 
-        public List<ChucVu> GetListChucVu()
+        public List<Object> GetListChucVu()
         {
             QuanCaPhePBL3Entities quanCaPheEntities = new QuanCaPhePBL3Entities();
-            return quanCaPheEntities.ChucVus.ToList();
+            List<Object> result = new List<Object>();
+            foreach (ChucVu i in quanCaPheEntities.ChucVus)
+            {
+                result.Add(new
+                {
+                    MaCV = i.MaCV,
+                    TenCV = i.TenCV
+                });
+            }
+            return result;
         }
         public string getTenChucVu(int maCV)
         {

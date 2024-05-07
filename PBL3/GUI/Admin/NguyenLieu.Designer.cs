@@ -40,9 +40,9 @@
             this.clearButton = new Guna.UI2.WinForms.Guna2Button();
             this.addButton = new Guna.UI2.WinForms.Guna2Button();
             this.ten = new System.Windows.Forms.Label();
-            this.editButton = new Guna.UI2.WinForms.Guna2Button();
             this.nameNLTb = new Guna.UI2.WinForms.Guna2TextBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.dsNL = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NLExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -180,7 +180,7 @@
             this.clearButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.clearButton.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clearButton.ForeColor = System.Drawing.Color.Black;
-            this.clearButton.Location = new System.Drawing.Point(601, 121);
+            this.clearButton.Location = new System.Drawing.Point(336, 121);
             this.clearButton.Margin = new System.Windows.Forms.Padding(4);
             this.clearButton.Name = "clearButton";
             this.clearButton.Size = new System.Drawing.Size(227, 49);
@@ -221,26 +221,6 @@
             this.ten.TabIndex = 48;
             this.ten.Text = "Đơn hàng";
             // 
-            // editButton
-            // 
-            this.editButton.BorderColor = System.Drawing.Color.DimGray;
-            this.editButton.BorderRadius = 7;
-            this.editButton.BorderThickness = 1;
-            this.editButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.editButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.editButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.editButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.editButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.editButton.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editButton.ForeColor = System.Drawing.Color.Black;
-            this.editButton.Location = new System.Drawing.Point(343, 121);
-            this.editButton.Margin = new System.Windows.Forms.Padding(4);
-            this.editButton.Name = "editButton";
-            this.editButton.Size = new System.Drawing.Size(227, 49);
-            this.editButton.TabIndex = 24;
-            this.editButton.Text = "Sửa";
-            this.editButton.Click += new System.EventHandler(this.editNL_Click);
-            // 
             // nameNLTb
             // 
             this.nameNLTb.BorderRadius = 5;
@@ -262,6 +242,7 @@
             this.nameNLTb.SelectedText = "";
             this.nameNLTb.Size = new System.Drawing.Size(267, 44);
             this.nameNLTb.TabIndex = 28;
+            this.nameNLTb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.enter);
             // 
             // pictureBox10
             // 
@@ -274,18 +255,38 @@
             this.pictureBox10.TabIndex = 26;
             this.pictureBox10.TabStop = false;
             // 
+            // dsNL
+            // 
+            this.dsNL.BorderColor = System.Drawing.Color.DimGray;
+            this.dsNL.BorderRadius = 7;
+            this.dsNL.BorderThickness = 1;
+            this.dsNL.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.dsNL.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.dsNL.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.dsNL.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.dsNL.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.dsNL.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dsNL.ForeColor = System.Drawing.Color.Black;
+            this.dsNL.Location = new System.Drawing.Point(606, 121);
+            this.dsNL.Margin = new System.Windows.Forms.Padding(4);
+            this.dsNL.Name = "dsNL";
+            this.dsNL.Size = new System.Drawing.Size(227, 49);
+            this.dsNL.TabIndex = 49;
+            this.dsNL.Text = "Danh sách nguyên liệu";
+            this.dsNL.Click += new System.EventHandler(this.dsNL_Click);
+            // 
             // NguyenLieu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(181)))), ((int)(((byte)(181)))));
             this.ClientSize = new System.Drawing.Size(1829, 970);
+            this.Controls.Add(this.dsNL);
             this.Controls.Add(this.ten);
             this.Controls.Add(this.nameNLTb);
             this.Controls.Add(this.findButton);
             this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.clearButton);
-            this.Controls.Add(this.editButton);
             this.Controls.Add(this.addButton);
             this.Controls.Add(this.NLData);
             this.Controls.Add(this.guna2Panel1);
@@ -325,6 +326,6 @@
         private System.Windows.Forms.PictureBox pictureBox10;
         private Guna.UI2.WinForms.Guna2Button clearButton;
         private Guna.UI2.WinForms.Guna2Button addButton;
-        private Guna.UI2.WinForms.Guna2Button editButton;
+        private Guna.UI2.WinForms.Guna2Button dsNL;
     }
 }

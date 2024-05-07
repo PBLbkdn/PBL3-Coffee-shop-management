@@ -25,22 +25,21 @@ namespace PBL3.GUI.Admin
         {
             this.maNV1 = maNV1;
             InitializeComponent();
+            maNV.Text= maNV1.ToString();
+            tenTK.Text = TaiKhoan_BLL.Instance.getTenTK(maNV1);
+            password.Text = TaiKhoan_BLL.Instance.getPass(maNV1);
         }
 
-        public void GetThongTin(int s)
-        {
-            string manv = maNV.Text;
-            string tentk = tenNV.Text;
-            string mk = password.Text;
-            TaiKhoan_BLL.Instance.LayThongTinTaiKhoan(s, ref manv, ref tentk, ref mk);
-            maNV.Text = manv;
-            tenNV.Text = tentk;
-            password.Text = mk;
-        }
+
 
         private void SaveTK_Click(object sender, EventArgs e)
         {
-            TaiKhoan_BLL.Instance.EditTaiKhoan(maNV.Text, tenNV.Text, password.Text);
+            if(tenTK.Text == "" || password.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            TaiKhoan_BLL.Instance.EditTaiKhoan(maNV.Text, tenTK.Text, password.Text);
             MessageBox.Show("Cập nhật tài khoản thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Dispose();
         }
@@ -48,6 +47,11 @@ namespace PBL3.GUI.Admin
         private void cancelTK_Click(object sender, EventArgs e)
         {
             Dispose();
+        }
+
+        private void suaTKExit_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

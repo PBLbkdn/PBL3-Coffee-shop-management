@@ -102,6 +102,10 @@ namespace PBL3.GUI.Admin
 
                 KHData.DataSource = KhachHang_BLL.Instance.GetListKhachHang(0, txt);
             }
+            if(KHData.Rows.Count==0)
+            {
+                MessageBox.Show("Không tìm thấy khách hàng được yêu cầu");
+            }   
             RefreshData();
         }
 
@@ -110,7 +114,10 @@ namespace PBL3.GUI.Admin
             DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn thoát?", "Thoát", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                Application.Exit();
+                DangNhap f = new DangNhap();
+                this.Hide();
+                f.ShowDialog();
+                this.Close();
             }
         }
 
@@ -120,6 +127,20 @@ namespace PBL3.GUI.Admin
             this.Hide();
             manHinhChinh.ShowDialog();
             this.Close();
+        }
+
+        private void dsKH_Click(object sender, EventArgs e)
+        {
+            KHData.DataSource = KhachHang_BLL.Instance.GetListKhachHang(0, null);
+            RefreshData();
+        }
+
+        private void enter(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar==(char)Keys.Enter)
+            {
+                searchKH_Click(sender, e);
+            }
         }
     }
 }

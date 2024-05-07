@@ -62,7 +62,8 @@ namespace PBL3.GUI.Employee
         private void backButton_Click_1(object sender, EventArgs e)
         {
             ManHinhChinh_NV manHinhChinh = new ManHinhChinh_NV(maNV1);
-            manHinhChinh.Show();
+            this.Hide();
+            manHinhChinh.ShowDialog();
             this.Close();
         }
     }

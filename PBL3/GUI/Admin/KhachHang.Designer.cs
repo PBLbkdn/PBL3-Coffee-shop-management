@@ -40,6 +40,7 @@
             this.KHData = new System.Windows.Forms.DataGridView();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.ten = new System.Windows.Forms.Label();
+            this.dsKH = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.exitKH)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -146,7 +147,7 @@
             this.findTextbox.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.findTextbox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.findTextbox.IconLeft = global::PBL3.Properties.Resources.entypo_magnifying_glass;
-            this.findTextbox.Location = new System.Drawing.Point(337, 123);
+            this.findTextbox.Location = new System.Drawing.Point(612, 123);
             this.findTextbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.findTextbox.Name = "findTextbox";
             this.findTextbox.PasswordChar = '\0';
@@ -154,6 +155,7 @@
             this.findTextbox.SelectedText = "";
             this.findTextbox.Size = new System.Drawing.Size(267, 44);
             this.findTextbox.TabIndex = 24;
+            this.findTextbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.enter);
             // 
             // findButton
             // 
@@ -167,7 +169,7 @@
             this.findButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.findButton.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.findButton.ForeColor = System.Drawing.Color.Black;
-            this.findButton.Location = new System.Drawing.Point(80, 118);
+            this.findButton.Location = new System.Drawing.Point(355, 118);
             this.findButton.Margin = new System.Windows.Forms.Padding(5);
             this.findButton.Name = "findButton";
             this.findButton.Size = new System.Drawing.Size(227, 49);
@@ -211,12 +213,33 @@
             this.ten.TabIndex = 48;
             this.ten.Text = "Đơn hàng";
             // 
+            // dsKH
+            // 
+            this.dsKH.BorderColor = System.Drawing.Color.DimGray;
+            this.dsKH.BorderRadius = 7;
+            this.dsKH.BorderThickness = 1;
+            this.dsKH.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.dsKH.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.dsKH.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.dsKH.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.dsKH.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.dsKH.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dsKH.ForeColor = System.Drawing.Color.Black;
+            this.dsKH.Location = new System.Drawing.Point(80, 118);
+            this.dsKH.Margin = new System.Windows.Forms.Padding(5);
+            this.dsKH.Name = "dsKH";
+            this.dsKH.Size = new System.Drawing.Size(227, 49);
+            this.dsKH.TabIndex = 49;
+            this.dsKH.Text = "Danh sách khách hàng";
+            this.dsKH.Click += new System.EventHandler(this.dsKH_Click);
+            // 
             // KhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(181)))), ((int)(((byte)(181)))));
             this.ClientSize = new System.Drawing.Size(1848, 970);
+            this.Controls.Add(this.dsKH);
             this.Controls.Add(this.ten);
             this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.KHData);
@@ -256,5 +279,6 @@
         private System.Windows.Forms.DataGridView KHData;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.Label ten;
+        private Guna.UI2.WinForms.Guna2Button dsKH;
     }
 }

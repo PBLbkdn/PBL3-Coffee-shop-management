@@ -142,9 +142,6 @@
   <data name="icons8-manage-50 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-manage-50 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="60429cbc0e4e7f3e0c604a2a6576b3a4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\60429cbc0e4e7f3e0c604a2a6576b3a4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="icons8-kawaii-bread-48 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-kawaii-bread-48 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -159,6 +156,9 @@
   </data>
   <data name="image 5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\image 5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon thực đơn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon thực đơn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="eye-close-line" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\eye-close-line.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -175,11 +175,17 @@
   <data name="carbon_gift" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\carbon_gift.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="thông báo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\thông báo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="bytesize_chevron-top (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bytesize_chevron-top (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Rectangle 157" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Rectangle 157.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Rectangle 276" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Rectangle 276.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="close-large-line" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\close-large-line.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -192,6 +198,9 @@
   </data>
   <data name="user-fill" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user-fill.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-order-48 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-order-48 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Nhân viên" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Nhân viên.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -208,14 +217,17 @@
   <data name="bàn 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bàn 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Line 5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Line 5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="eye-line" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\eye-line.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Group 171" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Group 171.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon quà" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon quà.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Line 5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Line 5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="60429cbc0e4e7f3e0c604a2a6576b3a4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\60429cbc0e4e7f3e0c604a2a6576b3a4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Vector (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Vector (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -238,10 +250,10 @@
   <data name="Group (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Group (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon thực đơn" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon thực đơn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icon quà" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon quà.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-order-48 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-order-48 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8-fail-96 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-fail-96 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

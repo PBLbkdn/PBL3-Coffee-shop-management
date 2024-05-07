@@ -110,6 +110,7 @@
           <ScalarProperty Name="TGKetThuc" ColumnName="TGKetThuc" />
           <ScalarProperty Name="MoTa" ColumnName="MoTa" />
           <ScalarProperty Name="GiaTriKM" ColumnName="GiaTriKM" />
+          <ScalarProperty Name="GiaTriDHToiThieu" ColumnName="GiaTriDHToiThieu" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

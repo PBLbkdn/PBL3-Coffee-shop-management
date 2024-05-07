@@ -44,8 +44,21 @@ namespace PBL3.GUI.Employee
         private void pictureBox5_Click_1(object sender, EventArgs e)
         {
             ManHinhChinh_NV manHinhChinh = new ManHinhChinh_NV();
-            manHinhChinh.Show();
+            this.Hide();
+            manHinhChinh.ShowDialog();
             this.Close();
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn đăng xuất?", "Đăng xuất", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                DangNhap dangNhap = new DangNhap();
+                this.Hide();         
+                dangNhap.ShowDialog();
+                this.Close();
+            }
         }
     }
 }

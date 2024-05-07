@@ -36,6 +36,7 @@ namespace PBL3.GUI.Employee
             banData.Columns["MaBan"].HeaderText = "Mã bàn";
             banData.Columns["TrangThai"].HeaderText = "Trạng thái";
             banData.Columns["ViTri"].HeaderText = "Vị trí";
+            banData.Columns["SDT"].HeaderText = "Số điện thoại của khách đã đặt";
 
         }
         private void findButton_Click(object sender, EventArgs e)
@@ -56,12 +57,18 @@ namespace PBL3.GUI.Employee
                     banData.Columns["MaBan"].HeaderText = "Mã bàn";
                     banData.Columns["TrangThai"].HeaderText = "Trạng thái";
                     banData.Columns["ViTri"].HeaderText = "Vị trí";
+                    banData.Columns["SDT"].HeaderText = "Số điện thoại của khách đã đặt";
                 }
             }
         }
 
         private void datBan_Click(object sender, EventArgs e)
         {
+            if (Ban_BLL.Instance.GetListBanFree().Count == 0)
+            {
+                MessageBox.Show("Không có bàn trống");
+                return; 
+            }
             DatBan f = new DatBan(maNV);
             this.Hide();
             f.ShowDialog();
@@ -76,7 +83,7 @@ namespace PBL3.GUI.Employee
             {
                 DangNhap dangNhap = new DangNhap();
                 this.Hide();
-                dangNhap.Show();
+                dangNhap.ShowDialog();
                 this.Close();
             }
         }
@@ -85,7 +92,7 @@ namespace PBL3.GUI.Employee
         {
             ManHinhChinh_NV manHinhChinh = new ManHinhChinh_NV(maNV);
             this.Hide();
-            manHinhChinh.Show();
+            manHinhChinh.ShowDialog();
             this.Close();
         }
     }

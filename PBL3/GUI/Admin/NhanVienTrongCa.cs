@@ -18,46 +18,32 @@ namespace PBL3.GUI
         private DateTime Day;
         private int maNV;
 
-        public NhanVienTrongCa()
+
+        public NhanVienTrongCa(int maCa, DateTime day, int maNV)
         {
             InitializeComponent();
-        }
-
-        public NhanVienTrongCa(int maCa, DateTime day)
-        {
-            InitializeComponent();
-            MaCa = maCa;
-            Day = day;
-            dayTb.Text = day.Day.ToString();
-            monthTb.Text = "Tháng " + day.Month.ToString();
-            dayTb.Enabled = false;
-            monthTb.Enabled = false;
-            RefreshData();
-        }
-
-        public NhanVienTrongCa(int maCa, DateTime day, int maNV) : this(maCa, day)
-        {
             this.maNV = maNV;
             ten.Text = NhanVien_BLL.Instance.getTenNV(maNV);
-            InitializeComponent();
             MaCa = maCa;
             Day = day;
             dayTb.Text = day.Day.ToString();
+            year.Text = "Năm " + day.Year.ToString();
             monthTb.Text = "Tháng " + day.Month.ToString();
             dayTb.Enabled = false;
             monthTb.Enabled = false;
             RefreshData();
+            CaTruc_BLL.Instance.AddCaTruc(day);
         }
 
         private void RefreshData()
         {
-            NVCadata.DataSource = CaTruc_BLL.Instance.GetListNhanVien(MaCa, Day.ToString());
+            NVCadata.DataSource = CaTruc_BLL.Instance.GetListNhanVien(MaCa, Day.ToString("yyyy-MM-dd"));
             if (NVCadata.Columns["MaNV"] != null)
                 NVCadata.Columns["MaNV"].HeaderText = "Mã nhân viên";
             if (NVCadata.Columns["HoTenNV"] != null)
                 NVCadata.Columns["HoTenNV"].HeaderText = "Họ tên nhân viên";
-            if (NVCadata.Columns["TenCV"] != null)
-                NVCadata.Columns["TenCV"].HeaderText = "Chức vụ";
+            if (NVCadata.Columns["ChucVu"] != null)
+                NVCadata.Columns["ChucVu"].HeaderText = "Chức vụ";
             if (NVCadata.Columns["NgaySinh"] != null)
                 NVCadata.Columns["NgaySinh"].HeaderText = "Ngày sinh";
             if (NVCadata.Columns["GioiTinh"] != null)
@@ -66,16 +52,13 @@ namespace PBL3.GUI
                 NVCadata.Columns["Luong"].HeaderText = "Lương";
         }
 
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
 
         private void addButton_Click(object sender, EventArgs e)
         {
-            ThemNhanVienVaoCa f = new ThemNhanVienVaoCa(MaCa, Day, maNV);
+            ThemNhanVienVaoCa f = new ThemNhanVienVaoCa(MaCa, Day);
+            this.Hide();
             f.ShowDialog();
+            this.Show();
             RefreshData();
         }
 
@@ -93,11 +76,24 @@ namespace PBL3.GUI
             }
         }
 
-        private void pictureBox5_Click(object sender, EventArgs e)
+
+        private void pictureBox5_Click_1(object sender, EventArgs e)
         {
             ManHinhChinh manHinhChinh = new ManHinhChinh(maNV);
-            manHinhChinh.Show();
+            manHinhChinh.ShowDialog();
             this.Close();
         }
+
+        private void exitCa_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn đăng xuất không?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if(result == DialogResult.Yes)
+            {
+                DangNhap f = new DangNhap();
+                f.ShowDialog();
+                this.Close();
+            }
+        }
+
     }
 }

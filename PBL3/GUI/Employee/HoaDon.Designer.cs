@@ -155,6 +155,7 @@
             this.timKiemHoaDon.SelectedText = "";
             this.timKiemHoaDon.Size = new System.Drawing.Size(562, 44);
             this.timKiemHoaDon.TabIndex = 34;
+            this.timKiemHoaDon.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.enter);
             // 
             // hoaDonData
             // 
@@ -167,6 +168,7 @@
             this.hoaDonData.RowHeadersWidth = 62;
             this.hoaDonData.Size = new System.Drawing.Size(1688, 651);
             this.hoaDonData.TabIndex = 37;
+            this.hoaDonData.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.chiTietHoaDon);
             // 
             // pictureBox10
             // 

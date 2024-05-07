@@ -102,7 +102,7 @@
             this.guna2Panel1.Controls.Add(this.label5);
             this.guna2Panel1.Controls.Add(this.label3);
             this.guna2Panel1.Location = new System.Drawing.Point(88, 82);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1680, 858);
             this.guna2Panel1.TabIndex = 59;
@@ -121,7 +121,7 @@
             this.backButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backButton.ForeColor = System.Drawing.Color.Black;
             this.backButton.Location = new System.Drawing.Point(31, 783);
-            this.backButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.backButton.Margin = new System.Windows.Forms.Padding(4);
             this.backButton.Name = "backButton";
             this.backButton.Size = new System.Drawing.Size(215, 59);
             this.backButton.TabIndex = 74;
@@ -142,7 +142,7 @@
             this.updatePass.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updatePass.ForeColor = System.Drawing.Color.Black;
             this.updatePass.Location = new System.Drawing.Point(747, 679);
-            this.updatePass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.updatePass.Margin = new System.Windows.Forms.Padding(4);
             this.updatePass.Name = "updatePass";
             this.updatePass.Size = new System.Drawing.Size(239, 59);
             this.updatePass.TabIndex = 73;
@@ -412,9 +412,10 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ThongTinNhanVien";
             this.Text = "ThongTinNhanVien";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.ThongTinNhanVien_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();

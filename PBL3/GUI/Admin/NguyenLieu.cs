@@ -33,7 +33,10 @@ namespace PBL3.GUI.Admin
             DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn thoát không?", "Xác nhận thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
-                Application.Exit();
+                ManHinhChinh f = new ManHinhChinh(maNV);
+                this.Hide();
+                f.ShowDialog();
+                Close();
             }
         }
 
@@ -78,10 +81,10 @@ namespace PBL3.GUI.Admin
             {
                 Manl = Convert.ToInt32(NLData.SelectedRows[0].Cells["MaNL"].Value.ToString());
             }
-            SuaNguyenLieu f = new SuaNguyenLieu();
-            f.GetThongTin(Manl);
+            //SuaNguyenLieu f = new SuaNguyenLieu();
+          //  f.GetThongTin(Manl);
             this.Hide();
-            f.ShowDialog();
+            //f.ShowDialog();
             this.Show();
             NLData.DataSource = NguyenLieu_BLL.Instance.GetListNguyenLieu(0, null);
             RefreshData();
@@ -130,6 +133,20 @@ namespace PBL3.GUI.Admin
             this.Hide();
             f.ShowDialog();
             Close();
+        }
+
+        private void enter(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == (char)Keys.Enter)
+            {
+                searchNL_Click(sender, e);
+            }
+        }
+
+        private void dsNL_Click(object sender, EventArgs e)
+        {
+            NLData.DataSource = NguyenLieu_BLL.Instance.GetListNguyenLieu(0, null);
+            RefreshData();
         }
     }
 }

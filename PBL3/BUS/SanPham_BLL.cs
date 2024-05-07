@@ -30,6 +30,13 @@ namespace PBL3.BUS
             return l.ToList<Object>();
 
         }
+
+        public string getTenSP(int id)
+        {
+            QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
+            SanPham sp = db.SanPhams.Find(id);
+            return sp.TenSP;
+        }
         public void AddSanPham(string masp, string tensp, string giasp, string loai, string nhom, string donvi)
         {
             SanPham s = new SanPham

@@ -60,12 +60,13 @@ namespace PBL3.GUI.Admin
         private void editTK_Click(object sender, EventArgs e)
         {
             int Manv = 0;
-            if (TKData.SelectedRows.Count == 1)
+            if(TKData.SelectedRows.Count == 0)
             {
-                Manv = Convert.ToInt32(TKData.SelectedRows[0].Cells["MaNV"].Value.ToString());
+                MessageBox.Show("Vui lòng chọn nhân viên cần cập nhật thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
-            SuaTaiKhoan f = new SuaTaiKhoan(maNV);
-            f.GetThongTin(Manv);
+            Manv = Convert.ToInt32(TKData.SelectedRows[0].Cells["MaNV"].Value.ToString());
+            SuaTaiKhoan f = new SuaTaiKhoan(Manv);
             this.Hide();
             f.ShowDialog();
             this.Show();
@@ -74,19 +75,20 @@ namespace PBL3.GUI.Admin
 
         private void deleteTK_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa nhân viên này không?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if(TKData.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Vui lòng chọn tài khoản cần xóa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa tài khoản này không?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
-                if (TKData.SelectedRows.Count > 0)
-                {
-                    foreach (DataGridViewRow i in TKData.SelectedRows)
-                    {
-                        int MaNV = Convert.ToInt32(TKData.SelectedRows[0].Cells["MaNV"].Value.ToString());
-                        TaiKhoan_BLL.Instance.DeleteTaiKhoan(MaNV);
-                    }
-                    TKData.DataSource = TaiKhoan_BLL.Instance.GetListTaiKhoan(0, null);
-                }
+                int MaNV = Convert.ToInt32(TKData.SelectedRows[0].Cells["MaNV"].Value.ToString());
+                TaiKhoan_BLL.Instance.DeleteTaiKhoan(MaNV);  
+                TKData.DataSource = TaiKhoan_BLL.Instance.GetListTaiKhoan(0, null);
+                RefreshData();
             }
+
         }
 
        
@@ -96,7 +98,7 @@ namespace PBL3.GUI.Admin
             if (result == DialogResult.Yes)
             {
                 DangNhap dangNhap = new DangNhap();
-                dangNhap.Show();
+                dangNhap.ShowDialog();
                 this.Close();
             }
         }
@@ -104,7 +106,7 @@ namespace PBL3.GUI.Admin
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             ManHinhChinh manHinhChinh = new ManHinhChinh(maNV);
-            manHinhChinh.Show();
+            manHinhChinh.ShowDialog();
             this.Close();
         }
     }

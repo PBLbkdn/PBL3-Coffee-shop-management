@@ -234,6 +234,16 @@ namespace PBL3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap eye_line {
+            get {
+                object obj = ResourceManager.GetObject("eye-line", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Group__1_ {
             get {
                 object obj = ResourceManager.GetObject("Group (1)", resourceCulture);
@@ -344,6 +354,16 @@ namespace PBL3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_fail_96_2 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-fail-96 2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_human_30_1 {
             get {
                 object obj = ResourceManager.GetObject("icons8-human-30 1", resourceCulture);
@@ -447,6 +467,26 @@ namespace PBL3.Properties {
         internal static System.Drawing.Bitmap Rectangle_157 {
             get {
                 object obj = ResourceManager.GetObject("Rectangle 157", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Rectangle_276 {
+            get {
+                object obj = ResourceManager.GetObject("Rectangle 276", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap thông_báo {
+            get {
+                object obj = ResourceManager.GetObject("thông báo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -17,8 +17,8 @@ namespace PBL3.GUI
         public DangNhap()
         {
             InitializeComponent();
-        }
 
+        }
         private void DangNhap_Load(object sender, EventArgs e)
         {
 
@@ -41,14 +41,16 @@ namespace PBL3.GUI
                     if (rbManager.Checked)
                     {
                         ManHinhChinh f = new ManHinhChinh(maNV);
+                        f.ShowDialog();
                         this.Hide();
-                        f.Show();
+                        this.Close();
                     }
                     else
                     {
                         ManHinhChinh_NV f = new ManHinhChinh_NV(maNV);
+                        f.ShowDialog();
                         this.Hide();
-                        f.Show();
+                        this.Close();
                     }
                     break;
                 case 2:
@@ -67,6 +69,21 @@ namespace PBL3.GUI
         private void exitButton2_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void mouseHover(object sender, EventArgs e)
+        {
+            password.PasswordChar = '\0';
+            close.Visible = false;
+            open.Visible = true;
+        }
+
+        private void mouseLeave(object sender, EventArgs e)
+        {
+
+            password.PasswordChar = '*';
+            close.Visible = true;
+            open.Visible = false;
         }
     }
 }
