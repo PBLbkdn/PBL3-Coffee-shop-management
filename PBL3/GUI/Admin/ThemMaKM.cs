@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace PBL3.GUI
 {
@@ -17,8 +18,10 @@ namespace PBL3.GUI
         public ThemMaKM()
         {
             InitializeComponent();
+            maKM.Text=KhuyenMai_BLL.Instance.getMaKM().ToString();
         }
 
+        
         private void saveKM_Click(object sender, EventArgs e)
         {
             if(startDay.Value > endDay.Value)
@@ -31,8 +34,39 @@ namespace PBL3.GUI
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            if(KHTT.Checked==false && KH.Checked==false && KHM.Checked==false)
+            {
+                MessageBox.Show("Vui lòng chọn đối tượng áp dụng khuyến mãi!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            int n;
+            if (!int.TryParse(min.Text, out n))
+            {
+                MessageBox.Show("Giá trị đơn hàng tối thiểu phải là số!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (Convert.ToInt32(min.Text) < 0)
+            {
+                MessageBox.Show("Giá trị đơn hàng tối thiểu không thể nhỏ hơn 0!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
-            //KhuyenMai_BLL.Instance.AddKhuyenMai(tenKM.Text, startDay.Value, endDay.Value, moTa.Text, giaTri.Text);
+            //kiểm tra giá trị nhập vào giaTri có phải số thập phân không
+
+
+            decimal n1;
+           
+            if (!decimal.TryParse(giaTri.Text, out n1))
+            {
+                MessageBox.Show("Giá trị khuyến mãi phải là số!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if(Convert.ToDecimal(giaTri.Text) <= 0 || Convert.ToDecimal(giaTri.Text)>=1)
+            {
+                MessageBox.Show("Giá trị khuyến mãi không hợp lệ!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            KhuyenMai_BLL.Instance.AddKhuyenMai(tenKM.Text, moTa.Text, startDay.Value, endDay.Value, Convert.ToDecimal(giaTri.Text), Convert.ToInt32(min.Text), KHTT.Checked, KH.Checked, KHM.Checked);
             MessageBox.Show("Thêm khuyến mãi thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Dispose();
         }

@@ -46,6 +46,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.ten = new System.Windows.Forms.Label();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.KMexit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -310,12 +311,33 @@
             this.ten.TabIndex = 48;
             this.ten.Text = "Đơn hàng";
             // 
+            // guna2Button1
+            // 
+            this.guna2Button1.BorderColor = System.Drawing.Color.DimGray;
+            this.guna2Button1.BorderRadius = 7;
+            this.guna2Button1.BorderThickness = 1;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button1.ForeColor = System.Drawing.Color.Black;
+            this.guna2Button1.Location = new System.Drawing.Point(880, 106);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(274, 49);
+            this.guna2Button1.TabIndex = 49;
+            this.guna2Button1.Text = "Danh sách khuyến mãi";
+            this.guna2Button1.Click += new System.EventHandler(this.dsKM_Click);
+            // 
             // KhuyenMai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(181)))), ((int)(((byte)(181)))));
             this.ClientSize = new System.Drawing.Size(1848, 970);
+            this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.ten);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox10);
@@ -363,5 +385,6 @@
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2Button findButton;
         private System.Windows.Forms.Label ten;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }

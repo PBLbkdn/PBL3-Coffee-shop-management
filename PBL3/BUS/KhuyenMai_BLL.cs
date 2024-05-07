@@ -56,7 +56,7 @@ namespace PBL3.BUS
         public List<Object> GetAllKM()
         {
             QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
-            var l1 = db.KhuyenMais.Select(p => new { p.MaKM, p.TenCT, p.TGBatDau, p.TGKetThuc, p.MoTa, p.GiaTriKM });
+            var l1 = db.KhuyenMais.Select(p => new { p.MaKM, p.TenCT, p.TGBatDau, p.TGKetThuc, p.MoTa, p.GiaTriKM , p.GiaTriDHToiThieu});
             return l1.ToList<Object>();
         }
         public void AddKhuyenMai(string maso, string ten, DateTime BD, DateTime KT, string mota, string gtri)
@@ -76,7 +76,7 @@ namespace PBL3.BUS
             db.KhuyenMais.Add(s);
             db.SaveChanges();
         }
-        public void EditKhuyenMai(string maso, string tenct, DateTime tgianbd, DateTime tgiankt, string mota, string gtri)
+        public void EditKhuyenMai(string maso, string tenct, DateTime tgianbd, DateTime tgiankt, string mota, string gtri, string tonghoadon, bool KHTT, bool KHM, bool KH)
         {
             QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
             KhuyenMai sedit = db.KhuyenMais.Find(Convert.ToInt32(maso));
@@ -85,13 +85,29 @@ namespace PBL3.BUS
             sedit.TGKetThuc = tgiankt;
             sedit.MoTa = mota;
             sedit.GiaTriKM = Convert.ToDecimal(gtri);
+            sedit.GiaTriDHToiThieu = Convert.ToInt32(tonghoadon);
+
+            sedit.LoaiKhachHangs.Clear();
+            if (KHTT)
+            {
+                sedit.LoaiKhachHangs.Add(db.LoaiKhachHangs.Find(1));
+            }
+            if (KH)
+            {
+                sedit.LoaiKhachHangs.Add(db.LoaiKhachHangs.Find(3));
+            }
+            if (KHM)
+            {
+                sedit.LoaiKhachHangs.Add(db.LoaiKhachHangs.Find(2));
+            }
             db.SaveChanges();
         }
         public void DeleteKM(int id)
         {
             QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
-            KhuyenMai banDelete = db.KhuyenMais.Find(id);
-            db.KhuyenMais.Remove(banDelete);
+            KhuyenMai Delete = db.KhuyenMais.Find(id);
+            Delete.LoaiKhachHangs.Clear();
+            db.KhuyenMais.Remove(Delete);
             db.SaveChanges();
         }
         public void LayThongTinKM(int s, ref string makm, ref string tenct, ref DateTime tgianbd, ref DateTime tgiankt, ref string mota, ref string gtri)
@@ -131,6 +147,43 @@ namespace PBL3.BUS
         {
             QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
             return db.KhuyenMais.Find(maKM);
+        }
+
+        internal void AddKhuyenMai(string ten, string moTa, DateTime startDay, DateTime endDay, decimal GTKM, int GTDHTT, bool KHTT, bool KH, bool KHM)
+        {
+            QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
+            int maKM = db.KhuyenMais.Count() + 1;
+            KhuyenMai s = new KhuyenMai
+            {
+                MaKM = maKM,
+                TenCT = ten,
+                TGBatDau = startDay,
+                TGKetThuc = endDay,
+                MoTa = moTa,
+                GiaTriKM = GTKM,
+                GiaTriDHToiThieu = GTDHTT
+            };
+            if(KHTT)
+            {
+                s.LoaiKhachHangs.Add(db.LoaiKhachHangs.Find(1));
+            }
+            if(KH)
+            {
+                s.LoaiKhachHangs.Add(db.LoaiKhachHangs.Find(3));
+            }
+            if(KHM)
+            {
+                s.LoaiKhachHangs.Add(db.LoaiKhachHangs.Find(2));
+            }
+            db.KhuyenMais.Add(s);
+            db.SaveChanges();
+
+        }
+
+        public int getMaKM()
+        {
+            QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
+            return db.KhuyenMais.Count() + 1;
         }
     }
 }

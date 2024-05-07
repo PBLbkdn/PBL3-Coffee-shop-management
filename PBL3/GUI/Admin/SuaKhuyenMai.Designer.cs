@@ -28,24 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.tenKhuyenMai = new Guna.UI2.WinForms.Guna2Panel();
             this.label7 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.toHour = new Guna.UI2.WinForms.Guna2TextBox();
-            this.fromHour = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.toDay = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.fromDay = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.DoiTuong = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cancelButton = new Guna.UI2.WinForms.Guna2Button();
             this.saveButton = new Guna.UI2.WinForms.Guna2Button();
-            this.MonAnKM = new Guna.UI2.WinForms.Guna2DataGridView();
             this.label9 = new System.Windows.Forms.Label();
             this.tenKM = new Guna.UI2.WinForms.Guna2TextBox();
             this.moTa = new Guna.UI2.WinForms.Guna2TextBox();
@@ -53,46 +39,50 @@
             this.TongHoaDon = new Guna.UI2.WinForms.Guna2TextBox();
             this.maKM = new Guna.UI2.WinForms.Guna2TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.MonAnRb = new System.Windows.Forms.RadioButton();
-            this.DoUongRb = new System.Windows.Forms.RadioButton();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.SuaKMExit = new System.Windows.Forms.PictureBox();
-            this.guna2Panel1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.MonAnKM)).BeginInit();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.endDay = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.startDay = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.KH = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.KHM = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.KHTT = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.tenKhuyenMai.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SuaKMExit)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // guna2Panel1
+            // tenKhuyenMai
             // 
-            this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
-            this.guna2Panel1.BorderRadius = 3123;
-            this.guna2Panel1.Controls.Add(this.label7);
-            this.guna2Panel1.Controls.Add(this.groupBox1);
-            this.guna2Panel1.Controls.Add(this.DoiTuong);
-            this.guna2Panel1.Controls.Add(this.cancelButton);
-            this.guna2Panel1.Controls.Add(this.saveButton);
-            this.guna2Panel1.Controls.Add(this.MonAnKM);
-            this.guna2Panel1.Controls.Add(this.label9);
-            this.guna2Panel1.Controls.Add(this.tenKM);
-            this.guna2Panel1.Controls.Add(this.moTa);
-            this.guna2Panel1.Controls.Add(this.giaTriKM);
-            this.guna2Panel1.Controls.Add(this.TongHoaDon);
-            this.guna2Panel1.Controls.Add(this.maKM);
-            this.guna2Panel1.Controls.Add(this.label8);
-            this.guna2Panel1.Controls.Add(this.MonAnRb);
-            this.guna2Panel1.Controls.Add(this.DoUongRb);
-            this.guna2Panel1.Controls.Add(this.label5);
-            this.guna2Panel1.Controls.Add(this.label4);
-            this.guna2Panel1.Controls.Add(this.label3);
-            this.guna2Panel1.Location = new System.Drawing.Point(88, 82);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1680, 858);
-            this.guna2Panel1.TabIndex = 3;
+            this.tenKhuyenMai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
+            this.tenKhuyenMai.BorderRadius = 3123;
+            this.tenKhuyenMai.Controls.Add(this.KH);
+            this.tenKhuyenMai.Controls.Add(this.KHM);
+            this.tenKhuyenMai.Controls.Add(this.KHTT);
+            this.tenKhuyenMai.Controls.Add(this.groupBox1);
+            this.tenKhuyenMai.Controls.Add(this.label7);
+            this.tenKhuyenMai.Controls.Add(this.cancelButton);
+            this.tenKhuyenMai.Controls.Add(this.saveButton);
+            this.tenKhuyenMai.Controls.Add(this.label9);
+            this.tenKhuyenMai.Controls.Add(this.tenKM);
+            this.tenKhuyenMai.Controls.Add(this.moTa);
+            this.tenKhuyenMai.Controls.Add(this.giaTriKM);
+            this.tenKhuyenMai.Controls.Add(this.TongHoaDon);
+            this.tenKhuyenMai.Controls.Add(this.maKM);
+            this.tenKhuyenMai.Controls.Add(this.label8);
+            this.tenKhuyenMai.Controls.Add(this.label5);
+            this.tenKhuyenMai.Controls.Add(this.label4);
+            this.tenKhuyenMai.Controls.Add(this.label3);
+            this.tenKhuyenMai.Location = new System.Drawing.Point(88, 82);
+            this.tenKhuyenMai.Margin = new System.Windows.Forms.Padding(4);
+            this.tenKhuyenMai.Name = "tenKhuyenMai";
+            this.tenKhuyenMai.Size = new System.Drawing.Size(1680, 858);
+            this.tenKhuyenMai.TabIndex = 3;
             // 
             // label7
             // 
@@ -104,156 +94,6 @@
             this.label7.Size = new System.Drawing.Size(65, 28);
             this.label7.TabIndex = 26;
             this.label7.Text = "Mô tả";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.toHour);
-            this.groupBox1.Controls.Add(this.fromHour);
-            this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.toDay);
-            this.groupBox1.Controls.Add(this.fromDay);
-            this.groupBox1.Location = new System.Drawing.Point(911, 180);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox1.Size = new System.Drawing.Size(551, 138);
-            this.groupBox1.TabIndex = 25;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Thời gian áp dụng";
-            // 
-            // toHour
-            // 
-            this.toHour.BorderRadius = 10;
-            this.toHour.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.toHour.DefaultText = "";
-            this.toHour.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.toHour.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.toHour.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.toHour.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.toHour.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.toHour.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.toHour.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.toHour.Location = new System.Drawing.Point(324, 86);
-            this.toHour.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.toHour.Name = "toHour";
-            this.toHour.PasswordChar = '\0';
-            this.toHour.PlaceholderText = "";
-            this.toHour.SelectedText = "";
-            this.toHour.Size = new System.Drawing.Size(147, 37);
-            this.toHour.TabIndex = 7;
-            // 
-            // fromHour
-            // 
-            this.fromHour.BorderRadius = 10;
-            this.fromHour.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.fromHour.DefaultText = "";
-            this.fromHour.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.fromHour.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.fromHour.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.fromHour.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.fromHour.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.fromHour.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.fromHour.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.fromHour.Location = new System.Drawing.Point(64, 86);
-            this.fromHour.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.fromHour.Name = "fromHour";
-            this.fromHour.PasswordChar = '\0';
-            this.fromHour.PlaceholderText = "";
-            this.fromHour.SelectedText = "";
-            this.fromHour.Size = new System.Drawing.Size(147, 37);
-            this.fromHour.TabIndex = 6;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(279, 86);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(31, 16);
-            this.label11.TabIndex = 5;
-            this.label11.Text = "Đến";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(28, 86);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(23, 16);
-            this.label10.TabIndex = 4;
-            this.label10.Text = "Từ";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(279, 38);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(31, 16);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Đến";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(28, 37);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(23, 16);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Từ";
-            // 
-            // toDay
-            // 
-            this.toDay.BorderRadius = 10;
-            this.toDay.Checked = true;
-            this.toDay.FillColor = System.Drawing.Color.White;
-            this.toDay.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.toDay.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.toDay.Location = new System.Drawing.Point(324, 27);
-            this.toDay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.toDay.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.toDay.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.toDay.Name = "toDay";
-            this.toDay.Size = new System.Drawing.Size(204, 36);
-            this.toDay.TabIndex = 1;
-            this.toDay.Value = new System.DateTime(2024, 4, 21, 20, 49, 1, 179);
-            // 
-            // fromDay
-            // 
-            this.fromDay.BorderRadius = 10;
-            this.fromDay.Checked = true;
-            this.fromDay.FillColor = System.Drawing.Color.White;
-            this.fromDay.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.fromDay.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.fromDay.Location = new System.Drawing.Point(65, 27);
-            this.fromDay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.fromDay.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.fromDay.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.fromDay.Name = "fromDay";
-            this.fromDay.Size = new System.Drawing.Size(205, 36);
-            this.fromDay.TabIndex = 0;
-            this.fromDay.Value = new System.DateTime(2024, 4, 21, 20, 49, 1, 179);
-            // 
-            // DoiTuong
-            // 
-            this.DoiTuong.BackColor = System.Drawing.Color.Transparent;
-            this.DoiTuong.BorderRadius = 10;
-            this.DoiTuong.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.DoiTuong.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.DoiTuong.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.DoiTuong.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.DoiTuong.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.DoiTuong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.DoiTuong.ItemHeight = 30;
-            this.DoiTuong.Location = new System.Drawing.Point(348, 384);
-            this.DoiTuong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.DoiTuong.Name = "DoiTuong";
-            this.DoiTuong.Size = new System.Drawing.Size(185, 36);
-            this.DoiTuong.TabIndex = 24;
             // 
             // cancelButton
             // 
@@ -269,7 +109,7 @@
             this.cancelButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cancelButton.ForeColor = System.Drawing.Color.Black;
             this.cancelButton.Location = new System.Drawing.Point(1341, 795);
-            this.cancelButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cancelButton.Margin = new System.Windows.Forms.Padding(4);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(215, 59);
             this.cancelButton.TabIndex = 23;
@@ -290,64 +130,12 @@
             this.saveButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.saveButton.ForeColor = System.Drawing.Color.Black;
             this.saveButton.Location = new System.Drawing.Point(1120, 795);
-            this.saveButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.saveButton.Margin = new System.Windows.Forms.Padding(4);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(213, 59);
             this.saveButton.TabIndex = 22;
             this.saveButton.Text = "Lưu";
             this.saveButton.Click += new System.EventHandler(this.saveKM_Click);
-            // 
-            // MonAnKM
-            // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.MonAnKM.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.MonAnKM.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.MonAnKM.ColumnHeadersHeight = 4;
-            this.MonAnKM.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.MonAnKM.DefaultCellStyle = dataGridViewCellStyle3;
-            this.MonAnKM.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.MonAnKM.Location = new System.Drawing.Point(136, 588);
-            this.MonAnKM.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.MonAnKM.Name = "MonAnKM";
-            this.MonAnKM.RowHeadersVisible = false;
-            this.MonAnKM.RowHeadersWidth = 51;
-            this.MonAnKM.Size = new System.Drawing.Size(785, 187);
-            this.MonAnKM.TabIndex = 16;
-            this.MonAnKM.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.MonAnKM.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.MonAnKM.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.MonAnKM.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.MonAnKM.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.MonAnKM.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.MonAnKM.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.MonAnKM.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.MonAnKM.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.MonAnKM.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MonAnKM.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.MonAnKM.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.MonAnKM.ThemeStyle.HeaderStyle.Height = 4;
-            this.MonAnKM.ThemeStyle.ReadOnly = false;
-            this.MonAnKM.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.MonAnKM.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.MonAnKM.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MonAnKM.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.MonAnKM.ThemeStyle.RowsStyle.Height = 22;
-            this.MonAnKM.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.MonAnKM.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
             // label9
             // 
@@ -478,32 +266,6 @@
             this.label8.TabIndex = 8;
             this.label8.Text = "Giá trị (*)";
             // 
-            // MonAnRb
-            // 
-            this.MonAnRb.AutoSize = true;
-            this.MonAnRb.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MonAnRb.Location = new System.Drawing.Point(271, 512);
-            this.MonAnRb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.MonAnRb.Name = "MonAnRb";
-            this.MonAnRb.Size = new System.Drawing.Size(103, 32);
-            this.MonAnRb.TabIndex = 6;
-            this.MonAnRb.TabStop = true;
-            this.MonAnRb.Text = "Món ăn";
-            this.MonAnRb.UseVisualStyleBackColor = true;
-            // 
-            // DoUongRb
-            // 
-            this.DoUongRb.AutoSize = true;
-            this.DoUongRb.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DoUongRb.Location = new System.Drawing.Point(271, 474);
-            this.DoUongRb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.DoUongRb.Name = "DoUongRb";
-            this.DoUongRb.Size = new System.Drawing.Size(113, 32);
-            this.DoUongRb.TabIndex = 4;
-            this.DoUongRb.TabStop = true;
-            this.DoUongRb.Text = "Đồ uống";
-            this.DoUongRb.UseVisualStyleBackColor = true;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -554,13 +316,139 @@
             // 
             this.SuaKMExit.Image = global::PBL3.Properties.Resources.akar_icons_circle_x_fill;
             this.SuaKMExit.Location = new System.Drawing.Point(1771, 18);
-            this.SuaKMExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SuaKMExit.Margin = new System.Windows.Forms.Padding(4);
             this.SuaKMExit.Name = "SuaKMExit";
             this.SuaKMExit.Size = new System.Drawing.Size(56, 49);
             this.SuaKMExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.SuaKMExit.TabIndex = 5;
             this.SuaKMExit.TabStop = false;
             this.SuaKMExit.Click += new System.EventHandler(this.SuaKMExit_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.endDay);
+            this.groupBox1.Controls.Add(this.startDay);
+            this.groupBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.groupBox1.Location = new System.Drawing.Point(925, 190);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Size = new System.Drawing.Size(645, 146);
+            this.groupBox1.TabIndex = 27;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Thời gian áp dụng";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.label6.Location = new System.Drawing.Point(359, 68);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(49, 28);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "Đến";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(25, 68);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 28);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Từ";
+            // 
+            // endDay
+            // 
+            this.endDay.BorderRadius = 10;
+            this.endDay.Checked = true;
+            this.endDay.CustomFormat = "hh:mm MM/dd/yyyy";
+            this.endDay.FillColor = System.Drawing.Color.White;
+            this.endDay.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.endDay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.endDay.Location = new System.Drawing.Point(430, 60);
+            this.endDay.Margin = new System.Windows.Forms.Padding(4);
+            this.endDay.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.endDay.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.endDay.Name = "endDay";
+            this.endDay.Size = new System.Drawing.Size(204, 36);
+            this.endDay.TabIndex = 1;
+            this.endDay.Value = new System.DateTime(2024, 4, 21, 20, 49, 1, 179);
+            // 
+            // startDay
+            // 
+            this.startDay.BorderRadius = 10;
+            this.startDay.Checked = true;
+            this.startDay.CustomFormat = "hh:mm MM/dd/yyyy";
+            this.startDay.FillColor = System.Drawing.Color.White;
+            this.startDay.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.startDay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.startDay.Location = new System.Drawing.Point(95, 60);
+            this.startDay.Margin = new System.Windows.Forms.Padding(4);
+            this.startDay.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.startDay.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.startDay.Name = "startDay";
+            this.startDay.Size = new System.Drawing.Size(205, 36);
+            this.startDay.TabIndex = 0;
+            this.startDay.Value = new System.DateTime(2024, 4, 21, 20, 49, 1, 179);
+            // 
+            // KH
+            // 
+            this.KH.AutoSize = true;
+            this.KH.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.KH.CheckedState.BorderRadius = 0;
+            this.KH.CheckedState.BorderThickness = 0;
+            this.KH.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.KH.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.KH.Location = new System.Drawing.Point(136, 576);
+            this.KH.Name = "KH";
+            this.KH.Size = new System.Drawing.Size(141, 32);
+            this.KH.TabIndex = 32;
+            this.KH.Text = "Khách hàng";
+            this.KH.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.KH.UncheckedState.BorderRadius = 0;
+            this.KH.UncheckedState.BorderThickness = 0;
+            this.KH.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            // 
+            // KHM
+            // 
+            this.KHM.AutoSize = true;
+            this.KHM.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.KHM.CheckedState.BorderRadius = 0;
+            this.KHM.CheckedState.BorderThickness = 0;
+            this.KHM.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.KHM.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.KHM.Location = new System.Drawing.Point(136, 520);
+            this.KHM.Name = "KHM";
+            this.KHM.Size = new System.Drawing.Size(182, 32);
+            this.KHM.TabIndex = 31;
+            this.KHM.Text = "Khách hàng mới";
+            this.KHM.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.KHM.UncheckedState.BorderRadius = 0;
+            this.KHM.UncheckedState.BorderThickness = 0;
+            this.KHM.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            // 
+            // KHTT
+            // 
+            this.KHTT.AutoSize = true;
+            this.KHTT.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.KHTT.CheckedState.BorderRadius = 0;
+            this.KHTT.CheckedState.BorderThickness = 0;
+            this.KHTT.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.KHTT.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.KHTT.Location = new System.Drawing.Point(136, 465);
+            this.KHTT.Name = "KHTT";
+            this.KHTT.Size = new System.Drawing.Size(236, 32);
+            this.KHTT.TabIndex = 30;
+            this.KHTT.Text = "Khách hàng thân thiết";
+            this.KHTT.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.KHTT.UncheckedState.BorderRadius = 0;
+            this.KHTT.UncheckedState.BorderThickness = 0;
+            this.KHTT.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             // 
             // SuaKhuyenMai
             // 
@@ -570,17 +458,17 @@
             this.ClientSize = new System.Drawing.Size(1848, 970);
             this.Controls.Add(this.SuaKMExit);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.guna2Panel1);
+            this.Controls.Add(this.tenKhuyenMai);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "SuaKhuyenMai";
             this.Text = "SuaKhuyenMai";
-            this.guna2Panel1.ResumeLayout(false);
-            this.guna2Panel1.PerformLayout();
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.tenKhuyenMai.ResumeLayout(false);
+            this.tenKhuyenMai.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SuaKMExit)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.MonAnKM)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SuaKMExit)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -588,21 +476,10 @@
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2Panel tenKhuyenMai;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private Guna.UI2.WinForms.Guna2TextBox toHour;
-        private Guna.UI2.WinForms.Guna2TextBox fromHour;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2DateTimePicker toDay;
-        private Guna.UI2.WinForms.Guna2DateTimePicker fromDay;
-        private Guna.UI2.WinForms.Guna2ComboBox DoiTuong;
         private Guna.UI2.WinForms.Guna2Button cancelButton;
         private Guna.UI2.WinForms.Guna2Button saveButton;
-        private Guna.UI2.WinForms.Guna2DataGridView MonAnKM;
         private System.Windows.Forms.Label label9;
         private Guna.UI2.WinForms.Guna2TextBox tenKM;
         private Guna.UI2.WinForms.Guna2TextBox moTa;
@@ -610,12 +487,18 @@
         private Guna.UI2.WinForms.Guna2TextBox TongHoaDon;
         private Guna.UI2.WinForms.Guna2TextBox maKM;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.RadioButton MonAnRb;
-        private System.Windows.Forms.RadioButton DoUongRb;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox SuaKMExit;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2DateTimePicker endDay;
+        private Guna.UI2.WinForms.Guna2DateTimePicker startDay;
+        private Guna.UI2.WinForms.Guna2CheckBox KH;
+        private Guna.UI2.WinForms.Guna2CheckBox KHM;
+        private Guna.UI2.WinForms.Guna2CheckBox KHTT;
     }
 }

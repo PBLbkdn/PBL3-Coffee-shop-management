@@ -52,6 +52,14 @@ namespace PBL3.GUI.Admin
                 {
                     column.HeaderText = "Doanh Thu Ngày Trực";
                 }
+                else if (column.HeaderText == "DoanhThuThang")
+                {
+                    column.HeaderText = "Doanh Thu Tháng";
+                }
+                else if (column.HeaderText == "Thang")
+                {
+                    column.HeaderText = "Tháng";
+                }
             }
         }
 
@@ -117,13 +125,22 @@ namespace PBL3.GUI.Admin
                 List<Object> data = new List<Object>();
                 if (MaCaCB.Visible == false)
                 {
-                    thongKeData.DataSource = null;
+                    if (TkeCb.SelectedItem.ToString() == "Thống kê theo tháng")
+                    {
+                        thongKeData.DataSource = null;
+                        data = BUS.DoanhThu_BLL.Instance.GetListDoanhThuThangByThang(ThoiGian.Value.ToString("yyyy-MM"));
+                    }
+                    else if (TkeCb.SelectedItem.ToString() == "Thống kê theo ngày")
+                    {
+                        thongKeData.DataSource = null;
 
-                    data = BUS.DoanhThu_BLL.Instance.GetListDoanhThuNgayByNgay(ThoiGian.Value.ToString("yyyy-MM-dd"));
+                        data = BUS.DoanhThu_BLL.Instance.GetListDoanhThuNgayByNgay(ThoiGian.Value.ToString("yyyy-MM-dd"));
+                    }
 
                 }
                 else
                 {
+                    //thống kê theo ca
                     int MaCa = MaCaCB.SelectedItem.ToString() == "Ca 1" ? 1 : MaCaCB.SelectedItem.ToString() == "Ca 2" ? 2 : 3;
                     string day = ThoiGian.Value.ToString("yyyy-MM-dd");
                     thongKeData.DataSource = null;

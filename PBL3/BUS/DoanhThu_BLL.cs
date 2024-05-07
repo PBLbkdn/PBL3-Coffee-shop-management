@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -52,7 +53,7 @@ namespace PBL3.BUS
 
             for (int j = 0; j < listDT.Count; j++)
             {
-                if (listDT[j].MaCT == maCa && listDT[j].NgayTruc.Date == day)
+                if (listDT[j].MaCT == maCa && listDT[j].NgayTruc.Date.ToString("yyyy-MM-dd") == day.ToString("yyyy-MM-dd"))
                 {
                     return listDT[j].DoanhThuCT.Value;
                 }
@@ -227,6 +228,36 @@ namespace PBL3.BUS
             return l1;
         }
 
+        internal List<DoanhThu> GetListDTThang()
+        {
+            QuanCaPhePBL3Entities quanCaPhePBL3Entities = new QuanCaPhePBL3Entities();
+            List<DoanhThu> doanhThus = quanCaPhePBL3Entities.DoanhThus.ToList();
+            List<DoanhThu> res = new List<DoanhThu>();
+            for(int i=0;i<doanhThus.Count;i++)
+            {
+                if (res.Where(p => p.NgayTruc.ToString("MM/yyyy") == doanhThus[i].NgayTruc.ToString("MM/yyyy")).Count() == 0)
+                {
+                    res.Add(doanhThus[i]);
+                }
+            }
+            return res;
+        }
+
+        internal List<DoanhThu> GetListDTNgay()
+        {
+            QuanCaPhePBL3Entities quanCaPhePBL3Entities = new QuanCaPhePBL3Entities();
+            List<DoanhThu> doanhThus = quanCaPhePBL3Entities.DoanhThus.ToList();
+            List<DoanhThu> res = new List<DoanhThu>();
+            for (int i = 0; i < doanhThus.Count; i++)
+            {
+                if (res.Where(p => p.NgayTruc.ToString("dd/MM/yyyy") == doanhThus[i].NgayTruc.ToString("dd/MM/yyyy")).Count() == 0)
+                {
+                    res.Add(doanhThus[i]);
+                }
+            }
+            return res;
+        }
+
         internal List<Object> GetListDoanhThuNgayByNgay(string Date)
         {
             QuanCaPhePBL3Entities quanCaPheEntities = new QuanCaPhePBL3Entities();
@@ -247,48 +278,76 @@ namespace PBL3.BUS
             }
             return list;
         }
-       
+
+        internal List<Object> GetListDoanhThuThangByThang(string Date)
+        {
+            QuanCaPhePBL3Entities quanCaPheEntities = new QuanCaPhePBL3Entities();
+            List<DoanhThu> listDT = quanCaPheEntities.DoanhThus.ToList();
+            List<Object> list = new List<object>();
+            long DTThang = 0;
+            for (int j = 0; j < listDT.Count; j++)
+            {
+                if (listDT[j].NgayTruc.ToString("yyyy-MM") == Date)
+                {
+                    DTThang += listDT[j].DoanhThuNT.Value;
+                }
+            }
+            list.Add(new
+            {
+                Thang = Date,
+                DoanhThuThang = DTThang
+            });
+            return list;
+        }
+
+
         internal List<Object> GetListDoanhThuThang()
         {
+            DataTable dataTable = new DataTable();
+            dataTable.Columns.Add("Tháng", typeof(string));
+            dataTable.Columns.Add("Doanh thu tháng", typeof(long));
+
             QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
-            List<DoanhThu> listDT = db.DoanhThus.ToList();
-            var list = listDT.Select(p => new
+
+            //lấy các tháng
+            List<DoanhThu> dTNgay = GetListDTThang();
+            List<string> listThang = new List<string>();
+            for (int i = 0; i < dTNgay.Count; i++)
             {
-                Thang = ((DateTime)p.NgayTruc).ToString("MM/yyyy"),
-                DoanhThuThang = 0
-            }).Distinct().ToList<Object>();
-            for(int i = 0; i < list.Count; i++)
-            {
-                for (int j = 0; j < listDT.Count; j++)
+                string thang = dTNgay[i].NgayTruc.ToString("MM/yyyy");
+                if (!listThang.Contains(thang))
                 {
-                    if (((DateTime)listDT[j].NgayTruc).ToString("MM/yyyy") == list[i].GetType().GetProperty("Thang").GetValue(list[i]).ToString())
-                    {
-                        list[i].GetType().GetProperty("DoanhThuThang").SetValue(list[i], (long)list[i].GetType().GetProperty("DoanhThuThang").GetValue(list[i]) + (long)listDT[j].DoanhThuNT);
-                    }
+                    listThang.Add(thang);
                 }
             }
-            return list;
-            /*List<Object> listDT = GetListDoanhThuNgay();
+
+
             
-            var list = listDT.Select(p => new
+            List<DoanhThu> doanhThus = GetListDTNgay();
+            for (int i = 0; i < listThang.Count; i++)
             {
-                Thang = ((DateTime)p.GetType().GetProperty("NgayTruc").GetValue(p)).ToString("MM/yyyy"),
-                DoanhThuThang = 0
-            }).Distinct().ToList<Object>();
-
-
-            foreach (Object obj in list)
-            {
-                for(int i = 0; i < listDT.Count; i++)
+                long doanhThuThang = 0;
+                for (int j = 0; j < doanhThus.Count; j++)
                 {
-                    if (((DateTime)listDT[i].GetType().GetProperty("NgayTruc").GetValue(listDT[i])).ToString("MM/yyyy") == obj.GetType().GetProperty("Thang").GetValue(obj).ToString())
+                    if (doanhThus[j].NgayTruc.ToString("MM/yyyy") == listThang[i])
                     {
-                        obj.GetType().GetProperty("DoanhThuThang").SetValue(obj, (long)obj.GetType().GetProperty("DoanhThuThang").GetValue(obj) + (long)listDT[i].GetType().GetProperty("DoanhThuNT").GetValue(listDT[i]));
+                        doanhThuThang += doanhThus[j].DoanhThuNT.Value;
                     }
-                   
                 }
+                dataTable.Rows.Add(listThang[i], doanhThuThang);
             }
-            return list;*/
+            //thêm dữ liệu từ datatable vào 1 list object
+            List<Object> list = new List<Object>();
+            for (int i = 0; i < dataTable.Rows.Count; i++)
+            {
+                list.Add(new
+                {
+                    Thang = dataTable.Rows[i][0],
+                    DoanhThuThang = dataTable.Rows[i][1]
+                });
+            }          
+
+            return list;
         }
 
         internal List<Object> GetDoanhThuCaNV(int maNV, string maCa, DateTime value)

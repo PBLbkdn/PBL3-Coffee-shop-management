@@ -57,17 +57,20 @@ namespace PBL3.GUI
             this.Show();
             RefreshData();
         }
-
-        //ktra edit
+        
         private void editKM_Click(object sender, EventArgs e)
         {
             int Makm = 0;
+            if(KMData.SelectedRows.Count==0)
+            {
+                MessageBox.Show("Vui lòng chọn khuyến mãi cần sửa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             if (KMData.SelectedRows.Count == 1)
             {
-                Makm = Convert.ToInt32(KMData.SelectedRows[0].Cells["MaNV"].Value.ToString());
+                Makm = Convert.ToInt32(KMData.SelectedRows[0].Cells["MaKM"].Value.ToString());
             }
-            SuaKhuyenMai f = new SuaKhuyenMai();
-            f.GetThongTin(Makm);
+            SuaKhuyenMai f = new SuaKhuyenMai(Makm);
             this.Hide();
             f.ShowDialog();
             this.Show();
@@ -87,7 +90,6 @@ namespace PBL3.GUI
             {
                int MaKM = Convert.ToInt32(KMData.SelectedRows[0].Cells["MaKM"].Value.ToString());
                KhuyenMai_BLL.Instance.DeleteKM(MaKM);
-               KMData.DataSource= KhuyenMai_BLL.Instance.GetAllKM();
             }
             RefreshData();
         }
@@ -124,6 +126,11 @@ namespace PBL3.GUI
             {
                 MessageBox.Show("Hiện không có khuyến mãi trong khoảng thời gian này", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void dsKM_Click(object sender, EventArgs e)
+        {
+            RefreshData();
         }
     }
 }
