@@ -102,5 +102,12 @@ namespace PBL3.BUS
             }
             return d;
         }
+
+        internal object getGiaSP(int maSP)
+        {
+            QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
+            SanPham sp = db.SanPhams.Find(maSP);
+            return sp.GiaSP;
+        }
     }
 }

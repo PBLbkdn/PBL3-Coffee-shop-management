@@ -41,13 +41,14 @@ namespace PBL3.GUI.Employee
             {
                 DTO.KhuyenMai km = KhuyenMai_BLL.Instance.GetKhuyenMai((int)ChiTietHoaDon_BLL.Instance.GetListChiTietHoaDonByMaHD(maHD)[0].MaKM);
                 tenKM.Text = km.TenCT;
+                decimal gtkm = (decimal)km.GiaTriKM;
                 if(km.GiaTriDHToiThieu!=null)
                 {
-                    moTa.Text = "Giảm "+ (int)km.GiaTriKM *100 + "%  cho đơn hàng có giá trị trên " + km.GiaTriDHToiThieu + " đồng";
+                    moTa.Text = "Giảm "+ gtkm *100 + "%  cho đơn hàng có giá trị trên " + km.GiaTriDHToiThieu + " đồng";
                 }
                 else
                 {
-                    moTa.Text = "Giảm " + (int)km.GiaTriKM * 100 + "% cho đơn hàng";
+                    moTa.Text = "Giảm " + gtkm * 100 + "% cho đơn hàng";
                 }
             }
         }

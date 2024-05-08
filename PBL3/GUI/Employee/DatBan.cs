@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,12 +30,35 @@ namespace PBL3.GUI.Employee
 
         }
 
-        public DatBan(int maNV)
+        public DatBan(int maNV, int maBan)
         {
-            this.maNV = maNV;
             InitializeComponent();
             
+            this.maNV = maNV;
 
+            datBanData.DataSource = Ban_BLL.Instance.GetBanByID(maBan);
+            ten.Text = NhanVien_BLL.Instance.getTenNV(maNV);
+
+            if (datBanData.Columns["MaBan"] != null)
+                datBanData.Columns["MaBan"].HeaderText = "Mã Bàn";
+            if (datBanData.Columns["TrangThai"] != null)
+                datBanData.Columns["TrangThai"].HeaderText = "Trạng Thái";
+            if (datBanData.Columns["ViTri"] != null)
+                datBanData.Columns["ViTri"].HeaderText = "Vị Trí";
+        }
+
+
+        public DatBan(int maNV)
+        {
+            if (Ban_BLL.Instance.GetListBanFree().Count == 0)
+            {
+                MessageBox.Show("Không có bàn trống");
+                this.Close();
+            }
+
+            InitializeComponent();
+            this.maNV = maNV;
+            ten.Text = NhanVien_BLL.Instance.getTenNV(maNV);
             RefreshData();
         }
 
@@ -51,6 +75,16 @@ namespace PBL3.GUI.Employee
 
         private void okButton_Click(object sender, EventArgs e)
         {
+            if (!sdt.Text.All(char.IsDigit))
+            {
+                MessageBox.Show("Số điện thoại phải là số", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (sdt.Text.Length != 10)
+            {
+                MessageBox.Show("Số điện thoại phải có 10 chữ số", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             if (datBanData.SelectedRows.Count == 0)
             {
                 MessageBox.Show("Vui lòng chọn bàn");
@@ -59,7 +93,8 @@ namespace PBL3.GUI.Employee
             {
                 int MaBan = Convert.ToInt32(datBanData.SelectedRows[0].Cells["MaBan"].Value);
                 string TrangThai = "Bàn đã được đặt trước";
-                Ban_BLL.Instance.EditBan(MaBan, TrangThai);
+                string SDT = sdt.Text;
+                Ban_BLL.Instance.EditBan(MaBan, TrangThai,SDT);
                 MessageBox.Show("Đặt bàn thành công");
                 this.Close();
             }
@@ -91,5 +126,6 @@ namespace PBL3.GUI.Employee
             manHinhChinh.ShowDialog();
             this.Close();
         }
+
     }
 }

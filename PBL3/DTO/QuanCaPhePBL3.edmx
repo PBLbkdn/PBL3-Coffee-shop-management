@@ -12,7 +12,7 @@
           <Property Name="MaBan" Type="int" Nullable="false" />
           <Property Name="TrangThai" Type="nvarchar" MaxLength="255" />
           <Property Name="ViTri" Type="nvarchar" MaxLength="255" />
-          <Property Name="SDT" Type="varchar" MaxLength="1" />
+          <Property Name="SDT" Type="nvarchar" MaxLength="10" />
         </EntityType>
         <EntityType Name="CaTruc">
           <Key>
@@ -497,7 +497,7 @@
           <Property Name="MaBan" Type="Int32" Nullable="false" />
           <Property Name="TrangThai" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="ViTri" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Name="SDT" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="SDT" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="ChiTietHoaDons" Relationship="Self.FK_ChiTietHoaDon_Ban" FromRole="Ban" ToRole="ChiTietHoaDon" />
         </EntityType>
         <EntityType Name="CaTruc">

@@ -40,6 +40,7 @@
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.findButton = new Guna.UI2.WinForms.Guna2Button();
             this.ten = new System.Windows.Forms.Label();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hoaDonExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -168,7 +169,7 @@
             this.hoaDonData.RowHeadersWidth = 62;
             this.hoaDonData.Size = new System.Drawing.Size(1688, 651);
             this.hoaDonData.TabIndex = 37;
-            this.hoaDonData.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.chiTietHoaDon);
+            this.hoaDonData.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.hoaDonData_CellDoubleClick);
             // 
             // pictureBox10
             // 
@@ -214,12 +215,34 @@
             this.ten.TabIndex = 46;
             this.ten.Text = "Hóa đơn";
             // 
+            // guna2Button1
+            // 
+            this.guna2Button1.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.guna2Button1.BorderRadius = 10;
+            this.guna2Button1.BorderThickness = 2;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2Button1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button1.ForeColor = System.Drawing.Color.Black;
+            this.guna2Button1.Location = new System.Drawing.Point(953, 106);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(215, 59);
+            this.guna2Button1.TabIndex = 47;
+            this.guna2Button1.Text = "Danh sách hóa đơn";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
             // HoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(181)))), ((int)(((byte)(181)))));
             this.ClientSize = new System.Drawing.Size(1858, 882);
+            this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.ten);
             this.Controls.Add(this.findButton);
             this.Controls.Add(this.pictureBox10);
@@ -260,5 +283,6 @@
         private System.Windows.Forms.PictureBox pictureBox10;
         private Guna.UI2.WinForms.Guna2Button findButton;
         private System.Windows.Forms.Label ten;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }

@@ -224,3 +224,4 @@ D:\sem4\pbl3\PBL3\obj\Debug\PBL3.GUI.Employee.Thanh.resources
 D:\sem4\pbl3\PBL3\obj\Debug\PBL3.GUI.Employee.ThemMon.resources
 D:\sem4\pbl3\PBL3\obj\Debug\PBL3.GUI.ThanhCong.resources
 D:\sem4\pbl3\PBL3\obj\Debug\PBL3.GUI.ThatBai.resources
+D:\sem4\pbl3\PBL3\obj\Debug\PBL3.GUI.Employee.ChinhSuaTrangThaiBan.resources

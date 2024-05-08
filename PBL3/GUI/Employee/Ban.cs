@@ -57,6 +57,7 @@ namespace PBL3.GUI.Employee
                     banData.Columns["MaBan"].HeaderText = "Mã bàn";
                     banData.Columns["TrangThai"].HeaderText = "Trạng thái";
                     banData.Columns["ViTri"].HeaderText = "Vị trí";
+                    if (banData.Columns["SDT"]!=null)
                     banData.Columns["SDT"].HeaderText = "Số điện thoại của khách đã đặt";
                 }
             }
@@ -94,6 +95,34 @@ namespace PBL3.GUI.Employee
             this.Hide();
             manHinhChinh.ShowDialog();
             this.Close();
+        }
+
+        private void chinhSuaTTBan_Click(object sender, EventArgs e)
+        {
+            if(banData.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Vui lòng chọn bàn cần chỉnh sửa trạng thái");
+                return;
+            }
+            int maBan = Convert.ToInt32(banData.SelectedRows[0].Cells["MaBan"].Value);
+            ChinhSuaTrangThaiBan chinhSuaTrangThaiBan = new ChinhSuaTrangThaiBan(maNV,maBan);
+            this.Hide();
+            chinhSuaTrangThaiBan.ShowDialog();
+            this.Show();
+            RefreshData();
+        }
+
+        private void enter(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar==(char)Keys.Enter)
+            {
+                findButton_Click(sender, e);
+            }
+        }
+
+        private void dsBan_Click(object sender, EventArgs e)
+        {
+            RefreshData();
         }
     }
 }

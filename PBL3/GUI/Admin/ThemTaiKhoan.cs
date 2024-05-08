@@ -58,9 +58,15 @@ namespace PBL3.GUI.Admin
 
         private void saveTK_Click(object sender, EventArgs e)
         {
-            if(mnvcb.Text==""||tenTK.Text==""||matKhau.Text=="")
+            if (mnvcb.Text == "" || tenTK.Text == "" || matKhau.Text == "")
             {
                 MessageBox.Show("Vui lòng nhập đủ thông tin");
+                return;
+            }
+            if (TaiKhoan_BLL.Instance.CheckTaiKhoan(tenTK.Text, NhanVien_BLL.Instance.getmaCV(Convert.ToInt32(mnvcb.Text)).ToString()))
+            {
+                MessageBox.Show("Tên tài khoản đã tồn tại");
+                return;
             }
             else
             {

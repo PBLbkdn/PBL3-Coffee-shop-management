@@ -105,16 +105,6 @@ namespace PBL3.GUI.Employee
             }
         }
 
-        private void chiTietHoaDon(object sender, DataGridViewCellEventArgs e)
-        {
-            int row = e.RowIndex;
-            int maHD = int.Parse(hoaDonData.Rows[row].Cells[0].Value.ToString());
-            
-            ChiTietHoaDon f = new ChiTietHoaDon(maHD, maNV);
-            this.Hide();
-            f.ShowDialog();
-            this.Close();
-        }
 
         private void enter(object sender, KeyPressEventArgs e)
         {
@@ -122,6 +112,24 @@ namespace PBL3.GUI.Employee
             {
                 findButton_Click(sender, e);
             }
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+
+            hoaDonData.DataSource = HoaDon_BLL.Instance.GetListObject();
+            RefreshData();
+        }
+
+        private void hoaDonData_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int row = e.RowIndex;
+            int maHD = int.Parse(hoaDonData.Rows[row].Cells[0].Value.ToString());
+
+            ChiTietHoaDon f = new ChiTietHoaDon(maHD, maNV);
+            this.Hide();
+            f.ShowDialog();
+            this.Close();
         }
     }
 }

@@ -189,6 +189,20 @@ namespace PBL3.BUS
             }
         }
 
-
+        internal bool CheckTaiKhoan(string tenTK, string maCV)
+        {
+            QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
+            List<TaiKhoan> list = db.TaiKhoans.ToList();
+            foreach (TaiKhoan i in list)
+            {
+                int MaCV = NhanVien_BLL.Instance.getmaCV(i.MaNV);
+                if (i.TenDangNhap == tenTK && MaCV.ToString() == maCV)
+                {
+                    //đã tồn tại
+                    return true;
+                }
+            }
+            return false;
+        }
     }
 }

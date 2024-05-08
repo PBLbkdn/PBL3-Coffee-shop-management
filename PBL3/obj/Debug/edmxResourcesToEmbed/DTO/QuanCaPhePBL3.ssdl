@@ -7,7 +7,7 @@
     <Property Name="MaBan" Type="int" Nullable="false" />
     <Property Name="TrangThai" Type="nvarchar" MaxLength="255" />
     <Property Name="ViTri" Type="nvarchar" MaxLength="255" />
-    <Property Name="SDT" Type="varchar" MaxLength="1" />
+    <Property Name="SDT" Type="nvarchar" MaxLength="10" />
   </EntityType>
   <EntityType Name="CaTruc">
     <Key>

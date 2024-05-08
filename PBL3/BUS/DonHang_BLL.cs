@@ -103,7 +103,8 @@ namespace PBL3.BUS
                     {
                         MaSP = listDH[i].MaSP,
                         SoLuongSP = listDH[i].SoLuongSP,
-                        TenSP = SanPham_BLL.Instance.getTenSP(listDH[i].MaSP)
+                        TenSP = SanPham_BLL.Instance.getTenSP(listDH[i].MaSP),
+                        GiaSP = SanPham_BLL.Instance.getGiaSP(listDH[i].MaSP),
                     };
                     listObjectDH.Add(obj);
                 }
@@ -125,21 +126,7 @@ namespace PBL3.BUS
             return null;
         }
 
-        public long TinhTien(int maHD)
-        {
-            long TongTien = 0;
-            QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
-            //List<DonHang> listDH = GetListDonHangByID(maHD);
-            /*for(int i=0; i<listDH.Count; i++)
-            {
-                SanPham sp = SanPham_BLL.Instance.GetSanPham(listDH[i].MaSP);
-                TongTien += sp.GiaSP * listDH[i].SoLuongSP;
-            }*/
-            //lấy mã khách hàng
-            //HoaDon_BLL.Instance.AddHoaDon(maHD, maHD, maKH, DateTime.Now, TongTien);
-            //tạo chi tiết hóa đơn
-            return TongTien;
-        }
+ 
         public void UpdateDonHang(int MaDH, int MaSP, int SoLuongSP)
         {
             QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
@@ -183,6 +170,8 @@ namespace PBL3.BUS
                 }
             }
         }
+
+
 
     }
 }

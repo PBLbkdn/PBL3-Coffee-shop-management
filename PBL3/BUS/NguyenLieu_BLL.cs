@@ -23,6 +23,7 @@ namespace PBL3.BUS
             private set { }
         }
         private NguyenLieu_BLL() { }
+
         public List<Object> GetListNguyenLieu(int ID, string name)
         {
             QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();

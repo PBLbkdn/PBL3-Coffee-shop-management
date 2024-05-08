@@ -30,6 +30,12 @@ namespace PBL3.GUI.Employee
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+            //kiểm tra sđt toàn số không
+            if(!sdt.Text.All(char.IsDigit))
+            {
+                MessageBox.Show("Số điện thoại phải là số", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             if(sdt.Text.Length != 10)
             {
                 MessageBox.Show("Số điện thoại phải có 10 chữ số", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);

@@ -33,8 +33,19 @@ namespace PBL3.GUI.Employee
             donHangData.Columns["MaSP"].HeaderText="Mã sản phẩm";
             donHangData.Columns["SoLuongSP"].HeaderText = "Số lượng sản phẩm";
             donHangData.Columns["TenSP"].HeaderText = "Tên sản phẩm";
+            donHangData.Columns["GiaSP"].HeaderText = "Giá sản phẩm";
+            tongTien.Text = getTongTien().ToString() + " đồng";
         }
 
+        private int getTongTien()
+        {
+            int tongTien = 0;
+            for (int i = 0; i < donHangData.Rows.Count; i++)
+            {
+                tongTien += Convert.ToInt32(donHangData.Rows[i].Cells["SoLuongSP"].Value) * Convert.ToInt32(donHangData.Rows[i].Cells["GiaSP"].Value);
+            }
+            return tongTien;
+        }
 
         private void donHangExit_Click(object sender, EventArgs e)
         {

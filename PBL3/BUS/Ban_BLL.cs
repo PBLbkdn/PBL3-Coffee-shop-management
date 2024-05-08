@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity.Validation;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using PBL3.DTO;
 
 namespace PBL3.BUS
@@ -40,7 +42,23 @@ namespace PBL3.BUS
             var l1 = from p in list2 where p.MaBan == MaBan select new { p.MaBan, p.TrangThai, p.ViTri };
             return l1.ToList<Object>();
         }
-
+        public int GetTrangThaiBan(int MaBan)
+        {
+            QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
+            Ban ban = db.Bans.Find(MaBan);
+            if(ban.TrangThai == "Bàn trống")
+            {
+                return 0;
+            }
+            else if(ban.TrangThai=="Bàn bận")
+            {
+                return 1;
+            }
+            else
+            {
+                return 2;
+            }
+        }
         public Ban GetBan(int MaBan)
         {
             QuanCaPhePBL3Entities quanCaPheEntities = new QuanCaPhePBL3Entities();
@@ -75,6 +93,17 @@ namespace PBL3.BUS
             Ban banEdit = quanCaPheEntities.Bans.Find(MaBan);
             banEdit.TrangThai = TrangThai;
             quanCaPheEntities.SaveChanges();
+        }
+
+        public void EditBan(int MaBan, string TrangThai, string sdt)
+        {
+            QuanCaPhePBL3Entities quanCaPheEntities = new QuanCaPhePBL3Entities();
+            Ban banEdit = quanCaPheEntities.Bans.Find(MaBan);
+            banEdit.TrangThai = TrangThai;
+            banEdit.SDT =sdt;
+            quanCaPheEntities.SaveChanges();
+            
+
         }
         public void DeleteBan(int id)
         {

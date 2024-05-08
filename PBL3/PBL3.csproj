@@ -477,6 +477,9 @@
     <EmbeddedResource Include="GUI\Employee\CapNhatMatKhau.resx">
       <DependentUpon>CapNhatMatKhau.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Employee\ChinhSuaTrangThaiBan.resx">
+      <DependentUpon>ChinhSuaTrangThaiBan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Employee\ChiTietDonHang.resx">
       <DependentUpon>ChiTietDonHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -667,7 +670,12 @@
     <None Include="Resources\icons8-order-48 1.png" />
     <None Include="Resources\bàn 1.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\icons8-fail-96 2.png" />
+    <None Include="Resources\thông báo.png" />
+    <None Include="Resources\Rectangle 276.png" />
+    <None Include="Resources\eye-line.png" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="DTO\QuanCaPhePBL3.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -679,10 +687,6 @@
       <DependentUpon>QuanCaPhePBL3.edmx</DependentUpon>
       <LastGenOutput>QuanCaPhePBL3.cs</LastGenOutput>
     </Content>
-    <None Include="Resources\icons8-fail-96 2.png" />
-    <None Include="Resources\thông báo.png" />
-    <None Include="Resources\Rectangle 276.png" />
-    <None Include="Resources\eye-line.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
