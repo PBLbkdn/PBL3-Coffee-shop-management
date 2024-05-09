@@ -98,6 +98,7 @@ namespace PBL3.GUI.Admin
             if (result == DialogResult.Yes)
             {
                 DangNhap dangNhap = new DangNhap();
+                this.Hide();
                 dangNhap.ShowDialog();
                 this.Close();
             }
@@ -106,6 +107,7 @@ namespace PBL3.GUI.Admin
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             ManHinhChinh manHinhChinh = new ManHinhChinh(maNV);
+            this.Hide();
             manHinhChinh.ShowDialog();
             this.Close();
         }

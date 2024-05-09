@@ -113,6 +113,7 @@ namespace PBL3.GUI
             if (result == DialogResult.Yes)
             {
                 DangNhap dangNhap = new DangNhap();
+                this.Hide();
                 dangNhap.ShowDialog();
                 this.Close();
             }

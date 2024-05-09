@@ -459,9 +459,9 @@ namespace PBL3.GUI
             int month = Convert.ToInt32(monthCbb.SelectedItem);
             int year = Convert.ToInt32(yearCbb.SelectedItem);
             DateTime today = new DateTime(year, month, dayNum);
-            this.Hide();
             NhanVienTrongCa nhanVienTrongCa = new NhanVienTrongCa(Convert.ToInt32(maCa), today, maNV);
-            nhanVienTrongCa.ShowDialog(); this.Close();
+            this.Hide(); nhanVienTrongCa.ShowDialog();
+             this.Close();
         }
 
         private void toiChuNhat_Click(object sender, EventArgs e)
@@ -656,7 +656,9 @@ namespace PBL3.GUI
         private void menu_Click(object sender, EventArgs e)
         {
             ManHinhChinh manHinhChinh = new ManHinhChinh(maNV);
-            manHinhChinh.Show();
+            this.Hide();
+            manHinhChinh.ShowDialog();
+            
             this.Close();
         }
     }

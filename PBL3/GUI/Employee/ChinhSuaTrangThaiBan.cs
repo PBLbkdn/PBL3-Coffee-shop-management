@@ -27,7 +27,6 @@ namespace PBL3.GUI.Employee
         private void setThongTin()
         {
             int trangThai = Ban_BLL.Instance.GetTrangThaiBan(maBan);
-            MessageBox.Show(trangThai.ToString());
             if (trangThai == 0)
             {
                 trong.Checked = true;

@@ -41,15 +41,16 @@ namespace PBL3.GUI
                     if (rbManager.Checked)
                     {
                         ManHinhChinh f = new ManHinhChinh(maNV);
-                        f.ShowDialog();
                         this.Hide();
+                        f.ShowDialog();
+                        
                         this.Close();
                     }
                     else
                     {
                         ManHinhChinh_NV f = new ManHinhChinh_NV(maNV);
-                        f.ShowDialog();
                         this.Hide();
+                        f.ShowDialog();
                         this.Close();
                     }
                     break;
