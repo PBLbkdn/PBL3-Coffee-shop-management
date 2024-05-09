@@ -95,5 +95,12 @@ namespace PBL3.GUI
             }
         }
 
+        private void quayLai_Click(object sender, EventArgs e)
+        {
+            CaLamViec f = new CaLamViec(maNV);
+            this.Hide();
+            f.ShowDialog();
+            this.Close();
+        }
     }
 }

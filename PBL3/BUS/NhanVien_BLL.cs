@@ -115,6 +115,8 @@ namespace PBL3.BUS
         {
             QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
             NhanVien nvDelete = db.NhanViens.Find(id);
+            nvDelete.CaTrucs.Clear();
+
             db.NhanViens.Remove(nvDelete);
             db.SaveChanges();
         }

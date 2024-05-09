@@ -42,6 +42,7 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.year = new Guna.UI2.WinForms.Guna2TextBox();
+            this.quayLai = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.NVCadata)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.guna2Panel1.SuspendLayout();
@@ -265,12 +266,33 @@
             this.year.Size = new System.Drawing.Size(133, 34);
             this.year.TabIndex = 50;
             // 
+            // quayLai
+            // 
+            this.quayLai.BorderColor = System.Drawing.Color.DimGray;
+            this.quayLai.BorderRadius = 7;
+            this.quayLai.BorderThickness = 1;
+            this.quayLai.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.quayLai.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.quayLai.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.quayLai.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.quayLai.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.quayLai.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.quayLai.ForeColor = System.Drawing.Color.Black;
+            this.quayLai.Location = new System.Drawing.Point(80, 883);
+            this.quayLai.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.quayLai.Name = "quayLai";
+            this.quayLai.Size = new System.Drawing.Size(227, 64);
+            this.quayLai.TabIndex = 51;
+            this.quayLai.Text = "Quay lại";
+            this.quayLai.Click += new System.EventHandler(this.quayLai_Click);
+            // 
             // NhanVienTrongCa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(181)))), ((int)(((byte)(181)))));
             this.ClientSize = new System.Drawing.Size(1848, 970);
+            this.Controls.Add(this.quayLai);
             this.Controls.Add(this.year);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.ten);
@@ -314,5 +336,6 @@
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2TextBox year;
+        private Guna.UI2.WinForms.Guna2Button quayLai;
     }
 }
