@@ -20,8 +20,8 @@ namespace PBL3.GUI.Employee
       
         public DatMon(int maNV)
         {
-            this.maNV = maNV;
             InitializeComponent();
+            this.maNV = maNV;
             ten.Text = NhanVien_BLL.Instance.getTenNV(maNV);
             LoadFoodItems();
             guna2DataGridView1.Columns.Add("Name", "Tên sản phẩm");
@@ -169,7 +169,8 @@ namespace PBL3.GUI.Employee
                 f.Show();
                 this.Close();*/
                 ThemMon f = new ThemMon(maNV, s);
-                f.Show();
+                this.Hide();
+                f.ShowDialog();
                 this.Close();
             }
         }
@@ -179,13 +180,15 @@ namespace PBL3.GUI.Employee
             if (this.maCheck == 1)
             {
                 ThemMon f = new ThemMon(maNV, s123);
-                f.Show();
+                this.Hide();
+                f.ShowDialog();
                 this.Close();
             }
             else
             {
                 ManHinhChinh_NV manHinhChinh = new ManHinhChinh_NV(maNV);
-                manHinhChinh.Show();
+                this.Hide();
+                manHinhChinh.ShowDialog();
                 this.Close();
             }
         }
@@ -193,7 +196,8 @@ namespace PBL3.GUI.Employee
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             ManHinhChinh_NV manHinhChinh = new ManHinhChinh_NV(maNV);
-            manHinhChinh.Show();
+            this.Hide();
+            manHinhChinh.ShowDialog();
             this.Close();
         }
 
@@ -215,7 +219,8 @@ namespace PBL3.GUI.Employee
             if (dialogResult == DialogResult.Yes)
             {
                 DangNhap dangNhap = new DangNhap();
-                dangNhap.Show();
+                this.Hide();
+                dangNhap.ShowDialog();
                 this.Close();
             }
         }

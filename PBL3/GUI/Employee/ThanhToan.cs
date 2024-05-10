@@ -81,8 +81,6 @@ namespace PBL3.GUI.Employee
                     if (k1 == null)
                     {
                         sdt.Text = "";
-                        tenKH.Text = "";
-                        loaiKH.Text = "";
                         return;
                     }
 
@@ -213,7 +211,8 @@ namespace PBL3.GUI.Employee
 
             }
             ThemMon f = new ThemMon(maNV, selectedDrinks);
-            f.Show();
+            this.Hide();
+            f.ShowDialog();
             this.Close();
         }
 
@@ -240,7 +239,8 @@ namespace PBL3.GUI.Employee
                 else
                 {
                     ChiTietHoaDonSauThanhToan f = new ChiTietHoaDonSauThanhToan(maNV, maHD, selectedDrinks, maDH, maBan, maKH, maKM, maNVphucvu, tgianhtai, gtrithanhtoan);
-                    f.Show();
+                    this.Hide();
+                    f.ShowDialog();
                     Ban_BLL.Instance.Changesdt(maBan, sdt.Text);
                     Ban_BLL.Instance.EditBan(maBan, "Bàn bận");
                     KhachHang_BLL.Instance.ChangemaLKH(maKH, 2, 3);
@@ -395,7 +395,8 @@ public Thanh(int maNV, List<SelectedDrink> selectedDrinks, int maDH, int maBan, 
             if (dialogResult == DialogResult.Yes)
             {
                 DangNhap dangNhap = new DangNhap();
-                dangNhap.Show();
+                this.Hide();
+                dangNhap.ShowDialog();
                 this.Close();
             }
         }
@@ -403,7 +404,8 @@ public Thanh(int maNV, List<SelectedDrink> selectedDrinks, int maDH, int maBan, 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
             ManHinhChinh_NV manHinhChinh = new ManHinhChinh_NV(maNV);
-            manHinhChinh.Show();
+            this.Hide();
+            manHinhChinh.ShowDialog();
             this.Close();
 
         }

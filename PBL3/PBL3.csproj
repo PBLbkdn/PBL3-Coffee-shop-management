@@ -142,6 +142,9 @@
       <DependentUpon>QuanCaPhePBL3.tt</DependentUpon>
     </Compile>
     <Compile Include="DTO\SelectedDrink.cs" />
+    <Compile Include="DTO\sysdiagram.cs">
+      <DependentUpon>QuanCaPhePBL3.tt</DependentUpon>
+    </Compile>
     <Compile Include="DTO\TaiKhoan.cs">
       <DependentUpon>QuanCaPhePBL3.tt</DependentUpon>
     </Compile>

@@ -40,7 +40,9 @@ namespace PBL3.GUI.Employee
             if (dialogResult == DialogResult.Yes)
             {
                 DangNhap dangNhap = new DangNhap();
-                dangNhap.Show();
+                this.Hide();
+                
+                dangNhap.ShowDialog();
                 this.Close();
             }
         }
@@ -48,14 +50,16 @@ namespace PBL3.GUI.Employee
         private void pictureBox5_Click(object sender, EventArgs e)
         {
             ManHinhChinh_NV manHinhChinh = new ManHinhChinh_NV(maNV);
-            manHinhChinh.Show();
+            this.Hide();
+            manHinhChinh.ShowDialog();
             this.Close();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             DatMon f = new DatMon(maNV, selectedDrinks, 1);
-            f.Show();
+            this.Hide();
+            f.ShowDialog();
             this.Close();
         }
 
@@ -67,14 +71,16 @@ namespace PBL3.GUI.Employee
                 DonHang_BLL.Instance.AddDonHang(maDH, i.MaSP, i.SoLuong);
             }
             Thanh f = new Thanh(maNV, selectedDrinks, maDH);
-            f.Show();
+            this.Hide();
+            f.ShowDialog();
             this.Close();
         }
 
         private void cancelButton_Click(object sender, EventArgs e)
         {
             DatMon f = new DatMon(maNV);
-            f.Show();
+            this.Hide();
+            f.ShowDialog();
             this.Close();
         }
     }

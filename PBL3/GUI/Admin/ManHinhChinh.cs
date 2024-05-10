@@ -113,5 +113,13 @@ namespace PBL3.GUI
                 this.Close();
             }
         }
+
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+            ThongTinNhanVien f = new ThongTinNhanVien(maNV);
+            this.Hide();
+            f.ShowDialog();
+            this.Close();
+        }
     }
 }

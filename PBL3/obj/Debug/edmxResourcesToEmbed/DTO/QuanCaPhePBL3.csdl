@@ -7,7 +7,7 @@
     <Property Name="MaBan" Type="Int32" Nullable="false" />
     <Property Name="TrangThai" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
     <Property Name="ViTri" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-    <Property Name="SDT" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="SDT" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="ChiTietHoaDons" Relationship="Self.FK_ChiTietHoaDon_Ban" FromRole="Ban" ToRole="ChiTietHoaDon" />
   </EntityType>
   <EntityType Name="CaTruc">
@@ -141,7 +141,7 @@
     </Key>
     <Property Name="MaNL" Type="Int32" Nullable="false" />
     <Property Name="TenNL" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-    <Property Name="SLTonKho" Type="Decimal" Precision="6" Scale="3" />
+    <Property Name="SLTonKho" Type="Decimal" Precision="18" Scale="0" />
     <Property Name="DonViTinh" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="ChiTietNguyenLieux" Relationship="Self.FK_ChiTietNguyenLieu_NguyenLieu" FromRole="NguyenLieu" ToRole="ChiTietNguyenLieu" />
     <NavigationProperty Name="ChiTietSanPhams" Relationship="Self.FK_ChiTietSanPham_NguyenLieu" FromRole="NguyenLieu" ToRole="ChiTietSanPham" />
@@ -177,13 +177,23 @@
     <NavigationProperty Name="ChiTietSanPhams" Relationship="Self.FK_ChiTietSanPham_SanPham" FromRole="SanPham" ToRole="ChiTietSanPham" />
     <NavigationProperty Name="DonHangs" Relationship="Self.FK_DonHang_SanPham" FromRole="SanPham" ToRole="DonHang" />
   </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
   <EntityType Name="TaiKhoan">
     <Key>
       <PropertyRef Name="MaNV" />
     </Key>
     <Property Name="MaNV" Type="Int32" Nullable="false" />
-    <Property Name="TenDangNhap" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-    <Property Name="MatKhau" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="TenDangNhap" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="MatKhau" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="NhanVien" Relationship="Self.FK_TaiKhoan_NhanVien" FromRole="TaiKhoan" ToRole="NhanVien" />
   </EntityType>
   <Association Name="FK_ChiTietHoaDon_Ban">
@@ -368,6 +378,7 @@
     <EntitySet Name="NguyenLieux" EntityType="Self.NguyenLieu" />
     <EntitySet Name="NhanViens" EntityType="Self.NhanVien" />
     <EntitySet Name="SanPhams" EntityType="Self.SanPham" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
     <EntitySet Name="TaiKhoans" EntityType="Self.TaiKhoan" />
     <AssociationSet Name="FK_ChiTietHoaDon_Ban" Association="Self.FK_ChiTietHoaDon_Ban">
       <End Role="Ban" EntitySet="Bans" />

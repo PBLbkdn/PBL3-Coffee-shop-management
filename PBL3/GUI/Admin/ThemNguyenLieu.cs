@@ -34,8 +34,19 @@ namespace PBL3.GUI.Admin
 
         public ThemNguyenLieu(int maNV)
         {
-            this.maNV = maNV;
             InitializeComponent();
+            RefreshData();
+            dvtcb.Items.Add("Kg");
+            dvtcb.Items.Add("Lít");
+            dvtcb.Items.Add("Hộp");
+            maNL.Enabled = false;
+            tenNL.Enabled = false;
+            soLuongNhap.Enabled = false;
+            giaNhap.Enabled = false;
+            ngayNhap.Enabled = false;
+            ngayHetHan.Enabled = false;
+            dvtcb.Enabled = false;
+            themNLMoi_Click(null, null);
         }
         private void RefreshData()
         {

@@ -72,6 +72,7 @@ namespace PBL3.BUS
             {
                 int maNL = i.MaNL;
                 decimal sl = (decimal)i.SLNguyenLieu;
+                MessageBox.Show("tru nl theo sp " + maNL.ToString() + " " + sl.ToString());
                 NguyenLieu_BLL.Instance.TruNL(maNL, SLsp, sl);
             }
             db.SaveChanges();
