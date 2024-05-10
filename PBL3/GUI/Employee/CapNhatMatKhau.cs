@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -32,10 +33,22 @@ namespace PBL3.GUI.Employee
 
         private void cancelButton_Click_1(object sender, EventArgs e)
         {
-            ManHinhChinh_NV manHinhChinh = new ManHinhChinh_NV(maNV1);
-            this.Hide();
-            manHinhChinh.ShowDialog();
-            this.Close();
+            int maCV = NhanVien_BLL.Instance.getmaCV(maNV1);
+            if (maCV == 1)
+            {
+                ManHinhChinh manHinhChinh = new ManHinhChinh(maNV1);
+                this.Hide();
+                manHinhChinh.ShowDialog();
+                this.Close();
+
+            }
+            else
+            {
+                ManHinhChinh_NV manHinhChinh = new ManHinhChinh_NV(maNV1);
+                this.Hide();
+                manHinhChinh.ShowDialog();
+                this.Close();
+            }
         }
 
         private void saveButton_Click_1(object sender, EventArgs e)
