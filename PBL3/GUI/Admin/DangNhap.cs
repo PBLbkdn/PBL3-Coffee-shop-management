@@ -42,15 +42,16 @@ namespace PBL3.GUI
                     {
                         ManHinhChinh f = new ManHinhChinh(maNV);
                         this.Hide();
-                        f.ShowDialog();
+                        f.Show();
                         
-                        this.Close();
+                        //this.Close();
                     }
                     else
                     {
                         ManHinhChinh_NV f = new ManHinhChinh_NV(maNV);
                         this.Hide();
                         f.Show();
+                        //this.Close();
                     }
                     break;
                 case 2:

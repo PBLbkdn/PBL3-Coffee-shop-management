@@ -81,6 +81,8 @@ namespace PBL3.GUI.Employee
                     if (k1 == null)
                     {
                         sdt.Text = "";
+                        tenKH.Text = "";
+                        loaiKH.Text = "";
                         return;
                     }
 

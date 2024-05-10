@@ -205,7 +205,7 @@ namespace PBL3.GUI
                 if (row == null) continue;
                 if (row.Cells["MaNL"].Value == null) continue;
                 int maNL = Convert.ToInt32(row.Cells["MaNL"].Value);
-                decimal soLuong = Convert.ToDecimal(row.Cells["SoLuong"].Value);
+                decimal soLuong = Convert.ToDecimal(row.Cells["SLNguyenLieu"].Value);
                 ChiTietSanPham_BLL.Instance.AddChiTietSanPham(Convert.ToInt32(maMon.Text), maNL, soLuong);
             }
             MessageBox.Show("Cập nhật sản phẩm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
