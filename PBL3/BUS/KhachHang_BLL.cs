@@ -60,6 +60,32 @@ namespace PBL3.BUS
             }
             return l;
         }
+        public KhachHang GetKHbySDT(string sdt)
+        {
+            QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
+            KhachHang k = db.KhachHangs.Where(p => p.SDT == sdt).FirstOrDefault();
+            return k;
+        }
+        public KhachHang GetKHbyMaKH(int maKH)
+        {
+            QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
+            return db.KhachHangs.Find(maKH);
+        }
+        public void ChangemaLKH(int maKH, int maLKHtruoc, int maLKHsau)
+        {
+            QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
+            KhachHang sedit = db.KhachHangs.Find(maKH);
+            if (sedit.MaLKH == maLKHtruoc)
+            {
+                sedit.MaLKH = maLKHsau;
+                db.SaveChanges();
+            }
+        }
+        public LoaiKhachHang GetLKH(KhachHang k)
+        {
+            QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
+            return k.LoaiKhachHang;
+        }
         public List<Object> GetListKhachHang()
         {
             QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();

@@ -42,6 +42,11 @@ namespace PBL3.BUS
             var l1 = from p in list2 where p.MaBan == MaBan select new { p.MaBan, p.TrangThai, p.ViTri };
             return l1.ToList<Object>();
         }
+        public Ban GetbanBySDT(string sdt)
+        {
+            QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
+            return db.Bans.Where(p => p.SDT == sdt).FirstOrDefault();
+        }
         public int GetTrangThaiBan(int MaBan)
         {
             QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
@@ -71,6 +76,13 @@ namespace PBL3.BUS
             List<Ban> list2 = quanCaPhePBL3Entities.Bans.ToList();
             var l1 = from p in list2 where p.TrangThai == "Bàn trống" select new { p.MaBan, p.TrangThai, p.ViTri };
             return l1.ToList<Object>();
+        }
+        public void Changesdt(int maBan, string sdt)
+        {
+            QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
+            Ban i = db.Bans.Find(maBan);
+            i.SDT = sdt;
+            db.SaveChanges();
         }
         public void AddBan(Ban b)
         {

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using PBL3.BUS;
+using PBL3.DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,14 +14,98 @@ namespace PBL3.GUI.Employee
 {
     public partial class ChonBan : Form
     {
-        public ChonBan()
+        private int maNV, maDH, maKH, maBan;
+        private List<SelectedDrink> selectedDrinks;
+        public ChonBan(int maNV, List<SelectedDrink> selectedDrinks, int maDH)
         {
+            this.maNV = maNV;
+            this.maDH = maDH;
             InitializeComponent();
+            ten.Text = NhanVien_BLL.Instance.getTenNV(maNV);
+
+            this.selectedDrinks = selectedDrinks;
+            guna2DataGridView2.Columns.Add("Name", "Tên sản phẩm");
+            guna2DataGridView2.Columns.Add("Quantity", "Số lượng");
+            ShowDB();
+            if (Ban_BLL.Instance.GetListBanFree().Count == 0)
+            {
+                MessageBox.Show("Không có bàn trống");
+                this.Close();
+            }
+
+            RefreshData();
+        }
+        public ChonBan(int maNV, List<SelectedDrink> selectedDrinks, int maDH, int maKH, int maBan)
+        {
+            this.maNV = maNV;
+            this.maDH = maDH;
+            this.maKH = maKH;
+            this.maBan = maBan;
+            //Ban_BLL.Instance.EditBan(maBan, "Bàn trống");
+            InitializeComponent();
+            ten.Text = NhanVien_BLL.Instance.getTenNV(maNV);
+
+            this.selectedDrinks = selectedDrinks;
+            guna2DataGridView2.Columns.Add("Name", "Tên sản phẩm");
+            guna2DataGridView2.Columns.Add("Quantity", "Số lượng");
+            ShowDB();
+            if (Ban_BLL.Instance.GetListBanFree().Count == 0)
+            {
+                MessageBox.Show("Không có bàn trống");
+                this.Close();
+            }
+            if (maBan != 0)
+            {
+                Ban_BLL.Instance.EditBan(maBan, "Bàn trống");
+                DTO.KhachHang k = KhachHang_BLL.Instance.GetKHbyMaKH(this.maKH);
+                Ban_BLL.Instance.Changesdt(maBan, "");
+            }
+
+            RefreshData();
+        }
+        public void ShowDB()
+        {
+            foreach (var item in selectedDrinks)
+            {
+                guna2DataGridView2.Rows.Add(item.TenMon, item.SoLuong);
+            }
+        }
+        private void RefreshData()
+        {
+            dataGridView1.DataSource = Ban_BLL.Instance.GetListBanFree();
+            dataGridView1.Columns["MaBan"].HeaderText = "Mã Bàn";
+            dataGridView1.Columns["TrangThai"].HeaderText = "Trạng Thái";
+            dataGridView1.Columns["ViTri"].HeaderText = "Vị Trí";
         }
 
         private void ChonBan_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            ManHinhChinh_NV manHinhChinh = new ManHinhChinh_NV(maNV);
+            manHinhChinh.Show();
+            this.Close();
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            //Xóa nx ĐH mới tạo
+            //DonHang_BLL.Instance.DelDonHang(maDH);
+
+            //ThemMon f = new ThemMon(maNV, selectedDrinks);
+            //Thanh f = new Thanh(maNV, selectedDrinks, maDH, maKH);
+            //f.Show();
+            if (maBan != 0)
+            {
+                string TrangThai = "Bàn bận";
+                Ban_BLL.Instance.EditBan(maBan, TrangThai);
+                DTO.KhachHang k = KhachHang_BLL.Instance.GetKHbyMaKH(this.maKH);
+                Ban_BLL.Instance.Changesdt(maBan, k.SDT);
+            }
+            this.Close();
         }
 
         private void guna2DataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -29,17 +115,31 @@ namespace PBL3.GUI.Employee
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            
+            if (dataGridView1.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Vui lòng chọn bàn");
+            }
+            else
+            {
+                int MaBan = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["MaBan"].Value);
+                string TrangThai = "Bàn bận";
+                Ban_BLL.Instance.EditBan(MaBan, TrangThai);
+                DTO.KhachHang k = KhachHang_BLL.Instance.GetKHbyMaKH(this.maKH);
+                Ban_BLL.Instance.Changesdt(MaBan, k.SDT);
+                MessageBox.Show("Đặt bàn thành công");
+                //Thanh f = new Thanh(maNV,selectedDrinks,maDH, MaBan, maKH);
+                //f.Show();   
+                this.Close();
+            }
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn thoát?", "Thoát", MessageBoxButtons.YesNo);
+            DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn đăng xuất không?", "Thông báo", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                DangNhap f = new DangNhap();
-                this.Hide();
-                f.ShowDialog();
+                DangNhap dangNhap = new DangNhap();
+                dangNhap.Show();
                 this.Close();
             }
         }

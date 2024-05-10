@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Security.Cryptography;
@@ -79,7 +80,14 @@ namespace PBL3.BUS
 
         }
 
+        public List<NhanVien> GetListNhanVienPhucVu(int idCT, DateTime day)
+        {
+            QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
+            DateTime t = day.Date;
+            CaTruc i = db.CaTrucs.Where(p => p.MaCT == idCT && DbFunctions.TruncateTime(p.NgayTruc) == t).FirstOrDefault();
+            return i.NhanViens.Where(p => p.MaCV == 4).ToList();
 
+        }
         public CaTruc newCaTruc1(DateTime day)
         {
             CaTruc ca1 = new CaTruc();

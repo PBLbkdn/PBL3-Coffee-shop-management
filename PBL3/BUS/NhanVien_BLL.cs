@@ -80,8 +80,12 @@ namespace PBL3.BUS
                 return l.ToList<Object>();
             }
         }
-     
-       
+        public NhanVien GetNVbymaNV(int maNV)
+        {
+            QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
+            return db.NhanViens.Find(maNV);
+        }
+
         public void AddNhanVien(int maCV, string hoten, DateTime ns, string sdt, string gioitinh, int luong)
         {
             QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();

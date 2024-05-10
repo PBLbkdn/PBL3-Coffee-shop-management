@@ -240,6 +240,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 42;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox10
             // 
@@ -271,6 +272,7 @@
             this.cancelButton.Size = new System.Drawing.Size(215, 59);
             this.cancelButton.TabIndex = 45;
             this.cancelButton.Text = "Hủy";
+            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
             // xacNhanButton
             // 
@@ -291,6 +293,7 @@
             this.xacNhanButton.Size = new System.Drawing.Size(292, 59);
             this.xacNhanButton.TabIndex = 44;
             this.xacNhanButton.Text = "Xác nhận danh sách món";
+            this.xacNhanButton.Click += new System.EventHandler(this.xacNhanButton_Click);
             // 
             // ten
             // 
@@ -320,6 +323,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ThemMon";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "ThemMon";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.guna2Panel1.ResumeLayout(false);

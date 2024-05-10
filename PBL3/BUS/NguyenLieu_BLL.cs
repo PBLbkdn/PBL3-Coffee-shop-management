@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace PBL3.BUS
 {
@@ -52,6 +53,20 @@ namespace PBL3.BUS
         {
             QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
             return db.NguyenLieux.Count() + 1;
+        }
+        public void TruNL(int manl, int slsp, decimal luongnl)
+        {
+            QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
+            DTO.NguyenLieu i = db.NguyenLieux.Find(manl);
+            decimal t = (decimal)(i.SLTonKho - (slsp * luongnl));
+            i.SLTonKho = t;
+            db.SaveChanges();
+
+        }
+        public DTO.NguyenLieu GetNLbymaNL(int maNL)
+        {
+            QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
+            return db.NguyenLieux.Find(maNL);
         }
         //add nguyên liệu mới
         public void AddNguyenLieu(string tennl, int SLtonkho, string donvi, DateTime ngayNhap, DateTime ngayHetHan, int giaNhap)
@@ -121,7 +136,7 @@ namespace PBL3.BUS
             return d;
         }
 
-        internal NguyenLieu GetNguyenLieu(int maNL)
+        internal DTO.NguyenLieu GetNguyenLieu(int maNL)
         {
             QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
             return db.NguyenLieux.Find(maNL);

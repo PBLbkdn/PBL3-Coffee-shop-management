@@ -59,7 +59,21 @@ namespace PBL3.BUS
             }
             return null;
         }
-
+        public void Add_1_ChiTietHoaDon(int MaHD, int MaBan, int MaNV, int MaSP, int MaKM, int SLSP)
+        {
+            ChiTietHoaDon cthd = new ChiTietHoaDon
+            {
+                MaHD = MaHD,
+                MaBan = MaBan,
+                MaNV = MaNV,
+                MaSP = MaSP,
+                MaKM = MaKM,
+                SoLuongSP = SLSP
+            };
+            QuanCaPhePBL3Entities quanCaPheEntities = new QuanCaPhePBL3Entities();
+            quanCaPheEntities.ChiTietHoaDons.Add(cthd);
+            quanCaPheEntities.SaveChanges();
+        }
         //add ChiTietHoaDon của 1 hóa đơn
         public void AddChiTietHoaDon(int MaHD, int MaBan, int MaNV, int[] MaSP, int MaKM, int[] SLSP) 
         {

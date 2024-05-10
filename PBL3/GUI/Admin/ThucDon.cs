@@ -67,31 +67,41 @@ namespace PBL3.GUI
             this.Hide();
             f.ShowDialog();
             this.Show();
-            ThucDonData.DataSource = SanPham_BLL.Instance.GetListSanPham(0, null);
+            ThucDonData.DataSource = SanPham_BLL.Instance.GetListObjectSanPham();
         }
 
         private void ThucDon_Load(object sender, EventArgs e)
         {
-            ThucDonData.DataSource = SanPham_BLL.Instance.GetListSanPham(0, null);
+            ThucDonData.DataSource = SanPham_BLL.Instance.GetListObjectSanPham();
         }
 
         private void editSP_Click(object sender, EventArgs e)
         {
             int Masp = 0;
+            if (ThucDonData.SelectedRows.Count != 1)
+            {
+                MessageBox.Show("Hãy chọn 1 sản phẩm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
             if (ThucDonData.SelectedRows.Count == 1)
             {
                 Masp = Convert.ToInt32(ThucDonData.SelectedRows[0].Cells["MaSP"].Value.ToString());
             }
-            SuaMon f = new SuaMon();
+            SuaMon f = new SuaMon(maNV);
             f.GetThongTin(Masp);
             this.Hide();
             f.ShowDialog();
             this.Show();
-            ThucDonData.DataSource = SanPham_BLL.Instance.GetListSanPham(0, null);
+            ThucDonData.DataSource = SanPham_BLL.Instance.GetListObjectSanPham();
         }
 
         private void deleteSP_Click(object sender, EventArgs e)
         {
+            if (ThucDonData.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Vui lòng chọn sản phẩm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
             DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa sản phẩm này không?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
@@ -100,9 +110,10 @@ namespace PBL3.GUI
                     foreach (DataGridViewRow i in ThucDonData.SelectedRows)
                     {
                         int Masp = Convert.ToInt32(ThucDonData.SelectedRows[0].Cells["MaSP"].Value.ToString());
+                        ChiTietSanPham_BLL.Instance.DelChiTietSanPhamFromOneSP(Masp);
                         SanPham_BLL.Instance.DeleteSanPham(Masp);
                     }
-                    ThucDonData.DataSource = SanPham_BLL.Instance.GetListSanPham(0, null);
+                    ThucDonData.DataSource = SanPham_BLL.Instance.GetListObjectSanPham();
                 }
             }
         }
@@ -113,8 +124,7 @@ namespace PBL3.GUI
             if (result == DialogResult.Yes)
             {
                 DangNhap dangNhap = new DangNhap();
-                this.Hide();
-                dangNhap.ShowDialog();
+                dangNhap.Show();
                 this.Close();
             }
         }

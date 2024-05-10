@@ -17,7 +17,13 @@ namespace PBL3.GUI.Employee
         {
             InitializeComponent();
         }
+        public ThemKhachHang(string s)
+        {
 
+            InitializeComponent();
+            sdt.Text = s;
+
+        }
         private void cancelButton_Click(object sender, EventArgs e)
         {
             this.Close();

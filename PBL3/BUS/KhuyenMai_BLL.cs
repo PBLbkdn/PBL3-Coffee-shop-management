@@ -53,6 +53,18 @@ namespace PBL3.BUS
             }
             return list;
         }
+        public List<KhuyenMai> GetKMchoKH(KhachHang k, long tien)
+        {
+            QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
+            LoaiKhachHang t = KhachHang_BLL.Instance.GetLKH(k);
+            var l = t.KhuyenMais.Where(p => p.GiaTriDHToiThieu <= tien).Select(p => p);
+            return l.ToList();
+        }
+        public KhuyenMai GetKMbymaKM(int maKM)
+        {
+            QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
+            return db.KhuyenMais.Find(maKM);
+        }
         public List<Object> GetAllKM()
         {
             QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();

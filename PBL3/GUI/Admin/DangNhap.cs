@@ -50,8 +50,7 @@ namespace PBL3.GUI
                     {
                         ManHinhChinh_NV f = new ManHinhChinh_NV(maNV);
                         this.Hide();
-                        f.ShowDialog();
-                        this.Close();
+                        f.Show();
                     }
                     break;
                 case 2:

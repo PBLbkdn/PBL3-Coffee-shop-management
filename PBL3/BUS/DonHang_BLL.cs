@@ -46,8 +46,13 @@ namespace PBL3.BUS
                 db.DonHangs.Add(dh);
                 db.SaveChanges();
             }
-        } 
-
+        }
+        public int GetmaDHTieptheo()
+        {
+            QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
+            var t = db.DonHangs.OrderByDescending(p => p.MaDH).FirstOrDefault();
+            return t.MaDH + 1;
+        }
         public List<DonHang> GetListDonHang()
         {
             QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();

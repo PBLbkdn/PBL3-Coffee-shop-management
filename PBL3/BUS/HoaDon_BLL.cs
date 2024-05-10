@@ -23,7 +23,12 @@ namespace PBL3.BUS
             }
             private set { }
         }
-
+        public int GetnextmaHD()
+        {
+            QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
+            var t = db.HoaDons.OrderByDescending(p => p.MaHD).FirstOrDefault();
+            return t.MaHD + 1;
+        }
 
         public void AddHoaDon(int MaHD, int MaDH, int MaKH, DateTime ThoiGian, long TongTien)
         {

@@ -209,6 +209,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ThemKhachHang";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "ThemKhachHang";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.guna2Panel1.ResumeLayout(false);
