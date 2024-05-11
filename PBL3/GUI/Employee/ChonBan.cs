@@ -83,13 +83,6 @@ namespace PBL3.GUI.Employee
 
         }
 
-        private void pictureBox5_Click(object sender, EventArgs e)
-        {
-            ManHinhChinh_NV manHinhChinh = new ManHinhChinh_NV(maNV);
-            manHinhChinh.Show();
-            this.Close();
-        }
-
         private void guna2Button2_Click(object sender, EventArgs e)
         {
             //Xóa nx ĐH mới tạo
@@ -108,10 +101,14 @@ namespace PBL3.GUI.Employee
             this.Close();
         }
 
-        private void guna2DataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void pictureBox3_Click(object sender, EventArgs e)
         {
-
+            ManHinhChinh_NV manHinhChinh = new ManHinhChinh_NV(maNV);
+            this.Hide();
+            manHinhChinh.ShowDialog();
+            this.Close();
         }
+
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
@@ -123,12 +120,9 @@ namespace PBL3.GUI.Employee
             {
                 int MaBan = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["MaBan"].Value);
                 string TrangThai = "Bàn bận";
-                Ban_BLL.Instance.EditBan(MaBan, TrangThai);
-                DTO.KhachHang k = KhachHang_BLL.Instance.GetKHbyMaKH(this.maKH);
-                Ban_BLL.Instance.Changesdt(MaBan, k.SDT);
+                Ban_BLL.Instance.EditBan(MaBan, TrangThai, KhachHang_BLL.Instance.getSDTKH(maKH));
+
                 MessageBox.Show("Đặt bàn thành công");
-                //Thanh f = new Thanh(maNV,selectedDrinks,maDH, MaBan, maKH);
-                //f.Show();   
                 this.Close();
             }
         }
@@ -139,7 +133,8 @@ namespace PBL3.GUI.Employee
             if (dialogResult == DialogResult.Yes)
             {
                 DangNhap dangNhap = new DangNhap();
-                dangNhap.Show();
+                this.Hide();
+                dangNhap.ShowDialog();
                 this.Close();
             }
         }

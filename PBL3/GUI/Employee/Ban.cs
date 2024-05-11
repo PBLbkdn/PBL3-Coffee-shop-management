@@ -89,7 +89,7 @@ namespace PBL3.GUI.Employee
             }
         }
 
-        private void pictureBox5_Click(object sender, EventArgs e)
+        private void pictureBox3_Click(object sender, EventArgs e)
         {
             ManHinhChinh_NV manHinhChinh = new ManHinhChinh_NV(maNV);
             this.Hide();
@@ -124,5 +124,6 @@ namespace PBL3.GUI.Employee
         {
             RefreshData();
         }
+
     }
 }

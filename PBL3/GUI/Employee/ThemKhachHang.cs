@@ -29,6 +29,11 @@ namespace PBL3.GUI.Employee
             this.Close();
         }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void saveButton_Click(object sender, EventArgs e)
         {
             if(string.IsNullOrWhiteSpace(tenKH.Text) || string.IsNullOrWhiteSpace(sdt.Text) )

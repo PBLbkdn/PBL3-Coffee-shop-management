@@ -40,8 +40,8 @@ namespace PBL3.GUI.Employee
             NhanVienPhucVu.Visible = true;
         }
 
-       
-        private void pictureBox5_Click_1(object sender, EventArgs e)
+
+        private void pictureBox3_Click(object sender, EventArgs e)
         {
             ManHinhChinh_NV manHinhChinh = new ManHinhChinh_NV();
             this.Hide();

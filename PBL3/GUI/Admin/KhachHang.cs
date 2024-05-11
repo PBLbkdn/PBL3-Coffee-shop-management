@@ -121,7 +121,7 @@ namespace PBL3.GUI.Admin
             }
         }
 
-        private void pictureBox5_Click(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
             ManHinhChinh manHinhChinh = new ManHinhChinh(maNV);
             this.Hide();

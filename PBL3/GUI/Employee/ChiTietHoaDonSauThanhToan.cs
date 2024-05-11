@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,11 +17,23 @@ namespace PBL3.GUI.Employee
     {
         private int maNV, maDH, maBan, maKH, maKM, maNVphucvu, maHD;
 
-        private void pictureBox5_Click_1(object sender, EventArgs e)
+        private void pictureBox3_Click(object sender, EventArgs e)
         {
-            ManHinhChinh_NV manHinhChinh = new ManHinhChinh_NV(maNV);
-            manHinhChinh.Show();
-            this.Close();
+            int maCV = NhanVien_BLL.Instance.getmaCV(maNV);
+            if (maCV == 1)
+            {
+                ManHinhChinh manHinhChinh = new ManHinhChinh(maNV);
+                this.Hide();
+                manHinhChinh.ShowDialog();
+                this.Close();
+            }
+            else
+            {
+                ManHinhChinh_NV manHinhChinh = new ManHinhChinh_NV(maNV);
+                this.Hide();
+                manHinhChinh.ShowDialog();
+                this.Close();
+            }
         }
 
         private void hoaDonExit_Click_1(object sender, EventArgs e)
@@ -29,16 +42,15 @@ namespace PBL3.GUI.Employee
             if (dialogResult == DialogResult.Yes)
             {
                 DangNhap dangNhap = new DangNhap();
-                dangNhap.Show();
+                this.Hide();
+                dangNhap.ShowDialog();
                 this.Close();
             }
         }
 
         private void guna2Button1_Click_1(object sender, EventArgs e)
         {
-            ManHinhChinh_NV f = new ManHinhChinh_NV(maNV);
-            f.Show();
-            this.Close();
+            pictureBox3_Click(sender, e);
         }     
         
 

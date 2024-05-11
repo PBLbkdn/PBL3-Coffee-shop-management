@@ -41,10 +41,6 @@ namespace PBL3.GUI.Employee
             }
             ban.Enabled = false;
         }
-        private void pictureBox5_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
 
         private void huyButton_Click(object sender, EventArgs e)
         {
@@ -90,5 +86,11 @@ namespace PBL3.GUI.Employee
         {
             setThongTin();
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
     }
 }

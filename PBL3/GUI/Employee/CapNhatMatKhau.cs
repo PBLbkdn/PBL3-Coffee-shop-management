@@ -64,5 +64,10 @@ namespace PBL3.GUI.Employee
             manHinhChinh.ShowDialog();
             this.Close();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            cancelButton_Click_1(sender, e);
+        }
     }
 }

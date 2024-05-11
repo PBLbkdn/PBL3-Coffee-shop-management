@@ -87,7 +87,7 @@ namespace PBL3.GUI.Employee
             }
         }
 
-        private void pictureBox5_Click(object sender, EventArgs e)
+        private void pictureBox3_Click(object sender, EventArgs e)
         {
             if (NhanVien_BLL.Instance.getmaCV(maNV) == 1)
             {
@@ -104,7 +104,6 @@ namespace PBL3.GUI.Employee
                 this.Close();
             }
         }
-
 
         private void enter(object sender, KeyPressEventArgs e)
         {

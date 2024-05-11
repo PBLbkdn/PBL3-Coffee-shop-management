@@ -84,7 +84,6 @@ namespace PBL3.BUS
                 }
                 if(doanhThus.Where(p => p.NgayTruc.Date.ToString("yyyy-MM-dd") == ((DateTime)hoaDons[i].ThoiGian).ToString("yyyy-MM-dd") && p.MaCT == maCa).Count() == 0)
                 {
-                   MessageBox.Show(((DateTime)hoaDons[i].ThoiGian).ToString("yyyy-MM-dd") + " " + maCa);
                    CaTruc_BLL.Instance.TinhDoanhThuCa(((DateTime)hoaDons[i].ThoiGian).ToString("yyyy-MM-dd"), maCa);
                 }
             }

@@ -77,9 +77,10 @@ namespace PBL3.GUI
         }
 
 
-        private void pictureBox5_Click_1(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
             ManHinhChinh manHinhChinh = new ManHinhChinh(maNV);
+            this.Hide();
             manHinhChinh.ShowDialog();
             this.Close();
         }
@@ -90,6 +91,7 @@ namespace PBL3.GUI
             if(result == DialogResult.Yes)
             {
                 DangNhap f = new DangNhap();
+                this.Hide();
                 f.ShowDialog();
                 this.Close();
             }

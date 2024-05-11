@@ -73,6 +73,7 @@ namespace PBL3.GUI
         private void ThucDon_Load(object sender, EventArgs e)
         {
             ThucDonData.DataSource = SanPham_BLL.Instance.GetListObjectSanPham();
+            
         }
 
         private void editSP_Click(object sender, EventArgs e)
@@ -93,6 +94,7 @@ namespace PBL3.GUI
             f.ShowDialog();
             this.Show();
             ThucDonData.DataSource = SanPham_BLL.Instance.GetListObjectSanPham();
+            RefreshData();
         }
 
         private void deleteSP_Click(object sender, EventArgs e)
@@ -114,6 +116,7 @@ namespace PBL3.GUI
                         SanPham_BLL.Instance.DeleteSanPham(Masp);
                     }
                     ThucDonData.DataSource = SanPham_BLL.Instance.GetListObjectSanPham();
+                    RefreshData();
                 }
             }
         }
@@ -136,6 +139,32 @@ namespace PBL3.GUI
             this.Hide();
             manHinhChinh.ShowDialog();
             this.Close();
+
+        }
+        private void findButton_Click(object sender, EventArgs e)
+        {
+            string s = findTextbox.Text;
+            if (s == "")
+            {
+                MessageBox.Show("Tên món không được trống!");
+                return;
+            }
+            foreach (char c in s)
+            {
+                if (char.IsDigit(c))
+                {
+                    MessageBox.Show("Tên món không hợp lệ");
+                    return;
+                }
+            }
+            ThucDonData.DataSource = SanPham_BLL.Instance.GetListSanPham(0, s.Trim().ToLower());
+            RefreshData();
+        }
+
+        private void dsMon_Click(object sender, EventArgs e)
+        {
+            ThucDonData.DataSource = SanPham_BLL.Instance.GetListObjectSanPham();
+            RefreshData();
         }
     }
 }

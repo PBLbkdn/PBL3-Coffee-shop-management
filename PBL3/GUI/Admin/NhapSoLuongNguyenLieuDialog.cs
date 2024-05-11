@@ -22,7 +22,13 @@ namespace PBL3.GUI.Admin
             this.manl = manl;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.Cancel;
+            Close();
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
         {
             if (!decimal.TryParse(textBox1.Text, out decimal soLuong) || Convert.ToDecimal(textBox1.Text) < 0)
             {
@@ -37,12 +43,6 @@ namespace PBL3.GUI.Admin
                 return;
             }
             DialogResult = DialogResult.OK;
-            Close();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            DialogResult = DialogResult.Cancel;
             Close();
         }
     }

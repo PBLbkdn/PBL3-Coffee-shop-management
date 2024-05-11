@@ -165,9 +165,6 @@ namespace PBL3.GUI.Employee
             }
             else
             {
-                /*Employee.ThemMon f = new Employee.ThemMon(maNV, s);
-                f.Show();
-                this.Close();*/
                 ThemMon f = new ThemMon(maNV, s);
                 this.Hide();
                 f.ShowDialog();
@@ -201,9 +198,23 @@ namespace PBL3.GUI.Employee
             this.Close();
         }
 
-        private void TimkiemMon(object sender, EventArgs e)
+        private void guna2Button3_Click(object sender, EventArgs e)
         {
             string searchText = guna2TextBox1.Text.Trim().ToLower();
+            if (searchText == "")
+            {
+                MessageBox.Show("Tên món không được trống!");
+                return;
+            }
+            foreach (char c in searchText)
+            {
+                if (char.IsDigit(c))
+                {
+                    MessageBox.Show("Tên món không hợp lệ");
+                    return;
+                }
+            }
+
             List<SanPham> filteredFoodItems = SanPham_BLL.Instance.GetListSanPham(searchText);
             flowLayoutPanel1.Controls.Clear();
             foreach (SanPham foodItem in filteredFoodItems)
@@ -212,6 +223,18 @@ namespace PBL3.GUI.Employee
                 flowLayoutPanel1.Controls.Add(panel);
             }
         }
+
+        private void guna2Button4_Click(object sender, EventArgs e)
+        {
+            List<SanPham> filteredFoodItems = SanPham_BLL.Instance.GetAllListSanPham();
+            flowLayoutPanel1.Controls.Clear();
+            foreach (SanPham foodItem in filteredFoodItems)
+            {
+                Panel panel = CreateFoodItemPanel(foodItem);
+                flowLayoutPanel1.Controls.Add(panel);
+            }
+        }
+        
 
         private void TDExit_Click(object sender, EventArgs e)
         {

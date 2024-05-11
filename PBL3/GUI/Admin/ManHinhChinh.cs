@@ -114,7 +114,7 @@ namespace PBL3.GUI
             }
         }
 
-        private void pictureBox10_Click(object sender, EventArgs e)
+        private void pictureBox10_Click_1(object sender, EventArgs e)
         {
             ThongTinNhanVien f = new ThongTinNhanVien(maNV);
             this.Hide();

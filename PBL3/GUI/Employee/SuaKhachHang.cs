@@ -48,5 +48,10 @@ namespace PBL3.GUI.Employee
             KhachHang_BLL.Instance.EditKhachHang(MaKH, tenKhachHang.Text, sdtKH.Text, MaLKH);
             this.Close();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

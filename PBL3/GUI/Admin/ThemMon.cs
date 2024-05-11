@@ -47,22 +47,7 @@ namespace PBL3.GUI
             dt.Columns.Add("DonViTinh");
             dinhLuong.DataSource = dt;
 
-            if (nguyenLieu.Columns["MaNL"] != null)
-            {
-                nguyenLieu.Columns["MaNL"].HeaderText = "Mã nguyên liệu";
-            }
-            if (nguyenLieu.Columns["TenNL"] != null)
-            {
-                nguyenLieu.Columns["TenNL"].HeaderText = "Tên nguyên liệu";
-            }
-            if (nguyenLieu.Columns["SLTonKho"] != null)
-            {
-                nguyenLieu.Columns["SLTonKho"].HeaderText = "Số lượng tồn kho";
-            }
-            if (nguyenLieu.Columns["DonViTinh"] != null)
-            {
-                nguyenLieu.Columns["DonViTinh"].HeaderText = "Đơn vị tính";
-            }
+           
 
             if (dinhLuong.Columns["MaNL"] != null)
             {
@@ -240,13 +225,6 @@ namespace PBL3.GUI
             this.Close();
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e)
-        {
-            ThemNguyenLieu f = new ThemNguyenLieu(this.maNV);
-            this.Hide();
-            f.ShowDialog();
-            this.Show();
-        }
 
         private void xoaAnh_Click(object sender, EventArgs e)
         {
@@ -256,7 +234,14 @@ namespace PBL3.GUI
                 return;
             }
             duongdananh = null;
-            anhDaiDien.Image = PBL3.Properties.Resources.Rectangle_157;
+            anhDaiDien.Image = null;
+        }
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            ThemNguyenLieu f = new ThemNguyenLieu(this.maNV);
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
         }
     }
 }

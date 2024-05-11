@@ -54,7 +54,7 @@ namespace PBL3.GUI.Employee
         }
 
 
-        private void pictureBox5_Click(object sender, EventArgs e)
+        private void pictureBox3_Click(object sender, EventArgs e)
         {
             int maCV = NhanVien_BLL.Instance.getmaCV(maNV);
             if (maCV == 1)

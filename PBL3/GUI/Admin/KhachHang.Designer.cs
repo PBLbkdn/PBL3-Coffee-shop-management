@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.exitKH = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -42,9 +42,9 @@
             this.ten = new System.Windows.Forms.Label();
             this.dsKH = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.exitKH)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.KHData)).BeginInit();
@@ -54,21 +54,33 @@
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(132)))), ((int)(((byte)(132)))));
+            this.guna2Panel1.Controls.Add(this.pictureBox1);
             this.guna2Panel1.Controls.Add(this.exitKH);
             this.guna2Panel1.Controls.Add(this.pictureBox4);
-            this.guna2Panel1.Controls.Add(this.pictureBox5);
             this.guna2Panel1.Controls.Add(this.panel2);
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(5);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1848, 66);
             this.guna2Panel1.TabIndex = 9;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::PBL3.Properties.Resources.icons8_home_50;
+            this.pictureBox1.Location = new System.Drawing.Point(19, 17);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(44, 34);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 50;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // exitKH
             // 
             this.exitKH.Image = global::PBL3.Properties.Resources.nút_tắt;
-            this.exitKH.Location = new System.Drawing.Point(1792, 15);
-            this.exitKH.Margin = new System.Windows.Forms.Padding(5);
+            this.exitKH.Location = new System.Drawing.Point(1756, 15);
+            this.exitKH.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.exitKH.Name = "exitKH";
             this.exitKH.Size = new System.Drawing.Size(40, 37);
             this.exitKH.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -80,24 +92,12 @@
             // 
             this.pictureBox4.Image = global::PBL3.Properties.Resources.nút_tắt;
             this.pictureBox4.Location = new System.Drawing.Point(80, 219);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(5);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(40, 37);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 2;
             this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::PBL3.Properties.Resources.bàn_Tầng_1__004;
-            this.pictureBox5.Location = new System.Drawing.Point(20, 17);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(5);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(44, 34);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 2;
-            this.pictureBox5.TabStop = false;
-            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // panel2
             // 
@@ -105,7 +105,7 @@
             this.panel2.Controls.Add(this.pictureBox11);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(80, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(5);
+            this.panel2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(240, 66);
             this.panel2.TabIndex = 0;
@@ -114,7 +114,7 @@
             // 
             this.pictureBox11.Image = global::PBL3.Properties.Resources.icons8_human_30_1;
             this.pictureBox11.Location = new System.Drawing.Point(21, 16);
-            this.pictureBox11.Margin = new System.Windows.Forms.Padding(5);
+            this.pictureBox11.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(36, 36);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -136,7 +136,7 @@
             // 
             // findTextbox
             // 
-            this.findTextbox.BorderRadius = 5;
+            this.findTextbox.BorderRadius = 10;
             this.findTextbox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.findTextbox.DefaultText = "";
             this.findTextbox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -147,7 +147,7 @@
             this.findTextbox.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.findTextbox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.findTextbox.IconLeft = global::PBL3.Properties.Resources.entypo_magnifying_glass;
-            this.findTextbox.Location = new System.Drawing.Point(612, 123);
+            this.findTextbox.Location = new System.Drawing.Point(556, 122);
             this.findTextbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.findTextbox.Name = "findTextbox";
             this.findTextbox.PasswordChar = '\0';
@@ -159,9 +159,9 @@
             // 
             // findButton
             // 
-            this.findButton.BorderColor = System.Drawing.Color.DimGray;
-            this.findButton.BorderRadius = 7;
-            this.findButton.BorderThickness = 1;
+            this.findButton.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.findButton.BorderRadius = 10;
+            this.findButton.BorderThickness = 2;
             this.findButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.findButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.findButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -169,10 +169,10 @@
             this.findButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.findButton.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.findButton.ForeColor = System.Drawing.Color.Black;
-            this.findButton.Location = new System.Drawing.Point(355, 118);
-            this.findButton.Margin = new System.Windows.Forms.Padding(5);
+            this.findButton.Location = new System.Drawing.Point(357, 118);
+            this.findButton.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.findButton.Name = "findButton";
-            this.findButton.Size = new System.Drawing.Size(227, 49);
+            this.findButton.Size = new System.Drawing.Size(171, 49);
             this.findButton.TabIndex = 23;
             this.findButton.Text = "Tìm kiếm";
             this.findButton.Click += new System.EventHandler(this.searchKH_Click);
@@ -183,7 +183,7 @@
             this.KHData.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.KHData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.KHData.Location = new System.Drawing.Point(80, 219);
-            this.KHData.Margin = new System.Windows.Forms.Padding(5);
+            this.KHData.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.KHData.Name = "KHData";
             this.KHData.RowHeadersWidth = 51;
             this.KHData.Size = new System.Drawing.Size(1688, 651);
@@ -193,7 +193,7 @@
             // 
             this.pictureBox10.Image = global::PBL3.Properties.Resources.Vector__2_;
             this.pictureBox10.Location = new System.Drawing.Point(1715, 118);
-            this.pictureBox10.Margin = new System.Windows.Forms.Padding(5);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(53, 49);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -206,7 +206,7 @@
             this.ten.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(181)))), ((int)(((byte)(181)))));
             this.ten.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ten.ForeColor = System.Drawing.Color.Black;
-            this.ten.Location = new System.Drawing.Point(1463, 135);
+            this.ten.Location = new System.Drawing.Point(1348, 135);
             this.ten.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.ten.Name = "ten";
             this.ten.Size = new System.Drawing.Size(133, 32);
@@ -215,9 +215,9 @@
             // 
             // dsKH
             // 
-            this.dsKH.BorderColor = System.Drawing.Color.DimGray;
-            this.dsKH.BorderRadius = 7;
-            this.dsKH.BorderThickness = 1;
+            this.dsKH.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.dsKH.BorderRadius = 10;
+            this.dsKH.BorderThickness = 2;
             this.dsKH.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.dsKH.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.dsKH.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -226,9 +226,9 @@
             this.dsKH.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dsKH.ForeColor = System.Drawing.Color.Black;
             this.dsKH.Location = new System.Drawing.Point(80, 118);
-            this.dsKH.Margin = new System.Windows.Forms.Padding(5);
+            this.dsKH.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.dsKH.Name = "dsKH";
-            this.dsKH.Size = new System.Drawing.Size(227, 49);
+            this.dsKH.Size = new System.Drawing.Size(253, 49);
             this.dsKH.TabIndex = 49;
             this.dsKH.Text = "Danh sách khách hàng";
             this.dsKH.Click += new System.EventHandler(this.dsKH_Click);
@@ -247,14 +247,13 @@
             this.Controls.Add(this.findButton);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(5);
+            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Name = "KhachHang";
             this.Text = "KhachHang";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.guna2Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.exitKH)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
@@ -270,7 +269,6 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.PictureBox exitKH;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.Label label2;
@@ -280,5 +278,6 @@
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.Label ten;
         private Guna.UI2.WinForms.Guna2Button dsKH;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

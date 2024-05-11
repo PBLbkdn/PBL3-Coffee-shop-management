@@ -194,7 +194,12 @@ namespace PBL3.BUS
                 UpdateLKHTT(kh.MaKH);
             }
         }
+        public string getSDTKH(int maKH)
+        {
+            QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
+            return db.KhachHangs.Find(maKH).SDT;
 
+        }
 
         private void UpdateLKHTT(int maKH)
         {

@@ -52,7 +52,6 @@ namespace PBL3.GUI.Employee
         {
             if (e.KeyCode == Keys.Enter)
             {
-
                 guna2Button1.Visible = true;
                 guna2Button1.Enabled = true;
                 string s = sdt.Text;
@@ -173,8 +172,19 @@ namespace PBL3.GUI.Employee
 
         private void apDungButton_Click(object sender, EventArgs e)
         {
+
+            if (guna2DataGridView1.RowCount == 1)
+            {
+                MessageBox.Show("Không có khuyến mãi nào cho khách hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             if (guna2DataGridView1.SelectedRows.Count == 1)
             {
+                if (guna2DataGridView1.SelectedRows[0].Cells["MaKM"].Value == null)
+                {
+                    MessageBox.Show("Hãy chọn khuyến mãi phù hợp", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
                 this.maKM = Convert.ToInt32(guna2DataGridView1.SelectedRows[0].Cells["MaKM"].Value);
                 MessageBox.Show("Đã áp dụng khuyến mãi này", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.gtrithanhtoan = (long)(this.gtrithanhtoan * (1 - KhuyenMai_BLL.Instance.GetKMbymaKM(this.maKM).GiaTriKM));
@@ -183,6 +193,7 @@ namespace PBL3.GUI.Employee
             else
             {
                 MessageBox.Show("Vui lòng chọn 1 khuyến mãi", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
         }
 
@@ -253,6 +264,13 @@ namespace PBL3.GUI.Employee
                     this.Close();
                 }
             }
+        }
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            ManHinhChinh_NV manHinhChinh = new ManHinhChinh_NV(maNV);
+            this.Hide();
+            manHinhChinh.ShowDialog();
+            this.Close();
         }
 
         /*public Thanh(int maNV, List<SelectedDrink> selectedDrinks, int maDH, int maKH)
@@ -401,13 +419,5 @@ public Thanh(int maNV, List<SelectedDrink> selectedDrinks, int maDH, int maBan, 
             }
         }
 
-        private void pictureBox5_Click(object sender, EventArgs e)
-        {
-            ManHinhChinh_NV manHinhChinh = new ManHinhChinh_NV(maNV);
-            this.Hide();
-            manHinhChinh.ShowDialog();
-            this.Close();
-
-        }
     }
 }

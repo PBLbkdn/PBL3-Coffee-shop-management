@@ -41,18 +41,9 @@ namespace PBL3.GUI.Employee
             {
                 DangNhap dangNhap = new DangNhap();
                 this.Hide();
-                
                 dangNhap.ShowDialog();
                 this.Close();
             }
-        }
-
-        private void pictureBox5_Click(object sender, EventArgs e)
-        {
-            ManHinhChinh_NV manHinhChinh = new ManHinhChinh_NV(maNV);
-            this.Hide();
-            manHinhChinh.ShowDialog();
-            this.Close();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -81,6 +72,14 @@ namespace PBL3.GUI.Employee
             DatMon f = new DatMon(maNV);
             this.Hide();
             f.ShowDialog();
+            this.Close();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            ManHinhChinh_NV manHinhChinh = new ManHinhChinh_NV(maNV);
+            this.Hide();
+            manHinhChinh.ShowDialog();
             this.Close();
         }
     }

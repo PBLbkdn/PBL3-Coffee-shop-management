@@ -27,9 +27,16 @@ namespace PBL3.BUS
         public List<Object> GetListSanPham(int ID, string name)
         {
             QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
-            var l = db.SanPhams.Select(p => new { p.MaSP, p.TenSP, p.LoaiSP, p.NhomSP, p.DonViSP, p.GiaSP });
-            return l.ToList<Object>();
-
+            if (name == null)
+            {
+                var l = db.SanPhams.Select(p => new { p.MaSP, p.TenSP, p.LoaiSP, p.NhomSP, p.DonViSP, p.GiaSP });
+                return l.ToList<Object>();
+            }
+            else
+            {
+                var l1 = db.SanPhams.Where(p => p.TenSP.ToLower().Contains(name)).Select(p => new { p.MaSP, p.TenSP, p.LoaiSP, p.NhomSP, p.DonViSP, p.GiaSP });
+                return l1.ToList<Object>();
+            }
         }
         public List<Object> GetListObjectSanPham()
         {
@@ -45,6 +52,14 @@ namespace PBL3.BUS
             return l;
 
         }
+        public List<SanPham> GetAllListSanPham()
+        {
+            QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
+            var l = db.SanPhams.Select(p => p).ToList();
+            return l;
+
+        }
+
         public Boolean CheckTrungName(string s)
         {
             QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
@@ -72,7 +87,6 @@ namespace PBL3.BUS
             {
                 int maNL = i.MaNL;
                 decimal sl = (decimal)i.SLNguyenLieu;
-                MessageBox.Show("tru nl theo sp " + maNL.ToString() + " " + sl.ToString());
                 NguyenLieu_BLL.Instance.TruNL(maNL, SLsp, sl);
             }
             db.SaveChanges();

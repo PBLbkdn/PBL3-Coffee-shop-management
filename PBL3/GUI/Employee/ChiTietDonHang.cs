@@ -67,8 +67,7 @@ namespace PBL3.GUI.Employee
             donHang.ShowDialog();
             this.Close();
         }
-
-        private void pictureBox5_Click(object sender, EventArgs e)
+        private void pictureBox3_Click(object sender, EventArgs e)
         {
             ManHinhChinh_NV manHinh = new ManHinhChinh_NV(maNV);
             this.Hide();

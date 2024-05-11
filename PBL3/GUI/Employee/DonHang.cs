@@ -36,7 +36,7 @@ namespace PBL3.GUI.Employee
                 donHangData.Columns["MaDH"].HeaderText = "Mã đơn hàng";
         }
 
-        private void pictureBox5_Click(object sender, EventArgs e)
+        private void pictureBox3_Click(object sender, EventArgs e)
         {
             ManHinhChinh_NV manHinhChinh = new ManHinhChinh_NV(maNV);
             this.Hide();

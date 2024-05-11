@@ -16,10 +16,9 @@ namespace PBL3.GUI
         {
             InitializeComponent();
         }
-
-        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        private void pictureBox2_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }

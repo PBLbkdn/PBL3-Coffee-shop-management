@@ -357,7 +357,7 @@ namespace PBL3.GUI
                 return;
             }
             duongdananh = null;
-            anhDaiDien.Image = PBL3.Properties.Resources.Rectangle_157;
+            anhDaiDien.Image = null;
         }
 
         private void themAnh_Click(object sender, EventArgs e)

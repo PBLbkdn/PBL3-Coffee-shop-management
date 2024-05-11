@@ -76,5 +76,10 @@ namespace PBL3.GUI.Employee
                 this.Close();
             } 
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            backButton_Click_1(sender, e);
+        }
     }
 }
