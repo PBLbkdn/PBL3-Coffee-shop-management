@@ -36,6 +36,8 @@ namespace PBL3.GUI.Employee
             label10.Text = "";
             label15.Text = tgianhtai.ToString("dd/MM/yyyy");
             label17.Text = tgianhtai.ToString("HH:mm:ss");
+            donHangData.Columns.Add("MaSP", "Mã sản phẩm");
+            donHangData.Columns.Add("LoaiSP", "Loại sản phẩm");
             donHangData.Columns.Add("Name", "Tên sản phẩm");
             donHangData.Columns.Add("Quantity", "Số lượng");
             donHangData.Columns.Add("Price", "Đơn giá");
@@ -47,11 +49,60 @@ namespace PBL3.GUI.Employee
             label9.Text = gtrithanhtoan.ToString() + " VNĐ";
             ten.Text = NhanVien_BLL.Instance.getTenNV(maNV);
         }
+        public Thanh(int maNV, List<SelectedDrink> selectedDrinks, int maDH, int maKH)
+        {
+            InitializeComponent();
+            this.maNV = maNV;
+            this.maDH = maDH;
+            this.maKH = maKH;
 
+            this.selectedDrinks = selectedDrinks;
+            //this.maBan = maBan;
+            this.maHD = HoaDon_BLL.Instance.GetnextmaHD();
+            label12.Text = maDH.ToString();
+            LoadCBB();
+            //DTO.Ban b = Ban_BLL.Instance.GetBan(maBan);
+            label10.Text = "";
+            label15.Text = tgianhtai.ToString("dd/MM/yyyy");
+            label17.Text = tgianhtai.ToString("HH:mm:ss");
+            donHangData.Columns.Add("MaSP", "Mã sản phẩm");
+            donHangData.Columns.Add("LoaiSP", "Loại sản phẩm");
+            donHangData.Columns.Add("Name", "Tên sản phẩm");
+            donHangData.Columns.Add("Quantity", "Số lượng");
+            donHangData.Columns.Add("Price", "Đơn giá");
+            ShowDB();
+            label7.Text = ThanhToan().ToString() + " VNĐ";
+            gtrithanhtoan = ThanhToan();
+            label9.Text = gtrithanhtoan.ToString() + " VNĐ";
+            ten.Text = NhanVien_BLL.Instance.getTenNV(maNV);
+            if (this.maKH != 0)
+            {
+                DTO.KhachHang k2 = KhachHang_BLL.Instance.GetKHbyMaKH(this.maKH);
+                if (k2 == null)
+                {
+                    MessageBox.Show("Error");
+                }
+                this.maKH = k2.MaKH;
+                tenKH.Text = k2.TenKH;
+                loaiKH.Text = KhachHang_BLL.Instance.GetLKH(k2).TenLKH;
+                sdt.Text = k2.SDT;
+                guna2DataGridView1.Columns.Add("MaKM", "Mã khuyến mãi");
+                guna2DataGridView1.Columns.Add("TenCT", "Tên chương trình");
+
+                foreach (DTO.KhuyenMai i in KhuyenMai_BLL.Instance.GetKMchoKH(k2, this.gtrithanhtoan))
+                {
+                    guna2DataGridView1.Rows.Add(i.MaKM, i.TenCT);
+                }
+            }
+        }
         private void ChecksdtKH(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
+                //this.maBan = 0;
+                label10.Text = "";
+                tenKH.Text = "";
+                loaiKH.Text = "";
                 guna2Button1.Visible = true;
                 guna2Button1.Enabled = true;
                 string s = sdt.Text;
@@ -80,6 +131,8 @@ namespace PBL3.GUI.Employee
                     if (k1 == null)
                     {
                         sdt.Text = "";
+                        tenKH.Text = "";
+                        loaiKH.Text = "";
                         return;
                     }
 
@@ -122,10 +175,10 @@ namespace PBL3.GUI.Employee
                         if (b.TrangThai == "Bàn bận" && b.SDT != null)
                         {
                             MessageBox.Show("Khách hàng này đã đặt món và đang sử dụng bàn tại quán", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            this.maBan = 0;
-                            label10.Text = "";
-                            guna2Button1.Visible = false;
-                            guna2Button1.Enabled = false;
+                            
+                            
+                            //guna2Button1.Visible = false;
+                            //guna2Button1.Enabled = false;
                             return;
                         }
                         MessageBox.Show("Khách hàng này đã đặt trước bàn!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -221,10 +274,21 @@ namespace PBL3.GUI.Employee
                 }
 
             }
-            ThemMon f = new ThemMon(maNV, selectedDrinks);
-            this.Hide();
-            f.ShowDialog();
-            this.Close();
+            if (this.maKH == 0)
+            {
+                ThemMon f = new ThemMon(maNV, selectedDrinks);
+                this.Hide();
+                f.ShowDialog();
+                this.Close();
+            }
+            else
+            {
+                ThemMon f = new ThemMon(maNV, selectedDrinks, this.maKH);
+                this.Hide();
+                f.ShowDialog();
+                this.Close();
+            }
+            
         }
 
         private void okButton_Click(object sender, EventArgs e)
@@ -249,24 +313,37 @@ namespace PBL3.GUI.Employee
                 }
                 else
                 {
-                    ChiTietHoaDonSauThanhToan f = new ChiTietHoaDonSauThanhToan(maNV, maHD, selectedDrinks, maDH, maBan, maKH, maKM, maNVphucvu, tgianhtai, gtrithanhtoan);
-                    this.Hide();
-                    f.ShowDialog();
                     Ban_BLL.Instance.Changesdt(maBan, sdt.Text);
                     Ban_BLL.Instance.EditBan(maBan, "Bàn bận");
-                    KhachHang_BLL.Instance.ChangemaLKH(maKH, 2, 3);
+                    KhachHang_BLL.Instance.ChangemaLKH(maKH);
+                    DTO.KhachHang kh = KhachHang_BLL.Instance.GetKHbyMaKH(maKH);                
                     HoaDon_BLL.Instance.AddHoaDon(maHD, maDH, maKH, tgianhtai, gtrithanhtoan);
                     foreach (SelectedDrink i in selectedDrinks)
                     {
                         ChiTietHoaDon_BLL.Instance.Add_1_ChiTietHoaDon(maHD, maBan, maNVphucvu, i.MaSP, maKM, i.SoLuong);
                         SanPham_BLL.Instance.TruNLtheoSP(i.MaSP, i.SoLuong);
                     }
+                    ChiTietHoaDonSauThanhToan f = new ChiTietHoaDonSauThanhToan(maNV, maHD, selectedDrinks, maDH, maBan, maKH, maKM, maNVphucvu, tgianhtai, gtrithanhtoan);
+                    this.Hide();
+                    f.ShowDialog();
+                    
                     this.Close();
                 }
             }
         }
         private void pictureBox3_Click(object sender, EventArgs e)
         {
+            if (maBan != 0)
+            {
+                DTO.Ban b = Ban_BLL.Instance.GetBan(maBan);
+                if (b.TrangThai != "Bàn đã được đặt trước")
+                {
+                    Ban_BLL.Instance.EditBan(maBan, "Bàn trống");
+                    //DTO.KhachHang k = KhachHang_BLL.Instance.GetKHbyMaKH(this.maKH);
+                    Ban_BLL.Instance.Changesdt(maBan, "");
+                }
+
+            }
             ManHinhChinh_NV manHinhChinh = new ManHinhChinh_NV(maNV);
             this.Hide();
             manHinhChinh.ShowDialog();
@@ -361,7 +438,7 @@ public Thanh(int maNV, List<SelectedDrink> selectedDrinks, int maDH, int maBan, 
         {
             foreach (var item in selectedDrinks)
             {
-                donHangData.Rows.Add(item.TenMon, item.SoLuong, item.GiaSP.ToString() + " VNĐ");
+                donHangData.Rows.Add(item.MaSP, item.LoaiSP, item.TenMon, item.SoLuong, item.GiaSP.ToString() + " VNĐ");
             }
         }
         public void LoadCBB()
@@ -412,6 +489,17 @@ public Thanh(int maNV, List<SelectedDrink> selectedDrinks, int maDH, int maBan, 
             DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn thoát không?", "Thoát", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
+                if (maBan != 0)
+                {
+                    DTO.Ban b = Ban_BLL.Instance.GetBan(maBan);
+                    if (b.TrangThai != "Bàn đã được đặt trước")
+                    {
+                        Ban_BLL.Instance.EditBan(maBan, "Bàn trống");
+                        //DTO.KhachHang k = KhachHang_BLL.Instance.GetKHbyMaKH(this.maKH);
+                        Ban_BLL.Instance.Changesdt(maBan, "");
+                    }
+
+                }
                 DangNhap dangNhap = new DangNhap();
                 this.Hide();
                 dangNhap.ShowDialog();

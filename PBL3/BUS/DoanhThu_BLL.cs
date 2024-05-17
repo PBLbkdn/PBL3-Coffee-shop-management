@@ -211,7 +211,7 @@ namespace PBL3.BUS
             quanCaPheEntities.DoanhThus.Add(doanhThu);
             DTNgay = doanhThu.DoanhThuNT.Value;
 
-            quanCaPheEntities.SaveChanges();
+            //quanCaPheEntities.SaveChanges();
 
             UpdateDoanhThu(MaCT, NgayTruc, DTNgay);
 

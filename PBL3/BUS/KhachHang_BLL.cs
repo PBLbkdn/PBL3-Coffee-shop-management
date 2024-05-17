@@ -71,15 +71,15 @@ namespace PBL3.BUS
             QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
             return db.KhachHangs.Find(maKH);
         }
-        public void ChangemaLKH(int maKH, int maLKHtruoc, int maLKHsau)
+        public void ChangemaLKH(int maKH)
         {
             QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
             KhachHang sedit = db.KhachHangs.Find(maKH);
-            if (sedit.MaLKH == maLKHtruoc)
+            if (sedit.MaLKH == 2)
             {
-                sedit.MaLKH = maLKHsau;
-                db.SaveChanges();
+                sedit.MaLKH = 3;
             }
+            db.SaveChanges();
         }
         public LoaiKhachHang GetLKH(KhachHang k)
         {

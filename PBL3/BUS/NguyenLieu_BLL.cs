@@ -61,7 +61,6 @@ namespace PBL3.BUS
             decimal t = (decimal)(i.SLTonKho - (slsp * luongnl));
             i.SLTonKho = t;
             db.SaveChanges();
-
         }
         public DTO.NguyenLieu GetNLbymaNL(int maNL)
         {

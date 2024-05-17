@@ -65,6 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BUS\Ban_BLL.cs" />
+    <Compile Include="BUS\Bonus_BLL.cs" />
     <Compile Include="BUS\KhachHang_BLL.cs" />
     <Compile Include="BUS\KhuyenMai_BLL.cs" />
     <Compile Include="BUS\LoaiKhachHang_BLL.cs" />

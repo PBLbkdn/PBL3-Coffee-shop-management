@@ -1,4 +1,5 @@
-﻿using PBL3.BUS;
+﻿using Guna.UI2.WinForms;
+using PBL3.BUS;
 using PBL3.DTO;
 using System;
 using System.Collections.Generic;
@@ -14,7 +15,7 @@ namespace PBL3.GUI.Employee
 {
     public partial class ThemMon : Form
     {
-        private int maNV;
+        private int maNV, maKH = 0;
         private List<SelectedDrink> selectedDrinks = new List<SelectedDrink>();
         public ThemMon(int maNV, List<SelectedDrink> selectedDrinks)
         {
@@ -23,6 +24,22 @@ namespace PBL3.GUI.Employee
             ten.Text = NhanVien_BLL.Instance.getTenNV(maNV);
 
             this.selectedDrinks = selectedDrinks;
+            themMonData.Columns.Add("MaSP", "Mã sản phẩm");
+            themMonData.Columns.Add("LoaiSP", "Loại sản phẩm");
+            themMonData.Columns.Add("Name", "Tên sản phẩm");
+            themMonData.Columns.Add("Quantity", "Số lượng");
+            ShowDB();
+        }
+        public ThemMon(int maNV, List<SelectedDrink> selectedDrinks, int maKH)
+        {
+            this.maNV = maNV;
+            this.maKH = maKH;
+            InitializeComponent();
+            ten.Text = NhanVien_BLL.Instance.getTenNV(maNV);
+
+            this.selectedDrinks = selectedDrinks;
+            themMonData.Columns.Add("MaSP", "Mã sản phẩm");
+            themMonData.Columns.Add("LoaiSP", "Loại sản phẩm");
             themMonData.Columns.Add("Name", "Tên sản phẩm");
             themMonData.Columns.Add("Quantity", "Số lượng");
             ShowDB();
@@ -31,7 +48,7 @@ namespace PBL3.GUI.Employee
         {
             foreach (var item in selectedDrinks)
             {
-                themMonData.Rows.Add(item.TenMon, item.SoLuong);
+                themMonData.Rows.Add(item.MaSP, item.LoaiSP, item.TenMon, item.SoLuong);
             }
         }
         private void pictureBox6_Click(object sender, EventArgs e)
@@ -48,10 +65,21 @@ namespace PBL3.GUI.Employee
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            DatMon f = new DatMon(maNV, selectedDrinks, 1);
-            this.Hide();
-            f.ShowDialog();
-            this.Close();
+            if (this.maKH == 0)
+            {
+                DatMon f = new DatMon(maNV, selectedDrinks, 1);
+                this.Hide();
+                f.ShowDialog();
+                this.Close();
+            }
+            else
+            {
+                DatMon f = new DatMon(maNV, selectedDrinks, 1, this.maKH);
+                this.Hide();
+                f.ShowDialog();
+                this.Close();
+            }
+            
         }
 
         private void xacNhanButton_Click(object sender, EventArgs e)
@@ -61,10 +89,21 @@ namespace PBL3.GUI.Employee
             {
                 DonHang_BLL.Instance.AddDonHang(maDH, i.MaSP, i.SoLuong);
             }
-            Thanh f = new Thanh(maNV, selectedDrinks, maDH);
-            this.Hide();
-            f.ShowDialog();
-            this.Close();
+            if (this.maKH == 0)
+            {
+                Thanh f = new Thanh(maNV, selectedDrinks, maDH);
+                this.Hide();
+                f.ShowDialog();
+                this.Close();
+            }
+            else
+            {
+                Thanh f = new Thanh(maNV, selectedDrinks, maDH, maKH);
+                this.Hide();
+                f.ShowDialog();
+                this.Close();
+            }
+            
         }
 
         private void cancelButton_Click(object sender, EventArgs e)

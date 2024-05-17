@@ -19,7 +19,6 @@ namespace PBL3
         [STAThread]
         static void Main()
         {
-
             CaTruc_BLL.Instance.AddCaTruc();
 
             // Khởi tạo và thiết lập timer
@@ -35,6 +34,8 @@ namespace PBL3
             //Application.SetCompatibleTextRenderingDefault(false);
 
             Application.Run(new GUI.DangNhap());
+           // Application.Run(new GUI.Employee.ManHinhChinh_NV(2));
+           // Application.Run(new GUI.ThanhCong());
         }
         private static void OnTimedEvent(Object source, ElapsedEventArgs e)
         {

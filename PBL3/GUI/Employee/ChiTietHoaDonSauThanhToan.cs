@@ -76,6 +76,8 @@ namespace PBL3.GUI.Employee
             label17.Text = b.ViTri;
             label7.Text = Tongthanhtoan.ToString();
             label9.Text = NhanVien_BLL.Instance.GetNVbymaNV(maNVphucvu).HoTenNV;
+            hoaDonData.Columns.Add("MaSP", "Mã sản phẩm");
+            hoaDonData.Columns.Add("LoaiSP", "Loại sản phẩm");
             hoaDonData.Columns.Add("Name", "Tên sản phẩm");
             hoaDonData.Columns.Add("Quantity", "Số lượng");
             hoaDonData.Columns.Add("Price", "Đơn giá");
@@ -90,7 +92,7 @@ namespace PBL3.GUI.Employee
         {
             foreach (var item in selectedDrinks)
             {
-                hoaDonData.Rows.Add(item.TenMon, item.SoLuong, item.GiaSP.ToString() + " VNĐ");
+                hoaDonData.Rows.Add(item.MaSP, item.LoaiSP, item.TenMon, item.SoLuong, item.GiaSP.ToString() + " VNĐ");
             }
         }
     }

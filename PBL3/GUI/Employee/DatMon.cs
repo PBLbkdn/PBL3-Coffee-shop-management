@@ -14,7 +14,7 @@ namespace PBL3.GUI.Employee
 {
     public partial class DatMon : Form
     {
-        private int maNV, maCheck;
+        private int maNV, maCheck, maKH = 0;
         private List<SelectedDrink> s = new List<SelectedDrink>();
         private List<SelectedDrink> s123 = new List<SelectedDrink>();
       
@@ -24,6 +24,8 @@ namespace PBL3.GUI.Employee
             this.maNV = maNV;
             ten.Text = NhanVien_BLL.Instance.getTenNV(maNV);
             LoadFoodItems();
+            guna2DataGridView1.Columns.Add("MaSP", "Mã sản phẩm");
+            guna2DataGridView1.Columns.Add("LoaiSP", "Loại sản phẩm");
             guna2DataGridView1.Columns.Add("Name", "Tên sản phẩm");
             guna2DataGridView1.Columns.Add("Quantity", "Số lượng");
         }
@@ -39,16 +41,39 @@ namespace PBL3.GUI.Employee
                 s123.Add(new SelectedDrink(drink)); // Thêm một bản sao của mỗi đối tượng SelectedDrink vào s123
             }
             LoadFoodItems();
+            guna2DataGridView1.Columns.Add("MaSP", "Mã sản phẩm");
+            guna2DataGridView1.Columns.Add("LoaiSP", "Loại sản phẩm");
             guna2DataGridView1.Columns.Add("Name", "Tên sản phẩm");
             guna2DataGridView1.Columns.Add("Quantity", "Số lượng");
             foreach (var item in s)
             {
-                guna2DataGridView1.Rows.Add(item.TenMon, item.SoLuong);
+                guna2DataGridView1.Rows.Add(item.MaSP, item.LoaiSP, item.TenMon, item.SoLuong);
+            }
+        }
+        public DatMon(int maNV, List<SelectedDrink> selectedDrinks, int maCheck, int maKH)
+        {
+            this.maNV = maNV;
+            this.maCheck = maCheck;
+            this.maKH = maKH;
+            InitializeComponent();
+            ten.Text = NhanVien_BLL.Instance.getTenNV(maNV);
+            this.s = selectedDrinks;
+            foreach (SelectedDrink drink in s)
+            {
+                s123.Add(new SelectedDrink(drink)); // Thêm một bản sao của mỗi đối tượng SelectedDrink vào s123
+            }
+            LoadFoodItems();
+            guna2DataGridView1.Columns.Add("MaSP", "Mã sản phẩm");
+            guna2DataGridView1.Columns.Add("LoaiSP", "Loại sản phẩm");
+            guna2DataGridView1.Columns.Add("Name", "Tên sản phẩm");
+            guna2DataGridView1.Columns.Add("Quantity", "Số lượng");
+            foreach (var item in s)
+            {
+                guna2DataGridView1.Rows.Add(item.MaSP, item.LoaiSP, item.TenMon, item.SoLuong);
             }
         }
         private void LoadFoodItems()
         {
-            QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
             int columnCount = 3;
             int rowCount = (int)Math.Ceiling((double)(SanPham_BLL.Instance.SLsp()) / columnCount);
 
@@ -67,10 +92,10 @@ namespace PBL3.GUI.Employee
                 for (int j = 0; j < columnCount; j++)
                 {
                     int index = i * columnCount + j;
-                    if (index >= (db.SanPhams.Count()))
+                    if (index >= (SanPham_BLL.Instance.SLsp()))
                         break;
 
-                    SanPham foodItem = db.SanPhams.ToList()[index];
+                    SanPham foodItem = SanPham_BLL.Instance.GetAllListSanPham()[index];
                     Panel panel = CreateFoodItemPanel(foodItem);
                     rowPanel.Controls.Add(panel);
                 }
@@ -99,15 +124,14 @@ namespace PBL3.GUI.Employee
             pictureBox.Image = ScaleImage(originalImage, imageSize, imageSize);
             pictureBox.Click += (sender, e) =>
             {
-                SelectedDrink selectedItem = s.Find(item => item.TenMon == foodItem.TenSP);
+                SelectedDrink selectedItem = Bonus_BLL.Instance.SearchSelectedDrink(s, foodItem.MaSP);
                 if (selectedItem != null)
                 {
-                    // Nếu đã tồn tại, tăng số lượng lên 1
-                    selectedItem.SoLuong++;
+                    MessageBox.Show("Sản phẩm đã tồn tại trong đơn hàng.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
-                    s.Add(new SelectedDrink { MaSP = foodItem.MaSP, TenMon = foodItem.TenSP, SoLuong = 1, GiaSP = (long)foodItem.GiaSP });
+                    s.Add(new SelectedDrink { MaSP = foodItem.MaSP, TenMon = foodItem.TenSP, LoaiSP = foodItem.LoaiSP,  SoLuong = 1, GiaSP = (long)foodItem.GiaSP });
                 }
 
                 UpdateDataGridView();
@@ -154,7 +178,7 @@ namespace PBL3.GUI.Employee
             guna2DataGridView1.Rows.Clear();
             foreach (var item in s)
             {
-                guna2DataGridView1.Rows.Add(item.TenMon, item.SoLuong);
+                guna2DataGridView1.Rows.Add(item.MaSP, item.LoaiSP, item.TenMon, item.SoLuong);
             }
         }
         private void guna2Button1_Click(object sender, EventArgs e)
@@ -165,10 +189,21 @@ namespace PBL3.GUI.Employee
             }
             else
             {
-                ThemMon f = new ThemMon(maNV, s);
-                this.Hide();
-                f.ShowDialog();
-                this.Close();
+                if (this.maKH == 0)
+                {
+                    ThemMon f = new ThemMon(maNV, s);
+                    this.Hide();
+                    f.ShowDialog();
+                    this.Close();
+                }
+                else
+                {
+                    ThemMon f = new ThemMon(maNV, s, maKH);
+                    this.Hide();
+                    f.ShowDialog();
+                    this.Close();
+                }
+                
             }
         }
 
@@ -176,10 +211,21 @@ namespace PBL3.GUI.Employee
         {
             if (this.maCheck == 1)
             {
-                ThemMon f = new ThemMon(maNV, s123);
-                this.Hide();
-                f.ShowDialog();
-                this.Close();
+                if (this.maKH == 0)
+                {
+                    ThemMon f = new ThemMon(maNV, s123);
+                    this.Hide();
+                    f.ShowDialog();
+                    this.Close();
+                }
+                else
+                {
+                    ThemMon f = new ThemMon(maNV, s123, maKH);
+                    this.Hide();
+                    f.ShowDialog();
+                    this.Close();
+                }
+                
             }
             else
             {
@@ -221,6 +267,69 @@ namespace PBL3.GUI.Employee
             {
                 Panel panel = CreateFoodItemPanel(foodItem);
                 flowLayoutPanel1.Controls.Add(panel);
+            }
+        }
+
+        private void enter(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                guna2Button3_Click(sender, e);
+            }
+        }
+
+        private void guna2DataGridView1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == guna2DataGridView1.Columns["Quantity"].Index)
+            {
+                int maMon = Convert.ToInt32(guna2DataGridView1.Rows[e.RowIndex].Cells["MaSP"].Value.ToString());
+                int soLuong;
+                if (int.TryParse(guna2DataGridView1.Rows[e.RowIndex].Cells["Quantity"].Value.ToString(), out soLuong))
+                {
+                    if (soLuong == 0)
+                    {
+                        var result = MessageBox.Show("Bạn có chắc chắn muốn xóa sản phẩm này khỏi đơn hàng?", "Xác nhận", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                        if (result == DialogResult.OK)
+                        {
+                            //s.RemoveAll(item => item.MaSP == maMon);
+                            Bonus_BLL.Instance.RemoveAllSP(s, maMon);
+                            UpdateDataGridView();
+                            return;
+                        }
+                        else
+                        {
+                            UpdateDataGridView();
+                            return;
+                        }
+                    }
+                    if (soLuong < 0)
+                    {
+                        MessageBox.Show("Số lượng không hợp lệ.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);                
+                        UpdateDataGridView();
+                        return;
+                    }
+                    SelectedDrink selectedItem = Bonus_BLL.Instance.SearchSelectedDrink(s, maMon);
+                    if (selectedItem != null)
+                    {
+                        selectedItem.SoLuong = soLuong;
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("Số lượng không hợp lệ.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    UpdateDataGridView();
+                }
+                
+            }
+        }
+
+        private void guna2DataGridView1_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
+        {
+            if (guna2DataGridView1.Columns[e.ColumnIndex].Name != "Quantity")
+            {
+                MessageBox.Show("Không thể sửa thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                e.Cancel = true; // Hủy sự kiện chỉnh sửa nếu không phải cột "Số lượng"
             }
         }
 

@@ -24,6 +24,8 @@ namespace PBL3.GUI.Employee
             ten.Text = NhanVien_BLL.Instance.getTenNV(maNV);
 
             this.selectedDrinks = selectedDrinks;
+            guna2DataGridView2.Columns.Add("MaSP", "Mã sản phẩm");
+            guna2DataGridView2.Columns.Add("LoaiSP", "Loại sản phẩm");
             guna2DataGridView2.Columns.Add("Name", "Tên sản phẩm");
             guna2DataGridView2.Columns.Add("Quantity", "Số lượng");
             ShowDB();
@@ -46,6 +48,8 @@ namespace PBL3.GUI.Employee
             ten.Text = NhanVien_BLL.Instance.getTenNV(maNV);
 
             this.selectedDrinks = selectedDrinks;
+            guna2DataGridView2.Columns.Add("MaSP", "Mã sản phẩm");
+            guna2DataGridView2.Columns.Add("LoaiSP", "Loại sản phẩm");
             guna2DataGridView2.Columns.Add("Name", "Tên sản phẩm");
             guna2DataGridView2.Columns.Add("Quantity", "Số lượng");
             ShowDB();
@@ -67,7 +71,7 @@ namespace PBL3.GUI.Employee
         {
             foreach (var item in selectedDrinks)
             {
-                guna2DataGridView2.Rows.Add(item.TenMon, item.SoLuong);
+                guna2DataGridView2.Rows.Add(item.MaSP, item.LoaiSP, item.TenMon, item.SoLuong);
             }
         }
         private void RefreshData()

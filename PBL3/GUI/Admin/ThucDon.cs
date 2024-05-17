@@ -166,5 +166,13 @@ namespace PBL3.GUI
             ThucDonData.DataSource = SanPham_BLL.Instance.GetListObjectSanPham();
             RefreshData();
         }
+
+        private void enter(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                findButton_Click(sender, e);
+            }
+        }
     }
 }

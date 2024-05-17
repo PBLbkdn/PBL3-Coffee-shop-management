@@ -205,7 +205,7 @@ namespace PBL3.GUI
                 if (row == null) continue;
                 if (row.Cells["MaNL"].Value == null) continue;
                 int maNL = Convert.ToInt32(row.Cells["MaNL"].Value);
-                decimal soLuong = Convert.ToDecimal(row.Cells["SoLuong"].Value);
+                decimal soLuong = Convert.ToDecimal(row.Cells["SLNguyenLieu"].Value);
                 ChiTietSanPham_BLL.Instance.AddChiTietSanPham(Convert.ToInt32(maMon.Text), maNL, soLuong);
             }
             MessageBox.Show("Cập nhật sản phẩm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -287,10 +287,10 @@ namespace PBL3.GUI
                     DataTable dt = (DataTable)nguyenLieuData.DataSource;
                     foreach (DataGridViewRow i in nguyenLieuData.SelectedRows)
                     {
-                        if (i.Cells[0].Value.ToString() == null)
+                        if (i.Cells[0].Value == null)
                             return;
                         int maNL = Convert.ToInt32(i.Cells["MaNL"].Value);
-                        DataRow[] rowsToDelete = dt.Select($"MaNL = {maNL}");
+                        DataRow[] rowsToDelete = Bonus_BLL.Instance.GetRowsNL(dt, maNL);
                         foreach (DataRow rowToDelete in rowsToDelete)
                         {
                             dt.Rows.Remove(rowToDelete);
@@ -314,12 +314,12 @@ namespace PBL3.GUI
         {
             if (nguyenLieuData.SelectedRows.Count != 1)
             {
-                MessageBox.Show("Hãy chọn 1 sản phẩm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Hãy chọn 1 nguyên liệu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             if (nguyenLieuData.SelectedRows.Count == 1)
             {
-                if (nguyenLieuData.SelectedRows[0].Cells[0].Value.ToString() == null)
+                if (nguyenLieuData.SelectedRows[0].Cells[0].Value == null)
                     return;
                 DataGridViewRow selectedRow = nguyenLieuData.SelectedRows[0];
                 int manl = Convert.ToInt32(nguyenLieuData.SelectedRows[0].Cells["MaNL"].Value.ToString());
@@ -335,7 +335,7 @@ namespace PBL3.GUI
                         foreach (DataGridViewRow i in nguyenLieuData.SelectedRows)
                         {
                             int maNL = Convert.ToInt32(i.Cells["MaNL"].Value);
-                            DataRow[] rowsToDelete = dt.Select($"MaNL = {maNL}");
+                            DataRow[] rowsToDelete = Bonus_BLL.Instance.GetRowsNL(dt, maNL);
                             foreach (DataRow rowToDelete in rowsToDelete)
                             {
                                 dt.Rows.Remove(rowToDelete);

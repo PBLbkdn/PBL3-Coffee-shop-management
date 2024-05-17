@@ -24,8 +24,7 @@ namespace PBL3.GUI
         public ThemMon()
         {
             InitializeComponent();
-            QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
-            nguyenLieu.DataSource = db.NguyenLieux.ToList();
+            nguyenLieu.DataSource = NguyenLieu_BLL.Instance.GetListNguyenLieu();
             DataTable dt = new DataTable();
             dt.Columns.Add("MaNL");
             dt.Columns.Add("TenNL");
@@ -47,7 +46,22 @@ namespace PBL3.GUI
             dt.Columns.Add("DonViTinh");
             dinhLuong.DataSource = dt;
 
-           
+            if (nguyenLieu.Columns["MaNL"] != null)
+            {
+                nguyenLieu.Columns["MaNL"].HeaderText = "Mã nguyên liệu";
+            }
+            if (nguyenLieu.Columns["TenNL"] != null)
+            {
+                nguyenLieu.Columns["TenNL"].HeaderText = "Tên nguyên liệu";
+            }
+            if (nguyenLieu.Columns["SLTonKho"] != null)
+            {
+                nguyenLieu.Columns["SLTonKho"].HeaderText = "Số lượng tồn kho";
+            }
+            if (nguyenLieu.Columns["DonViTinh"] != null)
+            {
+                nguyenLieu.Columns["DonViTinh"].HeaderText = "Đơn vị tính";
+            }
 
             if (dinhLuong.Columns["MaNL"] != null)
             {

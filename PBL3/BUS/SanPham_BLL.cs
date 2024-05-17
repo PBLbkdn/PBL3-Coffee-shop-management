@@ -57,7 +57,6 @@ namespace PBL3.BUS
             QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
             var l = db.SanPhams.Select(p => p).ToList();
             return l;
-
         }
 
         public Boolean CheckTrungName(string s)
