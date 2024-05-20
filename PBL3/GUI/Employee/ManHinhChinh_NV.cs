@@ -29,6 +29,11 @@ namespace PBL3.GUI.Employee
 
         private void guna2Button4_Click(object sender, EventArgs e)
         {
+            if (Ban_BLL.Instance.GetListBanFree().Count == 0)
+            {
+                MessageBox.Show("Hiện tại quán không có bàn trống");
+                return;
+            }
             DatMon f = new DatMon(maNV);
             this.Hide();
             f.ShowDialog();

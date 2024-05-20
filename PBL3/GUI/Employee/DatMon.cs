@@ -183,7 +183,7 @@ namespace PBL3.GUI.Employee
         }
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            if (guna2DataGridView1.RowCount == 1)
+            if (guna2DataGridView1.RowCount == 0)
             {
                 MessageBox.Show("Đơn hàng chưa có sản phầm nào.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

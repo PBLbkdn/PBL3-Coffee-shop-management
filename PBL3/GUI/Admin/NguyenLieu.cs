@@ -92,6 +92,11 @@ namespace PBL3.GUI.Admin
 
         private void clearNL_Click(object sender, EventArgs e)
         {
+            if (NLData.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Vui lòng chọn 1 nguyên liệu!", "Xác nhận xóa", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }    
             DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa nguyên liệu này không?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
@@ -100,7 +105,16 @@ namespace PBL3.GUI.Admin
                     foreach (DataGridViewRow i in NLData.SelectedRows)
                     {
                         int Manl = Convert.ToInt32(NLData.SelectedRows[0].Cells["MaNL"].Value.ToString());
-                        NguyenLieu_BLL.Instance.DeleteNguyenLieu(Manl);
+                        DTO.NguyenLieu n = NguyenLieu_BLL.Instance.GetNLbymaNL(Manl);
+                        if (n.SLTonKho > 0)
+                        {
+                            MessageBox.Show("Vẫn còn nguyên liệu " + n.TenNL + "! Không thể xóa.");
+                        }    
+                        else
+                        {
+                            NguyenLieu_BLL.Instance.DeleteNguyenLieu(Manl);
+                        }    
+                        
                     }
                     NLData.DataSource = NguyenLieu_BLL.Instance.GetListNguyenLieu(0, null);
                     RefreshData();

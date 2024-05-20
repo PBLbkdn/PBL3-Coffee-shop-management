@@ -402,3 +402,4 @@ D:\GameC++\PBL3 - BanChinhThuc\PBL3\obj\Debug\PBL3.csproj.CoreCompileInputs.cach
 D:\GameC++\PBL3 - BanChinhThuc\PBL3\obj\Debug\PBL3.csproj.CopyComplete
 D:\GameC++\PBL3 - BanChinhThuc\PBL3\obj\Debug\PBL3.exe
 D:\GameC++\PBL3 - BanChinhThuc\PBL3\obj\Debug\PBL3.pdb
+D:\GameC++\PBL3 - BanChinhThuc\PBL3\obj\Debug\PBL3.Form1.resources

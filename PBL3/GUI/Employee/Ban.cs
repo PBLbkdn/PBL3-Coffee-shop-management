@@ -54,9 +54,12 @@ namespace PBL3.GUI.Employee
                 else
                 {
                     banData.DataSource = BUS.Ban_BLL.Instance.GetBanByID(Convert.ToInt32(search.Text));
-                    banData.Columns["MaBan"].HeaderText = "Mã bàn";
-                    banData.Columns["TrangThai"].HeaderText = "Trạng thái";
-                    banData.Columns["ViTri"].HeaderText = "Vị trí";
+                    if (banData.Columns["MaBan"] != null)
+                        banData.Columns["MaBan"].HeaderText = "Mã bàn";
+                    if (banData.Columns["TrangThai"] != null)
+                        banData.Columns["TrangThai"].HeaderText = "Trạng thái";
+                    if (banData.Columns["ViTri"] != null)
+                        banData.Columns["ViTri"].HeaderText = "Vị trí";
                     if (banData.Columns["SDT"]!=null)
                     banData.Columns["SDT"].HeaderText = "Số điện thoại của khách đã đặt";
                 }

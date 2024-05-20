@@ -101,7 +101,7 @@
             this.guna2Panel1.Controls.Add(this.label3);
             this.guna2Panel1.Controls.Add(this.label1);
             this.guna2Panel1.Location = new System.Drawing.Point(80, 73);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1680, 858);
             this.guna2Panel1.TabIndex = 1;
@@ -152,7 +152,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.nguyenLieu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.nguyenLieu.ColumnHeadersHeight = 20;
+            this.nguyenLieu.ColumnHeadersHeight = 40;
             this.nguyenLieu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
@@ -183,7 +183,7 @@
             this.nguyenLieu.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nguyenLieu.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.nguyenLieu.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.nguyenLieu.ThemeStyle.HeaderStyle.Height = 20;
+            this.nguyenLieu.ThemeStyle.HeaderStyle.Height = 40;
             this.nguyenLieu.ThemeStyle.ReadOnly = false;
             this.nguyenLieu.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.nguyenLieu.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -271,7 +271,7 @@
             this.cancelButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cancelButton.ForeColor = System.Drawing.Color.Black;
             this.cancelButton.Location = new System.Drawing.Point(1341, 795);
-            this.cancelButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cancelButton.Margin = new System.Windows.Forms.Padding(4);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(215, 59);
             this.cancelButton.TabIndex = 23;
@@ -292,7 +292,7 @@
             this.saveButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.saveButton.ForeColor = System.Drawing.Color.Black;
             this.saveButton.Location = new System.Drawing.Point(1120, 795);
-            this.saveButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.saveButton.Margin = new System.Windows.Forms.Padding(4);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(213, 59);
             this.saveButton.TabIndex = 22;
@@ -303,7 +303,7 @@
             // 
             this.themAnh.Image = global::PBL3.Properties.Resources.ba_chấm;
             this.themAnh.Location = new System.Drawing.Point(1580, 203);
-            this.themAnh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.themAnh.Margin = new System.Windows.Forms.Padding(4);
             this.themAnh.Name = "themAnh";
             this.themAnh.Size = new System.Drawing.Size(51, 46);
             this.themAnh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -315,7 +315,7 @@
             // 
             this.xoaAnh.Image = global::PBL3.Properties.Resources.icon_hủy;
             this.xoaAnh.Location = new System.Drawing.Point(1580, 266);
-            this.xoaAnh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.xoaAnh.Margin = new System.Windows.Forms.Padding(4);
             this.xoaAnh.Name = "xoaAnh";
             this.xoaAnh.Size = new System.Drawing.Size(51, 46);
             this.xoaAnh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -327,7 +327,7 @@
             // 
             this.anhDaiDien.BackColor = System.Drawing.Color.White;
             this.anhDaiDien.Location = new System.Drawing.Point(1091, 116);
-            this.anhDaiDien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.anhDaiDien.Margin = new System.Windows.Forms.Padding(4);
             this.anhDaiDien.Name = "anhDaiDien";
             this.anhDaiDien.Size = new System.Drawing.Size(443, 421);
             this.anhDaiDien.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -358,7 +358,7 @@
             this.nguyenLieuData.DefaultCellStyle = dataGridViewCellStyle6;
             this.nguyenLieuData.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.nguyenLieuData.Location = new System.Drawing.Point(91, 543);
-            this.nguyenLieuData.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nguyenLieuData.Margin = new System.Windows.Forms.Padding(4);
             this.nguyenLieuData.Name = "nguyenLieuData";
             this.nguyenLieuData.RowHeadersVisible = false;
             this.nguyenLieuData.RowHeadersWidth = 51;
@@ -491,7 +491,7 @@
             this.monAnRb.AutoSize = true;
             this.monAnRb.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.monAnRb.Location = new System.Drawing.Point(448, 66);
-            this.monAnRb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.monAnRb.Margin = new System.Windows.Forms.Padding(4);
             this.monAnRb.Name = "monAnRb";
             this.monAnRb.Size = new System.Drawing.Size(103, 32);
             this.monAnRb.TabIndex = 6;
@@ -515,7 +515,7 @@
             this.doUongRb.AutoSize = true;
             this.doUongRb.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.doUongRb.Location = new System.Drawing.Point(260, 66);
-            this.doUongRb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.doUongRb.Margin = new System.Windows.Forms.Padding(4);
             this.doUongRb.Name = "doUongRb";
             this.doUongRb.Size = new System.Drawing.Size(113, 32);
             this.doUongRb.TabIndex = 4;
@@ -584,7 +584,7 @@
             // 
             this.suaMonExit.Image = global::PBL3.Properties.Resources.akar_icons_circle_x_fill;
             this.suaMonExit.Location = new System.Drawing.Point(1761, 15);
-            this.suaMonExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.suaMonExit.Margin = new System.Windows.Forms.Padding(4);
             this.suaMonExit.Name = "suaMonExit";
             this.suaMonExit.Size = new System.Drawing.Size(56, 49);
             this.suaMonExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -597,12 +597,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(156)))), ((int)(((byte)(156)))));
-            this.ClientSize = new System.Drawing.Size(1848, 970);
+            this.ClientSize = new System.Drawing.Size(1440, 1024);
             this.Controls.Add(this.suaMonExit);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "SuaMon";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "SuaMon";

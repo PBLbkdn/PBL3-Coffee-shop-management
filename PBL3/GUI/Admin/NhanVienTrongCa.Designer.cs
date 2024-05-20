@@ -65,13 +65,13 @@
             this.dayTb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.dayTb.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dayTb.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.dayTb.Location = new System.Drawing.Point(639, 108);
-            this.dayTb.Margin = new System.Windows.Forms.Padding(4);
+            this.dayTb.Location = new System.Drawing.Point(852, 133);
+            this.dayTb.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.dayTb.Name = "dayTb";
             this.dayTb.PasswordChar = '\0';
             this.dayTb.PlaceholderText = "";
             this.dayTb.SelectedText = "";
-            this.dayTb.Size = new System.Drawing.Size(100, 28);
+            this.dayTb.Size = new System.Drawing.Size(133, 34);
             this.dayTb.TabIndex = 19;
             // 
             // monthTb
@@ -87,13 +87,13 @@
             this.monthTb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.monthTb.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.monthTb.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.monthTb.Location = new System.Drawing.Point(758, 108);
-            this.monthTb.Margin = new System.Windows.Forms.Padding(4);
+            this.monthTb.Location = new System.Drawing.Point(1011, 133);
+            this.monthTb.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.monthTb.Name = "monthTb";
             this.monthTb.PasswordChar = '\0';
             this.monthTb.PlaceholderText = "";
             this.monthTb.SelectedText = "";
-            this.monthTb.Size = new System.Drawing.Size(100, 28);
+            this.monthTb.Size = new System.Drawing.Size(133, 34);
             this.monthTb.TabIndex = 18;
             // 
             // NVCadata
@@ -101,11 +101,11 @@
             this.NVCadata.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.NVCadata.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.NVCadata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.NVCadata.Location = new System.Drawing.Point(60, 178);
-            this.NVCadata.Margin = new System.Windows.Forms.Padding(2);
+            this.NVCadata.Location = new System.Drawing.Point(80, 219);
+            this.NVCadata.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.NVCadata.Name = "NVCadata";
             this.NVCadata.RowHeadersWidth = 62;
-            this.NVCadata.Size = new System.Drawing.Size(1266, 529);
+            this.NVCadata.Size = new System.Drawing.Size(1688, 651);
             this.NVCadata.TabIndex = 14;
             // 
             // ten
@@ -114,10 +114,10 @@
             this.ten.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(181)))), ((int)(((byte)(181)))));
             this.ten.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ten.ForeColor = System.Drawing.Color.Black;
-            this.ten.Location = new System.Drawing.Point(1103, 104);
-            this.ten.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.ten.Location = new System.Drawing.Point(1471, 128);
+            this.ten.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.ten.Name = "ten";
-            this.ten.Size = new System.Drawing.Size(107, 25);
+            this.ten.Size = new System.Drawing.Size(133, 32);
             this.ten.TabIndex = 48;
             this.ten.Text = "Đơn hàng";
             // 
@@ -133,10 +133,10 @@
             this.clearButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.clearButton.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clearButton.ForeColor = System.Drawing.Color.Black;
-            this.clearButton.Location = new System.Drawing.Point(244, 96);
-            this.clearButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.clearButton.Location = new System.Drawing.Point(325, 118);
+            this.clearButton.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.clearButton.Name = "clearButton";
-            this.clearButton.Size = new System.Drawing.Size(150, 40);
+            this.clearButton.Size = new System.Drawing.Size(200, 49);
             this.clearButton.TabIndex = 21;
             this.clearButton.Text = "Xóa";
             this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
@@ -153,10 +153,10 @@
             this.addButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.addButton.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addButton.ForeColor = System.Drawing.Color.Black;
-            this.addButton.Location = new System.Drawing.Point(60, 96);
-            this.addButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.addButton.Location = new System.Drawing.Point(80, 118);
+            this.addButton.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.addButton.Name = "addButton";
-            this.addButton.Size = new System.Drawing.Size(150, 40);
+            this.addButton.Size = new System.Drawing.Size(200, 49);
             this.addButton.TabIndex = 20;
             this.addButton.Text = "Thêm ";
             this.addButton.Click += new System.EventHandler(this.addButton_Click);
@@ -164,10 +164,10 @@
             // pictureBox10
             // 
             this.pictureBox10.Image = global::PBL3.Properties.Resources.Vector__2_;
-            this.pictureBox10.Location = new System.Drawing.Point(1286, 95);
-            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox10.Location = new System.Drawing.Point(1715, 117);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox10.Size = new System.Drawing.Size(53, 49);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox10.TabIndex = 17;
             this.pictureBox10.TabStop = false;
@@ -180,18 +180,18 @@
             this.guna2Panel1.Controls.Add(this.panel2);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1386, 54);
+            this.guna2Panel1.Size = new System.Drawing.Size(1440, 66);
             this.guna2Panel1.TabIndex = 49;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::PBL3.Properties.Resources.icons8_home_50;
-            this.pictureBox1.Location = new System.Drawing.Point(14, 14);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Location = new System.Drawing.Point(19, 17);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(33, 28);
+            this.pictureBox1.Size = new System.Drawing.Size(44, 34);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 53;
             this.pictureBox1.TabStop = false;
@@ -200,10 +200,10 @@
             // exitCa
             // 
             this.exitCa.Image = global::PBL3.Properties.Resources.nút_tắt;
-            this.exitCa.Location = new System.Drawing.Point(1317, 12);
-            this.exitCa.Margin = new System.Windows.Forms.Padding(4);
+            this.exitCa.Location = new System.Drawing.Point(1756, 15);
+            this.exitCa.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.exitCa.Name = "exitCa";
-            this.exitCa.Size = new System.Drawing.Size(30, 30);
+            this.exitCa.Size = new System.Drawing.Size(40, 37);
             this.exitCa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.exitCa.TabIndex = 2;
             this.exitCa.TabStop = false;
@@ -214,19 +214,19 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(231)))), ((int)(((byte)(231)))));
             this.panel2.Controls.Add(this.pictureBox6);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(60, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Location = new System.Drawing.Point(80, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(180, 54);
+            this.panel2.Size = new System.Drawing.Size(240, 66);
             this.panel2.TabIndex = 0;
             // 
             // pictureBox6
             // 
             this.pictureBox6.Image = global::PBL3.Properties.Resources.Nhân_viên;
-            this.pictureBox6.Location = new System.Drawing.Point(15, 13);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox6.Location = new System.Drawing.Point(20, 16);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(27, 29);
+            this.pictureBox6.Size = new System.Drawing.Size(36, 36);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 2;
             this.pictureBox6.TabStop = false;
@@ -237,10 +237,10 @@
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(231)))), ((int)(((byte)(231)))));
             this.label2.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(49, 15);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(65, 18);
+            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(120, 25);
+            this.label2.Size = new System.Drawing.Size(150, 32);
             this.label2.TabIndex = 0;
             this.label2.Text = "Ca làm việc";
             // 
@@ -257,13 +257,13 @@
             this.year.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.year.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.year.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.year.Location = new System.Drawing.Point(875, 108);
-            this.year.Margin = new System.Windows.Forms.Padding(4);
+            this.year.Location = new System.Drawing.Point(1167, 133);
+            this.year.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.year.Name = "year";
             this.year.PasswordChar = '\0';
             this.year.PlaceholderText = "";
             this.year.SelectedText = "";
-            this.year.Size = new System.Drawing.Size(100, 28);
+            this.year.Size = new System.Drawing.Size(133, 34);
             this.year.TabIndex = 50;
             // 
             // quayLai
@@ -278,20 +278,20 @@
             this.quayLai.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.quayLai.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.quayLai.ForeColor = System.Drawing.Color.Black;
-            this.quayLai.Location = new System.Drawing.Point(60, 717);
-            this.quayLai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.quayLai.Location = new System.Drawing.Point(80, 882);
+            this.quayLai.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.quayLai.Name = "quayLai";
-            this.quayLai.Size = new System.Drawing.Size(170, 52);
+            this.quayLai.Size = new System.Drawing.Size(227, 64);
             this.quayLai.TabIndex = 51;
             this.quayLai.Text = "Quay lại";
             this.quayLai.Click += new System.EventHandler(this.quayLai_Click);
             // 
             // NhanVienTrongCa
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(181)))), ((int)(((byte)(181)))));
-            this.ClientSize = new System.Drawing.Size(1386, 788);
+            this.ClientSize = new System.Drawing.Size(1440, 1024);
             this.Controls.Add(this.quayLai);
             this.Controls.Add(this.year);
             this.Controls.Add(this.guna2Panel1);
@@ -303,7 +303,7 @@
             this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.NVCadata);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Name = "NhanVienTrongCa";
             this.Text = "NhanVienTrongCa";
             ((System.ComponentModel.ISupportInitialize)(this.NVCadata)).EndInit();

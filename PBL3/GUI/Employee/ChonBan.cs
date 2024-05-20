@@ -32,7 +32,7 @@ namespace PBL3.GUI.Employee
             if (Ban_BLL.Instance.GetListBanFree().Count == 0)
             {
                 MessageBox.Show("Không có bàn trống");
-                this.Close();
+                //this.Close();
             }
 
             RefreshData();
@@ -56,7 +56,7 @@ namespace PBL3.GUI.Employee
             if (Ban_BLL.Instance.GetListBanFree().Count == 0)
             {
                 MessageBox.Show("Không có bàn trống");
-                this.Close();
+                //this.Close();
             }
             if (maBan != 0)
             {

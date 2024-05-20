@@ -103,6 +103,28 @@ namespace PBL3.BUS
             }
             return list;
         }
+        public Boolean CheckTrungsdt(string s)
+        {
+            QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
+            foreach (DTO.KhachHang i in db.KhachHangs.ToList())
+            {
+                if (i.SDT == s) return true;
+            }
+            return false;
+        }
+        public Boolean CheckTrungsdtUpdate(string sdtcu, string sdtmoi)
+        {
+            QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
+            DTO.KhachHang kh = GetKHbySDT(sdtcu);
+            if (kh != null)
+            {
+                foreach (DTO.KhachHang i in db.KhachHangs.ToList())
+                {
+                    if (i.SDT == sdtmoi && i.SDT != kh.SDT) return true;
+                }
+            }               
+            return false;
+        }
         public void AddKhachHang(string maso, string hoten, string sdt, string maloaikh)
         {
             KhachHang s = new KhachHang

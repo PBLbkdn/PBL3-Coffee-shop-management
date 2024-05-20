@@ -82,11 +82,19 @@ namespace PBL3.GUI.Employee
             hoaDonData.Columns.Add("Quantity", "Số lượng");
             hoaDonData.Columns.Add("Price", "Đơn giá");
             ShowDB();
-            dataKM.Columns.Add("TenCT", "Tên chương trình");
+            
             if (maKM != 0)
             {
+                dataKM.Columns.Add("TenCT", "Tên chương trình");
                 dataKM.Rows.Add(KhuyenMai_BLL.Instance.GetKMbymaKM(maKM).TenCT);
             }
+            else
+            {
+                dataKM.Columns.Clear();
+                dataKM.Rows.Clear();
+            } 
+                
+
         }
         public void ShowDB()
         {

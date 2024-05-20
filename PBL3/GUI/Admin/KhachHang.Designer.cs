@@ -59,7 +59,7 @@
             this.guna2Panel1.Controls.Add(this.pictureBox4);
             this.guna2Panel1.Controls.Add(this.panel2);
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(5);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1848, 66);
             this.guna2Panel1.TabIndex = 9;
@@ -68,7 +68,7 @@
             // 
             this.pictureBox1.Image = global::PBL3.Properties.Resources.icons8_home_50;
             this.pictureBox1.Location = new System.Drawing.Point(19, 17);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(5);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(44, 34);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -80,7 +80,7 @@
             // 
             this.exitKH.Image = global::PBL3.Properties.Resources.nút_tắt;
             this.exitKH.Location = new System.Drawing.Point(1756, 15);
-            this.exitKH.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.exitKH.Margin = new System.Windows.Forms.Padding(5);
             this.exitKH.Name = "exitKH";
             this.exitKH.Size = new System.Drawing.Size(40, 37);
             this.exitKH.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -92,7 +92,7 @@
             // 
             this.pictureBox4.Image = global::PBL3.Properties.Resources.nút_tắt;
             this.pictureBox4.Location = new System.Drawing.Point(80, 219);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(5);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(40, 37);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -105,7 +105,7 @@
             this.panel2.Controls.Add(this.pictureBox11);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(80, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel2.Margin = new System.Windows.Forms.Padding(5);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(240, 66);
             this.panel2.TabIndex = 0;
@@ -114,7 +114,7 @@
             // 
             this.pictureBox11.Image = global::PBL3.Properties.Resources.icons8_human_30_1;
             this.pictureBox11.Location = new System.Drawing.Point(21, 16);
-            this.pictureBox11.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.pictureBox11.Margin = new System.Windows.Forms.Padding(5);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(36, 36);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -170,7 +170,7 @@
             this.findButton.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.findButton.ForeColor = System.Drawing.Color.Black;
             this.findButton.Location = new System.Drawing.Point(357, 118);
-            this.findButton.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.findButton.Margin = new System.Windows.Forms.Padding(5);
             this.findButton.Name = "findButton";
             this.findButton.Size = new System.Drawing.Size(171, 49);
             this.findButton.TabIndex = 23;
@@ -183,7 +183,7 @@
             this.KHData.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.KHData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.KHData.Location = new System.Drawing.Point(80, 219);
-            this.KHData.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.KHData.Margin = new System.Windows.Forms.Padding(5);
             this.KHData.Name = "KHData";
             this.KHData.RowHeadersWidth = 51;
             this.KHData.Size = new System.Drawing.Size(1688, 651);
@@ -193,7 +193,7 @@
             // 
             this.pictureBox10.Image = global::PBL3.Properties.Resources.Vector__2_;
             this.pictureBox10.Location = new System.Drawing.Point(1715, 118);
-            this.pictureBox10.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(5);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(53, 49);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -226,7 +226,7 @@
             this.dsKH.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dsKH.ForeColor = System.Drawing.Color.Black;
             this.dsKH.Location = new System.Drawing.Point(80, 118);
-            this.dsKH.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.dsKH.Margin = new System.Windows.Forms.Padding(5);
             this.dsKH.Name = "dsKH";
             this.dsKH.Size = new System.Drawing.Size(253, 49);
             this.dsKH.TabIndex = 49;
@@ -238,7 +238,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(181)))), ((int)(((byte)(181)))));
-            this.ClientSize = new System.Drawing.Size(1848, 970);
+            this.ClientSize = new System.Drawing.Size(1440, 1024);
             this.Controls.Add(this.dsKH);
             this.Controls.Add(this.ten);
             this.Controls.Add(this.pictureBox10);
@@ -247,7 +247,7 @@
             this.Controls.Add(this.findButton);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "KhachHang";
             this.Text = "KhachHang";
             this.guna2Panel1.ResumeLayout(false);

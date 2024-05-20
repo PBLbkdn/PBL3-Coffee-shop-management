@@ -68,17 +68,18 @@
             this.guna2Panel1.Controls.Add(this.panel2);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1386, 54);
+            this.guna2Panel1.Size = new System.Drawing.Size(1440, 66);
             this.guna2Panel1.TabIndex = 33;
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::PBL3.Properties.Resources.icons8_home_50;
-            this.pictureBox3.Location = new System.Drawing.Point(13, 14);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox3.Location = new System.Drawing.Point(17, 17);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(5);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(33, 28);
+            this.pictureBox3.Size = new System.Drawing.Size(44, 34);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 56;
             this.pictureBox3.TabStop = false;
@@ -87,9 +88,10 @@
             // donHangExit
             // 
             this.donHangExit.Image = global::PBL3.Properties.Resources.nút_tắt;
-            this.donHangExit.Location = new System.Drawing.Point(1317, 12);
+            this.donHangExit.Location = new System.Drawing.Point(1756, 15);
+            this.donHangExit.Margin = new System.Windows.Forms.Padding(4);
             this.donHangExit.Name = "donHangExit";
-            this.donHangExit.Size = new System.Drawing.Size(30, 30);
+            this.donHangExit.Size = new System.Drawing.Size(40, 37);
             this.donHangExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.donHangExit.TabIndex = 3;
             this.donHangExit.TabStop = false;
@@ -98,9 +100,10 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::PBL3.Properties.Resources.nút_tắt;
-            this.pictureBox4.Location = new System.Drawing.Point(60, 178);
+            this.pictureBox4.Location = new System.Drawing.Point(80, 219);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox4.Size = new System.Drawing.Size(40, 37);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 2;
             this.pictureBox4.TabStop = false;
@@ -110,17 +113,19 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(231)))), ((int)(((byte)(231)))));
             this.panel2.Controls.Add(this.pictureBox11);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(60, 0);
+            this.panel2.Location = new System.Drawing.Point(80, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(260, 54);
+            this.panel2.Size = new System.Drawing.Size(347, 66);
             this.panel2.TabIndex = 0;
             // 
             // pictureBox11
             // 
             this.pictureBox11.Image = global::PBL3.Properties.Resources.icons8_order_48_1;
-            this.pictureBox11.Location = new System.Drawing.Point(26, 12);
+            this.pictureBox11.Location = new System.Drawing.Point(35, 15);
+            this.pictureBox11.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(27, 29);
+            this.pictureBox11.Size = new System.Drawing.Size(36, 36);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox11.TabIndex = 3;
             this.pictureBox11.TabStop = false;
@@ -131,9 +136,10 @@
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(231)))), ((int)(((byte)(231)))));
             this.label2.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(59, 14);
+            this.label2.Location = new System.Drawing.Point(79, 17);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(181, 25);
+            this.label2.Size = new System.Drawing.Size(223, 32);
             this.label2.TabIndex = 0;
             this.label2.Text = "Chi tiết đơn hàng";
             // 
@@ -142,18 +148,20 @@
             this.guna2Panel9.BackColor = System.Drawing.Color.White;
             this.guna2Panel9.Controls.Add(this.MaDonHang);
             this.guna2Panel9.Controls.Add(this.label13);
-            this.guna2Panel9.Location = new System.Drawing.Point(283, 166);
+            this.guna2Panel9.Location = new System.Drawing.Point(377, 204);
+            this.guna2Panel9.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel9.Name = "guna2Panel9";
-            this.guna2Panel9.Size = new System.Drawing.Size(820, 49);
+            this.guna2Panel9.Size = new System.Drawing.Size(1093, 60);
             this.guna2Panel9.TabIndex = 49;
             // 
             // MaDonHang
             // 
             this.MaDonHang.AutoSize = true;
             this.MaDonHang.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaDonHang.Location = new System.Drawing.Point(141, 20);
+            this.MaDonHang.Location = new System.Drawing.Point(188, 25);
+            this.MaDonHang.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.MaDonHang.Name = "MaDonHang";
-            this.MaDonHang.Size = new System.Drawing.Size(56, 20);
+            this.MaDonHang.Size = new System.Drawing.Size(72, 25);
             this.MaDonHang.TabIndex = 1;
             this.MaDonHang.Text = "label12";
             // 
@@ -161,9 +169,10 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(49, 20);
+            this.label13.Location = new System.Drawing.Point(65, 25);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(81, 20);
+            this.label13.Size = new System.Drawing.Size(102, 25);
             this.label13.TabIndex = 0;
             this.label13.Text = "Đơn hàng:";
             // 
@@ -172,18 +181,20 @@
             this.guna2Panel8.BackColor = System.Drawing.Color.White;
             this.guna2Panel8.Controls.Add(this.tongTien);
             this.guna2Panel8.Controls.Add(this.label6);
-            this.guna2Panel8.Location = new System.Drawing.Point(283, 505);
+            this.guna2Panel8.Location = new System.Drawing.Point(377, 622);
+            this.guna2Panel8.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel8.Name = "guna2Panel8";
-            this.guna2Panel8.Size = new System.Drawing.Size(820, 56);
+            this.guna2Panel8.Size = new System.Drawing.Size(1093, 69);
             this.guna2Panel8.TabIndex = 48;
             // 
             // tongTien
             // 
             this.tongTien.AutoSize = true;
             this.tongTien.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tongTien.Location = new System.Drawing.Point(692, 19);
+            this.tongTien.Location = new System.Drawing.Point(923, 23);
+            this.tongTien.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.tongTien.Name = "tongTien";
-            this.tongTien.Size = new System.Drawing.Size(50, 20);
+            this.tongTien.Size = new System.Drawing.Size(63, 25);
             this.tongTien.TabIndex = 1;
             this.tongTien.Text = "label7";
             // 
@@ -191,9 +202,10 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(587, 19);
+            this.label6.Location = new System.Drawing.Point(783, 23);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(48, 20);
+            this.label6.Size = new System.Drawing.Size(60, 25);
             this.label6.TabIndex = 0;
             this.label6.Text = "Tổng:";
             // 
@@ -201,9 +213,10 @@
             // 
             this.guna2Panel7.BackColor = System.Drawing.Color.White;
             this.guna2Panel7.Controls.Add(this.guna2Button1);
-            this.guna2Panel7.Location = new System.Drawing.Point(283, 561);
+            this.guna2Panel7.Location = new System.Drawing.Point(377, 690);
+            this.guna2Panel7.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel7.Name = "guna2Panel7";
-            this.guna2Panel7.Size = new System.Drawing.Size(821, 61);
+            this.guna2Panel7.Size = new System.Drawing.Size(1095, 75);
             this.guna2Panel7.TabIndex = 47;
             // 
             // guna2Button1
@@ -219,9 +232,10 @@
             this.guna2Button1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button1.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button1.Location = new System.Drawing.Point(13, 6);
+            this.guna2Button1.Location = new System.Drawing.Point(17, 7);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(161, 48);
+            this.guna2Button1.Size = new System.Drawing.Size(215, 59);
             this.guna2Button1.TabIndex = 42;
             this.guna2Button1.Text = "Quay lại";
             this.guna2Button1.Click += new System.EventHandler(this.quayLai_Click);
@@ -238,7 +252,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.donHangData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.donHangData.ColumnHeadersHeight = 4;
+            this.donHangData.ColumnHeadersHeight = 20;
             this.donHangData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
@@ -249,11 +263,12 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.donHangData.DefaultCellStyle = dataGridViewCellStyle3;
             this.donHangData.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.donHangData.Location = new System.Drawing.Point(283, 215);
+            this.donHangData.Location = new System.Drawing.Point(377, 265);
+            this.donHangData.Margin = new System.Windows.Forms.Padding(4);
             this.donHangData.Name = "donHangData";
             this.donHangData.RowHeadersVisible = false;
             this.donHangData.RowHeadersWidth = 51;
-            this.donHangData.Size = new System.Drawing.Size(819, 290);
+            this.donHangData.Size = new System.Drawing.Size(1092, 357);
             this.donHangData.TabIndex = 46;
             this.donHangData.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.donHangData.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -267,7 +282,7 @@
             this.donHangData.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.donHangData.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.donHangData.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.donHangData.ThemeStyle.HeaderStyle.Height = 4;
+            this.donHangData.ThemeStyle.HeaderStyle.Height = 20;
             this.donHangData.ThemeStyle.ReadOnly = false;
             this.donHangData.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.donHangData.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -279,16 +294,17 @@
             // 
             // ChiTietDonHang
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(181)))), ((int)(((byte)(181)))));
-            this.ClientSize = new System.Drawing.Size(1386, 788);
+            this.ClientSize = new System.Drawing.Size(1440, 1024);
             this.Controls.Add(this.guna2Panel9);
             this.Controls.Add(this.guna2Panel8);
             this.Controls.Add(this.guna2Panel7);
             this.Controls.Add(this.donHangData);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ChiTietDonHang";
             this.Text = "ChiTietDonHang";
             this.guna2Panel1.ResumeLayout(false);

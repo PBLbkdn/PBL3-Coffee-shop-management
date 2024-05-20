@@ -111,7 +111,7 @@
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.anhDaiDien);
             this.panel1.Location = new System.Drawing.Point(1091, 127);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(443, 421);
             this.panel1.TabIndex = 30;
@@ -201,7 +201,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.nguyenLieu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.nguyenLieu.ColumnHeadersHeight = 20;
+            this.nguyenLieu.ColumnHeadersHeight = 40;
             this.nguyenLieu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
@@ -231,7 +231,7 @@
             this.nguyenLieu.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nguyenLieu.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.nguyenLieu.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.nguyenLieu.ThemeStyle.HeaderStyle.Height = 20;
+            this.nguyenLieu.ThemeStyle.HeaderStyle.Height = 40;
             this.nguyenLieu.ThemeStyle.ReadOnly = false;
             this.nguyenLieu.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.nguyenLieu.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -566,7 +566,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(156)))), ((int)(((byte)(156)))));
-            this.ClientSize = new System.Drawing.Size(1848, 970);
+            this.ClientSize = new System.Drawing.Size(1440, 1024);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.guna2Panel1);

@@ -29,6 +29,14 @@
         private void InitializeComponent()
         {
             this.tenKhuyenMai = new Guna.UI2.WinForms.Guna2Panel();
+            this.KH = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.KHM = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.KHTT = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.endDay = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.startDay = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.cancelButton = new Guna.UI2.WinForms.Guna2Button();
             this.saveButton = new Guna.UI2.WinForms.Guna2Button();
@@ -44,17 +52,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.SuaKMExit = new System.Windows.Forms.PictureBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.endDay = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.startDay = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.KH = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.KHM = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.KHTT = new Guna.UI2.WinForms.Guna2CheckBox();
             this.tenKhuyenMai.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.SuaKMExit)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SuaKMExit)).BeginInit();
             this.SuspendLayout();
             // 
             // tenKhuyenMai
@@ -83,6 +83,132 @@
             this.tenKhuyenMai.Name = "tenKhuyenMai";
             this.tenKhuyenMai.Size = new System.Drawing.Size(1680, 858);
             this.tenKhuyenMai.TabIndex = 3;
+            // 
+            // KH
+            // 
+            this.KH.AutoSize = true;
+            this.KH.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.KH.CheckedState.BorderRadius = 0;
+            this.KH.CheckedState.BorderThickness = 0;
+            this.KH.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.KH.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.KH.Location = new System.Drawing.Point(136, 576);
+            this.KH.Name = "KH";
+            this.KH.Size = new System.Drawing.Size(141, 32);
+            this.KH.TabIndex = 32;
+            this.KH.Text = "Khách hàng";
+            this.KH.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.KH.UncheckedState.BorderRadius = 0;
+            this.KH.UncheckedState.BorderThickness = 0;
+            this.KH.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            // 
+            // KHM
+            // 
+            this.KHM.AutoSize = true;
+            this.KHM.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.KHM.CheckedState.BorderRadius = 0;
+            this.KHM.CheckedState.BorderThickness = 0;
+            this.KHM.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.KHM.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.KHM.Location = new System.Drawing.Point(136, 520);
+            this.KHM.Name = "KHM";
+            this.KHM.Size = new System.Drawing.Size(182, 32);
+            this.KHM.TabIndex = 31;
+            this.KHM.Text = "Khách hàng mới";
+            this.KHM.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.KHM.UncheckedState.BorderRadius = 0;
+            this.KHM.UncheckedState.BorderThickness = 0;
+            this.KHM.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            // 
+            // KHTT
+            // 
+            this.KHTT.AutoSize = true;
+            this.KHTT.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.KHTT.CheckedState.BorderRadius = 0;
+            this.KHTT.CheckedState.BorderThickness = 0;
+            this.KHTT.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.KHTT.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.KHTT.Location = new System.Drawing.Point(136, 465);
+            this.KHTT.Name = "KHTT";
+            this.KHTT.Size = new System.Drawing.Size(236, 32);
+            this.KHTT.TabIndex = 30;
+            this.KHTT.Text = "Khách hàng thân thiết";
+            this.KHTT.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.KHTT.UncheckedState.BorderRadius = 0;
+            this.KHTT.UncheckedState.BorderThickness = 0;
+            this.KHTT.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.endDay);
+            this.groupBox1.Controls.Add(this.startDay);
+            this.groupBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.groupBox1.Location = new System.Drawing.Point(925, 190);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Size = new System.Drawing.Size(645, 146);
+            this.groupBox1.TabIndex = 27;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Thời gian áp dụng";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.label6.Location = new System.Drawing.Point(359, 68);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(49, 28);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "Đến";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(25, 68);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 28);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Từ";
+            // 
+            // endDay
+            // 
+            this.endDay.BorderRadius = 10;
+            this.endDay.Checked = true;
+            this.endDay.CustomFormat = "hh:mm MM/dd/yyyy";
+            this.endDay.FillColor = System.Drawing.Color.White;
+            this.endDay.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.endDay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.endDay.Location = new System.Drawing.Point(430, 60);
+            this.endDay.Margin = new System.Windows.Forms.Padding(4);
+            this.endDay.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.endDay.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.endDay.Name = "endDay";
+            this.endDay.Size = new System.Drawing.Size(204, 36);
+            this.endDay.TabIndex = 1;
+            this.endDay.Value = new System.DateTime(2024, 4, 21, 20, 49, 1, 179);
+            // 
+            // startDay
+            // 
+            this.startDay.BorderRadius = 10;
+            this.startDay.Checked = true;
+            this.startDay.CustomFormat = "hh:mm MM/dd/yyyy";
+            this.startDay.FillColor = System.Drawing.Color.White;
+            this.startDay.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.startDay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.startDay.Location = new System.Drawing.Point(95, 60);
+            this.startDay.Margin = new System.Windows.Forms.Padding(4);
+            this.startDay.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.startDay.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.startDay.Name = "startDay";
+            this.startDay.Size = new System.Drawing.Size(205, 36);
+            this.startDay.TabIndex = 0;
+            this.startDay.Value = new System.DateTime(2024, 4, 21, 20, 49, 1, 179);
             // 
             // label7
             // 
@@ -324,138 +450,12 @@
             this.SuaKMExit.TabStop = false;
             this.SuaKMExit.Click += new System.EventHandler(this.SuaKMExit_Click);
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.endDay);
-            this.groupBox1.Controls.Add(this.startDay);
-            this.groupBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.groupBox1.Location = new System.Drawing.Point(925, 190);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(645, 146);
-            this.groupBox1.TabIndex = 27;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Thời gian áp dụng";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(359, 68);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(49, 28);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Đến";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(25, 68);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 28);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Từ";
-            // 
-            // endDay
-            // 
-            this.endDay.BorderRadius = 10;
-            this.endDay.Checked = true;
-            this.endDay.CustomFormat = "hh:mm MM/dd/yyyy";
-            this.endDay.FillColor = System.Drawing.Color.White;
-            this.endDay.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.endDay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.endDay.Location = new System.Drawing.Point(430, 60);
-            this.endDay.Margin = new System.Windows.Forms.Padding(4);
-            this.endDay.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.endDay.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.endDay.Name = "endDay";
-            this.endDay.Size = new System.Drawing.Size(204, 36);
-            this.endDay.TabIndex = 1;
-            this.endDay.Value = new System.DateTime(2024, 4, 21, 20, 49, 1, 179);
-            // 
-            // startDay
-            // 
-            this.startDay.BorderRadius = 10;
-            this.startDay.Checked = true;
-            this.startDay.CustomFormat = "hh:mm MM/dd/yyyy";
-            this.startDay.FillColor = System.Drawing.Color.White;
-            this.startDay.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.startDay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.startDay.Location = new System.Drawing.Point(95, 60);
-            this.startDay.Margin = new System.Windows.Forms.Padding(4);
-            this.startDay.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.startDay.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.startDay.Name = "startDay";
-            this.startDay.Size = new System.Drawing.Size(205, 36);
-            this.startDay.TabIndex = 0;
-            this.startDay.Value = new System.DateTime(2024, 4, 21, 20, 49, 1, 179);
-            // 
-            // KH
-            // 
-            this.KH.AutoSize = true;
-            this.KH.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.KH.CheckedState.BorderRadius = 0;
-            this.KH.CheckedState.BorderThickness = 0;
-            this.KH.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.KH.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.KH.Location = new System.Drawing.Point(136, 576);
-            this.KH.Name = "KH";
-            this.KH.Size = new System.Drawing.Size(141, 32);
-            this.KH.TabIndex = 32;
-            this.KH.Text = "Khách hàng";
-            this.KH.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.KH.UncheckedState.BorderRadius = 0;
-            this.KH.UncheckedState.BorderThickness = 0;
-            this.KH.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            // 
-            // KHM
-            // 
-            this.KHM.AutoSize = true;
-            this.KHM.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.KHM.CheckedState.BorderRadius = 0;
-            this.KHM.CheckedState.BorderThickness = 0;
-            this.KHM.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.KHM.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.KHM.Location = new System.Drawing.Point(136, 520);
-            this.KHM.Name = "KHM";
-            this.KHM.Size = new System.Drawing.Size(182, 32);
-            this.KHM.TabIndex = 31;
-            this.KHM.Text = "Khách hàng mới";
-            this.KHM.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.KHM.UncheckedState.BorderRadius = 0;
-            this.KHM.UncheckedState.BorderThickness = 0;
-            this.KHM.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            // 
-            // KHTT
-            // 
-            this.KHTT.AutoSize = true;
-            this.KHTT.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.KHTT.CheckedState.BorderRadius = 0;
-            this.KHTT.CheckedState.BorderThickness = 0;
-            this.KHTT.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.KHTT.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.KHTT.Location = new System.Drawing.Point(136, 465);
-            this.KHTT.Name = "KHTT";
-            this.KHTT.Size = new System.Drawing.Size(236, 32);
-            this.KHTT.TabIndex = 30;
-            this.KHTT.Text = "Khách hàng thân thiết";
-            this.KHTT.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.KHTT.UncheckedState.BorderRadius = 0;
-            this.KHTT.UncheckedState.BorderThickness = 0;
-            this.KHTT.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            // 
             // SuaKhuyenMai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(156)))), ((int)(((byte)(156)))));
-            this.ClientSize = new System.Drawing.Size(1848, 970);
+            this.ClientSize = new System.Drawing.Size(1440, 1024);
             this.Controls.Add(this.SuaKMExit);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tenKhuyenMai);
@@ -463,12 +463,11 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "SuaKhuyenMai";
             this.Text = "SuaKhuyenMai";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.tenKhuyenMai.ResumeLayout(false);
             this.tenKhuyenMai.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.SuaKMExit)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SuaKMExit)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -45,7 +45,14 @@ namespace PBL3.GUI.Employee
                 MessageBox.Show("Số điện thoại phải có 10 chữ số", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+
+            if (KhachHang_BLL.Instance.CheckTrungsdtUpdate(this.Sdt,  sdtKH.Text))
+            {
+                MessageBox.Show("Số điện thoại này đã trùng với khách hàng đã có", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             KhachHang_BLL.Instance.EditKhachHang(MaKH, tenKhachHang.Text, sdtKH.Text, MaLKH);
+            MessageBox.Show("Cập nhật thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
         }
 

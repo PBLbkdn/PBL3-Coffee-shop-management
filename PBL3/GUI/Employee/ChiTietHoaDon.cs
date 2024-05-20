@@ -40,16 +40,22 @@ namespace PBL3.GUI.Employee
             if (ChiTietHoaDon_BLL.Instance.GetListChiTietHoaDonByMaHD(maHD)[0].MaKM != null)
             {
                 DTO.KhuyenMai km = KhuyenMai_BLL.Instance.GetKhuyenMai((int)ChiTietHoaDon_BLL.Instance.GetListChiTietHoaDonByMaHD(maHD)[0].MaKM);
-                tenKM.Text = km.TenCT;
-                decimal gtkm = (decimal)km.GiaTriKM;
-                if(km.GiaTriDHToiThieu!=null)
+
+                if (km != null)
                 {
-                    moTa.Text = "Giảm "+ gtkm *100 + "%  cho đơn hàng có giá trị trên " + km.GiaTriDHToiThieu + " đồng";
+                    tenKM.Text = km.TenCT;
+                    decimal gtkm = (decimal)km.GiaTriKM;
+                    if (km.GiaTriDHToiThieu != null)
+                    {
+                        moTa.Text = "Giảm " + gtkm * 100 + "%  cho đơn hàng có giá trị trên " + km.GiaTriDHToiThieu + " đồng";
+                    }
+                    else
+                    {
+                        moTa.Text = "Giảm " + gtkm * 100 + "% cho đơn hàng";
+                    }
                 }
-                else
-                {
-                    moTa.Text = "Giảm " + gtkm * 100 + "% cho đơn hàng";
-                }
+                else { kmpanel.Visible = false; }
+                
             }
         }
 

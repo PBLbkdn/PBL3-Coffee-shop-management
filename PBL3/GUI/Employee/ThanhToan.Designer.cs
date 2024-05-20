@@ -101,7 +101,7 @@
             this.guna2Panel1.Controls.Add(this.pictureBox4);
             this.guna2Panel1.Controls.Add(this.panel2);
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1848, 66);
             this.guna2Panel1.TabIndex = 12;
@@ -110,7 +110,7 @@
             // 
             this.pictureBox3.Image = global::PBL3.Properties.Resources.icons8_home_50;
             this.pictureBox3.Location = new System.Drawing.Point(19, 17);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(5);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(44, 34);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -122,7 +122,7 @@
             // 
             this.thanhToanExit.Image = global::PBL3.Properties.Resources.nút_tắt;
             this.thanhToanExit.Location = new System.Drawing.Point(1756, 15);
-            this.thanhToanExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.thanhToanExit.Margin = new System.Windows.Forms.Padding(4);
             this.thanhToanExit.Name = "thanhToanExit";
             this.thanhToanExit.Size = new System.Drawing.Size(40, 37);
             this.thanhToanExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -134,7 +134,7 @@
             // 
             this.pictureBox4.Image = global::PBL3.Properties.Resources.nút_tắt;
             this.pictureBox4.Location = new System.Drawing.Point(80, 219);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(40, 37);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -147,7 +147,7 @@
             this.panel2.Controls.Add(this.pictureBox11);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(80, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(240, 66);
             this.panel2.TabIndex = 0;
@@ -156,7 +156,7 @@
             // 
             this.pictureBox11.Image = global::PBL3.Properties.Resources.Icon_order;
             this.pictureBox11.Location = new System.Drawing.Point(21, 16);
-            this.pictureBox11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox11.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(36, 36);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -283,7 +283,7 @@
             this.KMData.Controls.Add(this.pictureBox1);
             this.KMData.Controls.Add(this.label5);
             this.KMData.Location = new System.Drawing.Point(101, 329);
-            this.KMData.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.KMData.Margin = new System.Windows.Forms.Padding(4);
             this.KMData.Name = "KMData";
             this.KMData.Size = new System.Drawing.Size(447, 60);
             this.KMData.TabIndex = 34;
@@ -292,7 +292,7 @@
             // 
             this.pictureBox1.Image = global::PBL3.Properties.Resources.carbon_gift;
             this.pictureBox1.Location = new System.Drawing.Point(17, 10);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(43, 39);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -316,7 +316,7 @@
             this.guna2Panel6.Controls.Add(this.guna2DataGridView1);
             this.guna2Panel6.Controls.Add(this.apDungButton);
             this.guna2Panel6.Location = new System.Drawing.Point(101, 329);
-            this.guna2Panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel6.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel6.Name = "guna2Panel6";
             this.guna2Panel6.Size = new System.Drawing.Size(447, 561);
             this.guna2Panel6.TabIndex = 36;
@@ -389,7 +389,7 @@
             this.apDungButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.apDungButton.ForeColor = System.Drawing.Color.Black;
             this.apDungButton.Location = new System.Drawing.Point(215, 486);
-            this.apDungButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.apDungButton.Margin = new System.Windows.Forms.Padding(4);
             this.apDungButton.Name = "apDungButton";
             this.apDungButton.Size = new System.Drawing.Size(215, 59);
             this.apDungButton.TabIndex = 41;
@@ -420,7 +420,7 @@
             this.donHangData.DefaultCellStyle = dataGridViewCellStyle6;
             this.donHangData.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.donHangData.Location = new System.Drawing.Point(625, 389);
-            this.donHangData.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.donHangData.Margin = new System.Windows.Forms.Padding(4);
             this.donHangData.Name = "donHangData";
             this.donHangData.ReadOnly = true;
             this.donHangData.RowHeadersVisible = false;
@@ -463,7 +463,7 @@
             this.backButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backButton.ForeColor = System.Drawing.Color.Black;
             this.backButton.Location = new System.Drawing.Point(860, 7);
-            this.backButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.backButton.Margin = new System.Windows.Forms.Padding(4);
             this.backButton.Name = "backButton";
             this.backButton.Size = new System.Drawing.Size(215, 59);
             this.backButton.TabIndex = 42;
@@ -484,7 +484,7 @@
             this.okButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.okButton.ForeColor = System.Drawing.Color.Black;
             this.okButton.Location = new System.Drawing.Point(13, 7);
-            this.okButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.okButton.Margin = new System.Windows.Forms.Padding(4);
             this.okButton.Name = "okButton";
             this.okButton.Size = new System.Drawing.Size(292, 59);
             this.okButton.TabIndex = 41;
@@ -497,7 +497,7 @@
             this.guna2Panel7.Controls.Add(this.backButton);
             this.guna2Panel7.Controls.Add(this.okButton);
             this.guna2Panel7.Location = new System.Drawing.Point(625, 815);
-            this.guna2Panel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel7.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel7.Name = "guna2Panel7";
             this.guna2Panel7.Size = new System.Drawing.Size(1095, 75);
             this.guna2Panel7.TabIndex = 43;
@@ -510,7 +510,7 @@
             this.guna2Panel8.Controls.Add(this.label7);
             this.guna2Panel8.Controls.Add(this.label6);
             this.guna2Panel8.Location = new System.Drawing.Point(625, 746);
-            this.guna2Panel8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel8.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel8.Name = "guna2Panel8";
             this.guna2Panel8.Size = new System.Drawing.Size(1093, 69);
             this.guna2Panel8.TabIndex = 44;
@@ -572,7 +572,7 @@
             this.guna2Panel9.Controls.Add(this.label12);
             this.guna2Panel9.Controls.Add(this.label13);
             this.guna2Panel9.Location = new System.Drawing.Point(625, 329);
-            this.guna2Panel9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel9.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel9.Name = "guna2Panel9";
             this.guna2Panel9.Size = new System.Drawing.Size(1093, 60);
             this.guna2Panel9.TabIndex = 45;
@@ -669,7 +669,7 @@
             // 
             this.pictureBox10.Image = global::PBL3.Properties.Resources.Vector__2_;
             this.pictureBox10.Location = new System.Drawing.Point(1713, 106);
-            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(53, 49);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -741,7 +741,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(181)))), ((int)(((byte)(181)))));
-            this.ClientSize = new System.Drawing.Size(1848, 970);
+            this.ClientSize = new System.Drawing.Size(1440, 1024);
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.dsNV);
             this.Controls.Add(this.label18);
@@ -761,7 +761,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Thanh";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.guna2Panel1.ResumeLayout(false);
