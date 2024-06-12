@@ -430,7 +430,6 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ThongTinNhanVien";
             this.Text = "ThongTinNhanVien";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.ThongTinNhanVien_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();

@@ -342,7 +342,6 @@
             this.Name = "DatMon";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "DatMon";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.TDExit)).EndInit();

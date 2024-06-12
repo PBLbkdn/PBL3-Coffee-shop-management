@@ -304,7 +304,6 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ChinhSuaTrangThaiBan";
             this.Text = "ChinhSuaTrangThaiBan";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.ChinhSuaTrangThaiBan_Load);
             this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();

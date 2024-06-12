@@ -294,7 +294,6 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "NguyenLieu";
             this.Text = "NguyenLieu";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.NguyenLieu_Load);
             this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

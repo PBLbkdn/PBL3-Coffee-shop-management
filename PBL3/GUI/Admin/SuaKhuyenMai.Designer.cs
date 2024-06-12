@@ -463,7 +463,6 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "SuaKhuyenMai";
             this.Text = "SuaKhuyenMai";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.tenKhuyenMai.ResumeLayout(false);
             this.tenKhuyenMai.PerformLayout();
             this.groupBox1.ResumeLayout(false);

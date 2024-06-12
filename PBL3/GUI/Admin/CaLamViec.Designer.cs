@@ -1079,7 +1079,6 @@
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "CaLamViec";
             this.Text = "CaLamViec";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.CaLamViec_Load);
             this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.exitCa)).EndInit();

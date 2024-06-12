@@ -342,7 +342,6 @@
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Ban";
             this.Text = "Ban";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.banExit)).EndInit();

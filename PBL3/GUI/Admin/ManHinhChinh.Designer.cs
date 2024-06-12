@@ -335,7 +335,6 @@
             this.Name = "ManHinhChinh";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();

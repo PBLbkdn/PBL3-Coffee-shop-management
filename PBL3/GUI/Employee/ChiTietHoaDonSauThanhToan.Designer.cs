@@ -560,7 +560,6 @@
             this.Name = "ChiTietHoaDonSauThanhToan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "ChiTietHoaDonSauThanhToan";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.guna2Panel8.ResumeLayout(false);
             this.guna2Panel8.PerformLayout();
             this.guna2Panel7.ResumeLayout(false);
