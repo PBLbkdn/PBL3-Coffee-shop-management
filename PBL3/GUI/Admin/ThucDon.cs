@@ -81,7 +81,9 @@ namespace PBL3.GUI
             int Masp = 0;
             if (ThucDonData.SelectedRows.Count != 1)
             {
-                MessageBox.Show("Hãy chọn 1 sản phẩm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show("Hãy chọn 1 sản phẩm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ThatBai f3 = new ThatBai("Hãy chọn 1 sản phẩm");
+                f3.ShowDialog();
                 return;
             }
             if (ThucDonData.SelectedRows.Count == 1)
@@ -101,7 +103,9 @@ namespace PBL3.GUI
         {
             if (ThucDonData.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Vui lòng chọn sản phẩm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show("Vui lòng chọn sản phẩm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ThatBai f3 = new ThatBai("Vui lòng chọn sản phẩm");
+                f3.ShowDialog();
                 return;
             }
             DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa sản phẩm này không?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -146,14 +150,18 @@ namespace PBL3.GUI
             string s = findTextbox.Text;
             if (s == "")
             {
-                MessageBox.Show("Tên món không được trống!");
+                //MessageBox.Show("Tên món không được trống!");
+                ThatBai f3 = new ThatBai("Tên món không được trống!");
+                f3.ShowDialog();
                 return;
             }
             foreach (char c in s)
             {
                 if (char.IsDigit(c))
                 {
-                    MessageBox.Show("Tên món không hợp lệ");
+                    //MessageBox.Show("Tên món không hợp lệ");
+                    ThatBai f3 = new ThatBai("Tên món không hợp lệ!");
+                    f3.ShowDialog();
                     return;
                 }
             }

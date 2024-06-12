@@ -31,7 +31,9 @@ namespace PBL3.GUI.Employee
         {
             if (Ban_BLL.Instance.GetListBanFree().Count == 0)
             {
-                MessageBox.Show("Hiện tại quán không có bàn trống");
+                //MessageBox.Show("Hiện tại quán không có bàn trống");
+                ThatBai f3 = new ThatBai("Hiện tại quán không có bàn trống");
+                f3.ShowDialog();
                 return;
             }
             DatMon f = new DatMon(maNV);

@@ -52,7 +52,9 @@ namespace PBL3.GUI
         {
             if (maNVCb.SelectedItem == null)
             {
-                MessageBox.Show("Chọn nhân viên cần thêm");
+                //MessageBox.Show("Chọn nhân viên cần thêm");
+                ThatBai f3 = new ThatBai("Chọn nhân viên cần thêm");
+                f3.ShowDialog();
                 return;
             }
             else
@@ -60,13 +62,17 @@ namespace PBL3.GUI
                 bool test = NhanVien_BLL.Instance.isValidCaTruc(Convert.ToInt32(maNVCb.SelectedItem), MaCa, Day);
                 if (test == false)
                 {
-                    MessageBox.Show("Nhân viên đã có trong ca trực");
+                   // MessageBox.Show("Nhân viên đã có trong ca trực");
+                    ThatBai f3 = new ThatBai("Nhân viên đã có trong ca trực");
+                    f3.ShowDialog();
                     return;
                 }
                 else
                 {
                     CaTruc_BLL.Instance.AddNhanVienToCaTruc(Convert.ToInt32(maNVCb.SelectedItem), MaCa, Day.ToString());
-                    MessageBox.Show("Thêm nhân viên vào ca thành công");
+                    //MessageBox.Show("Thêm nhân viên vào ca thành công");
+                    ThanhCong f = new ThanhCong("Thêm nhân viên vào ca thành công");
+                    f.ShowDialog();
                     this.Close();
                 }
             }

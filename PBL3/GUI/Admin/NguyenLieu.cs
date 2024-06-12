@@ -73,7 +73,9 @@ namespace PBL3.GUI.Admin
         {
             if(NLData.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Vui lòng chọn nguyên liệu cần sửa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //MessageBox.Show("Vui lòng chọn nguyên liệu cần sửa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                ThatBai f1 = new ThatBai("Vui lòng chọn nguyên liệu cần sửa!");
+                f1.ShowDialog();
                 return;
             }
             int Manl = 0;
@@ -94,7 +96,9 @@ namespace PBL3.GUI.Admin
         {
             if (NLData.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Vui lòng chọn 1 nguyên liệu!", "Xác nhận xóa", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //MessageBox.Show("Vui lòng chọn 1 nguyên liệu!", "Xác nhận xóa", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ThatBai f1 = new ThatBai("Vui lòng chọn 1 nguyên liệu!");
+                f1.ShowDialog();
                 return;
             }    
             DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa nguyên liệu này không?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -108,7 +112,9 @@ namespace PBL3.GUI.Admin
                         DTO.NguyenLieu n = NguyenLieu_BLL.Instance.GetNLbymaNL(Manl);
                         if (n.SLTonKho > 0)
                         {
-                            MessageBox.Show("Vẫn còn nguyên liệu " + n.TenNL + "! Không thể xóa.");
+                            //MessageBox.Show("Vẫn còn nguyên liệu " + n.TenNL + "! Không thể xóa.");
+                            ThatBai f1 = new ThatBai("Vẫn còn nguyên liệu " + n.TenNL + "! Không thể xóa.");
+                            f1.ShowDialog();
                         }    
                         else
                         {
@@ -133,7 +139,9 @@ namespace PBL3.GUI.Admin
             string txt = nameNLTb.Text;
             if (txt == "")
             {
-                MessageBox.Show("Vui lòng nhập tên nguyên liệu cần tìm!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //MessageBox.Show("Vui lòng nhập tên nguyên liệu cần tìm!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                ThatBai f1 = new ThatBai("Vui lòng nhập tên nguyên liệu cần tìm!");
+                f1.ShowDialog();
             }
             NLData.DataSource = NguyenLieu_BLL.Instance.GetListNguyenLieu(0, txt);
             RefreshData();

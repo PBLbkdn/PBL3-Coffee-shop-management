@@ -1,5 +1,6 @@
 ﻿using PBL3.BUS;
 using PBL3.DTO;
+using PBL3.GUI;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -78,12 +79,16 @@ namespace PBL3.BUS
                 }
                 else
                 {
-                    MessageBox.Show("Mật khẩu mới không trùng khớp. Vui lòng nhập lại.");
+                    //MessageBox.Show("Mật khẩu mới không trùng khớp. Vui lòng nhập lại.");
+                    ThatBai f3 = new ThatBai("Mật khẩu mới không trùng khớp. Vui lòng nhập lại");
+                    f3.ShowDialog();
                 }
             }
             else
             {
-                MessageBox.Show("Mật khẩu cũ không đúng. Vui lòng nhập lại.");
+                //MessageBox.Show("Mật khẩu cũ không đúng. Vui lòng nhập lại.");
+                ThatBai f3 = new ThatBai("Mật khẩu cũ không đúng. Vui lòng nhập lại");
+                f3.ShowDialog();
             }
         }
         public void DeleteTaiKhoan(int id)

@@ -32,14 +32,18 @@ namespace PBL3.GUI.Admin
         {
             if (!decimal.TryParse(textBox1.Text, out decimal soLuong) || Convert.ToDecimal(textBox1.Text) < 0)
             {
-                MessageBox.Show("Vui lòng nhập số lượng hợp lệ!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //MessageBox.Show("Vui lòng nhập số lượng hợp lệ!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                ThatBai f1 = new ThatBai("Vui lòng nhập số lượng hợp lệ!");
+                f1.ShowDialog();
                 return;
             }
 
             SoLuong = soLuong;
             if (SoLuong > NguyenLieu_BLL.Instance.GetNLbymaNL(manl).SLTonKho)
             {
-                MessageBox.Show("Số lượng nhập vượt quá số lượng tồn kho!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //MessageBox.Show("Số lượng nhập vượt quá số lượng tồn kho!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                ThatBai f1 = new ThatBai("Số lượng nhập vượt quá số lượng tồn kho!");
+                f1.ShowDialog();
                 return;
             }
             DialogResult = DialogResult.OK;

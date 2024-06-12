@@ -53,13 +53,17 @@ namespace PBL3.GUI.Employee
             {
                 Ban_BLL.Instance.EditBan(maBan, "Bàn trống", "");
 
-                MessageBox.Show("Chỉnh sửa trạng thái bàn thành công");
+               // MessageBox.Show("Chỉnh sửa trạng thái bàn thành công");
+                ThanhCong f = new ThanhCong("Chỉnh sửa trạng thái bàn thành công");
+                f.ShowDialog();
             }
             else if(DaDat.Checked )
             {
                 if(Ban_BLL.Instance.GetTrangThaiBan(maBan)==1)
                 {
-                    MessageBox.Show("Không thể chuyển trạng thái bàn bận thành bàn đã được đặt trước");
+                    //MessageBox.Show("Không thể chuyển trạng thái bàn bận thành bàn đã được đặt trước");
+                    ThatBai f3 = new ThatBai("Không thể chuyển trạng thái bàn bận thành bàn đã được đặt trước");
+                    f3.ShowDialog();
                     return;
                 }
                 DatBan datBan = new DatBan(maNV, maBan);

@@ -55,7 +55,9 @@ namespace PBL3.GUI.Employee
         {
             if (matKhauMoi.Text.Equals("") || matKhauCu.Text.Equals("") || nhapLaiMK.Text.Equals(""))
             {
-                MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
+                //MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
+                ThatBai f3 = new ThatBai("Vui lòng nhập đầy đủ thông tin");
+                f3.ShowDialog();
                 return;
             }
             TaiKhoan_BLL.Instance.EditTaiKhoanNV(maNV1.ToString(), matKhauCu.Text, tenTK.Text, matKhauMoi.Text, nhapLaiMK.Text);

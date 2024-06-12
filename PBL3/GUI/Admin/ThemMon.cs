@@ -116,7 +116,9 @@ namespace PBL3.GUI
                     {
                         if (row.Cells[0].Value.ToString() == manl)
                         {
-                            MessageBox.Show("Nguyên liệu đã tồn tại trong bảng định lượng!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            //MessageBox.Show("Nguyên liệu đã tồn tại trong bảng định lượng!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            ThatBai f3 = new ThatBai("Nguyên liệu đã tồn tại trong bảng định lượng!");
+                            f3.ShowDialog();
                             daTonTai = true;
                             return;
                         }
@@ -151,37 +153,49 @@ namespace PBL3.GUI
             {
                 if (!char.IsDigit(c))
                 {
-                    MessageBox.Show("Giá bán không hợp lệ!");
+                    //MessageBox.Show("Giá bán không hợp lệ!");
+                    ThatBai f3 = new ThatBai("Giá bán không hợp lệ!");
+                    f3.ShowDialog();
                     return;
                 }
             }
             string s1 = tenMon.Text;
             if (s1 == "")
             {
-                MessageBox.Show("Tên món không được trống!");
+                //MessageBox.Show("Tên món không được trống!");
+                ThatBai f3 = new ThatBai("Tên món không được trống!");
+                f3.ShowDialog();
                 return;
             }   
             if (SanPham_BLL.Instance.CheckTrungName(s1))
             {
-                MessageBox.Show("Tên món trùng với món đã có!");
+                //MessageBox.Show("Tên món không được trống!");
+                ThatBai f3 = new ThatBai("Tên món không được trống!");
+                f3.ShowDialog();
                 return;
             }    
             foreach (char c in s1)
             {
                 if (char.IsDigit(c))
                 {
-                    MessageBox.Show("Tên món sai định dạng. Không được chứa các kí tự số!");
+                    //MessageBox.Show("Tên món sai định dạng. Không được chứa các kí tự số!");
+                    ThatBai f3 = new ThatBai("Tên món sai định dạng. Không được chứa các kí tự số!");
+                    f3.ShowDialog();
                     return;
                 }
             }
             if (string.IsNullOrEmpty(duongdananh))
             {
-                MessageBox.Show("Vui lòng chọn ảnh cho sản phẩm!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //MessageBox.Show("Vui lòng chọn ảnh cho sản phẩm!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ThatBai f3 = new ThatBai("Vui lòng chọn ảnh cho sản phẩm!");
+                f3.ShowDialog();
                 return;
             }
             if (dinhLuong.Rows.Count == 1)
             {
-                MessageBox.Show("Vui lòng thêm nguyên liệu vào bảng định lượng!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //MessageBox.Show("Vui lòng thêm nguyên liệu vào bảng định lượng!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ThatBai f3 = new ThatBai("Vui lòng thêm nguyên liệu vào bảng định lượng!");
+                f3.ShowDialog();
                 return;
             }
             string masp = Convert.ToString(SanPham_BLL.Instance.GetnextmaSP());
@@ -194,13 +208,17 @@ namespace PBL3.GUI
             string nhomtd = Nhomthucdon.SelectedItem as string;
             if (string.IsNullOrEmpty(nhomtd))
             {
-                MessageBox.Show("Vui lòng chọn nhóm thực đơn");
+                //MessageBox.Show("Vui lòng chọn nhóm thực đơn");
+                ThatBai f3 = new ThatBai("Vui lòng chọn nhóm thực đơn");
+                f3.ShowDialog();
                 return;
             }
             string donvidrink = donvi.SelectedItem as string;
             if (string.IsNullOrEmpty(donvidrink))
             {
-                MessageBox.Show("Vui lòng chọn đơn vị tính");
+               // MessageBox.Show("Vui lòng chọn đơn vị tính");
+                ThatBai f3 = new ThatBai("Vui lòng chọn đơn vị tính");
+                f3.ShowDialog();
                 return;
             }
             SanPham_BLL.Instance.AddSanPham(masp, tenMon.Text, giaBan.Text, loai, nhomtd, donvidrink, duongdananh);
@@ -212,7 +230,9 @@ namespace PBL3.GUI
                 decimal soLuong = Convert.ToDecimal(row.Cells["SoLuong"].Value);
                 ChiTietSanPham_BLL.Instance.AddChiTietSanPham(Convert.ToInt32(masp), maNL, soLuong);
             }
-            MessageBox.Show("Thêm món thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //MessageBox.Show("Thêm món thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            ThanhCong f = new ThanhCong("Thêm món thành công!");
+            f.ShowDialog();
             Dispose();
         }
 
@@ -229,7 +249,6 @@ namespace PBL3.GUI
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 duongdananh = openFileDialog.FileName;
-                //MessageBox.Show(duongdananh);
                 anhDaiDien.ImageLocation = duongdananh;
             }
         }
@@ -244,7 +263,9 @@ namespace PBL3.GUI
         {
             if (duongdananh == null)
             {
-                MessageBox.Show("Chưa có ảnh để xóa");
+                //MessageBox.Show("Chưa có ảnh để xóa");
+                ThatBai f3 = new ThatBai("Chưa có ảnh để xóa");
+                f3.ShowDialog();
                 return;
             }
             duongdananh = null;

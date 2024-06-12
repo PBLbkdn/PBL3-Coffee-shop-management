@@ -66,7 +66,9 @@ namespace PBL3.GUI
         {
             if (NVCadata.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Chọn nhân viên cần xóa");
+               // MessageBox.Show("Chọn nhân viên cần xóa");
+                ThatBai f1 = new ThatBai("Chọn nhân viên cần xóa");
+                f1.ShowDialog();
                 return;
             }
             else

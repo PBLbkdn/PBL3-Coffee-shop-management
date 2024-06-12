@@ -22,7 +22,9 @@ namespace PBL3.GUI.Employee
             InitializeComponent();
             if (Ban_BLL.Instance.GetListBanFree().Count == 0)
             {
-                MessageBox.Show("Không có bàn trống");
+                //MessageBox.Show("Không có bàn trống");
+                ThatBai f3 = new ThatBai("Không có bàn trống");
+                f3.ShowDialog();
                 this.Close();
             }
 
@@ -52,7 +54,9 @@ namespace PBL3.GUI.Employee
         {
             if (Ban_BLL.Instance.GetListBanFree().Count == 0)
             {
-                MessageBox.Show("Không có bàn trống");
+                //MessageBox.Show("Không có bàn trống");
+                ThatBai f3 = new ThatBai("Không có bàn trống");
+                f3.ShowDialog();
                 this.Close();
             }
 
@@ -77,17 +81,23 @@ namespace PBL3.GUI.Employee
         {
             if (!sdt.Text.All(char.IsDigit))
             {
-                MessageBox.Show("Số điện thoại phải là số", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //MessageBox.Show("Số điện thoại phải là số", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                ThatBai f3 = new ThatBai("Số điện thoại phải là số");
+                f3.ShowDialog();
                 return;
             }
             if (sdt.Text.Length != 10)
             {
-                MessageBox.Show("Số điện thoại phải có 10 chữ số", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //MessageBox.Show("Số điện thoại phải có 10 chữ số", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                ThatBai f3 = new ThatBai("Số điện thoại phải có 10 chữ số");
+                f3.ShowDialog();
                 return;
             }
             if (datBanData.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Vui lòng chọn bàn");
+               // MessageBox.Show("Vui lòng chọn bàn");
+                ThatBai f3 = new ThatBai("Vui lòng chọn bàn");
+                f3.ShowDialog();
             }
             else
             {
@@ -95,7 +105,9 @@ namespace PBL3.GUI.Employee
                 string TrangThai = "Bàn đã được đặt trước";
                 string SDT = sdt.Text;
                 Ban_BLL.Instance.EditBan(MaBan, TrangThai,SDT);
-                MessageBox.Show("Đặt bàn thành công");
+                //MessageBox.Show("Đặt bàn thành công");
+                ThanhCong f = new ThanhCong("Đặt bàn thành công");
+                f.ShowDialog();
                 this.Close();
             }
         }

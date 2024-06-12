@@ -303,6 +303,7 @@
             this.Name = "ThucDon";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "ThucDon";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.TDExit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

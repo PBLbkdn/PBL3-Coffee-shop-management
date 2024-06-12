@@ -66,7 +66,7 @@
             this.dayTb.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dayTb.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.dayTb.Location = new System.Drawing.Point(852, 133);
-            this.dayTb.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.dayTb.Margin = new System.Windows.Forms.Padding(5);
             this.dayTb.Name = "dayTb";
             this.dayTb.PasswordChar = '\0';
             this.dayTb.PlaceholderText = "";
@@ -88,7 +88,7 @@
             this.monthTb.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.monthTb.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.monthTb.Location = new System.Drawing.Point(1011, 133);
-            this.monthTb.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.monthTb.Margin = new System.Windows.Forms.Padding(5);
             this.monthTb.Name = "monthTb";
             this.monthTb.PasswordChar = '\0';
             this.monthTb.PlaceholderText = "";
@@ -165,7 +165,7 @@
             // 
             this.pictureBox10.Image = global::PBL3.Properties.Resources.Vector__2_;
             this.pictureBox10.Location = new System.Drawing.Point(1715, 117);
-            this.pictureBox10.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(5);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(53, 49);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -180,7 +180,7 @@
             this.guna2Panel1.Controls.Add(this.panel2);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(5);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1440, 66);
             this.guna2Panel1.TabIndex = 49;
@@ -189,7 +189,7 @@
             // 
             this.pictureBox1.Image = global::PBL3.Properties.Resources.icons8_home_50;
             this.pictureBox1.Location = new System.Drawing.Point(19, 17);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(5);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(44, 34);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -201,7 +201,7 @@
             // 
             this.exitCa.Image = global::PBL3.Properties.Resources.nút_tắt;
             this.exitCa.Location = new System.Drawing.Point(1756, 15);
-            this.exitCa.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.exitCa.Margin = new System.Windows.Forms.Padding(5);
             this.exitCa.Name = "exitCa";
             this.exitCa.Size = new System.Drawing.Size(40, 37);
             this.exitCa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -215,7 +215,7 @@
             this.panel2.Controls.Add(this.pictureBox6);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(80, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel2.Margin = new System.Windows.Forms.Padding(5);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(240, 66);
             this.panel2.TabIndex = 0;
@@ -224,7 +224,7 @@
             // 
             this.pictureBox6.Image = global::PBL3.Properties.Resources.Nhân_viên;
             this.pictureBox6.Location = new System.Drawing.Point(20, 16);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(5);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(36, 36);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -258,7 +258,7 @@
             this.year.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.year.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.year.Location = new System.Drawing.Point(1167, 133);
-            this.year.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.year.Margin = new System.Windows.Forms.Padding(5);
             this.year.Name = "year";
             this.year.PasswordChar = '\0';
             this.year.PlaceholderText = "";
@@ -303,9 +303,10 @@
             this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.NVCadata);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "NhanVienTrongCa";
             this.Text = "NhanVienTrongCa";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.NVCadata)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.guna2Panel1.ResumeLayout(false);

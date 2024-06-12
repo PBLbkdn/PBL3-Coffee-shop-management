@@ -307,6 +307,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ChiTietDonHang";
             this.Text = "ChiTietDonHang";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.donHangExit)).EndInit();

@@ -63,7 +63,9 @@ namespace PBL3.GUI.Admin
             string txt = findTextbox.Text;
             if (txt == "")
             {
-                MessageBox.Show("Vui lòng nhập tên/ số điện thoại khách hàng cần tìm kiếm");
+                //MessageBox.Show("Vui lòng nhập tên/ số điện thoại khách hàng cần tìm kiếm");
+                ThatBai f = new ThatBai("Vui lòng nhập tên/ số điện thoại khách hàng cần tìm kiếm");
+                f.ShowDialog();
                 return;
             }
             //kiểm tra txt là toàn chữ hay toàn số
@@ -95,7 +97,9 @@ namespace PBL3.GUI.Admin
                 }
                 if (!isChar)
                 {
-                    MessageBox.Show("Vui lòng nhập đúng định dạng tên/ số điện thoại của khách hàng");
+                    //MessageBox.Show("Vui lòng nhập đúng định dạng tên/ số điện thoại của khách hàng");
+                    ThatBai f = new ThatBai("Vui lòng nhập đúng định dạng tên/ số điện thoại của khách hàng");
+                    f.ShowDialog();
                     return;
                 }
                 //tìm theo tên
@@ -104,7 +108,9 @@ namespace PBL3.GUI.Admin
             }
             if(KHData.Rows.Count==0)
             {
-                MessageBox.Show("Không tìm thấy khách hàng được yêu cầu");
+                //MessageBox.Show("Không tìm thấy khách hàng được yêu cầu");
+                ThatBai f = new ThatBai("Không tìm thấy khách hàng được yêu cầu");
+                f.ShowDialog();
             }   
             RefreshData();
         }

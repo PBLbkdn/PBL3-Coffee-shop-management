@@ -56,7 +56,7 @@
             this.guna2Panel1.Controls.Add(this.pictureBox1);
             this.guna2Panel1.Controls.Add(this.label1);
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1848, 108);
             this.guna2Panel1.TabIndex = 1;
@@ -65,7 +65,7 @@
             // 
             this.Exit.Image = global::PBL3.Properties.Resources.nút_tắt;
             this.Exit.Location = new System.Drawing.Point(1737, 33);
-            this.Exit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Exit.Margin = new System.Windows.Forms.Padding(4);
             this.Exit.Name = "Exit";
             this.Exit.Size = new System.Drawing.Size(40, 37);
             this.Exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -90,7 +90,7 @@
             this.pictureBox1.Image = global::PBL3.Properties.Resources.icons8_manage_50_1;
             this.pictureBox1.InitialImage = global::PBL3.Properties.Resources.icons8_manage_50_1;
             this.pictureBox1.Location = new System.Drawing.Point(56, 27);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(67, 59);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -114,7 +114,7 @@
             // 
             this.pictureBox10.Image = global::PBL3.Properties.Resources.Vector__2_;
             this.pictureBox10.Location = new System.Drawing.Point(1724, 158);
-            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(53, 49);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -136,7 +136,7 @@
             this.DHButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DHButton.ForeColor = System.Drawing.Color.Black;
             this.DHButton.Location = new System.Drawing.Point(793, 571);
-            this.DHButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DHButton.Margin = new System.Windows.Forms.Padding(4);
             this.DHButton.Name = "DHButton";
             this.DHButton.Size = new System.Drawing.Size(267, 74);
             this.DHButton.TabIndex = 22;
@@ -157,7 +157,7 @@
             this.TKeButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TKeButton.ForeColor = System.Drawing.Color.Black;
             this.TKeButton.Location = new System.Drawing.Point(1181, 340);
-            this.TKeButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TKeButton.Margin = new System.Windows.Forms.Padding(4);
             this.TKeButton.Name = "TKeButton";
             this.TKeButton.Size = new System.Drawing.Size(267, 74);
             this.TKeButton.TabIndex = 21;
@@ -178,7 +178,7 @@
             this.HDButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HDButton.ForeColor = System.Drawing.Color.Black;
             this.HDButton.Location = new System.Drawing.Point(1181, 571);
-            this.HDButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.HDButton.Margin = new System.Windows.Forms.Padding(4);
             this.HDButton.Name = "HDButton";
             this.HDButton.Size = new System.Drawing.Size(267, 74);
             this.HDButton.TabIndex = 20;
@@ -199,7 +199,7 @@
             this.datMonButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.datMonButton.ForeColor = System.Drawing.Color.Black;
             this.datMonButton.Location = new System.Drawing.Point(401, 340);
-            this.datMonButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.datMonButton.Margin = new System.Windows.Forms.Padding(4);
             this.datMonButton.Name = "datMonButton";
             this.datMonButton.Size = new System.Drawing.Size(267, 74);
             this.datMonButton.TabIndex = 19;
@@ -220,7 +220,7 @@
             this.banButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.banButton.ForeColor = System.Drawing.Color.Black;
             this.banButton.Location = new System.Drawing.Point(793, 340);
-            this.banButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.banButton.Margin = new System.Windows.Forms.Padding(4);
             this.banButton.Name = "banButton";
             this.banButton.Size = new System.Drawing.Size(267, 74);
             this.banButton.TabIndex = 18;
@@ -252,7 +252,7 @@
             this.KHbt.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.KHbt.ForeColor = System.Drawing.Color.Black;
             this.KHbt.Location = new System.Drawing.Point(401, 571);
-            this.KHbt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.KHbt.Margin = new System.Windows.Forms.Padding(4);
             this.KHbt.Name = "KHbt";
             this.KHbt.Size = new System.Drawing.Size(267, 74);
             this.KHbt.TabIndex = 24;
@@ -275,11 +275,12 @@
             this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ManHinhChinh_NV";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ManHinhChinh_NV";
             this.TopMost = true;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Exit)).EndInit();

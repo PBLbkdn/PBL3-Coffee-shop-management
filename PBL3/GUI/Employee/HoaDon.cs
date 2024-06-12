@@ -61,7 +61,9 @@ namespace PBL3.GUI.Employee
         {
             if (timKiemHoaDon.Text == "")
             {
-                MessageBox.Show("Vui lòng nhập mã hóa đơn cần tìm!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //MessageBox.Show("Vui lòng nhập mã hóa đơn cần tìm!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                ThatBai f3 = new ThatBai("Vui lòng nhập mã hóa đơn cần tìm!");
+                f3.ShowDialog();
             }
             else
             {
@@ -69,7 +71,9 @@ namespace PBL3.GUI.Employee
                 RefreshData();
                 if (hoaDonData.Rows.Count == 0)
                 {
-                    MessageBox.Show("Không tìm thấy hóa đơn!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    //MessageBox.Show("Không tìm thấy hóa đơn!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    ThatBai f3 = new ThatBai("Không tìm thấy hóa đơn!");
+                    f3.ShowDialog();
                 }
             }
 

@@ -46,7 +46,9 @@ namespace PBL3.GUI.Admin
         private void saveNV_Click(object sender, EventArgs e)
         {
             NhanVien_BLL.Instance.EditNhanVien(maNV.Text, tenNV.Text, ngaySinh.Value, soDienThoai.Text, luong.Text, maCV.SelectedItem.ToString(), gender.SelectedItem.ToString());
-            MessageBox.Show("Cập nhật nhân viên thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //MessageBox.Show("Cập nhật nhân viên thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            ThanhCong f = new ThanhCong("Cập nhật nhân viên thành công!");
+            f.ShowDialog();
             Dispose();
         }
 

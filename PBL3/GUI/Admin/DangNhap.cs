@@ -28,7 +28,9 @@ namespace PBL3.GUI
         {
             if(username.Text.Equals("") || password.Text.Equals(""))
             {
-                MessageBox.Show("Vui lòng nhập đầy đủ thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //MessageBox.Show("Vui lòng nhập đầy đủ thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                ThatBai f = new ThatBai("Vui lòng nhập đầy đủ thông tin");
+                f.ShowDialog();
                 return;
             }
             int x = TaiKhoan_BLL.Instance.Login(username.Text, password.Text, rbManager.Checked, rbStaff.Checked);
@@ -36,7 +38,9 @@ namespace PBL3.GUI
             switch (x)
             {
                 case 1:
-                    MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ThanhCong f1 = new ThanhCong("Đăng nhập thành công!");
+                    f1.ShowDialog();
                     int maNV = TaiKhoan_BLL.Instance.GetMaNV(username.Text, password.Text);
                     if (rbManager.Checked)
                     {
@@ -56,13 +60,19 @@ namespace PBL3.GUI
                     }
                     break;
                 case 2:
-                    MessageBox.Show("Vui lòng chọn chức vụ!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    //MessageBox.Show("Vui lòng chọn chức vụ!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    ThatBai f2 = new ThatBai("Vui lòng chọn chức vụ!");
+                    f2.ShowDialog();
                     break;
                 case 3:
-                    MessageBox.Show("Chức vụ không phù hợp!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    //MessageBox.Show("Chức vụ không phù hợp!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    ThatBai f3 = new ThatBai("Chức vụ không phù hợp!");
+                    f3.ShowDialog();
                     break;
                 case 4:
-                    MessageBox.Show("Tên đăng nhập hoặc mật khẩu không đúng.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    //MessageBox.Show("Tên đăng nhập hoặc mật khẩu không đúng.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    ThatBai f4 = new ThatBai("Tên đăng nhập hoặc mật khẩu không đúng.");
+                    f4.ShowDialog();
                     break;
             }
 

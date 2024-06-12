@@ -60,18 +60,24 @@ namespace PBL3.GUI.Admin
         {
             if (mnvcb.Text == "" || tenTK.Text == "" || matKhau.Text == "")
             {
-                MessageBox.Show("Vui lòng nhập đủ thông tin");
+                //MessageBox.Show("Vui lòng nhập đủ thông tin");
+                ThatBai f3 = new ThatBai("Vui lòng nhập đủ thông tin");
+                f3.ShowDialog();
                 return;
             }
             if (TaiKhoan_BLL.Instance.CheckTaiKhoan(tenTK.Text, NhanVien_BLL.Instance.getmaCV(Convert.ToInt32(mnvcb.Text)).ToString()))
             {
-                MessageBox.Show("Tên tài khoản đã tồn tại");
+               // MessageBox.Show("Tên tài khoản đã tồn tại");
+                ThatBai f3 = new ThatBai("Tên tài khoản đã tồn tại");
+                f3.ShowDialog();
                 return;
             }
             else
             {
                 TaiKhoan_BLL.Instance.AddTaiKhoan(mnvcb.Text, tenTK.Text, matKhau.Text);
-                MessageBox.Show("Thêm tài khoản thành công");
+                //MessageBox.Show("Thêm tài khoản thành công");
+                ThanhCong f = new ThanhCong("Thêm tài khoản thành công");
+                f.ShowDialog();
                 Dispose();
             }
         }

@@ -43,13 +43,17 @@ namespace PBL3.GUI.Employee
         {
             if (search.Text == "")
             {
-                MessageBox.Show("Vui lòng nhập thông tin bàn cần tìm kiếm");
+                //MessageBox.Show("Vui lòng nhập thông tin bàn cần tìm kiếm");
+                ThatBai f3 = new ThatBai("Vui lòng nhập thông tin bàn cần tìm kiếm");
+                f3.ShowDialog();
             }
             else
             {
                 if (BUS.Ban_BLL.Instance.GetBanByID(Convert.ToInt32(search.Text)).Count == 0)
                 {
-                    MessageBox.Show("Không tìm thấy bàn");
+                    //MessageBox.Show("Không tìm thấy bàn");
+                    ThatBai f3 = new ThatBai("Không tìm thấy bàn");
+                    f3.ShowDialog();
                 }
                 else
                 {
@@ -70,7 +74,9 @@ namespace PBL3.GUI.Employee
         {
             if (Ban_BLL.Instance.GetListBanFree().Count == 0)
             {
-                MessageBox.Show("Không có bàn trống");
+                //MessageBox.Show("Không có bàn trống");
+                ThatBai f3 = new ThatBai("Không có bàn trống");
+                f3.ShowDialog();
                 return; 
             }
             DatBan f = new DatBan(maNV);
@@ -104,7 +110,9 @@ namespace PBL3.GUI.Employee
         {
             if(banData.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Vui lòng chọn bàn cần chỉnh sửa trạng thái");
+                //MessageBox.Show("Vui lòng chọn bàn cần chỉnh sửa trạng thái");
+                ThatBai f3 = new ThatBai("Vui lòng chọn bàn cần chỉnh sửa trạng thái");
+                f3.ShowDialog();
                 return;
             }
             int maBan = Convert.ToInt32(banData.SelectedRows[0].Cells["MaBan"].Value);

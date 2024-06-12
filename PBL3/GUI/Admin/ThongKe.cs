@@ -114,11 +114,15 @@ namespace PBL3.GUI.Admin
         {
             if (MaCaCB.SelectedItem == null && MaCaCB.Visible == true)
             {
-                MessageBox.Show("Vui lòng chọn ca làm việc");
+                //MessageBox.Show("Vui lòng chọn ca làm việc");
+                ThatBai f3 = new ThatBai("Vui lòng chọn ca làm việc");
+                f3.ShowDialog();
             }
             else if (ThoiGian.Value > DateTime.Now && ThoiGian.Visible == true)
             {
-                MessageBox.Show("Vui lòng chọn thời gian hợp lệ");
+                //MessageBox.Show("Vui lòng chọn thời gian hợp lệ");
+                ThatBai f3 = new ThatBai("Vui lòng chọn thời gian hợp lệ");
+                f3.ShowDialog();
             }
             else
             {
@@ -150,7 +154,9 @@ namespace PBL3.GUI.Admin
                 RefreshData();
                 if (thongKeData.Rows.Count==0)
                 {
-                    MessageBox.Show("Không có dữ liệu");
+                    //MessageBox.Show("Không có dữ liệu");
+                    ThatBai f3 = new ThatBai("Không có dữ liệu");
+                    f3.ShowDialog();
                 }
             }
         }

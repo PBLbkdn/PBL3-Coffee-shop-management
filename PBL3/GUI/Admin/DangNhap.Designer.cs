@@ -78,7 +78,7 @@
             this.guna2Panel1.Controls.Add(this.password);
             this.guna2Panel1.Controls.Add(this.username);
             this.guna2Panel1.Location = new System.Drawing.Point(631, 340);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(173, 422);
             this.guna2Panel1.TabIndex = 3;
@@ -127,7 +127,7 @@
             this.loginButton.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.loginButton.ForeColor = System.Drawing.Color.White;
             this.loginButton.Location = new System.Drawing.Point(185, 288);
-            this.loginButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.loginButton.Margin = new System.Windows.Forms.Padding(4);
             this.loginButton.Name = "loginButton";
             this.loginButton.Size = new System.Drawing.Size(0, 109);
             this.loginButton.TabIndex = 6;
@@ -140,7 +140,7 @@
             this.rbStaff.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold);
             this.rbStaff.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.rbStaff.Location = new System.Drawing.Point(309, 238);
-            this.rbStaff.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbStaff.Margin = new System.Windows.Forms.Padding(4);
             this.rbStaff.Name = "rbStaff";
             this.rbStaff.Size = new System.Drawing.Size(108, 24);
             this.rbStaff.TabIndex = 5;
@@ -154,7 +154,7 @@
             this.rbManager.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold);
             this.rbManager.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.rbManager.Location = new System.Drawing.Point(155, 238);
-            this.rbManager.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbManager.Margin = new System.Windows.Forms.Padding(4);
             this.rbManager.Name = "rbManager";
             this.rbManager.Size = new System.Drawing.Size(89, 24);
             this.rbManager.TabIndex = 4;
@@ -238,7 +238,7 @@
             this.pictureBox1.Image = global::PBL3.Properties.Resources.Coffee_Stamp_Round_Loyalty_Card_Mini_Self_Inking_Stamp_Coffee_Bean_Coffee_Cup_Coffee_Mug_Coffee_Latte_Hot_Coffee_Coffee_Takeaway;
             this.pictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.pictureBox1.Location = new System.Drawing.Point(1051, 235);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(0, 124);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -256,7 +256,7 @@
             this.exitLogin.ForeColor = System.Drawing.Color.White;
             this.exitLogin.Image = global::PBL3.Properties.Resources.close_large_line;
             this.exitLogin.Location = new System.Drawing.Point(1735, 30);
-            this.exitLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.exitLogin.Margin = new System.Windows.Forms.Padding(4);
             this.exitLogin.Name = "exitLogin";
             this.exitLogin.Size = new System.Drawing.Size(60, 53);
             this.exitLogin.TabIndex = 4;
@@ -274,10 +274,11 @@
             this.Controls.Add(this.exitLogin);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "x";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.DangNhap_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();

@@ -326,6 +326,7 @@
             this.Name = "ThemMon";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "ThemMon";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();

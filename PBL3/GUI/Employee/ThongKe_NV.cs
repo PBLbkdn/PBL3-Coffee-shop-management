@@ -65,23 +65,31 @@ namespace PBL3.GUI.Employee
             
             if(calamvieccb.SelectedItem == null)
             {
-                MessageBox.Show("Vui lòng chọn ca làm việc", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //MessageBox.Show("Vui lòng chọn ca làm việc", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                ThatBai f3 = new ThatBai("Vui lòng chọn ca làm việc");
+                f3.ShowDialog();
                 return;
             }
             if(ngayTK.Value == null)
             {
-                MessageBox.Show("Vui lòng chọn ngày", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //MessageBox.Show("Vui lòng chọn ngày", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                ThatBai f3 = new ThatBai("Vui lòng chọn ngày");
+                f3.ShowDialog();
                 return;
             }
             if(ngayTK.Value>DateTime.Now)
             {
-                MessageBox.Show("Ngày không hợp lệ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //MessageBox.Show("Ngày không hợp lệ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                ThatBai f3 = new ThatBai("Ngày không hợp lệ");
+                f3.ShowDialog();
                 return;
             }
             TkeData.DataSource =DoanhThu_BLL.Instance.GetDoanhThuCaNV(maNV, calamvieccb.SelectedItem.ToString(), ngayTK.Value);
             if(TkeData.Rows.Count==0)
             {
-                MessageBox.Show("Nhân viên không tham gia ca trực này, không thể xem doanh thu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //MessageBox.Show("Nhân viên không tham gia ca trực này, không thể xem doanh thu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                ThatBai f3 = new ThatBai("Nhân viên không tham gia ca trực này, không thể xem doanh thu");
+                f3.ShowDialog();
             }
             else
             {  

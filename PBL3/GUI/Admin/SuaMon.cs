@@ -83,7 +83,9 @@ namespace PBL3.GUI
             }
             else
             {
-                MessageBox.Show("Nhóm thực đơn chưa có trong danh sách");
+               // MessageBox.Show("Nhóm thực đơn chưa có trong danh sách");
+                ThatBai f1 = new ThatBai("Nhóm thực đơn chưa có trong danh sách");
+                f1.ShowDialog();
             }
             if (donvitinh.Items.Contains(donvi))
             {
@@ -91,7 +93,9 @@ namespace PBL3.GUI
             }
             else
             {
-                MessageBox.Show("Đơn vị tính chưa có trong danh sách");
+                //MessageBox.Show("Đơn vị tính chưa có trong danh sách");
+                ThatBai f1 = new ThatBai("Đơn vị tính chưa có trong danh sách");
+                f1.ShowDialog();
             }
             if (loai == "Đồ uống")
                 doUongRb.Checked = true;
@@ -162,7 +166,9 @@ namespace PBL3.GUI
             {
                 if (!char.IsDigit(c))
                 {
-                    MessageBox.Show("Giá bán sai định dạng. Chỉ chứa các kí tự số!");
+                    //MessageBox.Show("Giá bán sai định dạng. Chỉ chứa các kí tự số!");
+                    ThatBai f1 = new ThatBai("Giá bán sai định dạng. Chỉ chứa các kí tự số!");
+                    f1.ShowDialog();
                     return;
                 }
             }
@@ -171,13 +177,17 @@ namespace PBL3.GUI
             {
                 if (char.IsDigit(c))
                 {
-                    MessageBox.Show("Tên món sai định dạng. Không được chứa các kí tự số!");
+                    //MessageBox.Show("Tên món sai định dạng. Không được chứa các kí tự số!");
+                    ThatBai f1 = new ThatBai("Tên món sai định dạng. Không được chứa các kí tự số!");
+                    f1.ShowDialog();
                     return;
                 }
             }
             if (string.IsNullOrEmpty(duongdananh))
             {
-                MessageBox.Show("Vui lòng chọn ảnh cho sản phẩm!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //MessageBox.Show("Vui lòng chọn ảnh cho sản phẩm!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ThatBai f1 = new ThatBai("Vui lòng chọn ảnh cho sản phẩm!");
+                f1.ShowDialog();
                 return;
             }
             string loai;
@@ -189,13 +199,17 @@ namespace PBL3.GUI
             string nhomtd = nhomthucdon.SelectedItem as string;
             if (string.IsNullOrEmpty(nhomtd))
             {
-                MessageBox.Show("Vui lòng chọn nhóm thực đơn");
+                //MessageBox.Show("Vui lòng chọn nhóm thực đơn");
+                ThatBai f1 = new ThatBai("Vui lòng chọn nhóm thực đơn");
+                f1.ShowDialog();
                 return;
             }
             string donvidrink = donvitinh.SelectedItem as string;
             if (string.IsNullOrEmpty(donvidrink))
             {
-                MessageBox.Show("Vui lòng chọn đơn vị tính");
+                //MessageBox.Show("Vui lòng chọn đơn vị tính");
+                ThatBai f1 = new ThatBai("Vui lòng chọn đơn vị tính");
+                f1.ShowDialog();
                 return;
             }
             SanPham_BLL.Instance.EditSanPham(maMon.Text, tenMon.Text, giaBan.Text, loai, nhomtd, donvidrink, duongdananh);
@@ -208,7 +222,9 @@ namespace PBL3.GUI
                 decimal soLuong = Convert.ToDecimal(row.Cells["SLNguyenLieu"].Value);
                 ChiTietSanPham_BLL.Instance.AddChiTietSanPham(Convert.ToInt32(maMon.Text), maNL, soLuong);
             }
-            MessageBox.Show("Cập nhật sản phẩm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //MessageBox.Show("Cập nhật sản phẩm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            ThanhCong f = new ThanhCong("Cập nhật sản phẩm thành công!");
+            f.ShowDialog();
             Dispose();
         }
 
@@ -238,7 +254,9 @@ namespace PBL3.GUI
                     {
                         if (row.Cells[0].Value.ToString() == manl)
                         {
-                            MessageBox.Show("Nguyên liệu đã tồn tại trong bảng định lượng!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            //MessageBox.Show("Nguyên liệu đã tồn tại trong bảng định lượng!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            ThatBai f1 = new ThatBai("Nguyên liệu đã tồn tại trong bảng định lượng!");
+                            f1.ShowDialog();
                             daTonTai = true;
                             return;
                         }
@@ -276,7 +294,9 @@ namespace PBL3.GUI
         {
             if (nguyenLieuData.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Vui lòng chọn nguyên liệu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show("Vui lòng chọn nguyên liệu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ThatBai f1 = new ThatBai("Vui lòng chọn nguyên liệu");
+                f1.ShowDialog();
                 return;
             }
             DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa nguyên liệu này không?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -314,7 +334,9 @@ namespace PBL3.GUI
         {
             if (nguyenLieuData.SelectedRows.Count != 1)
             {
-                MessageBox.Show("Hãy chọn 1 nguyên liệu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show("Hãy chọn 1 nguyên liệu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ThatBai f1 = new ThatBai("Hãy chọn 1 nguyên liệu");
+                f1.ShowDialog();
                 return;
             }
             if (nguyenLieuData.SelectedRows.Count == 1)
@@ -353,7 +375,9 @@ namespace PBL3.GUI
         {
             if (duongdananh == null)
             {
-                MessageBox.Show("Chưa có ảnh để xóa");
+                //MessageBox.Show("Chưa có ảnh để xóa");
+                ThatBai f1 = new ThatBai("Chưa có ảnh để xóa");
+                f1.ShowDialog();
                 return;
             }
             duongdananh = null;
@@ -368,7 +392,6 @@ namespace PBL3.GUI
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 duongdananh = openFileDialog.FileName;
-                //MessageBox.Show(duongdananh);
                 anhDaiDien.ImageLocation = duongdananh;
             }
         }

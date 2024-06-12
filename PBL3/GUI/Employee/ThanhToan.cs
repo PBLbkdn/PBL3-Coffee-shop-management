@@ -80,7 +80,9 @@ namespace PBL3.GUI.Employee
                 DTO.KhachHang k2 = KhachHang_BLL.Instance.GetKHbyMaKH(this.maKH);
                 if (k2 == null)
                 {
-                    MessageBox.Show("Error");
+                   // MessageBox.Show("Error");
+                    ThatBai f3 = new ThatBai("Lỗi");
+                    f3.ShowDialog();
                 }
                 this.maKH = k2.MaKH;
                 tenKH.Text = k2.TenKH;
@@ -110,19 +112,25 @@ namespace PBL3.GUI.Employee
                 {
                     if (!char.IsDigit(c))
                     {
-                        MessageBox.Show("Sai định dạng. Số điện thoại chỉ chứa các kí tự số!");
+                        //MessageBox.Show("Sai định dạng. Số điện thoại chỉ chứa các kí tự số!");
+                        ThatBai f3 = new ThatBai("Sai định dạng. Số điện thoại chỉ chứa các kí tự số!");
+                        f3.ShowDialog();
                         return;
                     }
                 }
                 if (s.Length != 10)
                 {
-                    MessageBox.Show("Số điện thoại phải chứa 10 chữ số!");
+                   //MessageBox.Show("Số điện thoại phải chứa 10 chữ số!");
+                    ThatBai f3 = new ThatBai("Số điện thoại phải chứa 10 chữ số!");
+                    f3.ShowDialog();
                     return;
                 }
                 DTO.KhachHang k = KhachHang_BLL.Instance.GetKHbySDT(s);
                 if (k == null)
                 {
-                    MessageBox.Show("Không có khách hàng nào được tìm thấy. Tạo khách hàng mới", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    //MessageBox.Show("Không có khách hàng nào được tìm thấy. Tạo khách hàng mới", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    ThatBai f3 = new ThatBai("Không có khách hàng nào được tìm thấy. Tạo khách hàng mới");
+                    f3.ShowDialog();
                     ThemKhachHang f = new ThemKhachHang(s);
                     this.Hide();
                     f.ShowDialog();
@@ -144,7 +152,9 @@ namespace PBL3.GUI.Employee
                     {
                         guna2DataGridView1.Rows.Add(i.MaKM, i.TenCT);
                     }
-                    MessageBox.Show("Hãy chọn bàn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //MessageBox.Show("Hãy chọn bàn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ThatBai f4 = new ThatBai("Hãy chọn bàn");
+                    f4.ShowDialog();
                     return;
                     /*ChonBan f1 = new ChonBan(maNV, selectedDrinks, maDH, this.maKH);
                     f1.Show();
@@ -152,7 +162,9 @@ namespace PBL3.GUI.Employee
                 }
                 else
                 {
-                    MessageBox.Show("Đã có khách hàng này trong hệ thống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //MessageBox.Show("Đã có khách hàng này trong hệ thống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ThanhCong f5 = new ThanhCong("Đã có khách hàng này trong hệ thống");
+                    f5.ShowDialog();
                     this.maKH = k.MaKH;
                     tenKH.Text = k.TenKH;
                     loaiKH.Text = KhachHang_BLL.Instance.GetLKH(k).TenLKH;
@@ -164,7 +176,9 @@ namespace PBL3.GUI.Employee
                     DTO.Ban b = Ban_BLL.Instance.GetbanBySDT(sdt.Text);
                     if (b == null)
                     {
-                        MessageBox.Show("Khách hàng chưa đặt trước bàn. Hãy chọn bàn!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        //MessageBox.Show("Khách hàng chưa đặt trước bàn. Hãy chọn bàn!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        ThatBai f4 = new ThatBai("Khách hàng chưa đặt trước bàn. Hãy chọn bàn");
+                        f4.ShowDialog();
                         return;
                         /*ChonBan f1 = new ChonBan(maNV, selectedDrinks, maDH, this.maKH);
                         f1.Show();
@@ -174,14 +188,17 @@ namespace PBL3.GUI.Employee
                     {
                         if (b.TrangThai == "Bàn bận" && b.SDT != null)
                         {
-                            MessageBox.Show("Khách hàng này đã đặt món và đang sử dụng bàn tại quán", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            
-                            
+                           // MessageBox.Show("Khách hàng này đã đặt món và đang sử dụng bàn tại quán", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            ThanhCong f6 = new ThanhCong("Khách hàng này đã đặt món và đang sử dụng bàn tại quán");
+                            f6.ShowDialog();
+
                             //guna2Button1.Visible = false;
                             //guna2Button1.Enabled = false;
                             return;
                         }
-                        MessageBox.Show("Khách hàng này đã đặt trước bàn!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        //MessageBox.Show("Khách hàng này đã đặt trước bàn!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        ThanhCong f7 = new ThanhCong("Khách hàng này đã đặt trước bàn!");
+                        f7.ShowDialog();
                         this.maBan = b.MaBan;
                         label10.Text = this.maBan.ToString() + " / " + b.ViTri;
                         guna2Button1.Visible = false;
@@ -197,7 +214,9 @@ namespace PBL3.GUI.Employee
         {
             if (tenKH.Text == "")
             {
-                MessageBox.Show("Chưa có thông tin khách hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //MessageBox.Show("Chưa có thông tin khách hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                ThatBai f4 = new ThatBai("Chưa có thông tin khách hàng");
+                f4.ShowDialog();
                 return;
             }
             /*DTO.Ban b1 = Ban_BLL.Instance.GetbanBySDT(sdt.Text);
@@ -228,24 +247,32 @@ namespace PBL3.GUI.Employee
 
             if (guna2DataGridView1.RowCount == 1)
             {
-                MessageBox.Show("Không có khuyến mãi nào cho khách hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //MessageBox.Show("Không có khuyến mãi nào cho khách hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ThatBai f4 = new ThatBai("Không có khuyến mãi nào cho khách hàng");
+                f4.ShowDialog();
                 return;
             }
             if (guna2DataGridView1.SelectedRows.Count == 1)
             {
                 if (guna2DataGridView1.SelectedRows[0].Cells["MaKM"].Value == null)
                 {
-                    MessageBox.Show("Hãy chọn khuyến mãi phù hợp", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    //MessageBox.Show("Hãy chọn khuyến mãi phù hợp", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    ThatBai f4 = new ThatBai("Hãy chọn khuyến mãi phù hợp");
+                    f4.ShowDialog();
                     return;
                 }
                 this.maKM = Convert.ToInt32(guna2DataGridView1.SelectedRows[0].Cells["MaKM"].Value);
-                MessageBox.Show("Đã áp dụng khuyến mãi này", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show("Đã áp dụng khuyến mãi này", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ThanhCong f7 = new ThanhCong("Đã áp dụng khuyến mãi này");
+                f7.ShowDialog();
                 this.gtrithanhtoan = (long)(this.gtrithanhtoan * (1 - KhuyenMai_BLL.Instance.GetKMbymaKM(this.maKM).GiaTriKM));
                 label9.Text = gtrithanhtoan.ToString() + " VNĐ";
             }
             else
             {
-                MessageBox.Show("Vui lòng chọn 1 khuyến mãi", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //MessageBox.Show("Vui lòng chọn 1 khuyến mãi", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                ThatBai f4 = new ThatBai("Vui lòng chọn 1 khuyến mãi");
+                f4.ShowDialog();
                 return;
             }
         }
@@ -295,7 +322,9 @@ namespace PBL3.GUI.Employee
         {
             if (this.maBan == 0)
             {
-                MessageBox.Show("Chưa có thông tin bàn. Hãy chọn bàn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //MessageBox.Show("Chưa có thông tin bàn. Hãy chọn bàn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                ThatBai f4 = new ThatBai("Chưa có thông tin bàn. Hãy chọn bàn");
+                f4.ShowDialog();
                 /*ChonBan f1 = new ChonBan(maNV, selectedDrinks, maDH, this.maKH);
                 f1.Show();
                 this.Close();*/
@@ -303,13 +332,17 @@ namespace PBL3.GUI.Employee
             }
             if (tenKH.Text == "")
             {
-                MessageBox.Show("Chưa có thông tin khách hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //MessageBox.Show("Chưa có thông tin khách hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                ThatBai f4 = new ThatBai("Chưa có thông tin khách hàng");
+                f4.ShowDialog();
             }
             else
             {
                 if (this.maNVphucvu == 0)
                 {
-                    MessageBox.Show("Vui lòng chọn nhân viên phục vụ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    //MessageBox.Show("Vui lòng chọn nhân viên phục vụ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    ThatBai f4 = new ThatBai("Vui lòng chọn nhân viên phục vụ");
+                    f4.ShowDialog();
                 }
                 else
                 {
@@ -455,7 +488,9 @@ public Thanh(int maNV, List<SelectedDrink> selectedDrinks, int maDH, int maBan, 
 
             if (danhSachNhanVien.Count == 0)
             {
-                MessageBox.Show("Không có nhân viên phục vụ cho ca này.");
+                //MessageBox.Show("Không có nhân viên phục vụ cho ca này.");
+                ThatBai f4 = new ThatBai("Không có nhân viên phục vụ cho ca này");
+                f4.ShowDialog();
             }
             else
             {

@@ -68,7 +68,9 @@ namespace PBL3.GUI.Admin
             int Manv = 0;
             if(NVData.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Vui lòng chọn nhân viên cần sửa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //MessageBox.Show("Vui lòng chọn nhân viên cần sửa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                ThatBai f1 = new ThatBai("Vui lòng chọn nhân viên cần sửa!");
+                f1.ShowDialog();
                 return;
             }
             if (NVData.SelectedRows.Count == 1)
@@ -88,7 +90,9 @@ namespace PBL3.GUI.Admin
         {
             if(NVData.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Vui lòng chọn nhân viên cần xóa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //MessageBox.Show("Vui lòng chọn nhân viên cần xóa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                ThatBai f1 = new ThatBai("Vui lòng chọn nhân viên cần xóa!");
+                f1.ShowDialog();
                 return;
             }
             DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa nhân viên này không?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -108,14 +112,18 @@ namespace PBL3.GUI.Admin
         {
             if(nameNVTb.Text == "")
             {
-                MessageBox.Show("Vui lòng nhập tên nhân viên cần tìm!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //MessageBox.Show("Vui lòng nhập tên nhân viên cần tìm!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                ThatBai f1 = new ThatBai("Vui lòng nhập tên nhân viên cần tìm!");
+                f1.ShowDialog();
                 return;
             }
             string txt = nameNVTb.Text;
             NVData.DataSource = NhanVien_BLL.Instance.GetListNhanVien(0, txt);
             if(NVData.Rows.Count == 0)
             {
-                MessageBox.Show("Không tìm thấy nhân viên được yêu cầu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //MessageBox.Show("Không tìm thấy nhân viên được yêu cầu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                ThatBai f1 = new ThatBai("Không tìm thấy nhân viên được yêu cầu!");
+                f1.ShowDialog();
             }
             RefreshData();
         }

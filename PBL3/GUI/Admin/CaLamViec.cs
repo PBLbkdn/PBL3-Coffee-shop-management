@@ -483,7 +483,9 @@ namespace PBL3.GUI
         {
             if (monthCbb.SelectedItem == null || yearCbb.SelectedItem == null)
             {
-                MessageBox.Show("Vui lòng chọn tháng và năm trước khi xem lịch", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //MessageBox.Show("Vui lòng chọn tháng và năm trước khi xem lịch", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                ThatBai f = new ThatBai("Vui lòng chọn tháng và năm trước khi xem lịch");
+                f.ShowDialog();
                 return;
             }
             int month = Convert.ToInt32(monthCbb.SelectedItem);
@@ -555,7 +557,9 @@ namespace PBL3.GUI
         {
             if (monthCbb.SelectedItem == null || yearCbb.SelectedItem == null)
             {
-                MessageBox.Show("Vui lòng chọn tháng và năm trước khi xem lịch", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //MessageBox.Show("Vui lòng chọn tháng và năm trước khi xem lịch", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                ThatBai f = new ThatBai("Vui lòng chọn tháng và năm trước khi xem lịch");
+                f.ShowDialog();
                 return;
             }
             int month = Convert.ToInt32(monthCbb.SelectedItem);
@@ -591,7 +595,9 @@ namespace PBL3.GUI
         {
             if (monthCbb.SelectedItem == null || yearCbb.SelectedItem == null)
             {
-                MessageBox.Show("Vui lòng chọn tháng và năm trước khi xem lịch", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //MessageBox.Show("Vui lòng chọn tháng và năm trước khi xem lịch", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                ThatBai f = new ThatBai("Vui lòng chọn tháng và năm trước khi xem lịch");
+                f.ShowDialog();
                 return;
             }
             setCalendar();
@@ -601,7 +607,9 @@ namespace PBL3.GUI
         {
             if (monthCbb.SelectedItem == null || yearCbb.SelectedItem == null)
             {
-                MessageBox.Show("Vui lòng chọn tháng và năm trước khi xem lịch", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //MessageBox.Show("Vui lòng chọn tháng và năm trước khi xem lịch", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                ThatBai f = new ThatBai("Vui lòng chọn tháng và năm trước khi xem lịch");
+                f.ShowDialog();
                 return;
             }
             int month = Convert.ToInt32(monthCbb.SelectedItem);

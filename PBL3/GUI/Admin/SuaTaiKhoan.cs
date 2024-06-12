@@ -36,11 +36,15 @@ namespace PBL3.GUI.Admin
         {
             if(tenTK.Text == "" || password.Text == "")
             {
-                MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+               // MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                ThatBai f1 = new ThatBai("Vui lòng nhập đầy đủ thông tin!");
+                f1.ShowDialog();
                 return;
             }
             TaiKhoan_BLL.Instance.EditTaiKhoan(maNV.Text, tenTK.Text, password.Text);
-            MessageBox.Show("Cập nhật tài khoản thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //MessageBox.Show("Cập nhật tài khoản thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            ThanhCong f = new ThanhCong("Cập nhật tài khoản thành công!");
+            f.ShowDialog();
             Dispose();
         }
 

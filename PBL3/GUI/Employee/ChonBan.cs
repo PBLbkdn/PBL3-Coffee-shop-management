@@ -31,7 +31,9 @@ namespace PBL3.GUI.Employee
             ShowDB();
             if (Ban_BLL.Instance.GetListBanFree().Count == 0)
             {
-                MessageBox.Show("Không có bàn trống");
+                //MessageBox.Show("Không có bàn trống");
+                ThatBai f3 = new ThatBai("Không có bàn trống");
+                f3.ShowDialog();
                 //this.Close();
             }
 
@@ -55,7 +57,9 @@ namespace PBL3.GUI.Employee
             ShowDB();
             if (Ban_BLL.Instance.GetListBanFree().Count == 0)
             {
-                MessageBox.Show("Không có bàn trống");
+                //MessageBox.Show("Không có bàn trống");
+                ThatBai f3 = new ThatBai("Không có bàn trống");
+                f3.ShowDialog();
                 //this.Close();
             }
             if (maBan != 0)
@@ -118,7 +122,9 @@ namespace PBL3.GUI.Employee
         {
             if (dataGridView1.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Vui lòng chọn bàn");
+               // MessageBox.Show("Vui lòng chọn bàn");
+                ThatBai f3 = new ThatBai("Vui lòng chọn bàn");
+                f3.ShowDialog();
             }
             else
             {
@@ -126,7 +132,9 @@ namespace PBL3.GUI.Employee
                 string TrangThai = "Bàn bận";
                 Ban_BLL.Instance.EditBan(MaBan, TrangThai, KhachHang_BLL.Instance.getSDTKH(maKH));
 
-                MessageBox.Show("Đặt bàn thành công");
+                //MessageBox.Show("Đặt bàn thành công");
+                ThanhCong f = new ThanhCong("Đặt bàn thành công");
+                f.ShowDialog();
                 this.Close();
             }
         }

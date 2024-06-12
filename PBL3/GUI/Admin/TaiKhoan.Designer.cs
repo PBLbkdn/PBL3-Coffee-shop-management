@@ -55,7 +55,7 @@
             this.TKData.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.TKData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TKData.Location = new System.Drawing.Point(77, 196);
-            this.TKData.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.TKData.Margin = new System.Windows.Forms.Padding(5);
             this.TKData.Name = "TKData";
             this.TKData.RowHeadersWidth = 51;
             this.TKData.Size = new System.Drawing.Size(1688, 651);
@@ -74,7 +74,7 @@
             this.clearButton.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clearButton.ForeColor = System.Drawing.Color.Black;
             this.clearButton.Location = new System.Drawing.Point(599, 106);
-            this.clearButton.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.clearButton.Margin = new System.Windows.Forms.Padding(5);
             this.clearButton.Name = "clearButton";
             this.clearButton.Size = new System.Drawing.Size(227, 49);
             this.clearButton.TabIndex = 10;
@@ -94,7 +94,7 @@
             this.editButton.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.editButton.ForeColor = System.Drawing.Color.Black;
             this.editButton.Location = new System.Drawing.Point(340, 106);
-            this.editButton.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.editButton.Margin = new System.Windows.Forms.Padding(5);
             this.editButton.Name = "editButton";
             this.editButton.Size = new System.Drawing.Size(227, 49);
             this.editButton.TabIndex = 9;
@@ -114,7 +114,7 @@
             this.addButton.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addButton.ForeColor = System.Drawing.Color.Black;
             this.addButton.Location = new System.Drawing.Point(77, 106);
-            this.addButton.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.addButton.Margin = new System.Windows.Forms.Padding(5);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(227, 49);
             this.addButton.TabIndex = 8;
@@ -128,7 +128,7 @@
             this.guna2Panel1.Controls.Add(this.TKExit);
             this.guna2Panel1.Controls.Add(this.panel1);
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(5);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1848, 66);
             this.guna2Panel1.TabIndex = 7;
@@ -137,7 +137,7 @@
             // 
             this.pictureBox1.Image = global::PBL3.Properties.Resources.icons8_home_50;
             this.pictureBox1.Location = new System.Drawing.Point(19, 17);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(5);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(44, 34);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -149,7 +149,7 @@
             // 
             this.TKExit.Image = global::PBL3.Properties.Resources.nút_tắt;
             this.TKExit.Location = new System.Drawing.Point(1756, 15);
-            this.TKExit.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.TKExit.Margin = new System.Windows.Forms.Padding(5);
             this.TKExit.Name = "TKExit";
             this.TKExit.Size = new System.Drawing.Size(40, 37);
             this.TKExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -163,7 +163,7 @@
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(80, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel1.Margin = new System.Windows.Forms.Padding(5);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(240, 66);
             this.panel1.TabIndex = 0;
@@ -172,7 +172,7 @@
             // 
             this.pictureBox2.Image = global::PBL3.Properties.Resources.icons8_account_50_11;
             this.pictureBox2.Location = new System.Drawing.Point(24, 16);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(5);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(36, 36);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -196,7 +196,7 @@
             // 
             this.pictureBox10.Image = global::PBL3.Properties.Resources.Vector__2_;
             this.pictureBox10.Location = new System.Drawing.Point(1712, 106);
-            this.pictureBox10.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(5);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(53, 49);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -230,10 +230,11 @@
             this.Controls.Add(this.addButton);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "TaiKhoan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TaiKhoan";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.TKData)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

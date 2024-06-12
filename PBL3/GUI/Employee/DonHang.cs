@@ -60,19 +60,25 @@ namespace PBL3.GUI.Employee
         {
             if (timKiemDonHang.Text == "")
             {
-                MessageBox.Show("Vui lòng nhập thông tin đơn hàng cần tìm kiếm");
+                //MessageBox.Show("Vui lòng nhập thông tin đơn hàng cần tìm kiếm");
+                ThatBai f3 = new ThatBai("Vui lòng nhập thông tin đơn hàng cần tìm kiếm");
+                f3.ShowDialog();
                 return;
             }
             if(!int.TryParse(timKiemDonHang.Text, out int n))
             {
-                MessageBox.Show("Vui lòng nhập mã đơn hàng là số");
+                //MessageBox.Show("Vui lòng nhập mã đơn hàng là số");
+                ThatBai f3 = new ThatBai("Vui lòng nhập mã đơn hàng là số");
+                f3.ShowDialog();
             }
             else
             {
                 donHangData.DataSource = DonHang_BLL.Instance.getListObjectMaDH(int.Parse(timKiemDonHang.Text));
                 if (donHangData.Rows.Count == 0)
                 {
-                    MessageBox.Show("Không tìm thấy đơn hàng");
+                    //MessageBox.Show("Không tìm thấy đơn hàng");
+                    ThatBai f3 = new ThatBai("Không tìm thấy đơn hàng");
+                    f3.ShowDialog();
                 }
                 else
                 {

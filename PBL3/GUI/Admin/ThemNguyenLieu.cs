@@ -72,27 +72,37 @@ namespace PBL3.GUI.Admin
         {
             if(maNL.Text == "" || tenNL.Text == "" ||soLuongNhap.Text == "" || giaNhap.Text=="")
             {
-                MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
+                //MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
+                ThatBai f3 = new ThatBai("Vui lòng nhập đầy đủ thông tin!");
+                f3.ShowDialog();
                 return;
             }
             if(ngayNhap.Value > ngayHetHan.Value)
             {
-                MessageBox.Show("Ngày nhập không thể sau ngày hết hạn");
+               // MessageBox.Show("Ngày nhập không thể sau ngày hết hạn");
+                ThatBai f3 = new ThatBai("Ngày nhập không thể sau ngày hết hạn");
+                f3.ShowDialog();
                 return;
             }
             if(Convert.ToInt32(soLuongNhap.Text) <= 0 || Convert.ToInt32(giaNhap.Text) <= 0)
             {
-                MessageBox.Show("Số lượng nhập và giá nhập phải lớn hơn 0");
+                //MessageBox.Show("Số lượng nhập và giá nhập phải lớn hơn 0");
+                ThatBai f3 = new ThatBai("Số lượng nhập và giá nhập phải lớn hơn 0");
+                f3.ShowDialog();
                 return;
             }
             if(dvtcb.Text == "")
             {
-                MessageBox.Show("Vui lòng chọn đơn vị tính");
+               // MessageBox.Show("Vui lòng chọn đơn vị tính");
+                ThatBai f3 = new ThatBai("Vui lòng chọn đơn vị tính");
+                f3.ShowDialog();
                 return;
             }
             if(ChiTietNguyenLieu_BLL.Instance.ValidAdd(Convert.ToInt32(maNL.Text), ngayNhap.Value.ToString("yyyy-MM-dd")) == false)
             {
-                MessageBox.Show("Nguyên liệu đã được nhập vào thời gian này");
+               // MessageBox.Show("Nguyên liệu đã được nhập vào thời gian này");
+                ThatBai f3 = new ThatBai("Nguyên liệu đã được nhập vào thời gian này");
+                f3.ShowDialog();
                 return;
             }
             if(tenNL.Enabled == true)
@@ -106,7 +116,9 @@ namespace PBL3.GUI.Admin
                 ChiTietNguyenLieu_BLL.Instance.AddChiTietNguyenLieu(Convert.ToInt32(maNL.Text), ngayNhap.Value, Convert.ToInt32(soLuongNhap.Text), ngayHetHan.Value, Convert.ToInt32(giaNhap.Text));
             }
             RefreshData();
-            MessageBox.Show("Thêm nguyên liệu thành công");
+            //MessageBox.Show("Thêm nguyên liệu thành công");
+            ThanhCong f = new ThanhCong("Thêm nguyên liệu thành công!");
+            f.ShowDialog();
             this.Close();
         }
 

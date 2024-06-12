@@ -462,6 +462,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ThemMaKM";
             this.Text = "ThemMaKM";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.guna2Panel1.ResumeLayout(false);

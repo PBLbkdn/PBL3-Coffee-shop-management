@@ -62,7 +62,9 @@ namespace PBL3.GUI.Admin
             int Manv = 0;
             if(TKData.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Vui lòng chọn nhân viên cần cập nhật thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //MessageBox.Show("Vui lòng chọn nhân viên cần cập nhật thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                ThatBai f1 = new ThatBai("Vui lòng chọn nhân viên cần cập nhật thông tin");
+                f1.ShowDialog();
                 return;
             }
             Manv = Convert.ToInt32(TKData.SelectedRows[0].Cells["MaNV"].Value.ToString());
@@ -77,7 +79,9 @@ namespace PBL3.GUI.Admin
         {
             if(TKData.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Vui lòng chọn tài khoản cần xóa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+               // MessageBox.Show("Vui lòng chọn tài khoản cần xóa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                ThatBai f1 = new ThatBai("Vui lòng chọn tài khoản cần xóa");
+                f1.ShowDialog();
                 return;
             }
             DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa tài khoản này không?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);

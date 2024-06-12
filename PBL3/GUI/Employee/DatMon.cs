@@ -127,7 +127,9 @@ namespace PBL3.GUI.Employee
                 SelectedDrink selectedItem = Bonus_BLL.Instance.SearchSelectedDrink(s, foodItem.MaSP);
                 if (selectedItem != null)
                 {
-                    MessageBox.Show("Sản phẩm đã tồn tại trong đơn hàng.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    //MessageBox.Show("Sản phẩm đã tồn tại trong đơn hàng.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    ThatBai f3 = new ThatBai("Sản phẩm đã tồn tại trong đơn hàng");
+                    f3.ShowDialog();
                 }
                 else
                 {
@@ -185,7 +187,9 @@ namespace PBL3.GUI.Employee
         {
             if (guna2DataGridView1.RowCount == 0)
             {
-                MessageBox.Show("Đơn hàng chưa có sản phầm nào.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+               // MessageBox.Show("Đơn hàng chưa có sản phầm nào.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ThatBai f3 = new ThatBai("Đơn hàng chưa có sản phầm nào");
+                f3.ShowDialog();
             }
             else
             {
@@ -249,14 +253,18 @@ namespace PBL3.GUI.Employee
             string searchText = guna2TextBox1.Text.Trim().ToLower();
             if (searchText == "")
             {
-                MessageBox.Show("Tên món không được trống!");
+                //MessageBox.Show("Tên món không được trống!");
+                ThatBai f3 = new ThatBai("Tên món không được trống!");
+                f3.ShowDialog();
                 return;
             }
             foreach (char c in searchText)
             {
                 if (char.IsDigit(c))
                 {
-                    MessageBox.Show("Tên món không hợp lệ");
+                    //MessageBox.Show("Tên món không hợp lệ");
+                    ThatBai f3 = new ThatBai("Tên món không hợp lệ");
+                    f3.ShowDialog();
                     return;
                 }
             }
@@ -304,7 +312,9 @@ namespace PBL3.GUI.Employee
                     }
                     if (soLuong < 0)
                     {
-                        MessageBox.Show("Số lượng không hợp lệ.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);                
+                        //MessageBox.Show("Số lượng không hợp lệ.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        ThatBai f3 = new ThatBai("Số lượng không hợp lệ");
+                        f3.ShowDialog();
                         UpdateDataGridView();
                         return;
                     }
@@ -317,7 +327,9 @@ namespace PBL3.GUI.Employee
                 }
                 else
                 {
-                    MessageBox.Show("Số lượng không hợp lệ.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    //MessageBox.Show("Số lượng không hợp lệ.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    ThatBai f3 = new ThatBai("Số lượng không hợp lệ");
+                    f3.ShowDialog();
                     UpdateDataGridView();
                 }
                 
@@ -328,7 +340,9 @@ namespace PBL3.GUI.Employee
         {
             if (guna2DataGridView1.Columns[e.ColumnIndex].Name != "Quantity")
             {
-                MessageBox.Show("Không thể sửa thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //MessageBox.Show("Không thể sửa thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                ThatBai f3 = new ThatBai("Không thể sửa thông tin!");
+                f3.ShowDialog();
                 e.Cancel = true; // Hủy sự kiện chỉnh sửa nếu không phải cột "Số lượng"
             }
         }

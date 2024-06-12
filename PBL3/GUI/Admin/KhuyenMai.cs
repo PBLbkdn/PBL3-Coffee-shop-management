@@ -63,7 +63,9 @@ namespace PBL3.GUI
             int Makm = 0;
             if(KMData.SelectedRows.Count==0)
             {
-                MessageBox.Show("Vui lòng chọn khuyến mãi cần sửa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //MessageBox.Show("Vui lòng chọn khuyến mãi cần sửa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                ThatBai f1 = new ThatBai("Vui lòng chọn khuyến mãi cần sửa");
+                f1.ShowDialog();
                 return;
             }
             if (KMData.SelectedRows.Count == 1)
@@ -82,7 +84,9 @@ namespace PBL3.GUI
         {
             if(KMData.SelectedRows.Count==0)
             {
-                MessageBox.Show("Vui lòng chọn khuyến mãi cần xóa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //MessageBox.Show("Vui lòng chọn khuyến mãi cần xóa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                ThatBai f1 = new ThatBai("Vui lòng chọn khuyến mãi cần xóa");
+                f1.ShowDialog();
                 return;
             }
             DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa khuyến mãi này không?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -118,13 +122,17 @@ namespace PBL3.GUI
         {
             if(fromDay.Value>toDay.Value)
             {
-                MessageBox.Show("Thời gian không hợp lệ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //MessageBox.Show("Thời gian không hợp lệ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                ThatBai f1 = new ThatBai("Thời gian không hợp lệ");
+                f1.ShowDialog();
                 return;
             }
             KMData.DataSource=KhuyenMai_BLL.Instance.GetListKhuyenMaiTheoTGian(fromDay.Value, toDay.Value);
             if(KMData.Rows.Count==0)
             {
-                MessageBox.Show("Hiện không có khuyến mãi trong khoảng thời gian này", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //MessageBox.Show("Hiện không có khuyến mãi trong khoảng thời gian này", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                ThatBai f1 = new ThatBai("Hiện không có khuyến mãi trong khoảng thời gian này");
+                f1.ShowDialog();
             }
         }
 

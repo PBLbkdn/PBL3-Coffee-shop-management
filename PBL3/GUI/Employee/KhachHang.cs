@@ -79,7 +79,9 @@ namespace PBL3.GUI.Employee
             string txt = timKiemKH.Text;
             if (txt == "")
             {
-                MessageBox.Show("Vui lòng nhập tên/ số điện thoại khách hàng cần tìm kiếm");
+                //MessageBox.Show("Vui lòng nhập tên/ số điện thoại khách hàng cần tìm kiếm");
+                ThatBai f3 = new ThatBai("Vui lòng nhập tên/ số điện thoại khách hàng cần tìm kiếm");
+                f3.ShowDialog();
                 return;
             }
             //kiểm tra txt là toàn chữ hay toàn số
@@ -111,7 +113,9 @@ namespace PBL3.GUI.Employee
                 }
                 if (!isChar)
                 {
-                    MessageBox.Show("Vui lòng nhập đúng định dạng tên/ số điện thoại của khách hàng");
+                    //MessageBox.Show("Vui lòng nhập đúng định dạng tên/ số điện thoại của khách hàng");
+                    ThatBai f3 = new ThatBai("Vui lòng nhập đúng định dạng tên/ số điện thoại của khách hàng");
+                    f3.ShowDialog();
                     return;
                 }
                 //tìm theo tên
@@ -120,7 +124,9 @@ namespace PBL3.GUI.Employee
             }
             if (KHData.Rows.Count == 0)
             {
-                MessageBox.Show("Không tìm thấy khách hàng được yêu cầu");
+                //MessageBox.Show("Không tìm thấy khách hàng được yêu cầu");
+                ThatBai f3 = new ThatBai("Không tìm thấy khách hàng được yêu cầu");
+                f3.ShowDialog();
                 KHData.DataSource = KhachHang_BLL.Instance.GetListKhachHang();
             }
             RefreshData();
@@ -140,7 +146,9 @@ namespace PBL3.GUI.Employee
         {
             if(KHData.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Vui lòng chọn khách hàng cần sửa thông tin");
+               // MessageBox.Show("Vui lòng chọn khách hàng cần sửa thông tin");
+                ThatBai f3 = new ThatBai("Vui lòng chọn khách hàng cần sửa thông tin");
+                f3.ShowDialog();
                 return;
             }
             DataGridViewRow row = KHData.SelectedRows[0];
@@ -160,7 +168,9 @@ namespace PBL3.GUI.Employee
         {
             if (KHData.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Vui lòng chọn khách hàng cần xóa thông tin");
+                //MessageBox.Show("Vui lòng chọn khách hàng cần xóa thông tin");
+                ThatBai f3 = new ThatBai("Vui lòng chọn khách hàng cần xóa thông tin");
+                f3.ShowDialog();
                 return;
             }
             DataGridViewRow row = KHData.SelectedRows[0];
