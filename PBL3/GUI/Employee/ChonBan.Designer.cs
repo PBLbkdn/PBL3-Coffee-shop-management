@@ -36,14 +36,14 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.exit = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2DataGridView2 = new Guna.UI2.WinForms.Guna2DataGridView();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.hinhNguoi = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.ten = new System.Windows.Forms.Label();
@@ -51,10 +51,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.exit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hinhNguoi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.guna2Panel3.SuspendLayout();
             this.SuspendLayout();
@@ -64,21 +64,21 @@
             this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(132)))), ((int)(((byte)(132)))));
             this.guna2Panel1.Controls.Add(this.pictureBox3);
             this.guna2Panel1.Controls.Add(this.panel2);
-            this.guna2Panel1.Controls.Add(this.pictureBox6);
+            this.guna2Panel1.Controls.Add(this.exit);
             this.guna2Panel1.Controls.Add(this.pictureBox4);
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1848, 66);
+            this.guna2Panel1.Size = new System.Drawing.Size(2079, 82);
             this.guna2Panel1.TabIndex = 11;
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::PBL3.Properties.Resources.icons8_home_50;
-            this.pictureBox3.Location = new System.Drawing.Point(20, 17);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(5);
+            this.pictureBox3.Location = new System.Drawing.Point(22, 21);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(44, 34);
+            this.pictureBox3.Size = new System.Drawing.Size(50, 42);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 59;
             this.pictureBox3.TabStop = false;
@@ -89,19 +89,19 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(231)))), ((int)(((byte)(231)))));
             this.panel2.Controls.Add(this.pictureBox11);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(85, 1);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Location = new System.Drawing.Point(96, 1);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(240, 65);
+            this.panel2.Size = new System.Drawing.Size(270, 81);
             this.panel2.TabIndex = 4;
             // 
             // pictureBox11
             // 
             this.pictureBox11.Image = global::PBL3.Properties.Resources.bàn_1;
-            this.pictureBox11.Location = new System.Drawing.Point(28, 15);
-            this.pictureBox11.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox11.Location = new System.Drawing.Point(32, 19);
+            this.pictureBox11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(36, 36);
+            this.pictureBox11.Size = new System.Drawing.Size(40, 45);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox11.TabIndex = 3;
             this.pictureBox11.TabStop = false;
@@ -112,32 +112,32 @@
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(231)))), ((int)(((byte)(231)))));
             this.label2.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(72, 20);
+            this.label2.Location = new System.Drawing.Point(81, 25);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(128, 32);
+            this.label2.Size = new System.Drawing.Size(153, 37);
             this.label2.TabIndex = 0;
             this.label2.Text = "Chọn bàn";
             // 
-            // pictureBox6
+            // exit
             // 
-            this.pictureBox6.Image = global::PBL3.Properties.Resources.nút_tắt;
-            this.pictureBox6.Location = new System.Drawing.Point(1756, 15);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(40, 37);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 3;
-            this.pictureBox6.TabStop = false;
-            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
+            this.exit.Image = global::PBL3.Properties.Resources.nút_tắt;
+            this.exit.Location = new System.Drawing.Point(1847, 26);
+            this.exit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.exit.Name = "exit";
+            this.exit.Size = new System.Drawing.Size(45, 46);
+            this.exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.exit.TabIndex = 3;
+            this.exit.TabStop = false;
+            this.exit.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
             // pictureBox4
             // 
             this.pictureBox4.Image = global::PBL3.Properties.Resources.nút_tắt;
-            this.pictureBox4.Location = new System.Drawing.Point(80, 219);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox4.Location = new System.Drawing.Point(90, 274);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(40, 37);
+            this.pictureBox4.Size = new System.Drawing.Size(45, 46);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 2;
             this.pictureBox4.TabStop = false;
@@ -148,10 +148,10 @@
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(231)))), ((int)(((byte)(231)))));
             this.label1.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(80, 172);
+            this.label1.Location = new System.Drawing.Point(90, 215);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(303, 32);
+            this.label1.Size = new System.Drawing.Size(361, 37);
             this.label1.TabIndex = 34;
             this.label1.Text = "Danh sách món đã chọn";
             // 
@@ -178,13 +178,13 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.guna2DataGridView2.DefaultCellStyle = dataGridViewCellStyle3;
             this.guna2DataGridView2.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView2.Location = new System.Drawing.Point(80, 219);
-            this.guna2DataGridView2.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2DataGridView2.Location = new System.Drawing.Point(90, 274);
+            this.guna2DataGridView2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2DataGridView2.Name = "guna2DataGridView2";
             this.guna2DataGridView2.ReadOnly = true;
             this.guna2DataGridView2.RowHeadersVisible = false;
             this.guna2DataGridView2.RowHeadersWidth = 51;
-            this.guna2DataGridView2.Size = new System.Drawing.Size(516, 454);
+            this.guna2DataGridView2.Size = new System.Drawing.Size(580, 568);
             this.guna2DataGridView2.TabIndex = 35;
             this.guna2DataGridView2.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView2.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -221,10 +221,10 @@
             this.guna2Button2.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.guna2Button2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button2.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button2.Location = new System.Drawing.Point(1565, 836);
-            this.guna2Button2.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Button2.Location = new System.Drawing.Point(1650, 922);
+            this.guna2Button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(215, 59);
+            this.guna2Button2.Size = new System.Drawing.Size(242, 74);
             this.guna2Button2.TabIndex = 40;
             this.guna2Button2.Text = "Hủy";
             this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
@@ -242,10 +242,10 @@
             this.guna2Button1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button1.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button1.Location = new System.Drawing.Point(1287, 836);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Button1.Location = new System.Drawing.Point(1319, 922);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(249, 59);
+            this.guna2Button1.Size = new System.Drawing.Size(280, 74);
             this.guna2Button1.TabIndex = 39;
             this.guna2Button1.Text = "Xác nhận thanh toán";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
@@ -253,22 +253,22 @@
             // guna2Panel4
             // 
             this.guna2Panel4.BackColor = System.Drawing.Color.White;
-            this.guna2Panel4.Location = new System.Drawing.Point(80, 674);
-            this.guna2Panel4.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel4.Location = new System.Drawing.Point(90, 842);
+            this.guna2Panel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2Panel4.Name = "guna2Panel4";
-            this.guna2Panel4.Size = new System.Drawing.Size(516, 60);
+            this.guna2Panel4.Size = new System.Drawing.Size(580, 75);
             this.guna2Panel4.TabIndex = 41;
             // 
-            // pictureBox10
+            // hinhNguoi
             // 
-            this.pictureBox10.Image = global::PBL3.Properties.Resources.Vector__2_;
-            this.pictureBox10.Location = new System.Drawing.Point(1727, 135);
-            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(53, 49);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox10.TabIndex = 36;
-            this.pictureBox10.TabStop = false;
+            this.hinhNguoi.Image = global::PBL3.Properties.Resources.Vector__2_;
+            this.hinhNguoi.Location = new System.Drawing.Point(1832, 144);
+            this.hinhNguoi.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.hinhNguoi.Name = "hinhNguoi";
+            this.hinhNguoi.Size = new System.Drawing.Size(60, 61);
+            this.hinhNguoi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.hinhNguoi.TabIndex = 36;
+            this.hinhNguoi.TabStop = false;
             // 
             // dataGridView1
             // 
@@ -276,62 +276,63 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(557, 476);
+            this.dataGridView1.Size = new System.Drawing.Size(627, 595);
             this.dataGridView1.TabIndex = 0;
             // 
             // guna2Panel3
             // 
             this.guna2Panel3.Controls.Add(this.dataGridView1);
-            this.guna2Panel3.Location = new System.Drawing.Point(721, 219);
-            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel3.Location = new System.Drawing.Point(811, 274);
+            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(557, 476);
+            this.guna2Panel3.Size = new System.Drawing.Size(627, 595);
             this.guna2Panel3.TabIndex = 37;
             // 
             // ten
             // 
             this.ten.AutoSize = true;
             this.ten.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ten.Location = new System.Drawing.Point(1560, 146);
+            this.ten.Location = new System.Drawing.Point(1515, 173);
             this.ten.Name = "ten";
-            this.ten.Size = new System.Drawing.Size(71, 28);
+            this.ten.Size = new System.Drawing.Size(84, 32);
             this.ten.TabIndex = 42;
             this.ten.Text = "label3";
             // 
             // ChonBan
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(181)))), ((int)(((byte)(181)))));
-            this.ClientSize = new System.Drawing.Size(1440, 1024);
+            this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.Controls.Add(this.ten);
             this.Controls.Add(this.guna2Panel4);
             this.Controls.Add(this.guna2Button2);
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.guna2Panel3);
-            this.Controls.Add(this.pictureBox10);
+            this.Controls.Add(this.hinhNguoi);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2DataGridView2);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ChonBan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "ChonBan";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.ChonBan_Load);
             this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.exit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hinhNguoi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.guna2Panel3.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -342,11 +343,11 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox exit;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView2;
-        private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.PictureBox hinhNguoi;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;

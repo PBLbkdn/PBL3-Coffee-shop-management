@@ -31,12 +31,9 @@ namespace PBL3
 
 
             Application.EnableVisualStyles();
-            //Application.SetCompatibleTextRenderingDefault(false);
 
             Application.Run(new GUI.DangNhap());
-            // Application.Run(new GUI.Employee.ManHinhChinh_NV(2));
-            // Application.Run(new GUI.ThatBai("Không thể chuyển trạng thái bàn bận thành bàn đã được đặt trước"));
-           // Application.Run(new Form1());
+            
         }
         private static void OnTimedEvent(Object source, ElapsedEventArgs e)
         {

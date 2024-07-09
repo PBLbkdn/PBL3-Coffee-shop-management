@@ -200,7 +200,8 @@ namespace PBL3.BUS
             List<TaiKhoan> list = db.TaiKhoans.ToList();
             foreach (TaiKhoan i in list)
             {
-                int MaCV = NhanVien_BLL.Instance.getmaCV(i.MaNV);
+                
+                int MaCV = NhanVien_BLL.Instance.getmaCV(TaiKhoan_BLL.Instance.GetMaNV(i.TenDangNhap, i.MatKhau));
                 if (i.TenDangNhap == tenTK && MaCV.ToString() == maCV)
                 {
                     //đã tồn tại

@@ -26,16 +26,13 @@ namespace PBL3.GUI
             int y = (guna2Panel1.ClientSize.Height - label1.Height) / 2;
             label1.Location = new Point(x, y);
         }
-        private void pictureBox2_Click(object sender, EventArgs e)
+
+        private void ThanhCong_KeyDown(object sender, KeyEventArgs e)
         {
-            
-        }
-
-        
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
+            if (e.KeyCode == Keys.Enter)
+            {
+                this.Close();
+            }
         }
     }
 }

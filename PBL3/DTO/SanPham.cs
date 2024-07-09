@@ -29,6 +29,7 @@ namespace PBL3.DTO
         public string NhomSP { get; set; }
         public string DonViSP { get; set; }
         public string DuongDanAnh { get; set; }
+        public Nullable<bool> TonTai { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ChiTietHoaDon> ChiTietHoaDons { get; set; }

@@ -33,7 +33,7 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.hinhNguoi = new System.Windows.Forms.PictureBox();
             this.DHButton = new Guna.UI2.WinForms.Guna2Button();
             this.TKeButton = new Guna.UI2.WinForms.Guna2Button();
             this.HDButton = new Guna.UI2.WinForms.Guna2Button();
@@ -45,7 +45,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Exit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hinhNguoi)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -56,18 +56,18 @@
             this.guna2Panel1.Controls.Add(this.pictureBox1);
             this.guna2Panel1.Controls.Add(this.label1);
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1848, 108);
+            this.guna2Panel1.Size = new System.Drawing.Size(1920, 135);
             this.guna2Panel1.TabIndex = 1;
             // 
             // Exit
             // 
             this.Exit.Image = global::PBL3.Properties.Resources.nút_tắt;
-            this.Exit.Location = new System.Drawing.Point(1737, 33);
-            this.Exit.Margin = new System.Windows.Forms.Padding(4);
+            this.Exit.Location = new System.Drawing.Point(1826, 41);
+            this.Exit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Exit.Name = "Exit";
-            this.Exit.Size = new System.Drawing.Size(40, 37);
+            this.Exit.Size = new System.Drawing.Size(45, 46);
             this.Exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Exit.TabIndex = 25;
             this.Exit.TabStop = false;
@@ -76,10 +76,10 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = global::PBL3.Properties.Resources.nút_tắt;
-            this.pictureBox6.Location = new System.Drawing.Point(2632, 52);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.pictureBox6.Location = new System.Drawing.Point(2961, 65);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(60, 57);
+            this.pictureBox6.Size = new System.Drawing.Size(68, 71);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 24;
             this.pictureBox6.TabStop = false;
@@ -89,10 +89,10 @@
             // 
             this.pictureBox1.Image = global::PBL3.Properties.Resources.icons8_manage_50_1;
             this.pictureBox1.InitialImage = global::PBL3.Properties.Resources.icons8_manage_50_1;
-            this.pictureBox1.Location = new System.Drawing.Point(56, 27);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Location = new System.Drawing.Point(63, 34);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(67, 59);
+            this.pictureBox1.Size = new System.Drawing.Size(75, 74);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
@@ -103,24 +103,24 @@
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(132)))), ((int)(((byte)(132)))));
             this.label1.Font = new System.Drawing.Font("Cambria", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(128, 33);
+            this.label1.Location = new System.Drawing.Point(144, 41);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(375, 47);
+            this.label1.Size = new System.Drawing.Size(454, 57);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nhân viên thu ngân";
             // 
-            // pictureBox10
+            // hinhNguoi
             // 
-            this.pictureBox10.Image = global::PBL3.Properties.Resources.Vector__2_;
-            this.pictureBox10.Location = new System.Drawing.Point(1724, 158);
-            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(53, 49);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox10.TabIndex = 17;
-            this.pictureBox10.TabStop = false;
-            this.pictureBox10.Click += new System.EventHandler(this.pictureBox10_Click);
+            this.hinhNguoi.Image = global::PBL3.Properties.Resources.Vector__2_;
+            this.hinhNguoi.Location = new System.Drawing.Point(1811, 198);
+            this.hinhNguoi.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.hinhNguoi.Name = "hinhNguoi";
+            this.hinhNguoi.Size = new System.Drawing.Size(60, 61);
+            this.hinhNguoi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.hinhNguoi.TabIndex = 17;
+            this.hinhNguoi.TabStop = false;
+            this.hinhNguoi.Click += new System.EventHandler(this.pictureBox10_Click);
             // 
             // DHButton
             // 
@@ -135,10 +135,10 @@
             this.DHButton.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.DHButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DHButton.ForeColor = System.Drawing.Color.Black;
-            this.DHButton.Location = new System.Drawing.Point(793, 571);
-            this.DHButton.Margin = new System.Windows.Forms.Padding(4);
+            this.DHButton.Location = new System.Drawing.Point(892, 714);
+            this.DHButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.DHButton.Name = "DHButton";
-            this.DHButton.Size = new System.Drawing.Size(267, 74);
+            this.DHButton.Size = new System.Drawing.Size(300, 92);
             this.DHButton.TabIndex = 22;
             this.DHButton.Text = "Quản lý đơn hàng";
             this.DHButton.Click += new System.EventHandler(this.DHButton_Click);
@@ -156,10 +156,10 @@
             this.TKeButton.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.TKeButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TKeButton.ForeColor = System.Drawing.Color.Black;
-            this.TKeButton.Location = new System.Drawing.Point(1181, 340);
-            this.TKeButton.Margin = new System.Windows.Forms.Padding(4);
+            this.TKeButton.Location = new System.Drawing.Point(1329, 425);
+            this.TKeButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TKeButton.Name = "TKeButton";
-            this.TKeButton.Size = new System.Drawing.Size(267, 74);
+            this.TKeButton.Size = new System.Drawing.Size(300, 92);
             this.TKeButton.TabIndex = 21;
             this.TKeButton.Text = "Thống kê";
             this.TKeButton.Click += new System.EventHandler(this.TKeButton_Click);
@@ -177,10 +177,10 @@
             this.HDButton.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.HDButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HDButton.ForeColor = System.Drawing.Color.Black;
-            this.HDButton.Location = new System.Drawing.Point(1181, 571);
-            this.HDButton.Margin = new System.Windows.Forms.Padding(4);
+            this.HDButton.Location = new System.Drawing.Point(1329, 714);
+            this.HDButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.HDButton.Name = "HDButton";
-            this.HDButton.Size = new System.Drawing.Size(267, 74);
+            this.HDButton.Size = new System.Drawing.Size(300, 92);
             this.HDButton.TabIndex = 20;
             this.HDButton.Text = "Quản lý hóa đơn";
             this.HDButton.Click += new System.EventHandler(this.HDButton_Click);
@@ -198,13 +198,13 @@
             this.datMonButton.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.datMonButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.datMonButton.ForeColor = System.Drawing.Color.Black;
-            this.datMonButton.Location = new System.Drawing.Point(401, 340);
-            this.datMonButton.Margin = new System.Windows.Forms.Padding(4);
+            this.datMonButton.Location = new System.Drawing.Point(451, 425);
+            this.datMonButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.datMonButton.Name = "datMonButton";
-            this.datMonButton.Size = new System.Drawing.Size(267, 74);
+            this.datMonButton.Size = new System.Drawing.Size(300, 92);
             this.datMonButton.TabIndex = 19;
             this.datMonButton.Text = "Đặt món";
-            this.datMonButton.Click += new System.EventHandler(this.guna2Button4_Click);
+            this.datMonButton.Click += new System.EventHandler(this.datMon_Click);
             // 
             // banButton
             // 
@@ -219,10 +219,10 @@
             this.banButton.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.banButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.banButton.ForeColor = System.Drawing.Color.Black;
-            this.banButton.Location = new System.Drawing.Point(793, 340);
-            this.banButton.Margin = new System.Windows.Forms.Padding(4);
+            this.banButton.Location = new System.Drawing.Point(892, 425);
+            this.banButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.banButton.Name = "banButton";
-            this.banButton.Size = new System.Drawing.Size(267, 74);
+            this.banButton.Size = new System.Drawing.Size(300, 92);
             this.banButton.TabIndex = 18;
             this.banButton.Text = "Quản lý bàn";
             this.banButton.Click += new System.EventHandler(this.banButton_Click);
@@ -231,10 +231,10 @@
             // 
             this.ten.AutoSize = true;
             this.ten.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold);
-            this.ten.Location = new System.Drawing.Point(1405, 170);
-            this.ten.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.ten.Location = new System.Drawing.Point(1465, 222);
+            this.ten.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.ten.Name = "ten";
-            this.ten.Size = new System.Drawing.Size(136, 32);
+            this.ten.Size = new System.Drawing.Size(164, 37);
             this.ten.TabIndex = 23;
             this.ten.Text = "Nhân viên";
             // 
@@ -251,20 +251,20 @@
             this.KHbt.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.KHbt.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.KHbt.ForeColor = System.Drawing.Color.Black;
-            this.KHbt.Location = new System.Drawing.Point(401, 571);
-            this.KHbt.Margin = new System.Windows.Forms.Padding(4);
+            this.KHbt.Location = new System.Drawing.Point(451, 714);
+            this.KHbt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.KHbt.Name = "KHbt";
-            this.KHbt.Size = new System.Drawing.Size(267, 74);
+            this.KHbt.Size = new System.Drawing.Size(300, 92);
             this.KHbt.TabIndex = 24;
             this.KHbt.Text = "Quản lý khách hàng";
             this.KHbt.Click += new System.EventHandler(this.KHbt_Click);
             // 
             // ManHinhChinh_NV
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(181)))), ((int)(((byte)(181)))));
-            this.ClientSize = new System.Drawing.Size(1440, 1024);
+            this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.Controls.Add(this.KHbt);
             this.Controls.Add(this.ten);
             this.Controls.Add(this.DHButton);
@@ -272,20 +272,21 @@
             this.Controls.Add(this.HDButton);
             this.Controls.Add(this.datMonButton);
             this.Controls.Add(this.banButton);
-            this.Controls.Add(this.pictureBox10);
+            this.Controls.Add(this.hinhNguoi);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ManHinhChinh_NV";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ManHinhChinh_NV";
             this.TopMost = true;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Exit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hinhNguoi)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -296,7 +297,7 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.PictureBox hinhNguoi;
         private Guna.UI2.WinForms.Guna2Button DHButton;
         private Guna.UI2.WinForms.Guna2Button TKeButton;
         private Guna.UI2.WinForms.Guna2Button HDButton;

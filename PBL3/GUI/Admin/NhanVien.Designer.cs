@@ -62,18 +62,18 @@
             this.guna2Panel1.Controls.Add(this.pictureBox4);
             this.guna2Panel1.Controls.Add(this.panel2);
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1848, 66);
+            this.guna2Panel1.Size = new System.Drawing.Size(2079, 82);
             this.guna2Panel1.TabIndex = 8;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::PBL3.Properties.Resources.icons8_home_50;
-            this.pictureBox1.Location = new System.Drawing.Point(19, 17);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(5);
+            this.pictureBox1.Location = new System.Drawing.Point(21, 21);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(44, 34);
+            this.pictureBox1.Size = new System.Drawing.Size(50, 42);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 52;
             this.pictureBox1.TabStop = false;
@@ -82,10 +82,10 @@
             // NVExit
             // 
             this.NVExit.Image = global::PBL3.Properties.Resources.nút_tắt;
-            this.NVExit.Location = new System.Drawing.Point(1756, 15);
-            this.NVExit.Margin = new System.Windows.Forms.Padding(4);
+            this.NVExit.Location = new System.Drawing.Point(1745, 22);
+            this.NVExit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.NVExit.Name = "NVExit";
-            this.NVExit.Size = new System.Drawing.Size(40, 37);
+            this.NVExit.Size = new System.Drawing.Size(45, 46);
             this.NVExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.NVExit.TabIndex = 3;
             this.NVExit.TabStop = false;
@@ -94,10 +94,10 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::PBL3.Properties.Resources.nút_tắt;
-            this.pictureBox4.Location = new System.Drawing.Point(80, 219);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox4.Location = new System.Drawing.Point(90, 274);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(40, 37);
+            this.pictureBox4.Size = new System.Drawing.Size(45, 46);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 2;
             this.pictureBox4.TabStop = false;
@@ -107,19 +107,19 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(231)))), ((int)(((byte)(231)))));
             this.panel2.Controls.Add(this.pictureBox11);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(80, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Location = new System.Drawing.Point(90, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(240, 66);
+            this.panel2.Size = new System.Drawing.Size(270, 82);
             this.panel2.TabIndex = 0;
             // 
             // pictureBox11
             // 
             this.pictureBox11.Image = global::PBL3.Properties.Resources.icons8_human_30_1;
-            this.pictureBox11.Location = new System.Drawing.Point(21, 16);
-            this.pictureBox11.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox11.Location = new System.Drawing.Point(24, 20);
+            this.pictureBox11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(36, 36);
+            this.pictureBox11.Size = new System.Drawing.Size(40, 45);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox11.TabIndex = 3;
             this.pictureBox11.TabStop = false;
@@ -130,10 +130,10 @@
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(231)))), ((int)(((byte)(231)))));
             this.label2.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(65, 18);
+            this.label2.Location = new System.Drawing.Point(73, 22);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(136, 32);
+            this.label2.Size = new System.Drawing.Size(164, 37);
             this.label2.TabIndex = 0;
             this.label2.Text = "Nhân viên";
             // 
@@ -143,11 +143,11 @@
             this.NVData.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.NVData.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.NVData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.NVData.Location = new System.Drawing.Point(80, 219);
-            this.NVData.Margin = new System.Windows.Forms.Padding(4);
+            this.NVData.Location = new System.Drawing.Point(90, 274);
+            this.NVData.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.NVData.Name = "NVData";
             this.NVData.RowHeadersWidth = 51;
-            this.NVData.Size = new System.Drawing.Size(1688, 651);
+            this.NVData.Size = new System.Drawing.Size(1700, 700);
             this.NVData.TabIndex = 15;
             // 
             // clearButton
@@ -160,12 +160,12 @@
             this.clearButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.clearButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.clearButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.clearButton.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clearButton.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
             this.clearButton.ForeColor = System.Drawing.Color.Black;
-            this.clearButton.Location = new System.Drawing.Point(525, 118);
-            this.clearButton.Margin = new System.Windows.Forms.Padding(4);
+            this.clearButton.Location = new System.Drawing.Point(481, 109);
+            this.clearButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.clearButton.Name = "clearButton";
-            this.clearButton.Size = new System.Drawing.Size(200, 49);
+            this.clearButton.Size = new System.Drawing.Size(163, 61);
             this.clearButton.TabIndex = 19;
             this.clearButton.Text = "Xóa";
             this.clearButton.Click += new System.EventHandler(this.deleteNV_Click);
@@ -180,12 +180,12 @@
             this.editButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.editButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.editButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.editButton.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editButton.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
             this.editButton.ForeColor = System.Drawing.Color.Black;
-            this.editButton.Location = new System.Drawing.Point(303, 118);
-            this.editButton.Margin = new System.Windows.Forms.Padding(4);
+            this.editButton.Location = new System.Drawing.Point(286, 109);
+            this.editButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.editButton.Name = "editButton";
-            this.editButton.Size = new System.Drawing.Size(200, 49);
+            this.editButton.Size = new System.Drawing.Size(163, 61);
             this.editButton.TabIndex = 18;
             this.editButton.Text = "Sửa";
             this.editButton.Click += new System.EventHandler(this.editNV_Click);
@@ -200,12 +200,12 @@
             this.addButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.addButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.addButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.addButton.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addButton.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
             this.addButton.ForeColor = System.Drawing.Color.Black;
-            this.addButton.Location = new System.Drawing.Point(80, 118);
-            this.addButton.Margin = new System.Windows.Forms.Padding(4);
+            this.addButton.Location = new System.Drawing.Point(90, 109);
+            this.addButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.addButton.Name = "addButton";
-            this.addButton.Size = new System.Drawing.Size(200, 49);
+            this.addButton.Size = new System.Drawing.Size(163, 61);
             this.addButton.TabIndex = 17;
             this.addButton.Text = "Thêm";
             this.addButton.Click += new System.EventHandler(this.addNV_Click);
@@ -220,12 +220,12 @@
             this.findButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.findButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.findButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.findButton.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.findButton.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
             this.findButton.ForeColor = System.Drawing.Color.Black;
-            this.findButton.Location = new System.Drawing.Point(1011, 118);
-            this.findButton.Margin = new System.Windows.Forms.Padding(4);
+            this.findButton.Location = new System.Drawing.Point(419, 193);
+            this.findButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.findButton.Name = "findButton";
-            this.findButton.Size = new System.Drawing.Size(200, 49);
+            this.findButton.Size = new System.Drawing.Size(225, 61);
             this.findButton.TabIndex = 21;
             this.findButton.Text = "Tìm kiếm";
             this.findButton.Click += new System.EventHandler(this.searchNV_Click);
@@ -240,26 +240,26 @@
             this.nameNVTb.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.nameNVTb.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.nameNVTb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.nameNVTb.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.nameNVTb.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
             this.nameNVTb.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.nameNVTb.IconLeft = global::PBL3.Properties.Resources.entypo_magnifying_glass;
-            this.nameNVTb.Location = new System.Drawing.Point(1235, 118);
-            this.nameNVTb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.nameNVTb.Location = new System.Drawing.Point(735, 193);
+            this.nameNVTb.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.nameNVTb.Name = "nameNVTb";
             this.nameNVTb.PasswordChar = '\0';
             this.nameNVTb.PlaceholderText = "Tên nhân viên";
             this.nameNVTb.SelectedText = "";
-            this.nameNVTb.Size = new System.Drawing.Size(200, 49);
+            this.nameNVTb.Size = new System.Drawing.Size(281, 61);
             this.nameNVTb.TabIndex = 22;
             this.nameNVTb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.enter);
             // 
             // pictureBox10
             // 
             this.pictureBox10.Image = global::PBL3.Properties.Resources.Vector__2_;
-            this.pictureBox10.Location = new System.Drawing.Point(1715, 118);
-            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox10.Location = new System.Drawing.Point(1730, 148);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(53, 49);
+            this.pictureBox10.Size = new System.Drawing.Size(60, 61);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox10.TabIndex = 20;
             this.pictureBox10.TabStop = false;
@@ -270,10 +270,10 @@
             this.ten.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(181)))), ((int)(((byte)(181)))));
             this.ten.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ten.ForeColor = System.Drawing.Color.Black;
-            this.ten.Location = new System.Drawing.Point(1444, 132);
+            this.ten.Location = new System.Drawing.Point(1502, 172);
             this.ten.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ten.Name = "ten";
-            this.ten.Size = new System.Drawing.Size(133, 32);
+            this.ten.Size = new System.Drawing.Size(160, 37);
             this.ten.TabIndex = 48;
             this.ten.Text = "Đơn hàng";
             // 
@@ -289,20 +289,20 @@
             this.dsnvbt.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.dsnvbt.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dsnvbt.ForeColor = System.Drawing.Color.Black;
-            this.dsnvbt.Location = new System.Drawing.Point(753, 118);
-            this.dsnvbt.Margin = new System.Windows.Forms.Padding(4);
+            this.dsnvbt.Location = new System.Drawing.Point(90, 193);
+            this.dsnvbt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dsnvbt.Name = "dsnvbt";
-            this.dsnvbt.Size = new System.Drawing.Size(239, 49);
+            this.dsnvbt.Size = new System.Drawing.Size(269, 61);
             this.dsnvbt.TabIndex = 49;
             this.dsnvbt.Text = "Danh sách nhân viên";
             this.dsnvbt.Click += new System.EventHandler(this.dsnvbt_Click);
             // 
             // NhanVien
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(181)))), ((int)(((byte)(181)))));
-            this.ClientSize = new System.Drawing.Size(1440, 1024);
+            this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.Controls.Add(this.dsnvbt);
             this.Controls.Add(this.ten);
             this.Controls.Add(this.nameNVTb);
@@ -314,12 +314,11 @@
             this.Controls.Add(this.NVData);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.MaximumSize = new System.Drawing.Size(1920, 1260);
-            this.MinimumSize = new System.Drawing.Size(133, 123);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "NhanVien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NhanVien";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.NhanVien_Load);
             this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

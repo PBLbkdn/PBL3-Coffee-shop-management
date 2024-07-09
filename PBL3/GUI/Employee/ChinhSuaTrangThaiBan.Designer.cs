@@ -63,18 +63,18 @@
             this.guna2Panel1.Controls.Add(this.pictureBox4);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1440, 66);
+            this.guna2Panel1.Size = new System.Drawing.Size(1920, 82);
             this.guna2Panel1.TabIndex = 12;
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::PBL3.Properties.Resources.icons8_home_50;
-            this.pictureBox3.Location = new System.Drawing.Point(21, 16);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(5);
+            this.pictureBox3.Location = new System.Drawing.Point(24, 20);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(44, 34);
+            this.pictureBox3.Size = new System.Drawing.Size(50, 42);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 55;
             this.pictureBox3.TabStop = false;
@@ -85,19 +85,19 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(231)))), ((int)(((byte)(231)))));
             this.panel2.Controls.Add(this.pictureBox11);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(85, 1);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Location = new System.Drawing.Point(96, 1);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(240, 65);
+            this.panel2.Size = new System.Drawing.Size(270, 81);
             this.panel2.TabIndex = 4;
             // 
             // pictureBox11
             // 
             this.pictureBox11.Image = global::PBL3.Properties.Resources.bàn_1;
-            this.pictureBox11.Location = new System.Drawing.Point(65, 15);
-            this.pictureBox11.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox11.Location = new System.Drawing.Point(73, 19);
+            this.pictureBox11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(36, 36);
+            this.pictureBox11.Size = new System.Drawing.Size(40, 45);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox11.TabIndex = 3;
             this.pictureBox11.TabStop = false;
@@ -108,20 +108,20 @@
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(231)))), ((int)(((byte)(231)))));
             this.label2.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(109, 20);
+            this.label2.Location = new System.Drawing.Point(123, 25);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 32);
+            this.label2.Size = new System.Drawing.Size(74, 37);
             this.label2.TabIndex = 0;
             this.label2.Text = "Bàn";
             // 
             // pictureBox6
             // 
             this.pictureBox6.Image = global::PBL3.Properties.Resources.nút_tắt;
-            this.pictureBox6.Location = new System.Drawing.Point(1756, 15);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox6.Location = new System.Drawing.Point(1818, 16);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(40, 37);
+            this.pictureBox6.Size = new System.Drawing.Size(45, 46);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 3;
             this.pictureBox6.TabStop = false;
@@ -130,10 +130,10 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::PBL3.Properties.Resources.nút_tắt;
-            this.pictureBox4.Location = new System.Drawing.Point(80, 219);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox4.Location = new System.Drawing.Point(90, 274);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(40, 37);
+            this.pictureBox4.Size = new System.Drawing.Size(45, 46);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 2;
             this.pictureBox4.TabStop = false;
@@ -144,10 +144,10 @@
             this.ten.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(181)))), ((int)(((byte)(181)))));
             this.ten.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ten.ForeColor = System.Drawing.Color.Black;
-            this.ten.Location = new System.Drawing.Point(1533, 130);
+            this.ten.Location = new System.Drawing.Point(1499, 151);
             this.ten.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ten.Name = "ten";
-            this.ten.Size = new System.Drawing.Size(133, 32);
+            this.ten.Size = new System.Drawing.Size(160, 37);
             this.ten.TabIndex = 48;
             this.ten.Text = "Đơn hàng";
             // 
@@ -160,10 +160,10 @@
             this.trong.CheckedState.InnerColor = System.Drawing.Color.White;
             this.trong.CheckedState.InnerOffset = -4;
             this.trong.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.trong.Location = new System.Drawing.Point(80, 293);
+            this.trong.Location = new System.Drawing.Point(90, 366);
             this.trong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.trong.Name = "trong";
-            this.trong.Size = new System.Drawing.Size(123, 32);
+            this.trong.Size = new System.Drawing.Size(148, 36);
             this.trong.TabIndex = 54;
             this.trong.Text = "Bàn trống";
             this.trong.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -175,10 +175,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(36, 31);
+            this.label1.Location = new System.Drawing.Point(40, 39);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(302, 37);
+            this.label1.Size = new System.Drawing.Size(362, 45);
             this.label1.TabIndex = 0;
             this.label1.Text = "Thay đổi trạng thái bàn";
             // 
@@ -191,10 +191,10 @@
             this.ban.CheckedState.InnerColor = System.Drawing.Color.White;
             this.ban.CheckedState.InnerOffset = -4;
             this.ban.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.ban.Location = new System.Drawing.Point(80, 204);
+            this.ban.Location = new System.Drawing.Point(90, 255);
             this.ban.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ban.Name = "ban";
-            this.ban.Size = new System.Drawing.Size(107, 32);
+            this.ban.Size = new System.Drawing.Size(129, 36);
             this.ban.TabIndex = 53;
             this.ban.Text = "Bàn bận";
             this.ban.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -211,10 +211,10 @@
             this.DaDat.CheckedState.InnerColor = System.Drawing.Color.White;
             this.DaDat.CheckedState.InnerOffset = -4;
             this.DaDat.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.DaDat.Location = new System.Drawing.Point(80, 116);
+            this.DaDat.Location = new System.Drawing.Point(90, 145);
             this.DaDat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DaDat.Name = "DaDat";
-            this.DaDat.Size = new System.Drawing.Size(234, 32);
+            this.DaDat.Size = new System.Drawing.Size(289, 36);
             this.DaDat.TabIndex = 52;
             this.DaDat.Text = "Bàn đã được đặt trước";
             this.DaDat.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -235,10 +235,10 @@
             this.huyButton.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.huyButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.huyButton.ForeColor = System.Drawing.Color.Black;
-            this.huyButton.Location = new System.Drawing.Point(1196, 709);
-            this.huyButton.Margin = new System.Windows.Forms.Padding(4);
+            this.huyButton.Location = new System.Drawing.Point(1621, 887);
+            this.huyButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.huyButton.Name = "huyButton";
-            this.huyButton.Size = new System.Drawing.Size(215, 59);
+            this.huyButton.Size = new System.Drawing.Size(242, 74);
             this.huyButton.TabIndex = 51;
             this.huyButton.Text = "Hủy";
             this.huyButton.Click += new System.EventHandler(this.huyButton_Click);
@@ -256,10 +256,10 @@
             this.xacNhanButton.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.xacNhanButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xacNhanButton.ForeColor = System.Drawing.Color.Black;
-            this.xacNhanButton.Location = new System.Drawing.Point(936, 709);
-            this.xacNhanButton.Margin = new System.Windows.Forms.Padding(4);
+            this.xacNhanButton.Location = new System.Drawing.Point(1328, 887);
+            this.xacNhanButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.xacNhanButton.Name = "xacNhanButton";
-            this.xacNhanButton.Size = new System.Drawing.Size(215, 59);
+            this.xacNhanButton.Size = new System.Drawing.Size(242, 74);
             this.xacNhanButton.TabIndex = 50;
             this.xacNhanButton.Text = "Xác nhận ";
             this.xacNhanButton.Click += new System.EventHandler(this.xacNhanButton_Click);
@@ -267,10 +267,10 @@
             // pictureBox10
             // 
             this.pictureBox10.Image = global::PBL3.Properties.Resources.Vector__2_;
-            this.pictureBox10.Location = new System.Drawing.Point(1715, 118);
-            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox10.Location = new System.Drawing.Point(1803, 126);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(53, 50);
+            this.pictureBox10.Size = new System.Drawing.Size(60, 62);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox10.TabIndex = 47;
             this.pictureBox10.TabStop = false;
@@ -282,18 +282,18 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.ban);
             this.panel1.Controls.Add(this.trong);
-            this.panel1.Location = new System.Drawing.Point(301, 149);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Location = new System.Drawing.Point(731, 274);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(592, 391);
+            this.panel1.Size = new System.Drawing.Size(666, 489);
             this.panel1.TabIndex = 55;
             // 
             // ChinhSuaTrangThaiBan
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(181)))), ((int)(((byte)(181)))));
-            this.ClientSize = new System.Drawing.Size(1440, 1024);
+            this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.huyButton);
             this.Controls.Add(this.xacNhanButton);
@@ -301,9 +301,10 @@
             this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ChinhSuaTrangThaiBan";
             this.Text = "ChinhSuaTrangThaiBan";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.ChinhSuaTrangThaiBan_Load);
             this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();

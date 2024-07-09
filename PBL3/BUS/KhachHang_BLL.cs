@@ -30,13 +30,13 @@ namespace PBL3.BUS
 
             if (name == null)
             {
-                var l1 = db.KhachHangs.Select(p => new { p.MaKH, p.MaLKH, p.TenKH, p.SDT, p.LoaiKhachHang.TenLKH });
+                var l1 = db.KhachHangs.Where(p => p.TonTai == true).Select(p => new { p.MaKH, p.MaLKH, p.TenKH, p.SDT, p.LoaiKhachHang.TenLKH });
                 return l1.ToList<Object>();
             }
 
             else
             {
-                var l1 = db.KhachHangs.Where(p => p.TenKH.Contains(name)).Select(p => new { p.MaKH, p.MaLKH, p.TenKH, p.SDT, p.LoaiKhachHang.TenLKH });
+                var l1 = db.KhachHangs.Where(p => p.TonTai == true).Where(p => p.TenKH.Contains(name)).Select(p => new { p.MaKH, p.MaLKH, p.TenKH, p.SDT, p.LoaiKhachHang.TenLKH });
                 return l1.ToList<Object>();
             }
         }
@@ -46,7 +46,7 @@ namespace PBL3.BUS
             List <object> l = new List<object>();
             foreach (KhachHang i in db.KhachHangs)
             {
-                if (i.SDT == sdt)
+                if (i.SDT == sdt && i.TonTai==true)
                 {
                     l.Add(new
                     {
@@ -63,7 +63,7 @@ namespace PBL3.BUS
         public KhachHang GetKHbySDT(string sdt)
         {
             QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
-            KhachHang k = db.KhachHangs.Where(p => p.SDT == sdt).FirstOrDefault();
+            KhachHang k = db.KhachHangs.Where(p => p.TonTai == true).Where(p => p.SDT == sdt).FirstOrDefault();
             return k;
         }
         public KhachHang GetKHbyMaKH(int maKH)
@@ -90,7 +90,7 @@ namespace PBL3.BUS
         {
             QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
             List<Object> list = new List<Object>();
-            foreach (KhachHang i in db.KhachHangs)
+            foreach (KhachHang i in db.KhachHangs.Where(p => p.TonTai == true))
             {
                 list.Add(new
                 {
@@ -106,7 +106,7 @@ namespace PBL3.BUS
         public Boolean CheckTrungsdt(string s)
         {
             QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
-            foreach (DTO.KhachHang i in db.KhachHangs.ToList())
+            foreach (DTO.KhachHang i in db.KhachHangs.Where(p => p.TonTai == true).ToList())
             {
                 if (i.SDT == s) return true;
             }
@@ -118,7 +118,7 @@ namespace PBL3.BUS
             DTO.KhachHang kh = GetKHbySDT(sdtcu);
             if (kh != null)
             {
-                foreach (DTO.KhachHang i in db.KhachHangs.ToList())
+                foreach (DTO.KhachHang i in db.KhachHangs.Where(p => p.TonTai == true).ToList())
                 {
                     if (i.SDT == sdtmoi && i.SDT != kh.SDT) return true;
                 }
@@ -166,8 +166,8 @@ namespace PBL3.BUS
         public void DeleteKH(int id)
         {
             QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
-            KhachHang banDelete = db.KhachHangs.Find(id);
-            db.KhachHangs.Remove(banDelete);
+            KhachHang KHDelete = db.KhachHangs.Find(id);
+            KHDelete.TonTai = false;
             db.SaveChanges();
         }
         public void LayThongTinNV(int s, string makh, string hoten, string sdt, string maloaikh)

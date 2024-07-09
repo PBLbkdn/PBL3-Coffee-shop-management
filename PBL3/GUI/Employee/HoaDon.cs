@@ -65,6 +65,12 @@ namespace PBL3.GUI.Employee
                 ThatBai f3 = new ThatBai("Vui lòng nhập mã hóa đơn cần tìm!");
                 f3.ShowDialog();
             }
+            if(int.TryParse(timKiemHoaDon.Text, out int n) == false)
+            {
+                //MessageBox.Show("Mã hóa đơn phải là số!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                ThatBai f3 = new ThatBai("Mã hóa đơn phải là số!");
+                f3.ShowDialog();
+            }
             else
             {
                 hoaDonData.DataSource = HoaDon_BLL.Instance.GetListHoaDonByID(int.Parse(timKiemHoaDon.Text));
@@ -76,6 +82,7 @@ namespace PBL3.GUI.Employee
                     f3.ShowDialog();
                 }
             }
+
 
         }
 

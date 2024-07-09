@@ -113,7 +113,6 @@
     <Property Name="TenKH" Type="nvarchar" MaxLength="255" />
     <Property Name="SDT" Type="nvarchar" MaxLength="255" />
     <Property Name="MaLKH" Type="int" />
-    <Property Name="TonTai" Type="bit" />
   </EntityType>
   <EntityType Name="KhuyenMai">
     <Key>
@@ -166,7 +165,6 @@
     <Property Name="NhomSP" Type="nvarchar" MaxLength="255" />
     <Property Name="DonViSP" Type="nvarchar" MaxLength="20" />
     <Property Name="DuongDanAnh" Type="nvarchar" MaxLength="255" />
-    <Property Name="TonTai" Type="bit" />
   </EntityType>
   <EntityType Name="sysdiagrams">
     <Key>

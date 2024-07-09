@@ -29,33 +29,33 @@ namespace PBL3.BUS
             QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
             if (name == null)
             {
-                var l = db.SanPhams.Select(p => new { p.MaSP, p.TenSP, p.LoaiSP, p.NhomSP, p.DonViSP, p.GiaSP });
+                var l = db.SanPhams.Where(p=>p.TonTai==true).Select(p => new { p.MaSP, p.TenSP, p.LoaiSP, p.NhomSP, p.DonViSP, p.GiaSP });
                 return l.ToList<Object>();
             }
             else
             {
-                var l1 = db.SanPhams.Where(p => p.TenSP.ToLower().Contains(name)).Select(p => new { p.MaSP, p.TenSP, p.LoaiSP, p.NhomSP, p.DonViSP, p.GiaSP });
+                var l1 = db.SanPhams.Where(p => p.TonTai == true).Where(p => p.TenSP.ToLower().Contains(name)).Select(p => new { p.MaSP, p.TenSP, p.LoaiSP, p.NhomSP, p.DonViSP, p.GiaSP });
                 return l1.ToList<Object>();
             }
         }
         public List<Object> GetListObjectSanPham()
         {
             QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
-            var l = db.SanPhams.Select(p => new { p.MaSP, p.TenSP, p.LoaiSP, p.NhomSP, p.DonViSP, p.GiaSP });
+            var l = db.SanPhams.Where(p => p.TonTai == true).Select(p => new { p.MaSP, p.TenSP, p.LoaiSP, p.NhomSP, p.DonViSP, p.GiaSP });
             return l.ToList<Object>();
 
         }
         public List<SanPham> GetListSanPham(string name)
         {
             QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
-            var l = db.SanPhams.Where(sp => sp.TenSP.ToLower().Contains(name)).ToList();
+            var l = db.SanPhams.Where(p => p.TonTai == true).Where(sp => sp.TenSP.ToLower().Contains(name)).ToList();
             return l;
 
         }
         public List<SanPham> GetAllListSanPham()
         {
             QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
-            var l = db.SanPhams.Select(p => p).ToList();
+            var l = db.SanPhams.Where(p => p.TonTai == true).Select(p => p).ToList();
             return l;
         }
 
@@ -124,11 +124,12 @@ namespace PBL3.BUS
             sedit.DuongDanAnh = duongdan;
             db.SaveChanges();
         }
+        //xóa mềm
         public void DeleteSanPham(int id)
         {
             QuanCaPhePBL3Entities db = new QuanCaPhePBL3Entities();
             SanPham nlDelete = db.SanPhams.Find(id);
-            db.SanPhams.Remove(nlDelete);
+            nlDelete.TonTai= false;
             db.SaveChanges();
         }
         public void LayThongTinSanPham(int s, ref string masp, ref string tensp, ref string giasp, ref string loai, ref string nhom, ref string donvi, ref string duongdan)

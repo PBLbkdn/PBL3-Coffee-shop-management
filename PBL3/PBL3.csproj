@@ -701,6 +701,9 @@
     <None Include="Resources\eye-line.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\icons8-home-50.png" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="DTO\QuanCaPhePBL3.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>QuanCaPhePBL3.edmx</DependentUpon>
@@ -711,7 +714,6 @@
       <DependentUpon>QuanCaPhePBL3.edmx</DependentUpon>
       <LastGenOutput>QuanCaPhePBL3.cs</LastGenOutput>
     </Content>
-    <None Include="Resources\icons8-home-50.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

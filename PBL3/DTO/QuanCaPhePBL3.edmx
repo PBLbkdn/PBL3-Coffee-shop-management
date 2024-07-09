@@ -118,6 +118,7 @@
           <Property Name="TenKH" Type="nvarchar" MaxLength="255" />
           <Property Name="SDT" Type="nvarchar" MaxLength="255" />
           <Property Name="MaLKH" Type="int" />
+          <Property Name="TonTai" Type="bit" />
         </EntityType>
         <EntityType Name="KhuyenMai">
           <Key>
@@ -170,6 +171,7 @@
           <Property Name="NhomSP" Type="nvarchar" MaxLength="255" />
           <Property Name="DonViSP" Type="nvarchar" MaxLength="20" />
           <Property Name="DuongDanAnh" Type="nvarchar" MaxLength="255" />
+          <Property Name="TonTai" Type="bit" />
         </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
@@ -601,6 +603,7 @@
           <Property Name="TenKH" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="SDT" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="MaLKH" Type="Int32" />
+          <Property Name="TonTai" Type="Boolean" />
           <NavigationProperty Name="HoaDons" Relationship="Self.FK_HoaDon_KhachHang" FromRole="KhachHang" ToRole="HoaDon" />
           <NavigationProperty Name="LoaiKhachHang" Relationship="Self.FK_KhachHang_LoaiKhachHang" FromRole="KhachHang" ToRole="LoaiKhachHang" />
         </EntityType>
@@ -664,6 +667,7 @@
           <Property Name="NhomSP" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="DonViSP" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="DuongDanAnh" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="TonTai" Type="Boolean" />
           <NavigationProperty Name="ChiTietHoaDons" Relationship="Self.FK_ChiTietHoaDon_SanPham" FromRole="SanPham" ToRole="ChiTietHoaDon" />
           <NavigationProperty Name="ChiTietSanPhams" Relationship="Self.FK_ChiTietSanPham_SanPham" FromRole="SanPham" ToRole="ChiTietSanPham" />
           <NavigationProperty Name="DonHangs" Relationship="Self.FK_DonHang_SanPham" FromRole="SanPham" ToRole="DonHang" />
@@ -1035,6 +1039,7 @@
                 <ScalarProperty Name="TenKH" ColumnName="TenKH" />
                 <ScalarProperty Name="SDT" ColumnName="SDT" />
                 <ScalarProperty Name="MaLKH" ColumnName="MaLKH" />
+                <ScalarProperty Name="TonTai" ColumnName="TonTai" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1092,6 +1097,7 @@
                 <ScalarProperty Name="NhomSP" ColumnName="NhomSP" />
                 <ScalarProperty Name="DonViSP" ColumnName="DonViSP" />
                 <ScalarProperty Name="DuongDanAnh" ColumnName="DuongDanAnh" />
+                <ScalarProperty Name="TonTai" ColumnName="TonTai" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -27,20 +27,7 @@ namespace PBL3.GUI.Employee
             ten.Text = NhanVien_BLL.Instance.getTenNV(maNV);
         }
 
-        private void guna2Button4_Click(object sender, EventArgs e)
-        {
-            if (Ban_BLL.Instance.GetListBanFree().Count == 0)
-            {
-                //MessageBox.Show("Hiện tại quán không có bàn trống");
-                ThatBai f3 = new ThatBai("Hiện tại quán không có bàn trống");
-                f3.ShowDialog();
-                return;
-            }
-            DatMon f = new DatMon(maNV);
-            this.Hide();
-            f.ShowDialog();
-            this.Close();
-        }
+  
 
         private void banButton_Click(object sender, EventArgs e)
         {
@@ -115,6 +102,21 @@ namespace PBL3.GUI.Employee
                 dangNhap.ShowDialog();
                 this.Close();
             }
+        }
+
+        private void datMon_Click(object sender, EventArgs e)
+        {
+            if (Ban_BLL.Instance.GetListBanFree().Count == 0)
+            {
+                //MessageBox.Show("Hiện tại quán không có bàn trống");
+                ThatBai f3 = new ThatBai("Hiện tại quán không có bàn trống");
+                f3.ShowDialog();
+                return;
+            }
+            DatMon f = new DatMon(maNV);
+            this.Hide();
+            f.ShowDialog();
+            this.Close();
         }
     }
 }

@@ -24,9 +24,35 @@ namespace PBL3.GUI
 
         }
 
-        private void loginButton_Click(object sender, EventArgs e)
+
+        private void exitButton2_Click(object sender, EventArgs e)
         {
-            if(username.Text.Equals("") || password.Text.Equals(""))
+            Application.Exit();
+        }
+
+     
+
+
+
+
+
+        private void close_Click(object sender, EventArgs e)
+        {
+            password.PasswordChar = '\0';
+            close.Visible = false;
+            open.Visible = true;
+        }
+
+        private void open_Click(object sender, EventArgs e)
+        {
+            password.PasswordChar = '*';
+            close.Visible = true;
+            open.Visible = false;
+        }
+
+        private void loginButton_Click_1(object sender, EventArgs e)
+        {
+            if (username.Text.Equals("") || password.Text.Equals(""))
             {
                 //MessageBox.Show("Vui lòng nhập đầy đủ thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 ThatBai f = new ThatBai("Vui lòng nhập đầy đủ thông tin");
@@ -34,7 +60,7 @@ namespace PBL3.GUI
                 return;
             }
             int x = TaiKhoan_BLL.Instance.Login(username.Text, password.Text, rbManager.Checked, rbStaff.Checked);
-            
+
             switch (x)
             {
                 case 1:
@@ -47,7 +73,7 @@ namespace PBL3.GUI
                         ManHinhChinh f = new ManHinhChinh(maNV);
                         this.Hide();
                         f.ShowDialog();
-                        
+
                         this.Close();
                     }
                     else
@@ -75,27 +101,6 @@ namespace PBL3.GUI
                     f4.ShowDialog();
                     break;
             }
-
-        }
-
-        private void exitButton2_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void mouseHover(object sender, EventArgs e)
-        {
-            password.PasswordChar = '\0';
-            close.Visible = false;
-            open.Visible = true;
-        }
-
-        private void mouseLeave(object sender, EventArgs e)
-        {
-
-            password.PasswordChar = '*';
-            close.Visible = true;
-            open.Visible = false;
         }
     }
 }

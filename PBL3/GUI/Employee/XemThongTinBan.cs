@@ -40,25 +40,25 @@ namespace PBL3.GUI.Employee
             NhanVienPhucVu.Visible = true;
         }
 
+        private void exit_Click(object sender, EventArgs e)
+        {
 
-        private void pictureBox3_Click(object sender, EventArgs e)
+            DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn đăng xuất?", "Đăng xuất", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                DangNhap dangNhap = new DangNhap();
+                this.Hide();
+                dangNhap.ShowDialog();
+                this.Close();
+            }
+        }
+
+        private void menu_Click(object sender, EventArgs e)
         {
             ManHinhChinh_NV manHinhChinh = new ManHinhChinh_NV();
             this.Hide();
             manHinhChinh.ShowDialog();
             this.Close();
-        }
-
-        private void pictureBox6_Click(object sender, EventArgs e)
-        {
-            DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn đăng xuất?", "Đăng xuất", MessageBoxButtons.YesNo);
-            if (dialogResult == DialogResult.Yes)
-            {
-                DangNhap dangNhap = new DangNhap();
-                this.Hide();         
-                dangNhap.ShowDialog();
-                this.Close();
-            }
         }
     }
 }

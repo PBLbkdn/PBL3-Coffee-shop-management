@@ -34,8 +34,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.tenTK = new Guna.UI2.WinForms.Guna2TextBox();
-            this.saveButton = new Guna.UI2.WinForms.Guna2Button();
-            this.cancelButton = new Guna.UI2.WinForms.Guna2Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -46,20 +44,22 @@
             this.mnvcb = new Guna.UI2.WinForms.Guna2ComboBox();
             this.adtndata = new Guna.UI2.WinForms.Guna2DataGridView();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.themTKExit = new System.Windows.Forms.PictureBox();
+            this.save = new Guna.UI2.WinForms.Guna2Button();
+            this.huy = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.adtndata)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.themTKExit)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(144, 376);
+            this.label3.Location = new System.Drawing.Point(162, 470);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(164, 28);
+            this.label3.Size = new System.Drawing.Size(195, 32);
             this.label3.TabIndex = 1;
             this.label3.Text = "Tên tài khoản (*)";
             // 
@@ -67,10 +67,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(437, 378);
+            this.label4.Location = new System.Drawing.Point(492, 472);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(0, 28);
+            this.label4.Size = new System.Drawing.Size(0, 32);
             this.label4.TabIndex = 2;
             // 
             // tenTK
@@ -85,75 +85,33 @@
             this.tenTK.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tenTK.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tenTK.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tenTK.Location = new System.Drawing.Point(357, 357);
-            this.tenTK.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tenTK.Location = new System.Drawing.Point(402, 446);
+            this.tenTK.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.tenTK.Name = "tenTK";
             this.tenTK.PasswordChar = '\0';
             this.tenTK.PlaceholderText = "";
             this.tenTK.SelectedText = "";
-            this.tenTK.Size = new System.Drawing.Size(579, 63);
+            this.tenTK.Size = new System.Drawing.Size(651, 79);
             this.tenTK.TabIndex = 9;
-            // 
-            // saveButton
-            // 
-            this.saveButton.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.saveButton.BorderRadius = 10;
-            this.saveButton.BorderThickness = 2;
-            this.saveButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.saveButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.saveButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.saveButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.saveButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.saveButton.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.saveButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saveButton.ForeColor = System.Drawing.Color.Black;
-            this.saveButton.Location = new System.Drawing.Point(1120, 795);
-            this.saveButton.Margin = new System.Windows.Forms.Padding(4);
-            this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(213, 59);
-            this.saveButton.TabIndex = 22;
-            this.saveButton.Text = "Lưu";
-            this.saveButton.Click += new System.EventHandler(this.saveTK_Click);
-            // 
-            // cancelButton
-            // 
-            this.cancelButton.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.cancelButton.BorderRadius = 10;
-            this.cancelButton.BorderThickness = 2;
-            this.cancelButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.cancelButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.cancelButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.cancelButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.cancelButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.cancelButton.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.cancelButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cancelButton.ForeColor = System.Drawing.Color.Black;
-            this.cancelButton.Location = new System.Drawing.Point(1341, 795);
-            this.cancelButton.Margin = new System.Windows.Forms.Padding(4);
-            this.cancelButton.Name = "cancelButton";
-            this.cancelButton.Size = new System.Drawing.Size(215, 59);
-            this.cancelButton.TabIndex = 23;
-            this.cancelButton.Text = "Hủy";
-            this.cancelButton.Click += new System.EventHandler(this.huyTK_Click);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(427, 497);
+            this.label7.Location = new System.Drawing.Point(480, 621);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(0, 28);
+            this.label7.Size = new System.Drawing.Size(0, 32);
             this.label7.TabIndex = 30;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(144, 284);
+            this.label10.Location = new System.Drawing.Point(162, 355);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(165, 28);
+            this.label10.Size = new System.Drawing.Size(196, 32);
             this.label10.TabIndex = 34;
             this.label10.Text = "Mã nhân viên (*)";
             // 
@@ -161,20 +119,20 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(437, 286);
+            this.label5.Location = new System.Drawing.Point(492, 358);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(0, 28);
+            this.label5.Size = new System.Drawing.Size(0, 32);
             this.label5.TabIndex = 35;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(178, 463);
+            this.label11.Location = new System.Drawing.Point(200, 579);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(127, 28);
+            this.label11.Size = new System.Drawing.Size(152, 32);
             this.label11.TabIndex = 37;
             this.label11.Text = "Mật khẩu (*)";
             // 
@@ -182,10 +140,10 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(437, 465);
+            this.label6.Location = new System.Drawing.Point(492, 581);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(0, 28);
+            this.label6.Size = new System.Drawing.Size(0, 32);
             this.label6.TabIndex = 38;
             // 
             // matKhau
@@ -200,13 +158,13 @@
             this.matKhau.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.matKhau.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.matKhau.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.matKhau.Location = new System.Drawing.Point(357, 445);
-            this.matKhau.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.matKhau.Location = new System.Drawing.Point(402, 556);
+            this.matKhau.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.matKhau.Name = "matKhau";
             this.matKhau.PasswordChar = '\0';
             this.matKhau.PlaceholderText = "";
             this.matKhau.SelectedText = "";
-            this.matKhau.Size = new System.Drawing.Size(579, 63);
+            this.matKhau.Size = new System.Drawing.Size(651, 79);
             this.matKhau.TabIndex = 39;
             // 
             // guna2Panel1
@@ -221,15 +179,15 @@
             this.guna2Panel1.Controls.Add(this.label5);
             this.guna2Panel1.Controls.Add(this.label10);
             this.guna2Panel1.Controls.Add(this.label7);
-            this.guna2Panel1.Controls.Add(this.cancelButton);
-            this.guna2Panel1.Controls.Add(this.saveButton);
+            this.guna2Panel1.Controls.Add(this.huy);
+            this.guna2Panel1.Controls.Add(this.save);
             this.guna2Panel1.Controls.Add(this.tenTK);
             this.guna2Panel1.Controls.Add(this.label4);
             this.guna2Panel1.Controls.Add(this.label3);
-            this.guna2Panel1.Location = new System.Drawing.Point(88, 82);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel1.Location = new System.Drawing.Point(99, 102);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1680, 858);
+            this.guna2Panel1.Size = new System.Drawing.Size(1800, 950);
             this.guna2Panel1.TabIndex = 12;
             // 
             // mnvcb
@@ -242,9 +200,10 @@
             this.mnvcb.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.mnvcb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.mnvcb.ItemHeight = 30;
-            this.mnvcb.Location = new System.Drawing.Point(357, 284);
+            this.mnvcb.Location = new System.Drawing.Point(402, 355);
+            this.mnvcb.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.mnvcb.Name = "mnvcb";
-            this.mnvcb.Size = new System.Drawing.Size(579, 36);
+            this.mnvcb.Size = new System.Drawing.Size(651, 36);
             this.mnvcb.TabIndex = 41;
             // 
             // adtndata
@@ -272,13 +231,14 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.adtndata.DefaultCellStyle = dataGridViewCellStyle3;
             this.adtndata.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.adtndata.Location = new System.Drawing.Point(1006, 265);
+            this.adtndata.Location = new System.Drawing.Point(1132, 331);
+            this.adtndata.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.adtndata.Name = "adtndata";
             this.adtndata.ReadOnly = true;
             this.adtndata.RowHeadersVisible = false;
             this.adtndata.RowHeadersWidth = 51;
             this.adtndata.RowTemplate.Height = 24;
-            this.adtndata.Size = new System.Drawing.Size(454, 243);
+            this.adtndata.Size = new System.Drawing.Size(511, 304);
             this.adtndata.TabIndex = 40;
             this.adtndata.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.adtndata.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -308,42 +268,85 @@
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(156)))), ((int)(((byte)(156)))));
             this.label2.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
-            this.label2.Location = new System.Drawing.Point(81, 30);
+            this.label2.Location = new System.Drawing.Point(91, 38);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(232, 36);
+            this.label2.Size = new System.Drawing.Size(275, 42);
             this.label2.TabIndex = 13;
             this.label2.Text = "Thêm tài khoản";
             // 
-            // pictureBox1
+            // themTKExit
             // 
-            this.pictureBox1.Image = global::PBL3.Properties.Resources.akar_icons_circle_x_fill;
-            this.pictureBox1.Location = new System.Drawing.Point(1761, 15);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(56, 49);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 14;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.themTKExit.Image = global::PBL3.Properties.Resources.akar_icons_circle_x_fill;
+            this.themTKExit.Location = new System.Drawing.Point(1836, 19);
+            this.themTKExit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.themTKExit.Name = "themTKExit";
+            this.themTKExit.Size = new System.Drawing.Size(63, 61);
+            this.themTKExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.themTKExit.TabIndex = 14;
+            this.themTKExit.TabStop = false;
+            this.themTKExit.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // save
+            // 
+            this.save.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.save.BorderRadius = 10;
+            this.save.BorderThickness = 2;
+            this.save.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.save.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.save.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.save.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.save.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.save.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.save.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.save.ForeColor = System.Drawing.Color.Black;
+            this.save.Location = new System.Drawing.Point(1260, 809);
+            this.save.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.save.Name = "save";
+            this.save.Size = new System.Drawing.Size(240, 74);
+            this.save.TabIndex = 22;
+            this.save.Text = "Lưu";
+            this.save.Click += new System.EventHandler(this.saveTK_Click);
+            // 
+            // huy
+            // 
+            this.huy.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.huy.BorderRadius = 10;
+            this.huy.BorderThickness = 2;
+            this.huy.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.huy.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.huy.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.huy.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.huy.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.huy.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.huy.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.huy.ForeColor = System.Drawing.Color.Black;
+            this.huy.Location = new System.Drawing.Point(1509, 809);
+            this.huy.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.huy.Name = "huy";
+            this.huy.Size = new System.Drawing.Size(242, 74);
+            this.huy.TabIndex = 23;
+            this.huy.Text = "Hủy";
+            this.huy.Click += new System.EventHandler(this.huyTK_Click);
             // 
             // ThemTaiKhoan
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(156)))), ((int)(((byte)(156)))));
-            this.ClientSize = new System.Drawing.Size(1440, 1024);
-            this.Controls.Add(this.pictureBox1);
+            this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.Controls.Add(this.themTKExit);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ThemTaiKhoan";
             this.Text = "ThemTaiKhoan";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.adtndata)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.themTKExit)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -354,8 +357,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2TextBox tenTK;
-        private Guna.UI2.WinForms.Guna2Button saveButton;
-        private Guna.UI2.WinForms.Guna2Button cancelButton;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label5;
@@ -364,8 +365,10 @@
         private Guna.UI2.WinForms.Guna2TextBox matKhau;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox themTKExit;
         private Guna.UI2.WinForms.Guna2DataGridView adtndata;
         private Guna.UI2.WinForms.Guna2ComboBox mnvcb;
+        private Guna.UI2.WinForms.Guna2Button huy;
+        private Guna.UI2.WinForms.Guna2Button save;
     }
 }

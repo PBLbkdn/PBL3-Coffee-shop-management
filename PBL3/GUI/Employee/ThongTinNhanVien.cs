@@ -47,10 +47,6 @@ namespace PBL3.GUI.Employee
 
         }
 
-        
-
-       
-
         private void updatePass_Click_1(object sender, EventArgs e)
         {
             CapNhatMatKhau capNhatMatKhau = new CapNhatMatKhau(maNV1);
@@ -77,7 +73,7 @@ namespace PBL3.GUI.Employee
             } 
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void exit_Click(object sender, EventArgs e)
         {
             backButton_Click_1(sender, e);
         }

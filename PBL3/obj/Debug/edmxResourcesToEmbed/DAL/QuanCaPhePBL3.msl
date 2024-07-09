@@ -98,7 +98,6 @@
           <ScalarProperty Name="TenKH" ColumnName="TenKH" />
           <ScalarProperty Name="SDT" ColumnName="SDT" />
           <ScalarProperty Name="MaLKH" ColumnName="MaLKH" />
-          <ScalarProperty Name="TonTai" ColumnName="TonTai" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -156,7 +155,6 @@
           <ScalarProperty Name="NhomSP" ColumnName="NhomSP" />
           <ScalarProperty Name="DonViSP" ColumnName="DonViSP" />
           <ScalarProperty Name="DuongDanAnh" ColumnName="DuongDanAnh" />
-          <ScalarProperty Name="TonTai" ColumnName="TonTai" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
